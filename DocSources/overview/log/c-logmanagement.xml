@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Log Management</title>
+    <conbody>
+        <section>
+            <p>Services and servers in a cloud infrastructure generate huge amounts of log data, from simply announcing that everything is healthy to detailed information on events or processes. The logs are distributed over many physical and virtual servers. <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> collects, stores, and queries these logs and makes them accessible to <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users in one central place. </p>
+            <p><ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> covers all aspects of an enterprise-class log management solution:</p>
+            <ul
+                    compact="no">
+                <li
+                        id="Central_management_of_log_dat_concept_conbody_section_1_u">Central management of log data from medium and large-size OpenStack deployments.</li>
+                <li>Buffered exchange of log data to provide high data throughput.</li>
+                <li>Logical isolation of log data through multi-tenancy.</li>
+                <li>Scalable architecture capable of mastering the data load from a large number of nodes in OpenStack environments. The log management solution can be horizontally and vertically adapted to constantly changing data loads. </li>
+            </ul>
+        </section>
+        <section>
+            <title>Basic Usage Scenario</title>
+            <p>The basic usage scenario of setting up and using the log management services of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> looks as follows:</p>
+            <fig>
+                <image
+                    align="left" alt="logmanagement.png" height="298"
+                    href="../../images/logmanagement.png"
+                    placement="break"
+                        width="700"/>
+            </fig>
+            <p>The <b><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> operator</b> is responsible for providing the log management services to the OpenStack operator. He uses the log management services himself for retrieving log data on <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>The <b>OpenStack operator</b> uses the log management services for retrieving log data on the OpenStack services and the middleware components that make up the underlying OpenStack platform.</p>
+        </section>
+        <section>
+            <title>Data Collection</title>
+            <p>A <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent can be installed and configured on each physical and virtual server where log data is to be retrieved. The agent is responsible for collecting the log data from the cloud resources and sending them to the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service for further processing. </p>
+            <p><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> stores the log data in a central database. The central database forms the basis for visualizing the log data for the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users.</p>
+        </section>
+        <section>
+            <title>Data Visualization and Analysis</title>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> supports advanced data visualization and analysis of the log data in a variety of charts, tables, or maps. Visualizations can easily be combined in dynamic dashboards that display changes to search queries in real time. </p>
+            <p>Based on OpenStack Horizon, the customizable dashboards are seamlessly integrated into the cloud infrastructure. They enable user access to all log management functionality.</p>
+        </section>
+        <section>
+            <title>Alarms and Notifications</title>
+            <p>GUI-based alarm and notification management is also supported for log data. <ph
+                    id="Template-based_alarm_definiti_concept_conbody_section_4_p"><ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> supports a template mechanism for alarms on log data that is not limited to a single cloud resource but can analyze a scalable set of resources.</ph></p>
+            <p><ph id="Template-based_alarm_definiti_concept_conbody_section_4_p"
+                    >Alarms and notifications can be configured to inform system operators when the number of critical log entries exceeds a defined threshold. Compound alarms can be used to analyze more complex log events.</ph> This automation of log handling guarantees that system operators identify problems in their infrastructure early and find the root cause of these problems quickly. </p>
+        </section>
+    </conbody>
+</concept>

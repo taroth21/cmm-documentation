@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Installation</title>
+    <conbody>
+        <section>
+            <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> comprises several steps. They are partially executed by the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> operator, and partially by the OpenStack operator.</p>
+        </section>
+        <section>
+            <fig>
+                <image align="left" alt="installation-type-overview.png" height="346"
+                    href="../../images/installation-type-overview.png" width="350"/>
+            </fig>
+            <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> comprises the following steps: </p>
+            <ol>
+                <li>Preparing the installation environment - done by the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> operator and the OpenStack operator.</li>
+                <li>Configuring the Control Machine - done by the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> operator and the OpenStack operator.</li>
+                <li>Installing the offline resources - done by the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator only. </li>
+                <li>Installing the OpenStack extensions required for the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Service - done by the OpenStack operator only. </li>
+                <li>Installing the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> Service - done by the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator only.</li>
+            </ol>
+            <p>As a <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> operator, you also install and configure the agents for monitoring <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                />. The OpenStack operator installs and configures the agents for monitoring the OpenStack platform. He also prepares the monitoring environment for the tenant users who have booked a virtual machine in OpenStack.</p>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> ships with an installer that is based on Ansible. You use it for installing the required software components.</p>
+        </section>
+        <section>
+            <title>Installation Environment</title>
+            <p>The following overview depicts the installation environment for the default <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> cluster:</p>
+            <fig>
+                <image alt="ansible-installation-cluster.png" height="274"
+                    href="../../images/ansible-installation-cluster.png" width="436"/>
+            </fig>
+            <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> is managed from a so-called Control Machine:</p>
+            <ul>
+                <li>
+                    <p>As <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Operator, you have to prepare the Control Machine for installing the offline resources, the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> components and the agents for monitoring the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> components on the individual nodes. </p>
+                    <p>In the default cluster environment, you install the  <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> components and the required agents on three nodes. The offline resources are installed on one node only. </p>
+                </li>
+                <li>
+                    <p>The OpenStack Operator prepares the Control Machine for installing the OpenStack extensions and the required agents for monitoring the OpenStack Keystone and the OpenStack Horizon service. The OpenStack Operator and the CMM Operator can use one machine as Control Machine or implement there installation steps from two different Control Machines as depicted above.</p>
+                    <p>Depending on the OpenStack environment, Keystone and Horizon can either be installed on the same or on two separate hosts. The OpenStack Operator can install additional agents for monitoring additional OpenStack services as required.</p>
+                </li>
+            </ul>
+            <p>The Control Machines manage the remote machines via SSH. The offline resources, the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components, and the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> agents use the HTTP protocol for communication with each other.</p>
+        </section>
+    </conbody>
+</concept>

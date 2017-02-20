@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB" xml:lang="en-us">
+    <title>Installing the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service</title>
+    <conbody>
+        <section>
+            <p>As a prerequisite for installing the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Service, the OpenStack operator must have installed the OpenStack extensions for <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p>To install the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> Service, proceed as follows:</p>
+            <ol compact="no">
+                <li>
+                    <p>Log in to the Control Machine.</p>
+                </li>
+                <li>
+                    <p>The installer uses Ansible group variables for configuration purposes. The group variables are located in the <codeph>/opt/FJSVsvcmm/group_vars</codeph> directory. </p>
+                    <p>Open the <codeph>all_group</codeph> file with your favorite editor. It defines the main configuration settings. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/group_vars/all_group</codeblock>
+                </li>
+                <!-- li>Check the IP addresses of your environment in the <codeph>hosts</codeph> section. They have already been specified for the installation of the offline resources.<ul>
+                        <li><codeph>offline_host</codeph> for the offline resources</li>
+                        <li><codeph>monasca_host</codeph> for the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                    /> Service <i><b>QUESTION</b>: Just one IP address for three node cluster? Or is it the Load Balancer? ##</i></li>
+                        <li><codeph>keystone_host</codeph> for the OpenStack Keystone service</li>
+                        <li><codeph>keepalived_virtual_ip</codeph> for the HAProxy acting as load balancer for the MariaDB database </li>
+                    </ul><p>Example:</p><codeblock># hosts
+offline_host: 192.168.10.4
+monasca_host: 192.168.10.4
+keystone_host: 192.168.10.5
+keepalived_virtual_ip: 192.168.10.69</codeblock></li -->
+                <li>
+                    <p>Enter the user credentials of a valid OpenStack user in the <codeph>Monasca Api</codeph> section. Contact your OpenStack Operator for this purpose. He is responsible for creating the required users and roles.</p>
+                    <p>The user you enter must have full access to the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Service. He must be assigned a role that authorizes him to read and write data. The role must be specified for <codeph>defaultAuthorizedRoles</codeph> (see Step 8 below).</p>
+                    <p>Example:</p>
+                    <codeblock># Monasca Api CLI - Credentials
+monasca_user:
+  user: cmm-operator
+  password: "{{ keystone_cmm_operator_user_password }}"
+  project: cmm</codeblock>
+                </li>
+                <!-- li>
+                    <p>If you want to use HTTPS for communication between the Log Agent and the Log API as well as between the Log Agent and the OpenStack Keystone service, change the URL specification in the <codeph>URL service definition</codeph> section from <codeph>http</codeph> to <codeph>https</codeph>:</p>
+                    <codeblock># URL service definition
+monasca_log_api_url: "https://{{ monasca_host }}:{{ monasca_log_api_port|int }}/v3.0"</codeblock>
+                </li -->
+                <!-- li>
+                    <p>For using HTTPS communication, it is also required to specify the location of your SSL certificate that is to be used.</p>
+                    <p>For this purpose, open the <codeph>monasca_log_api_group</codeph> file with your favorite editor. It defines the configuration settings for the Log API.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/group_vars/monasca_log_api_group</codeblock>
+                </li -->
+                <!-- li>
+                    <p>Insert the <codeph>monasca_log_api_certfile</codeph> and the <codeph>monasca_log_api_keyfile</codeph> parameters. They specify the path to the certificate files you want to use. </p>
+                    <p>Example: </p>
+                    <codeblock>monasca_log_api_certfile: /home/vagrant/ssl/server.crt 
+monasca_log_api_keyfile: /home/vagrant/ssl/server.key</codeblock>
+                </li -->
+                <li>
+                    <p>Provide the passwords required for installing the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Service. They are defined in the <codeph>credentials.yml</codeph> file that is located in the <codeph>/opt/FJSVsvcmm</codeph> directory.</p>
+                    <p>Open the <codeph>credentials.yml</codeph> file with your favorite editor. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/credentials.yml</codeblock>
+                </li>
+                <li>
+                    <p>Specify the following passwords in the file:</p>
+                    <ul>
+                        <li><codeph>influxdb_mon_api_password:</codeph> for the Monitoring API user accessing the InfluxDB.</li>
+                        <li><codeph>influxdb_mon_persister_password:</codeph> for the Persister user accessing the InfluxDB.</li>
+                        <li><codeph>database_notification_password:</codeph> for the Notification Engine user accessing the MariaDB database. </li>
+                        <li><codeph>database_monapi_password:</codeph> for the Monitoring API user accessing the MariaDB database. </li>
+                        <li><codeph>database_thresh_password:</codeph> for the Threshold Engine user accessing the MariaDB database.</li>
+                        <!-- li><codeph>database_logapi_password:</codeph> for the Log API user accessing the MariaDB database. Removed with Bug 13149.</li -->
+                        <li><codeph>keystone_cmm_operator_user_password:</codeph> for Keystone access of the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> operator (see Step 4 above). The user account for the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> operator is automatically created with the installation.</li>
+                        <li><codeph>keystone_admin_password</codeph> of an OpenStack user account that already exists, for example, <codeph>admin</codeph>. This user account is used for creating new user accounts with the installation. It is the user account of the OpenStack operator.</li>
+                        <li><codeph>keystone_cmm_agent_password:</codeph> : for Keystone access of the user used for configuration purposes of the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> Metrics and Log Agents on the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> host. The user account (<codeph>cmm-agent</codeph>) is automatically created with the installation.</li>
+                        <li><codeph>keystone_admin_agent_password:</codeph> for Keystone access of the user used for configuration purposes of the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> Metrics and Log Agents on the OpenStack hosts. The user account (<codeph>admin-agent</codeph>) is automatically created with the installation.</li>
+                    </ul>
+                    <note othertype="note">
+                        <p id="The_passwords_must_be_handled_concept_conbody_section_ol_l"
+                                >The passwords must be handled in a secure way. Access to the <codeph>credentials.yml</codeph> is controlled by the Linux file permissions.</p>
+                    </note>
+                </li>
+                <li>
+                    <p>To install the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> components, specific configuration settings are required. They are specified in the <codeph>group_vars/monasca_group</codeph> file. </p>
+                    <p>The file contains the default configuration. No changes are required for the individual components. You have to specify only the authorized OpenStack roles (see Step 8 below) and a file system for backing up the Elasticsearch database (see Step 9 below).</p>
+                    <note othertype="note"
+                        >Make changes for the individual components only if you have to deviate from the default. </note>
+                    <p>To view the default configuration, you can open the file with your favorite editor.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/group_vars/monasca_group</codeblock>
+                </li>
+                <li>
+                    <p>Specify the OpenStack roles that have been authorized by the OpenStack operator in the <codeph>group_vars/monasca_group</codeph> file:</p>
+                    <ul>
+                        <li><codeph>defaultAuthorizedRoles</codeph> specifies the roles which grant the users full access.</li>
+                        <li><codeph>agentAuthorizedRoles</codeph> specifies the roles which grant agent access only. The users' access is restricted to sending monitoring data.</li>
+                    </ul>
+                    <p>Example:</p>
+                    <codeblock>defaultAuthorizedRoles: "user,domainuser,domainadmin,cmm-user"
+agentAuthorizedRoles: "cmm-agent"</codeblock>
+                </li>
+                <li>
+                    <p>Specify a file system for backing up the Elasticsearch database in the <codeph>elasticsearch</codeph> section of the <codeph>group_vars/monasca_group</codeph> file. The file system you specify must later be used for backing up your Elasticsearch database. </p>
+                    <p>Example: </p>
+                    <codeblock>elasticsearch_repo_dir: -/mount/backup/elasticsearch1</codeblock>
+                </li>
+                <li>
+                    <p>Configure data retention parameters for your InfluxDB database. <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> uses the data retention features offered by InfluxDB.</p>
+                    <p>By default, metrics and alarm history data is automatically deleted from the database if it is older than 60 days. You can change this default, if required.</p>
+                    <p>To change the default, open the <codeph>group_vars/influxdb_group</codeph> file with your favorite editor. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/group_vars/influxdb_group</codeblock>
+                    <p>Specify for how long you want to keep the data in the database in the <codeph>influxdb_retention_policy</codeph> parameter. The minimum retention period is one hour. Use the following options:</p>
+                    <ul id="m_concept_conbody_section_ol_l">
+                        <li><codeph>m</codeph> for minutes</li>
+                        <li><codeph>h</codeph> for hours</li>
+                        <li><codeph>d</codeph> for days</li>
+                        <li><codeph>w</codeph> for weeks</li>
+                        <li>
+                            <codeph>INF</codeph> for infinite retention</li>
+                    </ul>
+                    <p>Only single units are supported. This means, for example, that you cannot define a time span of <codeph>7230m</codeph> as <codeph>120h 30m</codeph>. </p>
+                    <p>Example: <codeph>influxdb_retention_policy: "30d"</codeph></p>
+                </li>
+                <li>
+                    <p
+                        conref="../../cmmoperator/install/c-cmmoinstcmm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Configure_data_retention_para_concept_conbody_section_ol_l"/>
+                    <p>By default, an Elasticsearch index is automatically deleted if it is older than 60 days. In the default cluster environment, the delete job is executed every day at midnight on the first node, at 1:00 pm on the second node, and at 2:00 pm on the third node. You can change these default settings, if required.</p>
+                    <p>To change the default time span after which you want indices to be removed, open the <codeph>group_vars/elasticsearch_curator_group</codeph> file with your favorite editor. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/group_vars/elasticsearch_curator_group</codeblock>
+                    <p>The time span is defined by the <codeph>deleted_days</codeph> parameter in the <codeph>curator_actions</codeph> section.</p>
+                    <p>Example for a time span of 30 days: </p>
+                    <codeblock>curator_actions:
+   - {
+        delete_by: age,
+        description: 'Delete indices older than 30 days',
+        deleted_days: 30,
+        disable: False
+      }</codeblock>
+                    <p>To change the default configuration of the Cron daemon for the individual nodes, open the <codeph>host_vars/elasticsearch-curator-node-<i>n</i></codeph> file with your favorite editor. There is a separate configuration file for each node. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/host_vars/elasticsearch-curator-node-1</codeblock>
+                    <p>Use the following parameters for defining when to run the delete job on each node:</p>
+                    <ul>
+                        <li><codeph>minute</codeph>. Any integer from <codeph>0</codeph> to <codeph>59</codeph>.</li>
+                        <li><codeph>hour</codeph>. Any integer from <codeph>0</codeph> to <codeph>23</codeph> where <codeph>0</codeph> represents midnight.</li>
+                        <li><codeph>day</codeph>. Any integer from <codeph>1</codeph> to <codeph>31</codeph>.</li>
+                        <li><codeph>weekday</codeph>. Any integer from <codeph>0</codeph> to <codeph>7</codeph> where <codeph>0</codeph> or <codeph>7</codeph> represent Sundays.</li>
+                        <li>
+                            <codeph>month</codeph>. Any integer from <codeph>1</codeph> to <codeph>12</codeph>.</li>
+                    </ul>
+                    <p>Example for running the delete job every Friday at midnight:</p>
+                    <codeblock>curator_cron_config:
+  - {
+      minute: 0,
+      hour: 0,
+      weekday: 5
+    }</codeblock>
+                </li>
+                <li>
+                    <p>To provide metrics for log data to system operators, specific configuration settings are required. They are specified in the <codeph>group_vars/monasca_log_metrics_group</codeph> file.</p>
+                    <p>The settings define which log levels are to be evaluated for the log data retrieved by a <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Log Agent. By default, <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> evaluates warnings, errors, fatal messages, and critical messages.</p>
+                    <note othertype="note"
+                            >To avoid high data loads and a reduced performance, it is recommended that you restrict the types to the default types that are automatically configured by the installer. Do not use additional types, e.g. <codeph>info</codeph>, if your focus is on long-term data analysis. </note>
+                    <p>To view the default configuration, you can open the file with your favorite editor.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/group_vars/monasca_log_metrics_group</codeblock>
+                    <note othertype="note"
+                        >Additional evaluations for log data can be prepared and configured by the system operator to provide further types of metrics. If you want to customize the Log Metrics component, contact your FUJITSU support organization for information.</note>
+                </li>
+                <li>
+                    <p>To install the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> components, execute the following command:</p>
+                    <codeblock>ansible-playbook /opt/FJSVsvcmm/monasca.yml</codeblock>
+                    <p>The following response is displayed if the installation is successful.</p>
+                    <p>Example:  </p>
+                    <codeblock>PLAY RECAP ********************************************************
+cmm-node  :  ok=262     changed=189     unreachable=0     failed=0</codeblock>
+                    <note othertype="note"
+                        >There are checks performed during installation that may result in failures or warnings. These failures and warnings are reported but they do not block the installation. It is only this final message that is relevant for a successful installation.</note>
+                </li>
+            </ol>
+            <p>In case the installation fails, check your configuration settings and passwords and retry the installation in verbose mode. To collect debug information, you can execute the following command:</p>
+            <codeblock>ansible-playbook -vvvv /opt/FJSVsvcmm/monasca.yml</codeblock>
+            <p>As soon as the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Service is successfully installed, you can proceed with installing and configuring the agents for monitoring <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+        </section>
+    </conbody>
+</concept>

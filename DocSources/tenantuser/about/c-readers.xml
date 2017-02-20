@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->                      
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Readers of this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual is directed to service providers who use <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> for monitoring the cloud resources they have booked on an OpenStack platform. The manual assumes that you have basic knowledge of OpenStack environments. </p>
+        </section>
+    </conbody>
+</concept>

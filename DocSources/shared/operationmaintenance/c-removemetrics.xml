@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+            xml:lang="en-us">
+    <title>Disabling Metrics for a <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent</title>
+    <conbody>
+        <section>
+            <p>To disable the monitoring of a specific metrics that is no longer needed in the configuration of a <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Metrics Agent, you have to delete the corresponding <codeph>.yaml</codeph> file. Proceed as follows:</p>
+            <ol compact="no">
+                <li>
+                    <p>Log in to the server where the agent is installed.</p>
+                </li>
+                <li>
+                    <p>To stop the agent, execute the following command:</p>
+                    <codeblock>sudo systemctl stop monasca-agent</codeblock>
+                </li>
+                <li>
+                    <p>Change to the directory that stores the metrics used for monitoring.</p>
+                    <p>Example: </p>
+                    <codeblock>cd /etc/monasca/agent/conf.d</codeblock>
+                </li>
+                <li>
+                    <p>Delete the <codeph>.yaml</codeph> file that is no longer needed.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo rm -i process.yaml</codeblock>
+                </li>
+                <li>
+                    <p>To start the agent again, execute the following command:</p>
+                    <codeblock>sudo systemctl start monasca-agent</codeblock>
+                </li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

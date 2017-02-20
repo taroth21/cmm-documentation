@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Readers of this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual is directed to OpenStack operators who use <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> for monitoring their OpenStack platform. </p>
+            <p>The manual assumes that you have profound knowledge of OpenStack. For installing the required <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components, you must be familiar with the administration and operation of LINUX systems.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>The Tenant User's Tasks</title>
+    <conbody>
+        <section>
+            <p>The <ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator and the OpenStack operator are responsible for preparing your monitoring environment. The OpenStack operator configures which metrics are available to you. He explicitly activates the metrics that you can use for monitoring the virtual machines you have booked. </p>
+        </section>
+        <section>
+            <title>Metrics</title>
+            <p
+                conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Metrics_represent_self-descri_concept_conbody_section_3_p"/>
+            <p>The standard metrics include: </p>
+            <ul
+                compact="no"
+                    id="System_metrics_for_example_concept_conbody_section_3_ul">
+                <li>
+                    <p>Metrics on CPU usage, for example, the percentage of time the CPU is idle when no I/O requests are in progress, or the percentage of time the CPU is used at system level or user level. </p>
+                </li>
+                <li>
+                    <p>Metrics on disk space, for example, the percentage of disk space that is used on a device, or the total amount of disk space aggregated across all the disks on a particular node. </p>
+                </li>
+                <li>
+                    <p>Metrics on the average system load over different periods, for example, 1 minute, 5 minutes, or 15 minutes.</p>
+                </li>
+                <li>
+                    <p>Metrics on memory usage, for example, the number of megabytes of total memory or free memory, or the percentage of free swap memory. </p>
+                </li>
+                <li>
+                    <p>Metrics on the network, for example, the number of network bytes received or sent per second, or the number of network errors on incoming or outgoing network traffic per second.</p>
+                </li>
+            </ul>
+            <p>The OpenStack operator can configure additional metrics. Please contact your OpenStack operator for information on the additional metrics that you can use for monitoring.</p>
+        </section>
+        <section>
+            <title>Monitoring Functions</title>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> provides a graphical user interface that is seamlessly integrated into your cloud infrastructure. Based on OpenStack Horizon, it visualizes the health and status of your virtual machines and enables access to all monitoring functionality and the resulting large-scale monitoring data.</p>
+            <p>A comfortable dashboard visualizes the health and status of your virtual machines. It allows you to experiment with many ways of visualizing the performance of your resources in real-time. You cannot only view but also share and explore visualizations of your monitoring data.</p>
+            <p>For monitoring your virtual machines, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> provides functions for alarm and notification management. <ph
+                    conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Template-based_alarm_definiti_concept_conbody_section_4_p"
+                /></p>
+            <p>As a tenant user, you can:</p>
+            <ul>
+                <li>Monitor the status of your virtual machines.</li>
+                <li>View, share, and explore visualizations of the monitoring data.</li>
+                <li>Create, update, and delete alarms.</li>
+                <li>Create, update, and delete notifications.</li>
+            </ul>
+            <p>For details on the monitoring functions, refer to <xref href="../monitor/c-tumonitor.xml"/>.</p>
+        </section>
+    </conbody>
+</concept>

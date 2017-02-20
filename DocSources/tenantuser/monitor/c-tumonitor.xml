@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Monitoring Services and Virtual Machines</title>
+    <conbody>
+        <section id="offers_various_features_for_concept_conbody_section">
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> offers various features for monitoring the virtual machines on which your services are provisioned. They include: </p>
+            <ul>
+                <li>A monitoring overview which allows you to keep track of the virtual machines and quickly check their status. </li>
+                <li>Dashboards for visualizing your monitoring data.</li>
+                <li>Alerting features for monitoring. </li>
+            </ul>
+            <p>In the following sections, you will find information on the monitoring overview and the integrated dashboards as well as details on how to define and handle alarms and notifications.</p>
+        </section>
+    </conbody>
+</concept>

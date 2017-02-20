@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Backup and Recovery</title>
+    <conbody>
+        <section>
+            <p><ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> does not offer integrated backup and recovery mechanisms. Use the standard file system mechanisms instead.</p>
+            <p>It is recommended that you create a regular backup of the configuration files:</p>
+            <ul>
+                <li>The configuration files of the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> Metrics Agent located in the <codeph>/etc/monasca/agent</codeph> directory.</li>
+                <li>The configuration file of the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> Log Agent located in the <codeph>/etc/monasca/monasca-log-agent</codeph> directory.</li>
+            </ul>
+            <p>The frequency of backups depends on the amount of configuration changes.</p>
+            <p>If you need to recover your agent installation, the recommended procedure is as follows: </p>
+            <ol>
+                <li>
+                    <p>Uninstall the agent. For details, refer to <xref
+                            href="c-osouninstall.xml"/>.</p>
+                </li>
+                <li>
+                    <p>Reinstall the agent. For details on the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent, refer to <xref
+                            href="c-osoinstallationmetagent.xml"/>. For details on the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent, refer to <xref href="c-osoinstallationlogagent.xml"/>.</p>
+                </li>
+                <li>
+                    <p>Stop the agent.</p>
+                </li>
+                <li>
+                    <p>Copy the backup of your configuration files to the <codeph>/etc/monasca/agent</codeph> or the <codeph>/etc/monasca/monasca-log-agent</codeph> directory, respectively.</p>
+                </li>
+                <li>
+                    <p>Start the agent again.</p>
+                </li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

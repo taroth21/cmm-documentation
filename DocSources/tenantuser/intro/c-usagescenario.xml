@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB" xml:lang="en-us">
+    <title>Basic Usage Scenario</title>
+    <conbody>
+        <section>
+            <p
+                conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_basic_usage_scenario_of_s_concept_conbody_section_2_p"/>
+            <fig>
+                <image align="left" alt="Monitoring.png" height="298" href="../../images/monitoring.png"
+                    placement="break" width="700"/>
+            </fig>
+            <p>As a <b>tenant user</b>, you book virtual machines in OpenStack to provide services to <b>end users</b> or to host services that you need for your own development activities. <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> helps you ensure that the virtual machines on which these services are provided are configured and working as required.</p>
+            <p>The <b>OpenStack operator</b> uses <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> to monitor physical and virtual servers, hypervisors, and services of the underlying platform. In addition, he is responsible for the middleware components, for example, the database services. The OpenStack operator also prepares the monitoring environment including available metrics for tenant users.</p>
+            <p>The <b><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> operator</b> is responsible for providing the monitoring services to the tenant users and the OpenStack operator. This enables the tenant users and the OpenStack operator to focus on operation and the quality of their services without having to carry out the tedious tasks implied by setting up and administrating their own monitoring software. The <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> operator uses the monitoring services himself for monitoring the operation of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+    </conbody>
+</concept>

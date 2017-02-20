@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<reference id="reference_7A5FB297419F4787832C9125D7CAC80F"
+                    xml:lang="en-us">
+    <title>Glossary</title>
+    <refbody>
+        <section>
+            <title><ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Operator</title>
+            <p>A person responsible for maintaining and administrating <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>Dimension</title>
+            <p>A key/value pair that allows for a flexible and concise description of the data to be monitored, for example, region, availability zone, service tier, or resource ID. Each dimension describes a specific characteristic of the metrics to be monitored. </p>
+            <p>In <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                />, metrics are uniquely identified by a name and a set of dimensions. Dimensions can serve as a filter for the monitoring data.</p>
+        </section>
+        <section>
+            <title>Elasticsearch</title>
+            <p>An open source application that provides a highly scalable full-text search and analytics engine. <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /> uses Elasticsearch as the underlying technology for storing, searching, and analyzing large volumes of log data.</p>
+        </section>
+        <section>
+            <title>Grafana</title>
+            <p>An open source application for visualizing large-scale measurement data. <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> integrates with Grafana for visualizing the <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> monitoring data.</p>
+        </section>
+        <section>
+            <title>Infrastructure as a Service (IaaS)</title>
+            <p>The delivery of computer infrastructure (typically a platform virtualization environment) as a service.</p>
+        </section>
+        <section>
+            <title>Kibana</title>
+            <p>An open source analytics and visualization platform designed to work with Elasticsearch. <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> integrates with Kibana for visualizing the <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> log data.</p>
+        </section>
+        <section>
+            <title>Logstash</title>
+            <p>An open source application that provides a data collection engine with pipelining capabilities. <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /> integrates with Logstash for collecting, processing, and outputting logs. </p>
+        </section>
+        <section>
+            <title>Metrics</title>
+            <p>Self-describing data structures that allow for a flexible and concise description of the data to be monitored. Metrics values represent the actual monitoring data that is collected and presented in <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>Monasca</title>
+            <p>An open source Monitoring as a Service solution that integrates with OpenStack. It forms the core of <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>OpenStack Operator</title>
+            <p>A person responsible for maintaining and administrating OpenStack, the underlying platform technology of <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>Platform as a Service (PaaS)</title>
+            <p>The delivery of a computing platform and solution stack as a service.</p>
+        </section>
+        <section>
+            <title>Software as a Service (SaaS)</title>
+            <p>A model of software deployment where a provider licenses an application to customers for use as a service on demand.</p>
+        </section>
+        <section>
+            <title>Tenant User</title>
+            <p>A person with limited access to cloud resources in OpenStack. A tenant user provides services to end users or hosts services for his own development activities.</p>
+        </section>
+    </refbody>
+</reference>

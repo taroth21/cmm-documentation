@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                            xml:lang="en-us">
+    <title>Configuration</title>
+    <conbody>
+        <section>
+            <p>The installation of an agent includes its initial configuration. The configuration files that are required for monitoring the services on the server where the agent is installed are created automatically. The following configuration files are provided:</p>
+            <ul>
+                <li>
+                    <p><codeph>agent.yaml</codeph> located in the <codeph>/etc/monasca/agent</codeph> directory.</p>
+                    <p>It defines the basic agent configuration. The installer auto-detects applications and processes that are running on your machine and saves the corresponding settings to this file. </p>
+                </li>
+                <li>
+                    <p><codeph>*.yaml</codeph> files located in the <codeph>/etc/monasca/agent/conf.d</codeph> directory. </p>
+                    <p>They provide the standard metrics the agent uses for monitoring your services and servers. Standard metrics for system checks are automatically configured by the installer. </p>
+                </li>
+                <li>
+                    <p><codeph>*.yaml</codeph> files located in the <codeph>/opt/monasca-agent/share/monasca/agent/conf.d</codeph> directory. </p>
+                    <p>They provide additional metrics that you can activate as enhancement to the standard metrics. These files provide template configurations that you can adapt to your environment.</p>
+                </li>
+            </ul>
+            <p>You have the following options for reconfiguring an agent:</p>
+            <ul>
+                <!-- li>You can execute the <codeph>monasca-setup</codeph> script.</li -->
+                <li>You can update the <codeph>agent.yaml</codeph> file.</li>
+                <li>You can activate metrics in addition to the standard metrics.</li>
+            </ul>
+            <p>Refer to the following sections for details. </p>
+            <!-- note othertype="note">
+                <p>The installer uses the <codeph>monasca-setup</codeph> script for the initial configuration of an agent. You can also execute this script for reconfiguring an agent. For details on the script, refer to the <xref
+                        format="html" href="https://github.com/openstack/monasca-agent/blob/stable/mitaka/docs/Agent.md"
+                        scope="external"><u><i>Monasca documentation</i></u></xref>.</p>
+            </note -->
+        </section>
+        <!-- section>
+            <title>Executing the Setup Script</title>
+            <p>To execute the <codeph>monasca-setup</codeph> script for updating an agent configuration, proceed as follows:</p>
+            <ol>
+                <li>
+                    <p>Log in to the server where the agent is installed.</p>
+                </li>
+                <li>
+                    <p>To stop the agent, execute the following command:</p>
+                    <codeblock>sudo systemctl stop monasca-agent</codeblock>
+                </li>
+                <li>
+                    <p>Execute the script. Each parameter must be preceded by <codeph>##</codeph>.</p>
+                    <p>Example:</p>
+                    <p>
+                        <codeblock>cd /opt/monasca-agent 
+sudo ./bin/monasca-setup \ 
+  ##username myusername \
+  ##password mypassword \
+  ##project_name myproject \
+  ##keystone_url http://192.168.1.5:5000/v3 \
+  ##check_frequency 60 \
+  ##monasca_url http://192.168.1.4:8080/v2.0</codeblock>
+                    </p>
+                    <p>For a list of the parameters that are supported by <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>, refer to <xref
+                            href="../appendix/r-confsettings-metrics.xml"/>.</p>
+                </li>
+            </ol>
+            <p>The agent is instantly available with the updated configuration settings.</p>
+        </section -->
+        <section>
+            <title>Updating the Configuration File</title>
+            <p>To edit the <codeph>agent.yaml</codeph> file, proceed as follows:</p>
+            <ol>
+                <li>
+                    <p>Log in to the server where the agent is installed.</p>
+                </li>
+                <li>
+                    <p>To stop the agent, execute the following command:</p>
+                    <codeblock>sudo systemctl stop monasca-agent</codeblock>
+                </li>
+                <li>
+                    <p>Open the file with your favorite editor.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /etc/monasca/agent/agent.yaml</codeblock>
+                </li>
+                <li>
+                    <p>Adapt the configuration settings as required. </p>
+                    <p>For a list of the parameters that are supported by <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>, refer to <xref
+                    href="../appendix/r-confsettings-metrics.xml"/>.</p>
+                </li>
+                <li>
+                    <p>To start the agent again, execute the following command:</p>
+                    <codeblock>sudo systemctl start monasca-agent	</codeblock>
+                </li>
+            </ol>
+            <p>The agent is instantly available with the updated configuration settings.</p>
+        </section>
+        <section>
+            <title>Activating Additional Metrics</title>
+            <p>The installer automatically activates standard metrics for monitoring your services and servers. They include system checks, for example, on CPU usage, disk space, or the average system load. No manual configuration is required for these system checks. The installer automatically configures them to retrieve monitoring data from the server where your agent is installed. For details on these metrics, refer to <xref
+                    href="../appendix/r-metricsstandard.xml"/>.</p>
+            <p>As enhancement to the standard metrics, <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> allows you to activate additional metrics. For a list of the metrics that are supported by <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>, refer to <xref
+                    href="../appendix/r-metricsadditional.xml"/>. </p>
+            <p>The agent ships with metrics templates that you can adapt to your environment and use for monitoring your services and servers.</p>
+            <p>To activate additional metrics, proceed as follows: </p>
+            <ol>
+                <li>
+                    <p>Log in to the server where the agent is installed.</p>
+                </li>
+                <li>
+                    <p>To stop the agent, execute the following command:</p>
+                    <codeblock>sudo systemctl stop monasca-agent</codeblock>
+                </li>
+                <li>
+                    <p>Copy the required template file.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo cp -p \
+ /opt/monasca-agent/share/monasca/agent/conf.d/rabbitmq.yaml.example \
+ /etc/monasca/agent/conf.d/rabbitmq.yaml</codeblock>
+                </li>
+                <li>
+                    <p>Open the template file with your favorite editor.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /etc/monasca/agent/conf.d/rabbitmq.yaml</codeblock>
+                </li>
+                <li>
+                    <p>Adapt the configuration to your environment. For configuration examples, refer to <xref
+                            href="../appendix/r-metricsadditional.xml"/>.</p>
+                </li>
+                <li>
+                    <p>To start the agent again, execute the following command:</p>
+                    <codeblock>sudo systemctl start monasca-agent</codeblock>
+                </li>
+            </ol>
+            <p>The activated metrics can instantly be used by the agent for retrieving monitoring data.</p>
+            <note othertype="note">
+                <p>The installer auto-detects applications and processes that are running on your system. It saves the detected settings to the corresponding configuration files, and automatically provides these files in the the <codeph>/etc/monasca/agent/conf.d/</codeph> directory (e.g. <codeph>host_alive.yaml</codeph>, <codeph>http_check.yaml</codeph>, or <codeph>process.yaml</codeph>). </p>
+            </note>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- (c) Copyright IBM Corp. 2004, 2005 All Rights Reserved. -->
+<bookmap xml:lang="en_US">
+    <title>HTTPS Support</title>
+    <bookmeta>
+        <prodinfo>
+            <prodname>ServerView</prodname>
+            <vrmlist>
+                <vrm version="15.3.2 Fix 5"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Cloud Monitoring Manager V1.1</prognum>
+            <component/>
+            <series>HTTPS Support</series>
+        </prodinfo>
+        <bookid>
+            <edition>Draft for Internal Use Only (2016-07-14)</edition>
+            <booknumber/>
+        </bookid>
+        <bookrights>
+            <bookowner name="."/>
+        </bookrights>
+    </bookmeta>
+    <frontmatter>
+        <preface format="dita" href="int-https/about/c-about.xml" type="concept">
+            <topicref href="int-https/about/c-readers.xml" type="concept"/>
+            <!-- topicref href="shared/gettingstarted/intro-convent.xml" type="concept"/ 
+ topicref href="shared/gettingstarted/intro-abbrev.xml" type="concept"/ -->
+            <topicref href="shared/gettingstarted/intro-availabledoc.xml" type="concept"/>
+        </preface>
+    </frontmatter>
+    <chapter href="int-https/metrics/c-metrics.xml">
+        <topicref format="dita" href="int-https/metrics/c-metrics-prepare.xml" type="concept"/>
+        <topicref format="dita" href="int-https/metrics/c-metrics-api.xml" type="concept"/>
+        <topicref format="dita" href="int-https/metrics/c-metrics-openstack.xml" type="concept"/>
+        <topicref format="dita" href="int-https/metrics/c-metrics-new.xml" type="concept"/>
+    </chapter>
+    <chapter href="int-https/logs/c-logs.xml">
+        <topicref format="dita" href="int-https/logs/c-logs-prepare.xml" type="concept"/>
+        <topicref format="dita" href="int-https/logs/c-logs-api.xml" type="concept"/>
+        <topicref format="dita" href="int-https/logs/c-logs-agent.xml" type="concept"/>
+    </chapter>
+    <appendix format="dita" href="shared/appendix/r-confsettings-metrics.xml" type="reference"/>
+    <appendix format="dita" href="int-https/appendix/r-confsettings-logshttps.xml" type="reference"/>
+</bookmap>

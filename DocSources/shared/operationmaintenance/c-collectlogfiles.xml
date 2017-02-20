@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Collecting the Agent Log Files</title>
+    <conbody>
+        <section>
+            <p>The agent log files record the events that occur in operating the agent. <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> provides an individual log file for each agent component. The log files provide important information, for example, for trouble-shooting.</p>
+            <p>The log files of the <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent are written to the following directory:</p>
+            <p><codeph>/var/log/monasca/agent</codeph></p>
+            <p>The log files of the <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent are written to the following directory:</p>
+            <p><codeph>/var/log/monasca/monasca-log-agent</codeph></p>
+        </section>
+    </conbody>
+</concept>

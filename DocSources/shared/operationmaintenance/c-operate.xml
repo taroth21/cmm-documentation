@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                            xml:lang="en-us">
+    <title>Operation and Maintenance</title>
+    <conbody>
+        <section>
+            <p>Regular operation and maintenance includes: </p>
+            <p>
+                <ul>
+                    <li>Starting and stopping agents and services.</li>
+                    <li>Disabling the monitoring of specific metrics in the configuration of a <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent.</li>
+                    <li>Disabling the collection of specific log data in the configuration of a <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent.</li>
+                    <li>Configuring data retention for the InfluxDB database.</li>
+                    <li>Configuring data retention for the Elasticsearch database.</li>
+                    <li>Removing metrics data from the InfluxDB database.</li>
+                    <li>Removing log data from the Elasticsearch database.</li>
+                    <li>Handling log files of agents and services.</li>
+                    <li>Backup and recovery of databases, configuration files, and dashboards.</li>
+                </ul>
+            </p>
+        </section>
+    </conbody>
+</concept>

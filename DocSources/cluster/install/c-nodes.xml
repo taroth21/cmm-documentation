@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Communication</title>
+    <conbody>
+        <section>
+            <p>There are components in the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> cluster, for example Apache Storm, that use the Fully Qualified Domain Name (FQDN) for communicating with each other. </p>
+            <p>To provide access to the components on the individual nodes, the mapping of IP addresses to host names and FQDNs must be specified on each node. You can either specify the DNS, or you can map your IP addresses in the <codeph>/etc/hosts</codeph> file on each node.</p>
+            <p>Example configuration in the <codeph>/etc/hosts</codeph> file:</p>
+            <codeblock>127.0.0.1 localhost
+192.168.10.4 monasca.cmm monasca
+192.168.10.5 openstack.cmm openstack
+192.168.10.6 exNode1.cmm exNode1 ex_node_1
+192.168.10.7 exNode2.cmm exNode2 ex_node_2
+192.168.10.8 exNode3.cmm exNode3 ex_node_3</codeblock>
+        </section>
+    </conbody>
+</concept>

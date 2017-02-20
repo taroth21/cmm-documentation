@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>Basic Usage Scenario</title>
+    <conbody>
+        <section>
+            <p
+                    conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_basic_usage_scenario_of_s_concept_conbody_section_2_p"/>
+            <fig>
+                <image
+                    align="left" alt="MetricsLogs.png" height="298"
+                    href="../../images/metricslogs.png"
+                    placement="break"
+                    width="700"/>
+            </fig>
+            <p id="A_concept_conbody_section_p_2"
+                                        >A <b>tenant user</b> acts as a service provider in the OpenStack environment. He books virtual machines to provide services to <b>end users</b> or to host services that he needs for his own development activities. <ph
+                                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> helps tenant users ensure that their services and the servers on which they are provided are configured and working as required.</p>
+            <p>As an <b>OpenStack operator</b>, you are a special tenant user who is responsible for administrating and maintaining the underlying OpenStack platform. The monitoring and log management services of <ph
+                                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> enable you to ensure the availability and quality of your platform. You use <ph
+                                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> for:</p>
+                        <p>
+                                <ul id="Monitoring_physical_and_virtu_concept_conbody_section_p_4">
+                                        <li>Monitoring physical and virtual servers, hypervisors, and OpenStack services.</li>
+                                        <li>Monitoring middleware components, for example, database services. </li>
+                                        <li>Retrieving and analyzing the log data of the OpenStack services and servers, the middleware components, and the operating system.</li>
+                                </ul>
+                        </p>
+            <p>The <b><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> operator</b> is responsible for providing the monitoring and log management services to the tenant users and the OpenStack operator. This enables them to focus on operation and the quality of their services and servers without having to carry out the tedious tasks implied by setting up and administrating their own monitoring software. The <ph
+                                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> operator uses the monitoring services himself for ensuring the quality of <ph
+                                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+    </conbody>
+</concept>

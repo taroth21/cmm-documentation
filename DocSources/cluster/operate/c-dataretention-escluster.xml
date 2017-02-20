@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Configuring Log Data Retention</title>
+    <conbody>
+        <section>
+            <p
+                conref="../../cmmoperator/operate/c-dataretention-es.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Log_data_is_stored_in_the_Ela_concept_conbody_section_p_1"/>
+            <p>By default, an Elasticsearch index is automatically deleted if it is older than 60 days. In the default cluster environment, the delete job is executed every day at midnight on the first node, at 1:00 pm on the second node, and at 2:00 pm on the third node. You can change these default settings individually for each node, if required.</p>
+            <p>Proceed as follows to change the data retention settings that were defined when installing the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> cluster:</p>
+            <ol>
+                <li>
+                    <p>Log in to the node for which you want to update the settings.</p>
+                </li>
+                <li
+                    conref="../../cmmoperator/operate/c-dataretention-es.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Open_the_concept_conbody_section_ol_l"/>
+                <li>
+                    <p>Specify the time span after which you want indices to be removed. It is defined by the <codeph>unit_count</codeph> parameter in the <codeph>action: delete_indices</codeph> section. It is recommended that you specify the same time span on every node. This avoids problems in case an Elasticsearch Curator job is not run as scheduled. </p>
+                    <p>Example for a time span of 30 days: </p>
+                    <codeblock>unit_count: 30</codeblock>
+                </li>
+                <li
+                    conref="../../cmmoperator/operate/c-dataretention-es.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Edit_the_concept_conbody_section_ol_l"/>
+                <li
+                    conref="../../cmmoperator/operate/c-dataretention-es.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/To_specify_when_to_run_a_job_concept_conbody_section_ol_l"/>
+            </ol>
+            <p>As soon as you have saved your changes, your updated data retention policy takes effect. Repeat the steps for each node for which you want to update the data retention settings.</p>
+            <p
+                conref="../../cmmoperator/operate/c-dataretention-es.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/For_details_on_Elasticsearch_concept_conbody_section_p_5"/>
+        </section>
+    </conbody>
+</concept>

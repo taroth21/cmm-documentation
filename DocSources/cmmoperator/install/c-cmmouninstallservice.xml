@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+            xml:lang="en-us">
+    <title>Uninstalling the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+        /> Service and the OpenStack Extensions</title>
+    <conbody>
+        <section>
+            <p>To uninstall the <ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service and the OpenStack extensions, proceed as follows:</p>
+            <ol
+                            compact="no">
+                <li>
+                    <p>Log in to the Control Machine.</p>
+                </li>
+                <li>
+                    <p>Open the configuration file of the Control Machine with your favorite editor. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /etc/ansible/hosts</codeblock>
+                </li>
+                <li>
+                    <p>Check that the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> host, the OpenStack Keystone host, and the OpenStack Horizon host from which you want to uninstall the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components are configured correctly. </p>
+                    <p>The IP address of the remote machines from which to uninstall the software components as well as the user name of the user who is to uninstall the software components must be specified. </p>
+                    <note othertype="note">The user who uninstalls the software components must have access to the corresponding host. Access as a user with root privileges is required. </note>
+                </li>
+                <li>
+                    <p>To run the uninstaller, execute the following command:</p>
+                    <codeblock>ansible-playbook /opt/FJSVsvcmm/uninstaller.yml</codeblock>
+                </li>
+                <li>
+                    <p>To remove the technical users that were used by <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, execute the following commands:</p>
+                    <codeblock>userdel -r curator
+userdel -r httpd_static_user
+userdel -r kafka
+userdel -r kibana
+userdel -r memcached
+userdel -r mon-agent
+userdel -r mon-api
+userdel -r mon-log-agent
+userdel -r mon-log-api
+userdel -r mon-log-metrics 
+userdel -r mon-notification
+userdel -r mon-persister
+userdel -r mon-schema
+userdel -r mon-thresh
+userdel -r mon-transformer
+userdel -r monasca_resources
+userdel -r storm
+userdel -r zookeeper</codeblock>
+                </li>
+            </ol>
+            <p>As soon as the uninstallation is finished, you can delete the OpenStack users, roles, and projects that are no longer relevant.</p>
+            <note othertype="note">
+                <p>Before installing <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> again, it is required to reboot the operating system.</p>
+            </note>
+        </section>
+    </conbody>
+</concept>

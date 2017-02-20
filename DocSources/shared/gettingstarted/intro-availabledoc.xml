@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_1E0510B5A3A349049FE82D9894E7DE18"
+                    xml:lang="en-us">
+        <title>Available Documentation</title>
+        <conbody>
+                <section>
+                        <p>The following documentation on <ph
+                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> is available:
+                        </p>
+                        <ul>
+                                <li><i>Overview:</i> A manual introducing <ph
+                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>. It is written for everybody interested in <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                                <li><i>Tenant User's Guide:</i> A manual for tenant users describing how <ph
+                                                conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> supports them in monitoring their services and virtual machines in OpenStack.</li>
+                                <li><i>OpenStack Operator's Guide:</i> A manual for OpenStack operators describing how to prepare their OpenStack platform for <ph
+                                                conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                                />. The manual also describes how the operators use <ph
+                                                conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> for monitoring their OpenStack services.</li>
+                                <li><i><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                                /> Operator's Guide:</i> A manual for operators describing how to install, operate, and maintain <ph
+                                                conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                                /> in single mode. The manual also describes how the operators use <ph
+                                                conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> for monitoring their environment.</li>
+                                <li><i>Cluster Management Guide:</i> A manual for operators describing how to install, operate, and maintain <ph
+                                                conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> in cluster mode.</li>
+                        </ul>
+                </section>
+        </conbody>
+</concept>

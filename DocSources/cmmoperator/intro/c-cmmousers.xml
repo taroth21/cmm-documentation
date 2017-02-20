@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>User Management</title>
+    <conbody>
+        <section>
+            <p
+                conref="../../overview/whatiscmm/c-userroles.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/is_fully_integrated_with_Key_concept_conbody_section_2_p"/>
+            <p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> integration with Keystone requires any <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> user, including the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> operator, to be registered as an OpenStack user. All authentication and authorization in <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> is done through Keystone. If a user requests monitoring data, for example, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> verifies that the user is a valid user in OpenStack and allowed to access the requested metrics.</p>
+            <p
+                conref="../../overview/whatiscmm/c-userroles.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/users_are_created_and_admini_concept_conbody_section_2_p"/>
+            <ul
+                conref="../../overview/whatiscmm/c-userroles.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Each_user_assumes_a_role_in_O_concept_conbody_section_2_ul">
+                <li/>
+            </ul>
+            <p>For details on user management, refer to the <xref
+                format="html" href="http://docs.openstack.org/liberty/"
+                scope="external"><u><i>OpenStack documentation</i></u></xref>.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Communication</title>
+    <conbody>
+        <section>
+            <p>There are components in CMM, for example Apache Storm, that require a Fully Qualified Domain Name (FQDN) that absolutely and uniquely identifies the corresponding host machine in your <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> environment. </p>
+            <p>Before installing <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    />, it is therefore required to define the mapping of IP addresses, host names, and FQDNs. You can either specify the DNS, or you can map your IP addresses in the <codeph>/etc/hosts</codeph> file on your <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> host.</p>
+            <p>Example configuration in the <codeph>/etc/hosts</codeph> file:</p>
+            <codeblock>127.0.0.1 localhost
+192.168.10.4 monasca.cmm monasca
+192.168.10.5 openstack.cmm openstack</codeblock>
+        </section>
+    </conbody>
+</concept>

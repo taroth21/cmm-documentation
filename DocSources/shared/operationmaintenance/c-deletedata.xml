@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Data Retention and Cleanup</title>
+    <conbody>
+        <section>
+            <p>By default, <ph
+                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> retains the data stored in the Elasticsearch database and the InfluxDB database for 60 days. Older data is automatically deleted. You can change the default data retention configuration for the databases, if required. In addition to implementing your data retention requirements, you should check for the amount and size of the collected metrics and log data at regular intervals, and delete any unnecessary data to free disk space. </p>
+            <p>This section describes how to:</p>
+            <ul>
+                <li>Disable the monitoring of specific metrics in the configuration of a <ph
+                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent.</li>
+                <li>Disable the collection of specific log data in the configuration of a <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent.</li>
+                <li>Configure data retention for the InfluxDB database.</li>
+                <li>Configure data retention for the Elasticsearch database.</li>
+                <li>Remove metrics data from the InfluxDB database.</li>
+                <li>Remove log data from the Elasticsearch database.</li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

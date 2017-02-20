@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Databases</title>
+    <conbody>
+        <section>
+                        <p>You need to create regular backups of the following databases on the host where the <ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is installed:</p>
+                        <ul
+                id="Elasticsearch_database_concept_conbody_section_1_ul">
+                                <li>Elasticsearch database</li>
+                                <li>InfluxDB database</li>
+                                <li>MariaDB database</li>
+                        </ul>
+                        <p
+                id="It_is_recommended_that_backup_concept_conbody_section_1_p">It is recommended that backup and restore operations for databases are carried out by experienced operators only.</p>
+                </section>
+                <section>
+                        <title>Elasticsearch Database</title>
+                        <p
+                id="For_backing_up_and_restoring_concept_conbody_section_2_p">For backing up and restoring your Elasticsearch database, you can use the Snapshot and Restore module of Elasticsearch.</p>
+                        <p
+                    id="To_make_a_backup_of_the_datab_concept_conbody_section_2_p">To make a backup of the database, proceed as follows:</p>
+                        <ol>
+                                <li
+                            id="Make_sure_that_concept_conbody_section_2_o">
+                                        <p>Make sure that <codeph>curl</codeph> is installed. If this is not the case, download and install it, for example, from the following Web site: <xref
+                            format="html"
+                            href="http://curl.haxx.se/download.html"
+                        scope="external"><u><i>http://curl.haxx.se/download.html</i></u></xref>.</p>
+                                </li>
+                                <li>Log in to the host where the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is installed.</li>
+                                <li>
+                                        <p>Create a snapshot repository.</p>
+                                        <p>Example:</p>
+                                        <codeblock>curl -XPUT http://localhost:9200/_snapshot/my_backup -d '{
+  "type": "fs",
+  "settings": {
+       "location": "/mount/backup/elasticsearch1/my_backup",
+       "compress": true
+  }
+}'</codeblock>
+                                        <p
+                        id="The_example_registers_a_share_concept_conbody_section_2_o">The example registers a shared file system repository (<codeph>"type": "fs"</codeph>) that uses the <codeph>/mount/backup/elasticsearch1</codeph> directory for storing snapshots. </p>
+                                        <note othertype="note"
+                                                        >The directory for storing snapshots must be specified as configured during the installation of the <ph
+                                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                                        /> Service in the <codeph>group_vars/monasca_group</codeph> file. The directory must be manually mounted before creating the snapshot. The <codeph>elastic</codeph> user must be specified as the owner of the directory.</note>
+                                        <p
+                    id="compress_concept_conbody_section_2_o"><codeph>compress</codeph> is turned on to compress the metadata files.</p>
+                                </li>
+                                <li id="Check_whether_the_repository_concept_conbody_section_2_o">
+                                        <p>Check whether the repository was created successfully.</p>
+                                        <p>Example:</p>
+                                        <codeblock>curl -XGET http://localhost:9200/_snapshot/my_backup</codeblock>
+                                        <p>Example response for a successfully created repository:</p>
+                                        <codeblock>{
+  "my_backup": {
+    "type": "fs",
+    "settings": {
+      "compress": "true",
+      "location": "/mount/backup/elasticsearch1/my_backup"
+    }
+  }
+}</codeblock>
+                                </li>
+                                <li id="Create_a_snapshot_of_your_dat_concept_conbody_section_2_o">
+                                        <p>Create a snapshot of your database that contains all indices. A repository can contain multiple snapshots of the same database. The name of a snapshot must be unique within the snapshots created for your database.</p>
+                                        <p>Example:</p>
+                                        <codeblock>curl -XPUT http://localhost:9200/_snapshot/my_backup/snapshot_1?wait_for_completion=true</codeblock>
+                                        <p>The example creates a snapshot named <codeph>snapshot_1</codeph> for all indices in the <codeph>my_backup</codeph> repository.</p>
+                                </li>
+                        </ol>
+                        <p>To restore the database instance, proceed as follows:</p>
+                        <ol id="Close_all_indices_of_your_dat_concept_conbody_section_2_o">
+                                <li>
+                                        <p>Close all indices of your database.</p>
+                                        <p>Example:</p>
+                                        <codeblock>curl -XPOST http://localhost:9200/_all/_close</codeblock>
+                                </li>
+                                <li>
+                                        <p>Restore all indices from the snapshot you have created.</p>
+                                        <p>Example:</p>
+                                        <codeblock>curl -XPOST http://localhost:9200/_snapshot/my_backup/snapshot_1/_restore</codeblock>
+                                        <p>The example restores all indices from <codeph>snapshot_1</codeph> that is stored in the <codeph>my_backup</codeph> repository.</p>
+                                </li>
+                        </ol>
+                        <p id="For_additional_information_ba_concept_conbody_section_2_p"
+                                        >For additional information backing up and restoring an Elasticsearch database, refer to the <xref
+                                        format="html"
+                                        href="https://www.elastic.co/guide/en/elasticsearch/reference/2.3/modules-snapshots.html"
+                                        scope="external"><u><i>Elasticsearch documentation</i></u></xref>.</p>
+                </section>
+                <section>
+                        <title>InfluxDB Database</title>
+                        <p>For backing up and restoring your InfluxDB database, you can use the InfluxDB shell. The shell is part of your InfluxDB distribution. If you installed InfluxDB via a package manager, the shell is, by default, installed in the <codeph>/usr/bin</codeph> directory.</p>
+                        <p>To make a backup of the database, proceed as follows:</p>
+                        <ol>
+                                <li>
+                                        <p>Log in to the InfluxDB database as a user who is allowed to run the <codeph>influxdb</codeph> service.</p>
+                                        <p>Example:</p>
+                                        <codeblock>$ su influxdb </codeblock>
+                                </li>
+                                <li>
+                                        <p>Back up the database.</p>
+                                        <p>Example:</p>
+                                        <codeblock>$ ./influxd backup -host "&lt;host&gt;:&lt;port&gt;" /mount/backup/mysnapshot</codeblock>
+                                        <p>Replace <codeph>&lt;host&gt;</codeph> and <codeph>&lt;port&gt;</codeph> with the IP address and port number that are defined in the <codeph>meta</codeph> section in your InfluxDB configuration file. By default, the <codeph>influxdb.conf</codeph> file is located in the <codeph>/etc/influxdb/</codeph> directory. The example creates the backup for the database in <codeph>/mount/backup/mysnapshot</codeph>.</p>
+                                </li>
+                        </ol>
+                        <p>Before restoring the database, make sure that all database processes are shut down. To restore the database, you can then proceed as follows:</p>
+                        <ol>
+                                <li>
+                                        <p>Stop the InfluxDB database service. Use the following command:</p>
+                                        <codeblock>$ systemctl stop influxdb</codeblock>
+                                </li>
+                                <li>
+                                        <p>Log in to the InfluxDB database as a user who is allowed to run the <codeph>influxdb</codeph> service.</p>
+                                        <p>Example:</p>
+                                        <codeblock>$ su influxdb </codeblock>
+                                </li>
+                                <li>
+                                        <p>Restore the database. </p>
+                                        <p>Example:</p>
+                                        <codeblock>$ ./influxd restore -config /etc/influxdb/influxdb.conf /mount/backup/mysnapshot</codeblock>
+                                        <p>The example restores the backup from <codeph>/mount/backup/mysnapshot</codeph> to <codeph>/etc/influxdb/influxdb.conf</codeph>.</p>
+                                </li>
+                                <li>
+                                        <p>Start the InfluxDB database service. Use the following command:</p>
+                                        <codeblock>$ systemctl start influxdb</codeblock>
+                                </li>
+                        </ol>
+                        <p>For additional information on backing up and restoring an InfluxDB database, refer to the <xref
+                                        format="html"
+                                        href="https://docs.influxdata.com/influxdb/v0.10/administration/backup_and_restore/"
+                                        scope="external"><u><i>InfluxDB documentation</i></u></xref>.</p>
+                </section>
+                <section>
+                        <title>MariaDB Database</title>
+                        <p id="For_backing_up_and_restoring_concept_conbody_section_4_p"
+                                        >For backing up and restoring your MariaDB database, you can use the <codeph>mysqldump</codeph> utility program. <codeph>mysqldump</codeph> performs a logical backup that produces a set of SQL statements. These statements can later be executed to restore the database.</p>
+                        <p>To back up your MariaDB database, you must be the owner of the database or a user with superuser privileges. You can use the following command.</p>
+                        <p>Example:</p>
+                        <codeblock>mysqldump -u root -p mon &gt; dumpfile.sql</codeblock>
+                        <p>In addition to the name of the database, you have to specify the name and the location where <codeph>mysqldump</codeph> stores its output.</p>
+                        <p>To restore your MariaDB database, proceed as follows:</p>
+                        <ol>
+                                <li>Log in to the host where the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is installed as a user with root privileges.</li>
+                                <li>Go to the directory where the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> installation package is located.<p>Example:</p><p>
+                                                <codeblock>cd /opt/FJSVsvcmm</codeblock>
+                                        </p></li>
+                                <li>
+                                        <p>Stop all <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> agents and services: </p>
+                                        <p>
+                                                <codeblock>./services.sh stop</codeblock>
+                                        </p>
+                                </li>
+                                <li>
+                                        <p>Start the <codeph>mariadb</codeph> service:</p>
+                                        <codeblock>systemctl start mariadb</codeblock>
+                                </li>
+                                <li id="Log_in_to_the_database_you_ha_concept_conbody_section_4_o">
+                                        <p>Log in to the database you have backed up as a user with root privileges.</p>
+                                        <p>Example:</p>
+                                        <codeblock>mysql -u root -p mon</codeblock>
+                                </li>
+                                <li id="Remove_and_create_the_databas_concept_conbody_section_4_o">
+                                        <p>Remove and create the database:</p>
+                                        <codeblock>&gt; DROP DATABASE mon;
+&gt; CREATE DATABASE mon;</codeblock>
+                                </li>
+                                <li id="Exit_concept_conbody_section_4_o">
+                                        <p>Exit <codeph>mariadb</codeph>:</p>
+                                        <codeblock>&gt; \q</codeblock>
+                                </li>
+                                <li id="Restore_the_database._concept_conbody_section_4_o">
+                                        <p>Restore the database.</p>
+                                        <p>Example:</p>
+                                        <codeblock>mysql -u root -p mon &lt; dumpfile.sql</codeblock>
+                                </li>
+                                <li>
+                                        <p>Start all <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> agents and services:</p>
+                                        <codeblock>./services.sh start</codeblock>
+                                </li>
+                        </ol>
+                        <p id="For_additional_information_on_concept_conbody_section_4_p"
+                                        >For additional information on backing up and restoring a MariaDB database with <codeph>mysqldump</codeph>, refer to the <xref
+                                        format="html" href="https://mariadb.com/kb/en/mariadb/mysqldump/"
+                                        scope="external"><u><i>MariaDB documentation</i></u></xref>.</p>
+                </section>
+    </conbody>
+</concept>

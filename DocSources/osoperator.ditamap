@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+                         "">
+<!-- Copyright FUJITSU LIMITED 2017 -->
+
+<bookmap xml:lang="en_US">
+   
+    <title>OpenStack Operator's Guide</title>
+    <bookmeta>
+        <prodinfo>
+            <prodname>ServerView</prodname>
+            <vrmlist>
+                <vrm version="1.2"/>
+            </vrmlist>
+            <brand>FUJITSU Software</brand>
+            <prognum>Cloud Monitoring Manager V1.2</prognum>
+            <component/>
+            <series>OpenStack Operator's Guide</series>
+        </prodinfo>
+        <bookid>
+            <edition>Preliminary Version (2017-02-15)</edition>
+            <booknumber>J2UL-2075-03ENZ0(00)</booknumber>
+        </bookid>
+        <bookrights>
+            <bookowner name="."/>
+        </bookrights>
+    </bookmeta>
+    
+    <frontmatter>
+        <preface format="dita" href="osoperator/about/c-about.xml" type="concept">
+            <topicref href="osoperator/about/c-readers.xml" type="concept"/>
+            <topicref href="shared/gettingstarted/intro-convent.xml" type="concept"/>
+            <topicref href="shared/gettingstarted/intro-abbrev.xml" type="concept"/>
+            <topicref href="shared/gettingstarted/intro-availabledoc.xml" type="concept"/>
+            <topicref href="shared/gettingstarted/c-webreferences.xml" type="concept"/>
+            <topicref href="shared/gettingstarted/intro-trademarks.xml" type="concept"/>
+            <topicref href="shared/gettingstarted/intro-copyright.xml" type="concept"/>
+            <topicref href="shared/gettingstarted/intro-export.xml" type="concept"/>
+        </preface>
+    </frontmatter>
+    
+    <chapter href="shared/intro/c-intro.xml">
+        <topicref format="dita" href="shared/intro/c-usagescenario.xml" type="concept"/>
+        <topicref format="dita" href="osoperator/intro/c-osotasks.xml" type="concept"/>
+        <topicref format="dita" href="osoperator/intro/c-osocomponents.xml" type="concept"/>
+        <topicref format="dita" href="osoperator/intro/c-osousers.xml" type="concept"/>
+    </chapter>
+    
+    <chapter href="osoperator/install/c-osoinstall.xml">
+        <topicref format="dita" href="osoperator/install/c-osoprepare.xml" type="concept">
+            <topicref format="dita" href="osoperator/install/c-osoprepare-pre.xml" type="concept"/>
+            <topicref format="dita" href="shared/install/c-cmmoprepare-cm.xml" type="concept"/>
+            <topicref format="dita" href="shared/install/c-cmmoprepare-sw.xml" type="concept"/>
+            <topicref format="dita" href="shared/install/c-cmmoprepare-sec.xml" type="concept"/>
+            <topicref format="dita" href="shared/install/c-cmmoprepare-https.xml" type="concept"/>
+            <topicref format="dita" href="shared/install/c-cmmoprepare-pip.xml" type="concept"/>
+            <topicref format="dita" href="shared/install/c-cmmoprepare-bs.xml" type="concept"/>
+        </topicref>
+        <topicref format="dita" href="osoperator/install/c-osoprepansiblemaster.xml" type="concept"/>
+        <topicref format="dita" href="osoperator/install/c-osoinstosext.xml" type="concept"/>
+        <topicref format="dita" href="osoperator/install/c-osoinstmetricsagent.xml" type="concept">
+            <topicref format="dita" href="osoperator/install/c-osoinstallationmetagent.xml" type="concept"/>
+            <topicref format="dita" href="shared/install/c-configuremetagent.xml" type="concept"/>
+        </topicref>
+        <topicref format="dita" href="osoperator/install/c-osoinstlogagent.xml" type="concept">
+            <topicref format="dita" href="osoperator/install/c-osoinstallationlogagent.xml" type="concept"/>
+            <topicref format="dita" href="shared/install/c-configurelogagent.xml" type="concept"/>
+        </topicref>
+        <topicref format="dita" href="osoperator/install/c-osooperate.xml" type="concept">
+            <topicref format="dita" href="shared/operationmaintenance/c-startstopagents.xml" type="concept"/>
+            <topicref format="dita" href="shared/operationmaintenance/c-removemetrics.xml" type="concept"/>
+            <topicref format="dita" href="shared/operationmaintenance/c-disablelogretrieval.xml" type="concept"/>
+            <topicref format="dita" href="shared/operationmaintenance/c-collectlogfiles.xml" type="concept"/>
+            <topicref format="dita" href="osoperator/install/c-osobackup.xml" type="concept"/>
+        </topicref>
+        <topicref format="dita" href="osoperator/install/c-osouninstall.xml" type="concept"/>
+    </chapter>
+   
+    <chapter href="osoperator/prepare/c-osopreparetu.xml">
+        <topicref format="dita" href="osoperator/prepare/c-osoprep-turoles.xml" type="concept"/>
+        <topicref format="dita" href="osoperator/prepare/c-osoprep-tuinstall.xml" type="concept"/>
+        <topicref format="dita" href="osoperator/prepare/c-osoprep-tulibs.xml" type="concept"/>
+        <topicref format="dita" href="osoperator/prepare/c-osoprep-tuconfig.xml" type="concept"/>
+    </chapter>
+   
+    <chapter href="shared/monitor/c-osomonitor.xml">
+        <topicref format="dita" href="shared/monitor/c-osomon-overview.xml" type="concept"/>
+        <topicref format="dita" href="shared/monitor/c-osomon-grafana.xml" type="concept"/>
+        <topicref format="dita" href="shared/monitor/c-osomon-alarm.xml" type="concept"/>
+        <topicref format="dita" href="shared/monitor/c-osomon-alert.xml" type="concept"/>
+        <topicref format="dita" href="shared/monitor/c-osomon-statusinfo.xml" type="concept"/>
+    </chapter>
+    
+    <chapter href="shared/logging/c-osologging.xml">
+        <topicref format="dita" href="shared/logging/c-osolog-index.xml" type="concept"/>
+        <topicref format="dita" href="shared/logging/c-osolog-kibana.xml" type="concept"/>
+        <topicref format="dita" href="shared/logging/c-osolog-alarms.xml" type="concept"/>
+    </chapter>
+    
+    <appendix format="dita" href="shared/appendix/r-confsettings.xml" type="reference">
+        <topicref format="dita" href="shared/appendix/r-confsettings-metrics.xml" type="reference"/>
+        <topicref format="dita" href="shared/appendix/r-confsettings-logs.xml" type="reference"/>
+    </appendix>
+    
+    <appendix format="dita" href="osoperator/appendix/r-osometrics.xml" type="reference">
+        <topicref format="dita" href="shared/appendix/r-metricsstandard.xml" type="reference"/>
+        <topicref format="dita" href="shared/appendix/r-metricsadditional.xml" type="reference"/>
+    </appendix>
+    
+    <appendix href="shared/glossary/r-glossary.xml"/>
+    
+</bookmap>

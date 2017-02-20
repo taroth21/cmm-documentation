@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>Configuration Files</title>
+    <conbody>
+        <section>
+            <p>Below you find a list of the configuration files of the agents and the individual services included in the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Service. Back up these files at least after you have installed and configured <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> and after each change in the configuration.</p>
+        </section>
+        <section>
+            <p>
+                <codeblock>/etc/firewalld/firewalld.conf
+/etc/firewalld/lockdown-whitelist.xml
+/etc/firewalld/zones/public.xml
+/etc/influxdb/influxdb.conf
+/etc/kafka/server.properties
+/etc/my.cnf
+/etc/my.cnf.d/client.cnf
+/etc/my.cnf.d/mysql-clients.cnf
+/etc/my.cnf.d/server.cnf
+/etc/monasca/agent/agent.yaml
+/etc/monasca/agent/conf.d/*
+/etc/monasca/agent/supervisor.conf
+/etc/monasca/api-config.yml
+/etc/monasca/log-api-config.conf
+/etc/monasca/log-api-config.ini
+/etc/monasca/log/persister.conf
+/etc/monasca/log/transformer.conf
+/etc/monasca/monasca-log-agent/agent.conf
+/etc/monasca/notification.yaml
+/etc/monasca/persister-config.yml
+/etc/monasca/thresh-config.yml
+/etc/systemd/system/elasticsearch.service
+/etc/systemd/system/kafka.service
+/etc/systemd/system/kibana.service
+/etc/systemd/system/monasca-agent.service
+/etc/systemd/system/monasca-api.service
+/etc/systemd/system/monasca-log-agent.service
+/etc/systemd/system/monasca-log-api.service
+/etc/systemd/system/monasca-log-persister.service
+/etc/systemd/system/monasca-log-transformer.service
+/etc/systemd/system/monasca-notification.service
+/etc/systemd/system/monasca-persister.service
+/etc/systemd/system/monasca-thresh.service
+/etc/systemd/system/static_httpd.service
+/etc/systemd/system/storm-nimbus.service
+/etc/systemd/system/storm-supervisor.service
+/etc/systemd/system/zookeeper.service
+/opt/elasticsearch/config/elasticsearch.yml
+/opt/elasticsearch/config/logging.yml
+/opt/kibana/config/kibana.yml
+/usr/lib/systemd/system/mariadb.service</codeblock>
+            </p>
+        </section>
+        <section>
+            <title>Recovery</title>
+            <p>If you need to recover the configuration of one or more agents or services, the recommended procedure is as follows: </p>
+            <ol>
+                <li>
+                    <p>If necessary, uninstall the agents or services, and install them again.</p>
+                </li>
+                <li>
+                    <p>Stop the agents or services.</p>
+                </li>
+                <li>
+                    <p>Copy the backup of your configuration files to the correct location according to the table above.</p>
+                </li>
+                <li>
+                    <p>Start the agents or services again.</p>
+                </li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

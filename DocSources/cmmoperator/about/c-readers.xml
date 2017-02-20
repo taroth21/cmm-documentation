@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Readers of this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual is written for operators who install, operate, and maintain <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    />, and who monitor the host on which <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed. </p>
+            <p>The manual assumes that you have profound knowledge of OpenStack and <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    />, especially the individual services <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> is composed of. For installing the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> components, you must be familiar with the administration and operation of LINUX systems.</p>
+        </section>
+    </conbody>
+</concept>

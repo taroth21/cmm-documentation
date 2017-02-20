@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Removing Metrics Data</title>
+    <conbody>
+        <section>
+            <p>Metrics data is stored in the Metrics and Alarms Database, an InfluxDB database.</p>
+            <note othertype="note">
+                <p>The InfluxDB version that is integrated into the current version of <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> does not feature reliable mechanisms for deleting outdated or unnecessary metrics data from a clustered database.</p>
+            </note>
+        </section>
+    </conbody>
+</concept>

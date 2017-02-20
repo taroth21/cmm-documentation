@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Log File Handling</title>
+    <conbody>
+        <section>
+            <p>In case of trouble with the <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> services, you can study their log files to find the reason. The log files are also useful if you need to contact your support organization. For storing the log files, the default installation uses the <codeph>/var/log</codeph> directory on the hosts where the agents or services are installed.</p>
+            <p>You can use <codeph>systemd</codeph>, a system and session manager for LINUX, and <codeph>journald</codeph>, a LINUX logging interface, for addressing dispersed log files.</p>
+            <p>The <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> installer automatically puts all <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> services under the control of <codeph>systemd</codeph>. <codeph>journald</codeph> provides a centralized management solution for the logging of all processes that are controlled by <codeph>systemd</codeph>. The logs are collected and managed in a so-called journal controlled by the <codeph>journald</codeph> daemon.</p>
+            <p>For details on the <codeph>systemd</codeph> and <codeph>journald</codeph> utilities, refer to the <xref
+                    format="html"
+                    href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/part-Basic_System_Configuration.html"
+                    scope="external"><u><i>Red Hat Enterprise LINUX documentation</i></u></xref>.</p>
+        </section>
+        
+    </conbody>
+</concept>

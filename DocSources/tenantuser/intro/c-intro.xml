@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>Introduction </title>
+    <conbody>
+        <section>
+            <p
+                    conref="../../overview/whatiscmm/c-cmm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/As_more_and_more_applications_concept_conbody_section_p_1"/>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> addresses the requirements of large-scale public and private clouds where high numbers of physical and virtual servers need to be monitored and huge amounts of monitoring data need to be managed. It consolidates metrics, alarms, and notifications, as well as health and status information from multiple systems, thus reducing the complexity and allowing for a higher-level analysis of the monitoring data.</p>
+            <p conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/covers_all_aspects_of_a_Moni_concept_conbody_section_1_p"/>
+            <ul conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Storage_of_monitoring_data_in_concept_conbody_section_1_ul">
+                <li/>
+            </ul>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+            xml:lang="en-us">
+    <title>Installing the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent</title>
+    <conbody>
+        <section>
+            <p>For monitoring the OpenStack services, a <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> Log Agent must be installed on each OpenStack node where services you want to monitor are provided. </p>
+            <p>As a prerequisite for installing an agent, the offline resources, the OpenStack extensions, and the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> Service must have been installed.</p>
+            <p>The installation consists of the following steps:</p>
+            <ol>
+                <li>Installing the agent.</li>
+                <li>Configuring the agent.</li>
+            </ol>
+            <note othertype="note">
+                <p>As an OpenStack operator, you are also responsible for preparing the monitoring environment for your tenant users who have booked a virtual machine in OpenStack. They monitor their virtual machines with libvirt. For details, refer to <xref
+                        href="../prepare/c-osopreparetu.xml"/>.</p>
+            </note>
+        </section>
+    </conbody>
+</concept>

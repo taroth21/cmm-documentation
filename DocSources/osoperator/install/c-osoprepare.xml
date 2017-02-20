@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Prerequisites and Preparation</title>
+    <conbody>
+        <section>
+            <p>The following sections describe the prerequisites that must be fulfilled and the preparations you need to take before installing the OpenStack extensions and the required agents.</p>
+        </section>
+    </conbody>
+</concept>

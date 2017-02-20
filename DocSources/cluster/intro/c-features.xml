@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB" xml:lang="en-us">
+    <title>Key Features</title>
+    <conbody>
+        <section>
+            <p>The key features of making <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> available on multiple host machines that are linked together in a cluster configuration include: </p>
+            <ul>
+                <li>High availability</li>
+                <li>Fault tolerance and recoverability</li>
+                <li>Scalability</li>
+            </ul>
+            <p>As multiple hosts and additional hardware are used in a clustered solution, monitoring the solution is becoming increasingly difficult. As a <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Operator, you simply use the monitoring and log management features of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. A <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent and a <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> Log Agent are installed on each node. They constantly check the quality of your cluster and guarantee that it is successfully used to manage, track, and optimize your cloud infrastructure and the services that are provided.</p>
+        </section>
+        <section>
+            <title>High Availability</title>
+            <p>An infrastructure that runs redundant instances of each <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> component ensures high availability. Distributing <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> redundantly across different nodes guarantees that <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> is operational and providing its intended monitoring and log management services even if a node fails or needs any maintenance. </p>
+            <p>Failures in operating individual components or complete nodes are instantly detected and automatically trigger internal fail over mechanisms without the need for administrative intervention. If an instance of a CMM component on one node fails, CMM uses another instance of the component on a different node that is up and running. <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> users do not experience any downtimes. They can rely on operational continuity and an uninterrupted access to <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                />'s monitoring and log management services. </p>
+        </section>
+        <section>
+            <title>Fault Tolerance</title>
+            <p>Maintaining a replicated environment on multiple nodes means providing fault tolerance through functional redundancy. </p>
+            <p>In case of failures of individual CMM components or underlying hardware resources, CMM continues operating properly without sacrificing system performance and operational quality. Continuous monitoring and log management services can be guaranteed for end users, even if multiple problems occur.</p>
+            <p>CMM does not only detect failures, but also switches to redundant components instantly, thus automatically recovering from the detected failures. A node that fails, for example, is able to recover completely autonomously. It restarts and synchronizes with the other nodes automatically before joining the cluster again. </p>
+        </section>
+        <section>
+            <title>Scalability</title>
+            <p>A <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> cluster can easily and reliably be extended to address the requirements of constantly evolving and highly demanding cloud infrastructures. You cannot only scale up vertically by adding memory, disk space, or CPU, but you can also scale out horizontally by adding physical or virtual servers to the monitoring solution as required. </p>
+            <p>With cluster support, <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> responds to both increased and decreased demands in data load. To accommodate a growth, an additional node can easily be added to the cluster configuration. Removing a node that is no longer required gives end users no experience of downtime. </p>
+            <p>The modular architecture and design of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> even supports you in scaling out individual <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> components only. If the data load on an individual component is particularly high in your environment, you can scale out just this component to an additional node, thus distributing the data load and further improving your system performance. </p>
+        </section>
+    </conbody>
+</concept>

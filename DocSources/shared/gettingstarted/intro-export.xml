@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd"
+[
+<!ENTITY % entities PUBLIC "-//XDOC//ENTITIES//FujitsuUserDoc" "entities.dtd">
+]>
+
+<concept xml:lang="en-us" id="Readers">
+    <title>Export Restrictions</title>
+    <conbody>
+        <section>
+            <p>Exportation/release of this document may require necessary procedures in accordance with the regulations of your resident country and/or US export control laws.</p>
+        </section>
+    </conbody>
+</concept>

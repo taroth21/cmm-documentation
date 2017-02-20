@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Bash Script Failures</title>
+    <conbody>
+        <section>
+            <p>When executing the <codeph>sudo</codeph> command in bash scripts during installation, services may fail to start properly. This may be caused by the <codeph>tty</codeph>specification in the <codeph>/etc/sudoers</codeph> file. </p>
+            <p>To prevent failures, proceed as follows:</p>
+            <ol>
+                <li>
+                    <p>Open the <codeph>sudoers</codeph> file.</p>
+                    <p>Example:</p>
+                    <p>
+                        <codeblock>sudo visudo /etc/sudoers</codeblock>
+                    </p>
+                </li>
+                <li>
+                    <p>Make sure that the following line is commented by adding a <codeph>#</codeph> at the beginning of the line:</p>
+                    <p>
+                        <codeblock>#Defaults requiretty</codeblock>
+                    </p>
+                </li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

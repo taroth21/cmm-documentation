@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+                           
+<reference id="reference832"
+            xml:lang="en-us">
+    <title>Configuration Settings for <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent</title>
+    <refbody>
+        <section>
+            <p>The configuration settings for the <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent are provided in the following file:</p>
+            <p><codeph>/etc/monasca/monasca-log-agent/agent.conf</codeph></p>
+            <p>Below you find a detailed description of the individual settings.</p>
+        </section>
+        <section>
+            <title>monasca_log_api_url</title>
+            <p>Mandatory. The URL used to access the machine where the <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service is installed. </p>
+            <p>Example: <codeph>http://192.168.10.4:5607/v3.0</codeph></p>
+        </section>
+        <section>
+            <title>keystone_api_url</title>
+            <p>Mandatory. The URL used to access the server where the OpenStack Keystone service is installed. The service is used for authenticating the user specified in <codeph>username</codeph>.</p>
+            <p>Example: <codeph>http://192.168.10.5:35357/v3</codeph></p>
+        </section>
+        <section>
+            <title>project_name </title>
+            <p>Mandatory. The name of the OpenStack project for which log data is to be retrieved by the agent.</p>
+            <p>Example: <codeph>cmm</codeph></p>
+        </section>
+        <section>
+            <title>username</title>
+            <p>Mandatory. The user to be used for authenticating the agent against Keystone.</p>
+            <p>The user specified here must have the <codeph>cmm-agent</codeph> role in OpenStack and be assigned to the OpenStack project that is to be monitored by the agent. The project is specified in <codeph>project_name</codeph>.</p>
+            <p>It is recommended that this user is used only for configuration purposes and not for actually monitoring services and servers.</p>
+            <p>Example: <codeph>admin-agent</codeph></p>
+        </section>
+        <section>
+            <title>password</title>
+            <p>Mandatory. The password of the user specified in <codeph>username</codeph>. </p>
+        </section>
+        <section>
+            <title>domain_id</title>
+            <p>Mandatory. The ID of the OpenStack Keystone domain to which the user specified in <codeph>username</codeph> is assigned.</p>
+            <p>Example: <codeph>default</codeph></p>
+        </section>
+        <section>
+            <title>dimensions </title>
+            <p>Optional. Meta information to be collected with the log data that is retrieved by the agent. The information can be defined as an array.</p>
+            <p>The meta information defined by a dimension is attached to each log entry. It is represented as one or more fields in the <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /> log management dashboard. For the user who is working with the log data, dimensions provide additional filtering options.</p>
+            <p>Example: <codeph>['app_type:kafka', 'priority:high']</codeph></p>
+        </section>
+        <section>
+            <title>num_of_logs </title>
+            <p>Optional. The maximum number of logs per request that is sent to the Log API.</p>
+            <p>It is recommended that you check the number of logs you have to manage. The lower the maximum number of logs you specify, the higher the log management performance.</p>
+            <p>Allowed values: Any value above <codeph>0</codeph></p>
+            <p>Default: <codeph>125</codeph></p>
+        </section>
+        <section>
+            <title>max_data_size_kb </title>
+            <p>Optional. The maximum data load in kilobyte for sending a request to the Log API. </p>
+            <p>Allowed values: Any value above <codeph>0</codeph></p>
+            <p>Default: <codeph>5120</codeph></p>
+        </section>
+        <section>
+            <title>elapsed_time_sec </title>
+            <p>Optional. The time interval in seconds for sending logs to the Log API. </p>
+            <p>Logs are sent in the interval you specify provided that the maximum number of logs specified in <codeph>num_of_logs</codeph> or the maximum data load specified in <codeph>max_data_size_kb</codeph> is not reached earlier.</p>
+            <p>Allowed values: Any value above <codeph>0</codeph></p>
+            <p>Default: <codeph>30</codeph></p>
+        </section>
+        <section>
+            <title>delay</title>
+            <p>Optional. The delay time in seconds until it is checked whether the time interval specified in <codeph>elapsed_time_sec</codeph> is reached. </p>
+            <p>Allowed values: Any value above <codeph>0</codeph></p>
+            <p>Default: <codeph>10</codeph></p>
+        </section>
+    </refbody>
+</reference>

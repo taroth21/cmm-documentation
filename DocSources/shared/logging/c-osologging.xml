@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Log Management</title>
+    <conbody>
+                <section>
+                        <p>For managing the log data of your services and the virtual and physical servers on which they are provisioned, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> offers various features: </p>
+            <ul>
+                <li>A log management dashboard for visualizing and analyzing your data.</li>
+                <li>Alerting features for monitoring.</li>
+            </ul>
+            <p>Based on index patterns, you view and analyze the log data in the dashboard. <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> ships with a preconfigured index pattern. It allows you to instantly view and analyze log data when accessing the dashboard for the first time. You can configure additional index patterns to visualize different sets of data, as required. </p>
+                </section>
+        <section>
+                        <title>Accessing <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /></title>
+            <p>For accessing <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> and performing log management tasks, the following prerequisites must be fulfilled:</p>
+            <ul>
+                <li>
+                    <p>You must have access to the OpenStack platform as a user with the <codeph>admin</codeph> and the <codeph>cmm-user</codeph> role, or any other role that is authorized to use the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> monitoring functions. Additional roles are optional. </p>
+                </li>
+                <li>
+                    <p>You must be assigned to the OpenStack project you want to monitor.</p>
+                </li>
+            </ul>
+            <p>Log in to the OpenStack platform with your user name and password. This allows you to access the OpenStack Horizon dashboard. The tabs and functions you can access in the dashboard depend on your access permissions. </p>
+            <p>The log management functionality of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> can be accessed from the <uicontrol>Monitoring</uicontrol> tab. It provides access to the log management data of all projects to which you are assigned. You have to select the project you want to monitor from the drop-down menu at the top left of the dashboard.</p>
+            <p>For accessing the log management dashboard from the <uicontrol>Monitoring</uicontrol> tab, use <uicontrol>Monitoring > Overview</uicontrol>. The <uicontrol>Log Management</uicontrol> option is provided at the top border of the <uicontrol>Overview</uicontrol> page. As soon as you access the log management dashboard, the complete log management functionality is available. </p>
+                </section>
+    </conbody>
+</concept>

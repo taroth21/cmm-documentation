@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Starting and Stopping an Agent</title>
+    <conbody>
+        <section>
+            <p>System operation and maintenance may require that an agent is manually stopped and restarted.</p>
+            <p>To start an agent, proceed as follows:</p>
+            <ol
+                            compact="no">
+                <li>
+                    <p>Log in to the server where the agent is installed.</p>
+                </li>
+                <li>
+                    <p>To start a <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent, execute the following command:</p>
+                    <codeblock>sudo systemctl start monasca-agent	</codeblock>
+                    <p>To start a <ph
+                conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent, execute the following command:</p>
+                    <codeblock>sudo systemctl start monasca-log-agent	</codeblock>
+                </li>
+            </ol>
+            <p>To stop an agent, proceed as follows:</p>
+            <ol
+                            compact="no">
+                <li>
+                    <p>Log in to the server where the agent is installed.</p>
+                </li>
+                <li>
+                    <p>To stop a <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent, execute the following command:</p>
+                    <codeblock>sudo systemctl stop monasca-agent</codeblock>
+                    <p>To stop a <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent, execute the following command:</p>
+                    <codeblock>sudo systemctl stop monasca-log-agent</codeblock>
+                </li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

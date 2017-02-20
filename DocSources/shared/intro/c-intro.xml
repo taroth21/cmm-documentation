@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>Introduction </title>
+    <conbody>
+        <section>
+            <p
+                    conref="../../overview/whatiscmm/c-cmm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/As_more_and_more_applications_concept_conbody_section_p_1"/>
+            <p>The component architecture of OpenStack provides for high flexibility, yet it increases the burden of system operation because multiple services must be handled. <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> offers an integrated view of all services and assembles and presents related metrics and log data in one convenient access point. While being flexible and scalable to instantly reflect changes in the OpenStack platform, <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /> provides the ways and means required to ensure multi-tenancy, high availability, and data security.</p>
+            <p conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/covers_all_aspects_of_a_Moni_concept_conbody_section_1_p"/>
+            <ul>
+                <li>
+                    <p>Central management of monitoring and log data from medium and large-size OpenStack deployments.</p>
+                </li>
+                <li>
+                    <p>Storage of metrics and log data in a resilient way.</p>
+                </li>
+                <li>
+                    <p>Multi-tenancy architecture to ensure the secure isolation of metrics and log data.</p>
+                </li>
+                <li>
+                    <p>Horizontal and vertical scalability to support constantly evolving cloud infrastructures. When physical and virtual servers are scaled up or down to varying loads, the monitoring and log management solution can be adapted accordingly.</p>
+                </li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

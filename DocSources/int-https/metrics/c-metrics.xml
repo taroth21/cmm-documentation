@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>HTTPS for Monitoring</title>
+    <conbody>
+        <section>
+            <p>By default, the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Metrics Agent uses the HTTP protocol for communication with the Monitoring API and the OpenStack Keystone service. For a more secure connection, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> can be configured to use the HTTPS protocol.</p>
+            <p>The following sections describe the preparations required for HTTPS as well as changes required to the default configuration of your environment.</p>
+            <note othertype="note">The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> installer has not been updated for configuring HTTPS communication. The following configuration tasks can be implemented as soon as the installation of the involved components is successful.</note>
+        </section>
+    </conbody>
+</concept>

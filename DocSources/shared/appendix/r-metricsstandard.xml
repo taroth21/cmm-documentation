@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+                           
+<reference id="reference832"
+                    xml:lang="en-us">
+    <title>Standard Metrics </title>
+    <refbody>
+        <section>
+            <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> supports the following standard metrics for monitoring servers and networks. These metrics usually do not require specific settings. The metrics are grouped by metrics types. Each metrics type references a set of related metrics. </p>
+        </section>
+        <section>
+            <title>cpu.yaml</title>
+            <p>Metrics on CPU usage, e.g. the percentage of time the CPU is idle when no I/O requests are in progress, or the percentage of time the CPU is used at system level or user level.</p>
+        </section>
+        <section>
+            <title>disk.yaml</title>
+            <p>Metrics on disk space, e.g. the percentage of disk space that is used on a device, or the total amount of disk space aggregated across all the disks on a particular node.</p>
+        </section>
+        <section>
+            <title>load.yaml</title>
+            <p>Metrics on the average system load over different periods (e.g. 1 minute, 5 minutes, or 15 minutes).</p>
+        </section>
+        <section>
+            <title>memory.yaml</title>
+            <p>Metrics on memory usage, e.g. the number of megabytes of total memory or free memory, or the percentage of free swap memory.</p>
+        </section>
+        <section>
+            <title>network.yaml</title>
+            <p>Metrics on the network, e.g. the number of network bytes received or sent per second, or the number of network errors on incoming or outgoing network traffic per second.</p>
+        </section>
+    </refbody>
+</reference>

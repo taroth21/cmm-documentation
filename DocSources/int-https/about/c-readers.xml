@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Readers of this Document</title>
+    <conbody>
+        <section>
+            <p>This document is for system operators who want to use the HTTPS protocol. The document assumes that you have profound knowledge of OpenStack and <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    />, especially of installing the individual <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components. </p>
+        </section>
+    </conbody>
+</concept>

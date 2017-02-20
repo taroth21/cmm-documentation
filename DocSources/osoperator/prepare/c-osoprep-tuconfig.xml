@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+            xml:lang="en-us">
+    <title>Configuring the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent</title>
+    <conbody>
+                <section>
+                        <p>The installation of the <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> Metrics Agent includes its initial configuration. To prepare the environment for tenant users, you have to reconfigure the agent. It is necessary to explicitly activate the libvirt metrics that the tenant users use for monitoring. </p>
+                        <p>To reconfigure the agent, proceed as follows:</p>
+                        <ol compact="no">
+                                <li>
+                                        <p>Activate the libvirt metrics. For details on activating additional metrics, refer to <xref
+                                                        href="../../shared/install/c-configuremetagent.xml"
+                                                        />. For an example configuration, refer to <xref
+                                                        href="../../shared/appendix/r-metricsadditional.xml"/>.</p>
+                                </li>
+                                <li>
+                                        <p>Make sure that the host name specified for the <codeph>nova-compute</codeph> service is specified in the <codeph>agent.yaml</codeph> configuration file.</p>
+                                        <p>To check the host name for the <codeph>nova-compute</codeph> service, you can execute the following command: </p>
+                                        <codeblock># nova service-list</codeblock>
+                                </li>
+                        </ol>
+            <p>As soon as the agent is started again, the tenant users can use the libvirt metrics for monitoring.</p>
+                </section>
+        </conbody>
+</concept>

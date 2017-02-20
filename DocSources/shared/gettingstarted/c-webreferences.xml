@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+        <title>Related Web References</title>
+        <conbody>
+                <section>
+                        <p>The following Web references provide information on open source offerings integrated with <ph
+                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>:</p>
+                        <ul>
+                        <li><xref
+                                format="html" href="http://docs.openstack.org/liberty/"
+                        scope="external">
+                        <u><i>OpenStack</i></u></xref>: Documentation on OpenStack, the underlying platform technology.</li>
+                        <li><xref
+                        format="html"
+                        href="http://docs.openstack.org/developer/horizon/"
+                        scope="external">
+                        <u><i>OpenStack Horizon</i></u></xref>: Documentation on the OpenStack Horizon dashboard.</li>
+                        <li><xref
+                        format="html"
+                        href="https://wiki.openstack.org/wiki/Monasca"
+                        scope="external">
+                        <u><i>Monasca Wiki</i></u></xref>: Information on Monasca, the core of <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                        </ul>
+                        <p>More detailed Web references provided in this manual are subject to change without notice.</p>
+                </section>
+        </conbody>
+</concept>

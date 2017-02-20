@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Configuring the Control Machine</title>
+    <conbody>
+        <section>
+            <p>The Control Machine must be connected to all remote machines on which <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> components are to be installed. To configure the Control Machine, proceed as follows:</p>
+            <ol compact="no">
+                <li>
+                    <p>Log in to the Control Machine.</p>
+                </li>
+                <li>
+                    <p>Open the Ansible configuration file with your favorite editor. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /etc/ansible/ansible.cfg</codeblock>
+                </li>
+                <li>
+                    <p>Specify the following SSH settings in the file: </p>
+                    <codeblock>[defaults]
+transport = ssh
+
+[ssh_connection]
+ssh_args = -o ControlMaster=auto -o BatchMode=yes -o ForwardAgent=yes</codeblock>
+                </li>
+                <li>
+                    <p>Open the configuration file of the Control Machine with your favorite editor. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /etc/ansible/hosts</codeblock>
+                    <p>For detailed information on the configuration of the Control Machine, refer to the <xref
+                            format="html" href="http://docs.ansible.com/intro_inventory.html" scope="external"
+                                    ><u><i>Ansible Inventory documentation</i></u></xref>. </p>
+                </li>
+                <li>
+                    <p>Configure the required hosts in the configuration file. <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> ships with a sample configuration file that you can use as a template:</p>
+                    <p><codeph>hosts-cluster.j2</codeph>
+                    </p>
+                    <p>The sample is located in the <codeph>/opt/FJSVsvcmm/templates</codeph> directory. </p>
+                    <p>Copy the complete content of the sample file to your configuration file.</p>
+                </li>
+                <li>
+                    <p>Replace all variables in the host definitions section: </p>
+                    <ul>
+                        <li><codeph>Offline Host</codeph> for installing the offline resources required for the installation.</li>
+                        <li><codeph>OpenStack Hosts</codeph> for installing the OpenStack extensions on the Horizon host and the Keystone host.</li>
+                        <li><codeph>&lt;cmm_component></codeph> for installing the individual <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> components on the cluster nodes.</li>
+                        <li><codeph>Monasca Agent Nodes for Cluster</codeph> for installing a <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Metrics Agent on the three nodes.</li>
+                        <li><codeph>Monasca Log Agent Nodes for Cluster</codeph> for installing a <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Log Agent on the three nodes.</li>
+                    </ul>
+                    <p>Replace all host variables, for example <codeph>{{ex_node_1_host}}</codeph>, with the IP address of the remote machine on which you want to install the corresponding <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> component. </p>
+                    <note othertype="note"><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> supports and has been tested with IPv4. IPv6 and FQDN are not supported.</note>
+                    <p>Replace all user variables, for example <codeph>{{ssh_user_ex_node_1}}</codeph> with the user name of the user who is to install it. </p>
+                    <note othertype="note">The user who is to install the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> component must have the privilege to execute sudo commands without password. Check your sudo configuration for this purpose.</note>
+                    <p>Check that you have removed all curly brackets with your replacements.</p>
+                </li>
+                <li>
+                    <p>To establish the connection between the Control Machine and the remote machines, generate the SSH key for Ansible.</p>
+                    <p>Execute the following command:</p>
+                    <p>
+                        <codeblock>ssh-keygen -t rsa</codeblock>
+                    </p>
+                    <note othertype="note">
+                        <p>If you have specified a passphrase for the SSH key, execute any install or uninstall command with the <codeph>ssh-agent</codeph> tool.</p>
+                        <p>Make sure to stop the <codeph>ssh-agent</codeph> tool as soon as the installation or uninstallation is successful.</p>
+                    </note>
+                </li>
+                <li>
+                    <p>To copy the SSH key to the remote machines, execute the following command. Repeat the command for each machine.</p>
+                    <codeblock>ssh-copy-id &lt;user_name&gt;@&lt;host_ip_address&gt;</codeblock>
+                    <p>Replace <codeph>&lt;user_name&gt;</codeph> by the user name to be used for accessing the remote machine, and replace <codeph>&lt;host_ip_address&gt;</codeph> by the IP address of the remote machine.</p>
+                    <p>Example response for a successful connection to a remote machine:</p>
+                    <codeblock>/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+&lt;user_name&gt;@&lt;host_ip_address&gt;'s password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   "ssh '&lt;user_name&gt;@&lt;host_ip_address&gt;'"
+and check to make sure that only the key(s) you wanted were added.</codeblock>
+                </li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

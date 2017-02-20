@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>Overview</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> provides one convenient access point to your monitoring data. Use <uicontrol>Monitoring > Overview</uicontrol> to keep track of your services and servers and quickly check their status. The overview also indicates any irregularities in the log data of the system components your are monitoring. </p>
+                        <p>On the <uicontrol>Overview</uicontrol> page, you can:</p>
+                        <ul>
+                                <li>
+                                        <p>Access preconfigured dashboards that visualize your metrics data. Use the <uicontrol>Dashboard</uicontrol> option and the <uicontrol>Monasca Health</uicontrol> option at the top border of the <uicontrol>Overview</uicontrol> page for this purpose. Starting from these preconfigured dashboards, you can create your own dashboards for visualizing your monitoring data as required. For details, refer to <xref
+                                                        href="c-osomon-grafana.xml"/>. </p>
+                                </li>
+                                <li>
+                                        <p>Access a preconfigured dashboard that visualizes your log data. Use the <uicontrol>Log Management</uicontrol> option at the top border of the <uicontrol>Overview</uicontrol> page for this purpose. Starting from this preconfigured default dashboard, you can create your own dashboards for visualizing your log data as required. For details, refer to <xref
+                                                href="../logging/c-osolog-kibana.xml"/>.</p>
+                                </li>
+                                <li>
+                                        <p>View the status of your services, servers, and log data at a glance. As soon as you have defined an alarm for a service, a server, or log data, there is status information displayed on the <uicontrol>Overview</uicontrol> page. For details on defining alarms, refer to <xref
+                                                        href="c-osomon-alarm.xml"
+                                                        />. For details on the status information, refer to <xref
+                                                        href="c-osomon-statusinfo.xml"/>.</p>
+                                </li>
+                        </ul>
+        </section>
+    </conbody>
+</concept>

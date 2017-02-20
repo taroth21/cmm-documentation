@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                        xml:lang="en-us">
+    <title>Working with the Log Management Dashboard</title>
+    <conbody>
+        <section>
+            <p>The user interface for managing your log data is based on Kibana, an open source analytics and visualization platform that uses Elasticsearch as the underlying database technology. Kibana allows you to search, view, and interact with your log data, thus supporting you in understanding large data volumes. You can easily perform advanced data analysis and visualize your data in a variety of charts, tables, and maps. Changes to the underlying log data are displayed in real time.</p>
+            <fig>
+                <image alt="kibana.png" height="260" href="../../images/kibana.png" width="435"/>
+            </fig>
+            <p>The log management dashboard provides the following options:</p>
+            <ul>
+                <li>Submitting search queries, filtering the search results, and viewing and examining the data in the log entries that are returned. You can see the number of log entries that match the search query, and you get field value statistics. If a time field is configured for the index pattern, the distribution of log entries over time is displayed in a histogram at the top of the log management dashboard. </li>
+                <li>Constructing a visualization of search results. You can save visualizations, use them individually, or combine them in a dashboard. Different visualization types are supported, for example, data tables, line charts, pie charts, or vertical bar charts.</li>
+                <li>Combining visualizations in dashboards for correlating related information. A dashboard can be saved and reloaded later. A saved dashboard can be accessed and used by any OpenStack or <ph
+                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> operator.</li>
+                <li>Sharing dashboards with other users by providing a direct link to the dashboard or embedding it in a Web page. A user must have Kibana access in order to use an embedded dashboard.</li>
+            </ul>
+            <p>For details on working with the log management dashboard, refer to the <xref format="html"
+                    href="https://www.elastic.co/guide/en/kibana/4.5/index.html" scope="external"
+                            ><u><i>Kibana documentation</i></u></xref>. </p>
+        </section>
+    </conbody>
+</concept>

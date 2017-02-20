@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>Backup and Recovery</title>
+    <conbody>
+        <section>Typical tasks of the <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> operator are to make regular backups, particularly of the data created during operation.<p>At regular intervals, you should make a backup of all:</p><p>
+                <ul>
+                    <li>Databases.</li>
+                    <li>Configuration files of the individual agents and services.</li>
+                    <li>Monitoring and log dashboards you have created and saved.</li>
+                </ul>
+            </p><p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> does not offer integrated backup and recovery mechanisms. Instead, you use the mechanisms and procedures of the individual components. </p></section>
+    </conbody>
+</concept>

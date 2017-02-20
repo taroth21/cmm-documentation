@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>MariaDB Galera Cluster</title>
+    <conbody>
+        <section>
+            <p>The following preparations for MariaDB Galera and HAProxy are required before installing <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> in cluster mode:</p>
+            <ul>
+                <li>SELinux must be configured for HAProxy. </li>
+                <li>An SELinux access policy must be created for <codeph>mysqld</codeph>.</li>
+                <li>The <codeph>MariaDB-server</codeph> package must be removed.</li>
+                <li><codeph>firewalld</codeph> rules must be configured.</li>
+            </ul>
+        </section>
+        <section>
+            <title>Configuring SELinux for HAProxy</title>
+            <p>SELinux must not block the communication between HAProxy and the connected services. </p>
+            <p>To configure SELinux, execute the following command:</p>
+            <codeblock>setsebool -P haproxy_connect_any 1</codeblock>
+            <p>The <codeph>setsebool</codeph> command requires the <codeph>policycoreutils-python</codeph> library. If it is not installed in your environment, execute the following command:</p>
+            <codeblock># pip install policycoreutils-python</codeblock>
+        </section>
+        <section>
+            <title>Configuring SELinux for <codeph>mysqld</codeph></title>
+            <p>SELinux may block <codeph>mysqld</codeph> from carrying out the required operations. It is therefore necessary to define an access policy that allows <codeph>mysqld</codeph> to run external programs and open listen sockets on unprivileged ports. </p>
+            <p>Before installing <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> in cluster mode, you must configure the access policy so that normal operations between the MariaDB database server and the connected nodes in the cluster are enabled. For information on creating an access policy for the MariaDB database, refer to the <xref
+                    format="html" href="http://galeracluster.com/documentation-webpages/selinux.html" scope="external"
+                            ><u><i>Galera Cluster documentation</i></u></xref>.</p>
+        </section>
+        <section>
+            <title>Removing the <codeph>MariaDB-server</codeph> Package</title>
+            <p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> cluster installation fails if the <codeph>MariaDB-server</codeph> RPM package is already installed. Check on all nodes whether the package is installed. If so, execute the following command to remove it:</p>
+            <codeblock>$ sudo yum remove MariaDB-server</codeblock>
+            <p>Removing the RPM package does not remove any databases from your environment. Yet, it is recommended that you create a backup of an existing MariaDB database before installing <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> in cluster mode.</p>
+        </section>
+        <section>
+            <title>Configuring the Firewall</title>
+            <p>MariaDB Galera Cluster requires specific ports for replication. The Ansible installer you use to install the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> components in cluster mode opens the required ports and changes your <codeph>iptables</codeph> configuration. </p>
+            <p>The installer opens the following ports to TCP:</p>
+            <ul>
+                <li>Port <codeph>3306</codeph>, <codeph>13306</codeph>, and <codeph>9199</codeph> on the node where the HAProxy service is installed.</li>
+                <li>Port <codeph>4567</codeph>, <codeph>4568</codeph>, and <codeph>4444</codeph> on the node where a Galera Cluster instance is installed.</li>
+            </ul>
+            <p>If it is necessary to manually enable access to the ports, you can execute the following commands. Repeat them for each node in your cluster environment and for each port to which access must be enabled.</p>
+            <codeblock>firewall-cmd --add-port=&lt;port_number&gt;/tcp
+firewall-cmd --permanent --add-port=&lt;port_number&gt;/tcp
+firewall-cmd --reload
+
+firewall-cmd --add-port=&lt;port_number&gt;/udp
+firewall-cmd --permanent --add-port=&lt;port_number&gt;/udp
+firewall-cmd --reload</codeblock>
+            <p>Replace <codeph>&lt;port_number&gt;</codeph> with the port.</p>
+        </section>
+    </conbody>
+</concept>

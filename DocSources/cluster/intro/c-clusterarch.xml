@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+            xml:lang="en-us">
+    <title>Installation Scenarios</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> provides out-of-the-box solutions that meet the different challenges resulting from your individual environment. It can be installed to satisfy a variety of distinct objectives, ranging from small-scale deployments to high-availability deployments or even deployments that support high levels of scalability. </p>
+            <p>The installer functionality is targeted to make the installation straightforward and easy to achieve. You basically choose to install and operate <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> either in single mode or in cluster mode.</p>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> in single mode means running the complete monitoring and log management functionality on one host machine. All components of the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Service are installed on this machine. For details on installing, operating, and maintaining CMM in single mode, refer to the <i>CMM Operator's Guide</i>.</p>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> in cluster mode means running the Monitoring as a Service solution on three or more nodes where a node corresponds to a logical server instance and must not necessarily be a separate physical server. </p>
+        </section>
+        <section>
+            <title>Default Cluster</title>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> supports a default cluster that consists of three nodes with a fully replicated <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> Service on each node. The default cluster is based on a limited set of hardware. It provides the minimum configuration required to ensure high availability.</p>
+            <p>The following illustration provides a simplified overview of the components involved in the default cluster:</p>
+            <fig>
+                <image alt="cluster-default.png" height="260" href="../../images/cluster-default.png" width="435"/>
+            </fig>
+            <p>Instances of the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> components are available on each of the three nodes. An external load balancer is responsible for distributing the workload across the components on the individual nodes. The load balancer is not part of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>Each node in the cluster is monitored by a <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent and a <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent. </p>
+        </section>
+        <section>
+            <title>Customizing the Default Cluster</title>
+            <p>The default cluster is designed for maximum flexibility, ensuring that <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> can easily be scaled out to fulfill the needs of constantly changing data loads in the cloud infrastructure of your enterprise.</p>
+            <p>Depending on the requirements of your environment, you can configure any number of nodes in your cluster configuration. </p>
+            <p>The default cluster can be used for study and demonstration purposes. Depending on your individual requirements, customizing is required to make it truly highly available and appropriate for production environments.</p>
+        </section>
+    </conbody>
+</concept>

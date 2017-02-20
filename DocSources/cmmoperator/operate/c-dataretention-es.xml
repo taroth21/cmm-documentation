@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>Configuring Log Data Retention</title>
+    <conbody>
+        <section>
+            <p id="Log_data_is_stored_in_the_Ela_concept_conbody_section_p_1"
+                    >Log data is stored in the Elasticsearch database. Elasticsearch stores the data in indices. <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> uses Elasticsearch Curator for managing data retention of these indices. Elasticsearch Curator jobs are automatically run by a Cron daemon that executes scheduled commands defined in a <codeph>crontab</codeph> configuration file. <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> allows you to configure Elasticsearch Curator and the Cron daemon to define your data retention policies as required by your monitoring environment. </p>
+            <p>By default, an Elasticsearch index is automatically deleted in <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> if it is older than 60 days. The delete job is executed every day at midnight. </p>
+            <p>Proceed as follows to change the data retention settings that were defined when installing <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>:</p>
+            <ol>
+                <li>
+                    <p>Log in to the host where <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed.</p>
+                </li>
+                <li
+                    id="Open_the_concept_conbody_section_ol_l">
+                    <p>Open the <codeph>curator_action.yml</codeph> file with your favorite editor. It defines how long you keep the data in the database. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /etc/monasca/elastisearch-curator/curator_action.yml</codeblock>
+                </li>
+                <li
+                    id="Specify_the_time_span_after_w_concept_conbody_section_ol_l">
+                    <p>Specify the time span after which you want indices to be removed. It is defined by the <codeph>unit_count</codeph> parameter in the <codeph>action: delete_indices</codeph> section.</p>
+                    <p>Example for a time span of 30 days: </p>
+                    <codeblock>unit_count: 30</codeblock>
+                </li>
+                <li
+                    id="Edit_the_concept_conbody_section_ol_l">
+                    <p>Edit the <codeph>crontab</codeph> configuration file which contains the list of commands to be run at the specified times. These commands are checked by the Cron daemon and then executed in the system background.</p>
+                    <p>Edit the configuration file, for example, as follows:</p>
+                    <codeblock>sudo curator
+crontab -e</codeblock>
+                </li>
+                <li
+                id="To_specify_when_to_run_a_job_concept_conbody_section_ol_l">
+                    <p>To specify when to run a job, edit the entry in the file. The default is as follows:</p>
+                    <codeblock>0 0 * * * /opt/elasticsearch-curator/bin/curator 
+--config /etc/monasca/elasticsearch-curator/curator_config.yml 
+/etc/monasca/elasticsearch-curator/curator_action.yml</codeblock>
+                    <p>Each line starts with five fields for defining the time/date, followed by a command, followed by a newline character (<codeph>\n</codeph>). The fields are separated by spaces, they must not contain spaces:</p>
+                    <ul>
+                        <li>Field 1 defines the minute. Use any integer from <codeph>0</codeph> to <codeph>59</codeph>.</li>
+                        <li>Field 2 defines the hour. Use any integer from <codeph>0</codeph> to <codeph>23</codeph> where <codeph>0</codeph> represents midnight.</li>
+                        <li>Field 3 defines the day of the month. Use any integer from <codeph>1</codeph> to <codeph>31</codeph>.</li>
+                        <li>Field 4 defines the month. Use any integer from <codeph>1</codeph> to <codeph>12</codeph>.</li>
+                        <li>Field 5 defines the day of the week. Use any integer from <codeph>0</codeph> to <codeph>7</codeph> where <codeph>0</codeph> or <codeph>7</codeph> represent Sundays.</li>
+                        <li>
+                            <codeph>month</codeph>. </li>
+                    </ul>
+                    <p>Example:</p>
+                    <codeblock>30 04 1 1 * /usr/bin/directory/command</codeblock>
+                    <p>The above example will run <codeph>/usr/bin/directory/command</codeph> at 4:30 am on January 1st. </p>
+                </li>
+            </ol>
+            <p>As soon as you have saved your changes, your new data retention policy takes effect. </p>
+            <p
+                    id="For_details_on_Elasticsearch_concept_conbody_section_p_5">For details on Elasticsearch Curator, refer to the <xref
+                    format="html"
+                    href="https://www.elastic.co/guide/en/elasticsearch/client/curator/4.0/index.html"
+                    scope="external"><u><i>Elasticsearch Curator documentation</i></u></xref>. Find details on configuring the Cron daemon, for example, in the <xref
+                    format="html"
+                    href="https://help.ubuntu.com/community/CronHowto" scope="external"><u><i>Ubuntu Wiki</i></u></xref>.</p>
+        </section>
+    </conbody>
+</concept>

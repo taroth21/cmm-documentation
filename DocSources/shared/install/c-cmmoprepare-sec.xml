@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+            xml:lang="en-us">
+    <title>Security</title>
+    <conbody>
+        <section
+                    id="In_a_default_Red_Hat_Enterpri_concept_conbody_section_1">
+            <p>In a default Red Hat Enterprise Linux installation, the following security precautions are taken:</p>
+            <ul>
+                <li>A firewall exists to prevent unauthorized user access.</li>
+                <li>Security-Enhanced Linux (SELinux), a security module that adds mandatory access control mechanisms to the Linux kernel, is enabled.</li>
+            </ul>
+            <p>Before installing the <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> components, make sure that the firewall is enabled and SELinux is running. Make sure that neither the firewall nor SELinux block the communication between the Control Machine and the remote machines.</p>
+        </section>
+        <section>
+            <p>The Ansible installer you use to install the <ph
+            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> components opens the following ports:</p>
+            <ul>
+                <li>Port <codeph>8888</codeph> for the offline resources required for the installation.</li>
+                <li>Port <codeph>5607</codeph> for the Log API. </li>
+                <li>Port <codeph>8070</codeph> for the Monitoring API.</li>
+                <li>Port <codeph>5601</codeph> for the Kibana Server.</li>
+            </ul>
+            <p>Port <codeph>8081</codeph> is required internally by the Monitoring API, for example, for healthchecks or threads. The DropWizard framework that is used by the Ansible installer enables external access to this port. </p>
+        </section>
+        <section
+                    id="uses_the_following_ports_to_concept_conbody_section_3">
+            <p><ph
+            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> uses the following ports to integrate with the required OpenStack services:</p>
+            <ul>
+                <li>Port <codeph>80</codeph> for the OpenStack Horizon service.</li>
+                <li>Port <codeph>5000</codeph> and <codeph>35357</codeph> for the OpenStack Keystone service.</li>
+            </ul>
+        </section>
+        <section
+                id="If_it_is_necessary_to_manuall_concept_conbody_section_4">
+            <p>If it is necessary to manually enable access to the ports, you can execute the following commands. Repeat them for each port to which access must be enabled.</p>
+            <codeblock>firewall-cmd --add-port=&lt;port_number&gt;/tcp
+firewall-cmd --permanent --add-port=&lt;port_number&gt;/tcp
+firewall-cmd --reload
+
+firewall-cmd --add-port=&lt;port_number&gt;/udp
+firewall-cmd --permanent --add-port=&lt;port_number&gt;/udp
+firewall-cmd --reload</codeblock>
+            <p>Replace <codeph>&lt;port_number&gt;</codeph> with the port.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Control Machine</title>
+    <conbody>
+        <section>
+            <p>A so-called Control Machine is used for installing <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. The Control Machine is a separate machine from which any number of remote machines can be managed on which software components are to be installed. </p>
+            <p>The remote machines are managed via SSH. </p>
+            <fig>
+                <image
+                    align="left" alt="Ansible.png" height="149"
+                    href="../../images/ansible.png" placement="break"
+                        width="350"/>
+            </fig>
+            <p>The Control Machine must fulfill the following system requirements:</p>
+            <ul>
+                <li>
+                    <p>Ansible 2.1.1.0 must be installed and prepared as described below. </p>
+                    <p>Ansible is a simple IT automation platform that makes applications and systems easier to deploy. The automated installation of <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> is based on Ansible playbooks, and has been tested with Ansible 2.1.1.0. The minimum version supported by the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> installer is Ansible 2.0.0.0.</p>
+                </li>
+                <li>
+                    <p>Python 2.7 must be installed.</p>
+                </li>
+            </ul>
+            <p>For details on the operating system required for the Control Machine, refer to the <xref format="html"
+                    href="http://docs.ansible.com/ansible/intro_installation.html#control-machine-requirements"
+                    scope="external"><u><i>Ansible documentation</i></u></xref>. </p>
+            <p>To install and prepare Ansible on the Control Machine, proceed as follows:</p>
+            <ol>
+                <li>
+                    <p>Log in to the Control Machine.</p>
+                </li>
+                <li>
+                    <p>Install pip.</p>
+                    <p>To install the latest pip version, execute the following command:</p>
+                    <p>
+                        <codeblock>#yum install python-pip</codeblock>
+                    </p>
+                </li>
+                <li>
+                    <p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> installer requires pip V8.1.1.</p>
+                    <p>To downgrade pip to the required version, execute the following command:</p>
+                    <p>
+                        <codeblock>#pip install pip==8.1.1</codeblock>
+                    </p>
+                </li>
+                <li>
+                    <p>To install Ansible, execute the following command:</p>
+                    <p>
+                        <codeblock>#pip install ansible==2.1.1</codeblock>
+                    </p>
+                </li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

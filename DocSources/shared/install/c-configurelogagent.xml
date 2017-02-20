@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Configuration</title>
+    <conbody>
+        <section>
+            <p>The agent installation automatically configures the agent so that a minimum set of log data can instantly be retrieved. You can enhance the agent configuration or update the initial configuration, if required.</p>
+            <p>The following sections provide information on the file that stores the agent configuration and describe how to update and enhance the configuration.</p>
+        </section>
+        <section>
+            <title>Configuration File</title>
+            <p>The installer stores all configuration settings of the <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent in the following file:</p>
+            <p><codeph>/etc/monasca/monasca-log-agent/agent.conf</codeph></p>
+            <p>The file is composed of an input and an output section:</p>
+            <ul>
+                <li>
+                    <p>The input section specifies which log data is to be retrieved. </p>
+                    <p>The <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Log Agent is based on the so-called ELK stack, a solution for searching and analyzing log data that combines the open source projects Elasticsearch, Logstash, and Kibana. For details on the ELK stack, refer to the documentation on <xref
+                            format="html" href="https://www.elastic.co/guide/index.html" scope="external"
+                                    ><u><i>Elasticsearch, Logstash, and Kibana</i></u></xref>. </p>
+                    <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> supports the file plugin of Logstash as input mechanism. The file plugin enables Logstash to read log data from any log file on your file system. Logstash supports additional plugins. For details, refer to <xref
+                            format="html" href="https://www.elastic.co/guide/en/logstash/2.3/input-plugins.html"
+                            scope="external"
+                            ><u><i>Logstash Input Plugins</i></u></xref>. Contact Fujitsu if you want to integrate a different plugin with <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+                </li>
+                <li>
+                    <p>The output section specifies all parameters required for retrieving the log data and sending it to the <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Server for further processing. </p>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <title>Updating the Configuration File</title>
+            <p>To edit the <codeph>agent.conf</codeph> file, proceed as follows:</p>
+            <ol>
+                <li>
+                    <p>Log in to the server where the agent is installed.</p>
+                </li>
+                <li>
+                    <p>To stop the agent, execute the following command:</p>
+                    <codeblock>sudo systemctl stop monasca-log-agent</codeblock>
+                </li>
+                <li>
+                    <p>Open the file with your favorite editor.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /etc/monasca/monasca-log-agent/agent.conf</codeblock>
+                </li>
+                <li>
+                    <p>Adapt the input section, if required.</p>
+                    <p>If you want to add files to be monitored, add a corresponding file block.</p>
+                    <p>If you want to define dimensions for the log files of a file block, define them with <codeph>add_field</codeph>. Dimensions allow you to collect meta information with the log data that is retrieved by the agent. The meta information is attached to each log entry. It is represented as a field in the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> log management dashboard. For the user who is working with the log data, dimensions provide additional filtering options.</p>
+                    <p>Example configuration:</p>
+                    <codeblock>input {
+  file {
+    path =&gt; "/var/log/keystone/*.log"
+  }
+   file {
+    path =&gt; "/var/log/monasca/agent/*.log"
+  }
+  file {
+    path =&gt; "/var/log/monasca/monasca-log-agent/*.log"
+  }
+  file {
+    add_field => { "dimensions" => { "service" => "monasca-api" }}
+    add_field => { "dimensions" => { "language" => "java" }}
+    add_field => { "dimensions" => { "log_level" => "error" }}
+    path => "/var/log/monasca/api/error.log"
+  }
+}</codeblock>
+                </li>
+                <li>
+                    <p>Adapt the output section, if required. Update the corresponding parameter values. Each value must be enclosed in double quotes (<codeph>"</codeph>).</p>
+                    <p>For details on the configuration settings that can be defined, refer to <xref href="../appendix/r-confsettings-logs.xml"/>.</p>
+                    <p>Example configuration:</p>
+                    <codeblock>output {
+  monasca_log_api {
+    monasca_log_api_url => "http://192.168.10.4:5607/v3.0"
+    keystone_api_url => "http://192.168.10.5:35357/v3"
+    project_name =&gt; "cmm"  
+    username =&gt; "cmm-agent" 
+    password =&gt; "password"    
+    domain_id =&gt; "default"
+    dimensions =&gt; ['app_type:kafka', 'priority:high'] 
+    num_of_logs => 100
+    delay => 1
+    elapsed_time_sec => 600
+    max_data_size_kb => 5120
+  }
+}</codeblock>
+                </li>
+                <li>
+                    <p>To start the agent again, execute the following command:</p>
+                    <codeblock>sudo systemctl start monasca-log-agent	</codeblock>
+                </li>
+            </ol>
+            <p>The agent is instantly available with the updated configuration settings.</p>
+        </section>
+    </conbody>
+</concept>

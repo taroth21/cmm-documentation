@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Security</title>
+    <conbody>
+        <section
+            conref="../../shared/install/c-cmmoprepare-sec.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/In_a_default_Red_Hat_Enterpri_concept_conbody_section_1"/>
+        <section>
+            <p>The Ansible installer you use to install <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> in cluster mode opens specific ports to ensure connectivity. These ports differ depending on whether you install the default cluster or choose a distributed environment that deviates from this default. For details on the opened ports, contact your FUJITSU support organization.</p>
+        </section>
+        <section
+            conref="../../shared/install/c-cmmoprepare-sec.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/uses_the_following_ports_to_concept_conbody_section_3"/>
+        <section
+            conref="../../shared/install/c-cmmoprepare-sec.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/If_it_is_necessary_to_manuall_concept_conbody_section_4"/>
+    </conbody>
+</concept>

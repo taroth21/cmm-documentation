@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Prerequisites</title>
+    <conbody>
+        <section id="can_be_installed_on_a_host_m_concept_conbody_section_1">
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> can be installed on a host machine with the following operating systems:</p>
+            <ul>
+                <li>
+                    <p>Red Hat Enterprise Linux 7.3 (for Intel64). </p>
+                    <p>Extra Packages for Enterprise Linux (EPEL) for Red Hat Enterprise Linux 7.3 must be installed as an add-on to the operating system. The <codeph>optional</codeph> repository (<codeph>rhel-7-server-optional-rpsms</codeph>) and the <codeph>extras</codeph> repository (<codeph>rhel-7-server-extras-rpm</codeph>) must have been enabled.</p>
+                </li>
+            </ul>
+            <note othertype="note"
+                    >Make sure that you use a clean operating system. This avoids compatibility-related issues during the installation of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</note>
+            <p>As underlying platform technology, the following OpenStack platforms are supported:</p>
+            <ul>
+                <li>Red Hat Enterprise Linux OpenStack Platform 8</li>
+            </ul>
+        </section>
+        <section>
+            <p>The following hardware resources are recommended: </p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col2" colnum="1" colwidth="1*"/>
+                    <colspec colname="col3" colnum="2" colwidth="2.32*"/>
+                    <thead>
+                        <row>
+                            <entry colname="col2">Hardware type</entry>
+                            <entry colname="col3">Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry colname="col2">Model</entry>
+                            <entry colname="col3">
+                                <p>Fujitsu Server PRIMERGY RX300 S8 </p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry colname="col2">CPU</entry>
+                            <entry colname="col3">
+                                <p>Intel® Xeon® E5-2660 v2, 2.20 GHz or more</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry colname="col2">Memory</entry>
+                            <entry colname="col3">
+                                <p>64 GB DIMM (DDR3) or more</p>
+                            </entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+        </section>
+        <section>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> without any data requires about 2 GB of disk space. The disk capacity required for log data and metrics data varies considerably depending on the number of services and servers to be monitored.</p>
+            <p>Make sure that enough disk space is provided. If required, mount partitions for storing the log data and the metrics data. The default installation uses the following directories: </p>
+            <ul id="The_data_directory_of_Elastic_concept_conbody_section_3_ul">
+                <li>The data directory of Elasticsearch is located in <codeph>/var/data/elasticsearch</codeph>.</li>
+                <li>The data directory of InfluxDB is located in <codeph>/var/opt/influxdb/data</codeph>. </li>
+                <li>The data directory of MariaDB is located in <codeph>/var/lib/mysql</codeph>. </li>
+                <li>The data directory of Kafka is located in <codeph>/var/kafka</codeph>.</li>
+            </ul>
+        </section>
+        <section id="has_been_tested_with_the_fol_concept_conbody_section_2">
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> has been tested with the following Web browsers: </p>
+            <ul id="Google_Chrome_50.0_concept_conbody_section_2_ul">
+                <li>Google Chrome 50.0</li>
+                <li>Microsoft Internet Explorer 11.0 (with Compatibility View disabled)</li>
+                <li>Mozilla Firefox 46.0</li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

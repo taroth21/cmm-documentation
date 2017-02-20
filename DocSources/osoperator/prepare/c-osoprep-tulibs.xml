@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Installing Additional Libraries</title>
+    <conbody>
+        <section>
+            <p>Additional RPM packages and Python libraries are required for libvirt monitoring. </p>
+            <p>You have to install the following RPM package from your YUM repository server:</p>
+            <ul>
+                <li><codeph>libvirt-devel</codeph>
+                </li>
+            </ul>
+            <p>You have to install the following Python libraries in the virtualenv environment of the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent:</p>
+            <ul>
+                <li><codeph>libvirt-python</codeph>
+                </li>
+                <li><codeph>lxml</codeph></li>
+                <li><codeph>python-neutronclient</codeph></li>
+                <li><codeph>python-novaclient</codeph>. Version 2.26 is required.</li>
+            </ul>
+            <p>By default, the virtualenv environment of the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent is located in the <codeph>/opt/monasca-agent</codeph> directory. </p>
+            <p>To install the RPM package and the libraries in the default directory, execute the following command:</p>
+            <codeblock># yum install libvirt-devel
+# source /opt/monasca-agent/bin/activate
+# pip install libvirt-python
+# pip install lxml
+# pip install python-neutronclient
+# pip install python-novaclient==2.26
+# deactivate</codeblock>
+        </section>
+        </conbody>
+</concept>

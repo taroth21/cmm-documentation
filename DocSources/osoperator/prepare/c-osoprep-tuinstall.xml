@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+            xml:lang="en-us">
+    <title>Installing the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent</title>
+    <conbody>
+        <section>
+            <p>To enable monitoring for tenant users, a <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> Metrics Agent must be installed on the hypervisor that hosts the virtual machines of the tenant user. </p>
+            <p>Enter the credentials of the OpenStack user you want to use for libvirt monitoring in the agent configuration. This user is used for the communication between the <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> Service and the agent.</p>
+            <p>For details on installing a <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent, refer to <xref href="../install/c-osoinstallationmetagent.xml"/>.</p>
+        </section>
+        </conbody>
+</concept>

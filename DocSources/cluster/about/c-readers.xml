@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Readers of this Manual</title>
+    <conbody>
+        <section>
+            <p>This manual is written for system operators who install, operate, and maintain <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> in cluster mode. </p>
+            <p>The manual assumes that you have profound knowledge of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> and OpenStack as well as profound networking skills. In addition, you must also be familiar with the administration and operation of LINUX systems.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Key Features</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> is an out-of-the-box solution for monitoring OpenStack-based cloud environments. It is provided as a cloud service to users. <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> meets different challenges, ranging from small-scale deployments to high-availability deployments and deployments with high levels of scalability. </p>
+            <p>The core of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is Monasca, an open source Monitoring as a Service solution that integrates with OpenStack. The key features of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> form an integral part of the Monasca project. <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> extends the source code base of the project through active contributions.</p>
+            <p>Compared to the Monasca community edition, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> provides the following added value:</p>
+            <ul>
+                <li>Packaging as a commercial enterprise solution </li>
+                <li>Enterprise-level support</li>
+            </ul>
+            <p>The key features of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> address public as well as private cloud service providers. They include:</p>
+            <ul>
+                                <li>Monitoring</li>
+                                <li>Log management</li>
+                                <li>Integration with OpenStack</li>
+                        </ul>
+        </section>
+        <section>
+            <title>Monitoring</title>
+            <p><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is a highly scalable and fault tolerant monitoring solution for OpenStack-based cloud infrastructures. </p>
+            <p>The system operator of the cloud infrastructure and the service providers do not have to care for system monitoring software any longer. They use <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> to check whether their services and servers are working appropriately. </p>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> provides comprehensive and configurable metrics with reasonable defaults for monitoring the status, capacity, throughput, and latency of cloud systems. The <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> users can set their own warnings and critical thresholds and can combine multiple warnings and thresholds to support the processing of complex events. Combined with a notification system, these alerting features enable them to quickly analyze and resolve problems in the cloud infrastructure. </p>
+            <p>For details, refer to <xref
+                    href="../monitor/c-monitoring.xml"/>.</p>
+        </section>
+        <section>
+                        <title>Log Management</title>
+                        <p>With the increasing complexity of cloud infrastructures, it is becoming more and more difficult and time-consuming for the system operator to gather, store, and query the large amounts of log data manually. To cope with these problems, <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> provides centralized log management features. </p>
+                        <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> collects log data from all services and servers the cloud infrastructure is composed of. The log data from a large number of sources can be accessed from a single dashboard. Integrated search, filter, and graphics options enable system operators to isolate problems and narrow down potential root causes. <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> thus provides valuable insights into the log data, even with large amounts of data resulting from highly complex environments.</p>
+                        <p>Based on <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                />'s alerting features and notification system, the users can also configure warnings and critical thresholds for log data. If the number of critical log entries reaches a defined threshold, the users receive a warning and can instantly analyze their logs and start troubleshooting.</p>
+                        <p>For details, refer to <xref href="../log/c-logmanagement.xml"/>.</p>
+                </section>
+        <section>
+            <title>Integration with OpenStack </title>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is integrated with OpenStack core services. These include: </p>
+            <ul>
+                <li>OpenStack Horizon dashboard for visualizing monitoring metrics and log data</li>
+                <li>OpenStack user management</li>
+                <li>OpenStack security and access control</li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Configuring OpenStack</title>
+    <conbody>
+        <section>
+            <p>To enable HTTPS, the Monitoring API endpoint and the Openstack Horizon configuration must be updated.</p>
+            <p>To make the required changes, carry out the following steps:</p>
+            <ol compact="no">
+                <li>
+                    <p>Delete the endpoint of the <codeph>monasca</codeph> service. For this purpose, list the endpoints that are currently defined for the OpenStack services:</p>
+                    <codeblock>openstack endpoint list</codeblock>
+                    <p>Example response:</p>
+                    <codeblock>+----------------------------------+-----------+--------------+--------------+
+| ID                               | Region    | Service Name | Service Type |
++----------------------------------+-----------+--------------+--------------+
+| f3628bd692f840f2ad885dcca2032b03 | RegionOne | ceilometer   | metering     |
+| 023d89ed00a544968ab06afdb8ccd416 | RegionOne | monasca      | monitoring   |
+| 257f2d60dcf5481a9c77249e10153efe | RegionOne | keystone     | identity     |
+| e948de4682c94df6b9bb34064c898c3d | RegionOne | nova_ec2     | ec2          |
+| 3cd143535ac24b25b94446f527a58289 | RegionOne | glance       | image        |
+| f3c7bc6694b94d0ba69940b130d684f2 | RegionOne | neutron      | network      |
+| 9555c66c45464ee6b079a131003632d8 | RegionOne | novav3       | computev3    |
+| 09d72d06542d495781cb7952c48323e8 | RegionOne | logs-search  | logs-search  |
+| c506c6526f5e40aaa9f1a743528727b7 | RegionOne | cinderv2     | volumev2     |
+| bccefa9c92584333a7f4023fc3f53e5f | RegionOne | nova         | compute      |
+| 79b2c7da8f1b40299126629cba54e1d8 | RegionOne | swift        | object-store |
+| f4fcc7dfcc534835b0c09e9ca2081e97 | RegionOne | logs         | logs         |
+| 76dbfdd93561465e8569578fa98eb320 | RegionOne | cinder       | volume       |
++----------------------------------+-----------+--------------+--------------+openstack endpoint list</codeblock>
+                </li>
+                <li>
+                    <p>To delete the endpoint of the <codeph>monasca</codeph> service, execute the following command:</p>
+                    <codeblock>openstack endpoint delete &lt;ID of monasca service></codeblock>
+                    <p>Example: </p>
+                    <codeblock>openstack endpoint delete 023d89ed00a544968ab06afdb8ccd416</codeblock>
+                </li>
+                <li>
+                    <p>To create a new endpoint for the <codeph>monasca</codeph> service by specify the corresponding HTTPS URL, execute the following command:</p>
+                    <codeblock>openstack endpoint create --publicurl https://&lt;CMM server IP>:8070/v2.0 --region RegionOne monasca</codeblock>
+                    <p>Example:</p>
+                    <codeblock>openstack endpoint create --publicurl https://10.124.154.8:8070/v2.0 --region RegionOne monasca</codeblock>
+                </li>
+                <li>
+                    <p>Update the configuration for the OpenStack Horizon Service.</p>
+                    <p>For this purpose, open the <codeph>local_settings.py</codeph> file with your favorite editor.</p>
+                    <p>Example:</p>
+                    <codeblock>vi /usr/share/openstack-dashboard/monitoring/config/local_settings.py</codeblock>
+                </li>
+                <li>
+                    <p>Set the  <codeph>OPENSTACK_SSL_NO_VERIFY</codeph> parameter to <codeph>true</codeph>.</p>
+                    <p>Example:</p>
+                    <codeblock>OPENSTACK_SSL_NO_VERIFY = getattr(settings, 'OPENSTACK_SSL_NO_VERIFY', True)</codeblock>
+                </li>
+                <li>
+                    <p>To restart the <codeph>httpd</codeph> service, execute the following command:</p>
+                    <codeblock>systemctl restart httpd</codeblock>
+                </li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Configuring Metrics Data Retention</title>
+    <conbody>
+        <section>
+            <p
+                conref="../../cmmoperator/operate/c-dataretention-inf.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Metrics_and_alarm_history_dat_concept_conbody_section_p_1"/>
+            <p>To change the data retention settings that were defined when installing the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> cluster, you use the InfluxDB command line interface, the interactive shell that is provided for the database. You have to change the data retention settings on one node only. The updated settings are automatically replicated to the other nodes in the cluster. Proceed as follows:</p>
+            <ol>
+                <li>Log in to one of the nodes in the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> cluster.</li>
+                <li
+                    conref="../../cmmoperator/operate/c-dataretention-inf.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Go_to_the_directory_where_Inf_concept_conbody_section_ol_l"/>
+                <li>Connect to InfluxDB using the InfluxDB command line interface as follows: <p>
+                        <codeblock>./influx -host &lt;ex_node_host_ip&gt;</codeblock>
+                    </p><p>Replace <codeph>&lt;ex_node_host_ip&gt;</codeph> with the IP address of the machine on which the instance of the InfluxDB database is installed.</p><p>The output of this command is, for example, as follows: </p><p>
+                        <codeblock>Connected to http://localhost:8086 version 0.9.1
+InfluxDB shell 0.9.1</codeblock>
+                    </p></li>
+                <li
+                    conref="../../cmmoperator/operate/c-dataretention-inf.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Connect_to_the_InfluxDB_datab_concept_conbody_section_ol_l"/>
+                <li>
+                    <p>To update your data retention policy, use the <codeph>ALTER RETENTION POLICY</codeph> command:</p>
+                    <codeblock>ALTER RETENTION POLICY &lt;policy_name&gt; ON &lt;db_name&gt; DURATION &lt;duration&gt; REPLICATION &lt;n&gt; [DEFAULT]</codeblock>
+                    <p>Replace <codeph>&lt;policy_name&gt;</codeph> with the name of the retention policy you define. Multiple policies can be defined, one of them is set as default. <codeph>persister_all</codeph> is the name of the policy that is initially installed by <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+                    <p>Replace <codeph>&lt;db_name&gt;</codeph> with the name of your database.</p>
+                    <p>Replace <codeph>&lt;duration&gt;</codeph> with the time period after which the data is to be deleted. The minimum retention period is one hour. You can use the following options for specifying the time period:</p>
+                    <ul
+                        conref="../../cmmoperator/install/c-cmmoinstcmm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/m_concept_conbody_section_ol_l">
+                        <li/>
+                    </ul>
+                    <p>Only single units are supported. This means, for example, that you cannot define a time span of <codeph>7230m</codeph> as <codeph>120h 30m</codeph>. </p>
+                    <p>Replace <codeph>&lt;n&gt;</codeph> with the number of nodes on which the InfluxDB database is installed. The replication factor is relevant if <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> is installed in cluster mode.</p>
+                    <p>Use <codeph>[DEFAULT]</codeph> to set the new retention policy as the default retention policy for your database.</p>
+                    <p>Example for deleting data if it is older than 30 days:</p>
+                    <codeblock>ALTER RETENTION POLICY my_policy ON mon DURATION 30d REPLICATION 3 DEFAULT </codeblock>
+                </li>
+                <li
+                    conref="../../cmmoperator/operate/c-dataretention-inf.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Restart_the_concept_conbody_section_ol_l"
+                />
+            </ol>
+            <p
+                conref="../../cmmoperator/operate/c-dataretention-inf.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/For_an_introduction_to_the_In_concept_conbody_section_p_3"
+            />
+        </section>
+    </conbody>
+</concept>

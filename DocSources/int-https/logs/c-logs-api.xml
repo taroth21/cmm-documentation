@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Configuring the Log API</title>
+    <conbody>
+        <section>
+            <p>For using the HTTPS protocol, it is required to install the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> components as described in the product documentation.</p>
+            <p>As a <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Operator, you must additionally configure the Log API for HTTPS <b>before</b> executing the <codeph>monasca.yml</codeph> playbook.</p>
+            <p>To configure the Log API for HTTPS, carry out the following additional steps before running the installer:</p>
+            <ol compact="no">
+                <li>
+                    <p>Change the URL for communication with the Log API.</p>
+                    <p>For this purpose, open the <codeph>all_group</codeph> file with your favorite editor. It defines the main configuration settings. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/group_vars/all_group</codeblock>
+                </li>
+                <li>
+                    <p>Change the specification in the <codeph>URL service definition</codeph> section from <codeph>http</codeph> to <codeph>https</codeph>:</p>
+                    <codeblock># URL service definition
+monasca_log_api_url: "https://{{ monasca_host }}:{{ monasca_log_api_port|int }}/v3.0"</codeblock>
+                </li>
+                <li>
+                    <p>Specify the location of your SSL certificate that is to be used.</p>
+                    <p>For this purpose, open the <codeph>monasca_log_api_group</codeph> file with your favorite editor. It defines the configuration settings for the Log API.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/group_vars/monasca_log_api_group</codeblock>
+                </li>
+                <li>
+                    <p>Insert the <codeph>monasca_log_api_certfile</codeph> and the <codeph>monasca_log_api_keyfile</codeph> parameters. They specify the path to the certificate files you want to use. </p>
+                    <p>Example: </p>
+                    <codeblock>monasca_log_api_certfile: /home/vagrant/ssl/server.crt 
+monasca_log_api_keyfile: /home/vagrant/ssl/server.key</codeblock>
+                </li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

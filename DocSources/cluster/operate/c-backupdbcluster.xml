@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Databases</title>
+    <conbody>
+        <section>
+                        <p>You need to create regular backups of the following databases:</p>
+                        <ul
+                                conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Elasticsearch_database_concept_conbody_section_1_ul">
+                                <li/>
+                        </ul>
+                        <p
+                                conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/It_is_recommended_that_backup_concept_conbody_section_1_p"/>
+                </section>
+                <section>
+                        <title>Elasticsearch Database</title>
+                        <p
+                                conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/For_backing_up_and_restoring_concept_conbody_section_2_p"/>
+                        <p
+                                conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/To_make_a_backup_of_the_datab_concept_conbody_section_2_p"/>
+                        <ol>
+                                <li
+                                        conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Make_sure_that_concept_conbody_section_2_o"/>
+                                <li>
+                                        <p>Log in to one of the nodes in the <ph
+                                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                                /> cluster.</p>
+                                </li>
+                                <li>
+                                        <p>Create a snapshot repository.</p>
+                                        <p>Example:</p>
+                                        <codeblock>curl -XPUT http://localhost:9200/_snapshot/my_backup -d '{
+  "type": "fs",
+  "settings": {
+       "location": "/mount/backup/elasticsearch1/my_backup",
+       "compress": true
+  }
+}'</codeblock>
+                                        <p
+                                                conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_example_registers_a_share_concept_conbody_section_2_o"/>
+                                        <note othertype="note">
+                                                <p>The directory for storing snapshots must be specified as configured during the installation of the <ph
+                                                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                                            /> Service in the <codeph>group_vars/monasca_group</codeph> file. The directory must be manually mounted before creating the snapshot. It must be accessible from all nodes on which an Elasticsearch database instance is installed. The <codeph>elastic</codeph> user must be specified as the owner of the directory.</p>
+                                        </note>
+                                        <p
+                                                conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/compress_concept_conbody_section_2_o"/>
+                                </li>
+                                <li
+                                        conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Check_whether_the_repository_concept_conbody_section_2_o"/>
+                                <li
+                                        conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Create_a_snapshot_of_your_dat_concept_conbody_section_2_o"/>
+                        </ol>
+                        <p>To restore the database cluster, you have to restore only one database instance. Proceed as follows:</p>
+                        <ol
+                                conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Close_all_indices_of_your_dat_concept_conbody_section_2_o">
+                                <li/>
+                        </ol>
+                        <p
+                                conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/For_additional_information_ba_concept_conbody_section_2_p"/>
+                </section>
+                <section>
+                        <title>InfluxDB Database</title>
+                        <note othertype="note">
+                                <p>The InfluxDB version that is integrated into the current version of <ph
+                                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> does not feature reliable mechanisms for backing up and restoring your database in a clustered environment.</p>
+                        </note>
+                </section>
+                <section>
+                        <title>MariaDB Database</title>
+                        <p
+                                conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/For_backing_up_and_restoring_concept_conbody_section_4_p"/>
+                        <p>To back up your MariaDB database, you must be the owner of the database or a user with superuser privileges. Proceed as follows:</p>
+                        <ol>
+                                <li>
+                                        <p>Log in to one of the nodes in your <ph
+                                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                                /> cluster. </p>
+                                </li>
+                                <li>
+                                        <p>Check the status of the database cluster to ensure that the instance of the MariaDB database on this node is up and running. It must be fully synchronized with the other nodes. </p>
+                                        <p>Example:</p>
+                                        <codeblock>mysql -u root --execute="SHOW GLOBAL STATUS WHERE Variable_name IN ('wsrep_ready', 'wsrep_cluster_size', 'wsrep_cluster_status', 'wsrep_connected', 'wsrep_evs_state', 'wsrep_local_state_comment');"</codeblock>
+                                </li>
+                                <li>
+                                        <p>Create the backup.</p>
+                                        <p>Example:</p>
+                                        <codeblock>mysqldump -u root -p mon &gt; dumpfile.sql</codeblock>
+                                        <p>In addition to the name of the database, you have to specify the name and the location where <codeph>mysqldump</codeph> stores its output.</p>
+                                </li>
+                        </ol>
+                        <p>To restore your MariaDB database, proceed as follows:</p>
+                        <ol>
+                                <li>
+                                        <p>Log in to one of the nodes in your <ph
+                                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                                /> cluster.</p>
+                                </li>
+                                <li>
+                                        <p>Stop all MariaDB-related services on this node to avoid errors during the restore operation:</p>
+                                        <codeblock>systemctl stop mariadb
+systemctl stop mariadbchk.socket
+systemctl stop monasca-api
+systemctl stop monasca-thresh
+systemctl stop monasca-agent
+systemctl stop monasca-log-agent</codeblock>
+                                </li>
+                                <li>
+                                        <p>Repeat Step 1 and 2 for the other nodes in your cluster.</p>
+                                </li>
+                                <li>
+                                        <p>Log in to one of the nodes in your <ph
+                                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                                        /> cluster again, and start the database cluster. Starting the database cluster automatically starts the <codeph>mariadb</codeph> service on this node.</p>
+                                        <p>Use the following command to start the database cluster: </p>
+                                        <p>
+                                                <codeblock>galera_new_cluster</codeblock>
+                                        </p>
+                                </li>
+                                <li
+                                        conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Log_in_to_the_database_you_ha_concept_conbody_section_4_o"/>
+                                <li
+                                        conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Remove_and_create_the_databas_concept_conbody_section_4_o"/>
+                                <li
+                                        conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Exit_concept_conbody_section_4_o"/>
+                                <li
+                                        conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Restore_the_database._concept_conbody_section_4_o"/>
+                                <li>
+                                        <p>Start the MariaDB-related services:</p>
+                                        <codeblock>systemctl start mariadb
+systemctl start mariadbchk.socket
+systemctl start monasca-api
+systemctl start monasca-thresh
+systemctl start monasca-agent
+systemctl start monasca-log-agent</codeblock>
+                                </li>
+                        </ol>
+                        <p
+                                conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/For_additional_information_on_concept_conbody_section_4_p"/>
+                </section>
+    </conbody>
+</concept>

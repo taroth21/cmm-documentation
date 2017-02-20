@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+            xml:lang="en-us">
+        <title>Components</title>
+        <conbody>
+        <section
+            conref="../../overview/whatiscmm/c-components.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_following_illustration_pr_concept_conbody_section_1"/>
+        <section
+            conref="../../tenantuser/intro/c-tucomponents.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/OpenStack_concept_conbody_section_2"/>
+        <section
+            conref="../../overview/whatiscmm/c-components.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Service_concept_conbody_section_3"/>
+                <section id="Horizon_Plugin_concept_conbody_section_4">
+            <title><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Horizon Plugin</title>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> comes with a plugin for the OpenStack Horizon dashboard. The plugin extends the main dashboard in OpenStack with a view for monitoring. This enables <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> users to access the monitoring functions from a central Web-based graphical user interface. For details, refer to the <xref
+                    format="html" href="http://docs.openstack.org/developer/horizon/" scope="external"
+                            ><u><i>OpenStack Horizon documentation</i></u></xref>.</p>
+            <p>Based on OpenStack Horizon, the monitoring data is visualized on a comfortable and easy-to-use dashboard which fully integrates with the following applications:<ul>
+                    <li>Grafana (for metrics data). An open source application for visualizing large-scale measurement data.</li>
+                    <li>Kibana (for log data). An open source analytics and visualization platform designed to work with Elasticsearch.</li>
+                </ul></p>
+        </section>
+        <section
+            conref="../../overview/whatiscmm/c-components.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Metrics_Agent_concept_conbody_section_5"/>
+        <section
+            conref="../../overview/whatiscmm/c-components.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Log_Agent_concept_conbody_section_6"/>
+        </conbody>
+</concept>

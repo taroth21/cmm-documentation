@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>Removing Log Data</title>
+    <conbody>
+        <section>
+            <p id="Log_data_is_stored_in_the_Ela_concept_conbody_section_p_1"
+                >Log data is stored in the Elasticsearch database. Elasticsearch stores the data in indices. One index per day is created for every OpenStack project.</p>
+        </section>
+        <section id="By_default_the_indices_are_s_concept_conbody_section_2">
+            <p>By default, the indices are stored in the following directory on the host where the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is installed: </p>
+            <p><codeph>/var/data/elasticsearch/&lt;cluster-name&gt;/nodes/&lt;node-name&gt;</codeph></p>
+            <p>Example:</p>
+            <p><codeph>/var/data/elasticsearch/elasticsearch/nodes/0</codeph></p>
+            <p>
+                <note othertype="note"
+                        >If your system uses a different directory, look up the <codeph>path.data</codeph> parameter in the Elasticsearch configuration file, <codeph>/opt/elasticsearch/config/elasticsearch.yml</codeph>.</note>
+            </p>
+        </section>
+        <section>
+            <p>If you want to delete outdated or unnecessary log data from the Elasticsearch database, proceed as follows: </p>
+            <p>
+                <ol>
+                    <li>Make sure that <codeph>curl</codeph> is installed. If this is not the case, download and install it, for example, from the following Web site: <xref
+                            format="html"
+                            href="http://curl.haxx.se/download.html"
+                            scope="external"><u><i>http://curl.haxx.se/download.html</i></u></xref>.</li>
+                    <li>Create a backup of the Elasticsearch database. For details, refer to <xref
+                                    href="../../shared/operationmaintenance/c-backup.xml"/>.</li>
+                    <li>Determine the ID of the OpenStack project for the data to be deleted:<p>Log in to the OpenStack dashboard and go to <b>Identity &gt; Projects</b>.</p><p>The following OpenStack projects are relevant for log management: </p><p>
+                            <ul>
+                                <li><codeph>admin</codeph>: All log information related to OpenStack.</li>
+                                <li><codeph>cmm</codeph>: All log information related to <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                            </ul>
+                        </p><p>In the course of the productive operation of <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, additional projects may be created.</p><p>The <b>Project ID</b> field shows the relevant ID. </p></li>
+                    <li>Log in to the host where <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed. </li>
+                    <li>Make sure that the data you want to delete exists by executing the following command: <p>
+                            <codeblock>curl -XHEAD -i 'http://localhost:&lt;port&gt;/&lt;projectID-date&gt;'</codeblock>
+                        </p><p>For example, if Elasticsearch is listening at port 9200 (default), the ID of the OpenStack project is <codeph>abc123</codeph>, and you want to check the index of 2015, July 1st, the command is as follows: </p><p>
+                            <codeblock>curl -XHEAD -i 'http://localhost:9200/abc123-2015-07-01'</codeblock>
+                        </p><p>If the HTTP response is <codeph>200</codeph>, the index exists; if the response is <codeph>404</codeph>, it does not exist.</p></li>
+                    <li>Delete the index as follows: <p>
+                            <codeblock>curl -XDELETE -i 'http://localhost:&lt;port&gt;/&lt;projectID-date&gt;'</codeblock>
+                        </p><p>Example: </p><p>
+                            <codeblock>curl -XDELETE -i 'http://localhost:9200/abc123-2015-07-01'</codeblock>
+                        </p><p>This command either returns an error, such as <codeph>IndexMissingException</codeph>, or acknowledges the successful deletion of the index. </p></li>
+                </ol>
+            </p>
+            <p>
+                <note
+                    othertype="note">Be aware that the <codeph>-XDELETE</codeph> command immediately deletes the index file!</note>
+            </p>
+            <p>Both, for <codeph>-XHEAD</codeph> and <codeph>-XDELETE</codeph>, you can use wildcards for processing several indices. For example, you can delete all indices of a specific project for the whole month of July, 2015: </p>
+            <p>
+                <codeblock>curl -XDELETE -i 'http://localhost:9200/abc123-2015-07-*'</codeblock>
+            </p>
+            <p>
+                <note othertype="note">Take extreme care when using wildcards for the deletion of indices. You could delete all existing indices with one single command!</note>
+            </p>
+        </section>
+    </conbody>
+</concept>

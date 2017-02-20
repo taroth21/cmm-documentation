@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Cleanup</title>
+    <conbody>
+        <section>
+            <p>The automatic uninstallation of the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> Service and the OpenStack extensions does not include the removal of the MariaDB database, the InfluxDB database, and the Elasticsearch database. In this way, possible dependencies to other systems are not broken deliberately. </p>
+            <p>If you no longer need one of the above components, and want to manually remove it, proceed as follows: </p>
+            <ol compact="no">
+                <li>
+                    <p>Log in to the host where the component is installed as a user with root privileges.</p>
+                </li>
+                <li>
+                    <p>Proceed as described in the subsequent sections.</p>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <title>MariaDB Database</title>
+            <p>
+                <ol>
+                    <li>
+                        <p>Stop the MariaDB service: </p>
+                        <p>
+                            <codeblock>systemctl stop mariadb</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Disable the automatic start of the MariaDB service during system booting: </p>
+                        <p>
+                            <codeblock>systemctl disable mariadb</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the MariaDB packages from your YUM repository, provided that they are not used by other services:</p>
+                        <p>
+                            <codeblock>yum remove mariadb \
+  mariadb-devel \
+  mariadb-server \
+  perl-Compress-Raw-Bzip2 \
+  perl-Compress-Raw-Zlib \
+  perl-DBD-MySQL \
+  perl-DBI \
+  perl-Data-Dumper \
+  perl-IO-Compress \
+  perl-Net-Daemon \
+  perl-PlRPCrm</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the Python module required for the MariaDB database, provided that it is not used by other services:</p>
+                        <p>
+                            <codeblock>pip uninstall PyMySQL</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the MariaDB data directory: </p>
+                        <p>
+                            <codeblock>rm -rf /var/lib/mysql</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the MariaDB configuration file:</p>
+                        <p>
+                            <codeblock>rm -rf /etc/my.cnf</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the daemon directory:</p>
+                        <p>
+                            <codeblock>rm -rf /etc/my.cnf.d</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the log error directory:</p>
+                        <p>
+                            <codeblock>rm -rf /var/log/mariadb</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the MariaDB user and group: </p>
+                        <p>
+                            <codeblock>userdel -r mysql</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Optionally, restart the <codeph>systemctl</codeph> daemon: </p>
+                        <p>
+                            <codeblock>systemctl daemon-reload</codeblock>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </section>
+        <section>
+            <title>InfluxDB Database</title>
+            <p>
+                <ol>
+                    <li>
+                        <p>Stop the InfluxDB service: </p>
+                        <p>
+                            <codeblock>systemctl stop influxdb</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Disable the automatic start of the InfluxDB service during system booting: </p>
+                        <p>
+                            <codeblock>/sbin/chkconfig influxdb off</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the InfluxDB package from your YUM repository: </p>
+                        <p>
+                            <codeblock>yum remove influxdb</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the remaining folders and files: </p>
+                        <p>
+                            <codeblock>rm -rf /var/log/influxdb
+rm -rf /var/opt/influxdb
+rm -rf /etc/influxdb 
+rm /etc/logrotate.d/influxdb</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the InfluxDB user and group: </p>
+                        <p>
+                            <codeblock>userdel -r influxdb </codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Optionally, restart the <codeph>systemctl</codeph> daemon:</p>
+                        <p>
+                            <codeblock>systemctl daemon-reload</codeblock>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </section>
+        <section>
+            <title>Elasticsearch Database</title>
+            <p>
+                <ol>
+                    <li>
+                        <p>Stop the Elasticsearch service: </p>
+                        <p>
+                            <codeblock>systemctl stop elasticsearch</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Disable the automatic start of the Elasticsearch service during system booting: </p>
+                        <p>
+                            <codeblock>/sbin/chkconfig elasticsearch off</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the remaining folders and files: </p>
+                        <p>
+                            <codeblock>rm -rf /var/data
+rm -rf /var/log/elasticsearch
+rm -rf /tmp/hsperfdata_elastic
+rm -rf /tmp/jna--1666338091</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Remove the Elasticsearch user and group: </p>
+                        <p>
+                            <codeblock>userdel -r elastic</codeblock>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Optionally, restart the <codeph>systemctl</codeph> daemon:</p>
+                        <p>
+                            <codeblock>systemctl daemon-reload</codeblock>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

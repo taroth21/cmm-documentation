@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Users and Roles</title>
+    <conbody>
+        <section>
+            <p><ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users can be grouped by their role. The following user roles are distinguished:</p>
+            <ul>
+                <li>
+                    <p>A <b>tenant user</b> acts as a service provider in the OpenStack environment. He books virtual machines in OpenStack to provide services to end users or to host services that he needs for his own development activities. <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> helps tenant users to ensure the quality of their services in the cloud.</p>
+                    <p>For details on the tasks of the tenant user, refer to the <i>Tenant User's Guide</i>.</p>
+                </li>
+                <li>
+                    <p>The<b> OpenStack operator</b> is a special tenant user. He is responsible for administrating and maintaining the underlying OpenStack platform and ensures the availability and quality of the OpenStack services (e.g. Heat, Nova, Cinder, Swift, Glance, or Keystone).</p>
+                    <p>For details on the tasks of the OpenStack operator, refer to the <i>OpenStack Operator's Guide</i>.</p>
+                </li>
+                <li>
+                    <p>The <b><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> operator</b> is responsible for administrating and maintaining <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            />. He provides the cloud monitoring services to the other users and ensures the quality of the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</p>
+                    <p>For details on the tasks of the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator, refer to the <i><ph
+            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Operator's Guide</i>.</p>
+                </li>
+            </ul>
+        </section>
+        <section
+                    id="User_Management_concept_conbody_section_2">
+            <title>User Management</title>
+            <p id="is_fully_integrated_with_Key_concept_conbody_section_2_p"><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> is fully integrated with Keystone, the identity service which serves as the common authentication and authorization system in OpenStack.</p>
+            <p id="The_concept_conbody_section_2_p">The <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> integration with Keystone requires any <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> user to be registered as an OpenStack user. All authentication and authorization in <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> is done through Keystone. If a user requests monitoring data, for example, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> verifies that the user is a valid user in OpenStack and allowed to access the requested metrics.</p>
+            <p id="users_are_created_and_admini_concept_conbody_section_2_p"><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> users are created and administrated in OpenStack:</p>
+            <ul id="Each_user_assumes_a_role_in_O_concept_conbody_section_2_ul">
+                <li>Each user assumes a role in OpenStack to perform a specific set of operations. The OpenStack role specifies a set of rights and privileges.</li>
+                <li>Each user is assigned to at least one project in OpenStack. A project is an organizational unit that defines a set of resources which can be accessed by the assigned users. <p>Tenant users in <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> can monitor the set of resources that is defined for the projects to which they are assigned.</p></li>
+            </ul>
+            <p>For details on user management, refer to the <xref
+                    format="html" href="http://docs.openstack.org/" scope="external"><u><i>OpenStack documentation</i></u></xref>.</p>
+        </section>
+    </conbody>
+</concept>

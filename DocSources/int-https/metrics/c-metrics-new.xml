@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Configuring the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+        /> Metrics Agent</title>
+    <conbody>
+        <section>
+            <p>For using the HTTPS protocol, it is required to update the <codeph>agent.yaml</codeph> configuration file of each agent involved.</p>
+            <p>To update an agent configuration for HTTPS, proceed as follows:</p>
+            <ol>
+                <li>
+                    <p>Log in to the server where the agent is installed.</p>
+                </li>
+                <li>
+                    <p>To stop the agent, execute the following command:</p>
+                    <codeblock>sudo systemctl stop monasca-agent</codeblock>
+                </li>
+                <li>
+                    <p>Open the agent's configuration file with your favorite editor.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /etc/monasca/agent/agent.yaml</codeblock>
+                </li>
+                <li>
+                    <p>Set the <codeph>insecure</codeph> parameter to <codeph>true</codeph>, and set the URL to the HTTPS address to be uses as connection point.</p>
+                    <p>Example:</p>
+                    <codeblock>Api:
+  amplifier: 0
+  backlog_send_rate: 1000
+  ca_file: null
+  insecure: true
+  keystone_url: http://10.124.154.110:35357/v3
+  max_buffer_size: 1000
+  password: password
+  project_domain_id: null
+  project_domain_name: null
+  project_id: null
+  project_name: cmm
+  url: https://10.124.154.111:8070/v2.0</codeblock>
+                </li>
+                <li>
+                    <p>To start the agent again, execute the following command:</p>
+                    <codeblock>sudo systemctl start monasca-agent</codeblock>
+                </li>
+            </ol>
+            <p>For details on all configuration settings, refer to <xref
+                    href="../../shared/appendix/r-confsettings-metrics.xml"/>.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
+                      "task.dtd" >
+                      
+<task id="ProductNameTopic" xml:lang="en-us">
+  <title>Cloud Monitoring Manager</title>
+  <taskbody>
+    <context><ph id="Product_Name">Cloud Monitoring Manager</ph>
+      <ph id="Product_Abbr">CMM</ph>
+    </context>
+  </taskbody>
+</task>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB" xml:lang="en-us">
+    <title>Working with Data Visualizations</title>
+    <conbody>
+        <section id="The_user_interface_for_monito_concept_conbody_section">
+            <p>The user interface for monitoring your virtual machines integrates with Grafana, an open source application for visualizing large-scale monitoring data on metrics dashboards. <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> ships with preconfigured metrics dashboards for operators. As a tenant user, you can configure your own dashboards as required. </p>
+            <p id="Each_metrics_dashboard_is_com_concept_conbody_section_p_2"
+                >Each metrics dashboard is composed of one or more panels that are arranged in one or more rows. A row serves as a logical divider within the dashboard. It organizes the panels in groups. </p>
+            <p id="A_panel_is_the_basic_building_concept_conbody_section_p_5"
+                >A panel is the basic building block for visualizing your metrics data. A query editor allows you to exactly define which data is displayed in which panel and which time range is visualized. Grafana offers a large number of display and formatting features that enable you to customize how your content is presented. You can drag and drop panels within and between rows, you can also change the size of the panels.</p>
+            <p id="In_addition_to_creating_your_concept_conbody_section_p_3"
+                    >In addition to creating your own dashboards, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> allows you to save your dashboards locally. Saving a dashboard means exporting it to a JSON file. You can use the JSON file as a template: Edit the JSON file, share it with other users at request, and import it to <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> again at a later stage. </p>
+            <p id="For_details_on_working_with_t_concept_conbody_section_p_4"
+                    >For details on working with the panel editing user interface of the metrics dashboard, refer to the <xref
+                    format="html" href="http://docs.grafana.org/v1.9/guides/gettingstarted/" scope="external"
+                            ><u><i>Getting Started</i></u></xref> tutorial of Grafana.</p>
+            <p id="Use_the_concept_conbody_section_p_5"
+                    >Use <uicontrol>Monitoring > Overview</uicontrol> in the OpenStack Horizon dashboard to access the metrics dashboards. The options at the top border of the <uicontrol>Overview</uicontrol> page allow you to access preconfigured dashboards. Use them as the starting point for creating your own dashboard with the data you want to visualize.</p>
+        </section>
+    </conbody>
+</concept>

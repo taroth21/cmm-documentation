@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Removing Log Data</title>
+    <conbody>
+        <section>
+      <p
+        conref="../../cmmoperator/operate/c-removelogfiles.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Log_data_is_stored_in_the_Ela_concept_conbody_section_p_1"/>
+      <p>From time to time, you may want to delete outdated or unnecessary indices from your Elasticsearch database, for example, to save space or remove data you are not longer interested in. For this purpose, you can use Elasticsearch Curator. </p>
+    </section>
+    <section
+      conref="../../cmmoperator/operate/c-removelogfiles.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/By_default_the_indices_are_s_concept_conbody_section_2"/>
+    <section>
+      <p>To delete outdated or unnecessary log data, proceed as follows: </p>
+      <ol>
+        <li>
+          <p>Create a backup of the Elasticsearch database cluster. For details, refer to <xref
+              href="../../shared/operationmaintenance/c-backup.xml"/>.</p>
+        </li>
+        <li>
+          <p>Log in to one of the nodes where an Elasticsearch database instance is installed.</p>
+        </li>
+        <li>
+          <p>Open the <codeph>curator_action.yml</codeph> file with your favorite editor. It defines the delete operation to be executed.</p>
+          <p>Example:</p>
+          <codeblock>sudo vim /etc/monasca/elasticsearch-curator/curator_action.yml</codeblock>
+        </li>
+        <li>
+          <p>Specify which indices are to be deleted. In the <codeph>action: delete_indices</codeph> section, you can define filters for this purpose. One or multiple <codeph>filtertype</codeph> parameters have to be defined to select the indices you want to delete. </p>
+          <p>Example for deleting the indices stored for tenant <codeph>d85e5e20a7c946258ec1f2e92ac67747-</codeph> that are older than 7 days: </p>
+          <codeblock>actions:
+  1:
+    action: delete_indices
+    description: >-
+      Delete indices that are older than 7 days 
+      for d85e5e20a7c946258ec1f2e92ac67747-.
+    options:
+      ignore_empty_list: True
+      timeout_override:
+      continue_if_exception: False
+      disable_action: False
+    filters:
+     - filtertype: pattern
+       kind: prefix
+       value: d85e5e20a7c946258ec1f2e92ac67747-
+       exclude:
+     - filtertype: age
+       source: name
+       direction: older
+       timestring: '%Y-%m-%d'
+       unit: days
+       unit_count: 7 #time span after which data is to be removed
+       field:
+       stats_result:
+       epoch:
+       exclude: False</codeblock>
+          <p>For detailed information on the filter types that can be used, refer to the <xref format="html"
+              href="https://www.elastic.co/guide/en/elasticsearch/client/curator/4.0/filtertype.html" scope="external"
+                  ><u><i>Elasticsearch Curator documentation</i></u></xref>.</p>
+          <p>The index with the Kibana configuration must be excluded from the delete operation. Therefore the following filter is defined by default:</p>
+          <codeblock>- filtertype: pattern
+  kind: prefix
+  value: .kibana
+  exclude: True </codeblock>
+        </li>
+        <li>
+          <p>To run Elasticsearch Curator, execute the following command: </p>
+          <codeblock>/opt/elasticsearch-curator/bin/curator \
+ --config &lt;path>/curator.yml &lt;path>/action_file.yml</codeblock>
+          <p>Replace <codeph>&lt;path></codeph> with the directory where the Elasticsearch Curator configuration file and action file are located. By default, the Ansible installer stores both files in the <codeph>/etc/monasca/elasticsearch-curator</codeph> directory.</p>
+        </li>
+      </ol>
+      <p>Elasticsearch Curator instantly deletes the indices from the Elasticsearch database instance. Following the delete operation, the database engine automatically replicates the log data and synchronizes the nodes in the cluster.</p>
+    </section>
+    </conbody>
+</concept>

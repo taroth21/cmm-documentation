@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>Dashboards</title>
+    <conbody>
+        <section>
+            <p>Kibana can persist customized log dashboard designs to the Elasticsearch database, and allows you to recall them. For details on saving, loading, and sharing log management dashboards, refer to the <xref
+                    format="html" href="https://www.elastic.co/guide/en/kibana/4.5/dashboard.html#saving-dashboards"
+                    scope="external"><u><i>Kibana documentation</i></u></xref>.</p>
+            <p>Grafana allows you to export customized monitoring dashboards to a location of your choice and re-import them when necessary. For backing up and restoring the exported dashboards, use the standard mechanisms for the file system. For details on exporting monitoring dashboards, refer to the <xref
+                    format="html" href="http://docs.grafana.org/v1.9/guides/gettingstarted/" scope="external"
+                            ><u><i>Getting Started</i></u></xref> tutorial of Grafana.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Installing the OpenStack Extensions</title>
+    <conbody>
+        <section>
+            <p>As a prerequisite for installing the OpenStack Extensions, the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> operator must have installed the offline resources.</p>
+            <p>To install the OpenStack extensions for <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, proceed as follows:</p>
+            <ol compact="no">
+                <li>
+                    <p>Log in to the Control Machine. </p>
+                </li>
+                <li>
+                    <p>The installer uses Ansible group variables for configuration purposes. The group variables are located in the <codeph>/opt/FJSVsvcmm/group_vars</codeph> directory.</p>
+                    <p>Open the <codeph>all_group</codeph> file with your favorite editor. It defines the main configuration settings. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/group_vars/all_group</codeblock>
+                </li>
+                <li>
+                    <p>The installer creates OpenStack user accounts for working with <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            />. For this purpose, specify your access credentials for the OpenStack Keystone service in the <codeph>Keystone Admin credentials</codeph> section:</p>
+                    <p>Example:</p>
+                    <codeblock># Keystone Admin credentials
+keystone_admin_token: ADMIN
+keystone_admin: 'admin'
+keystone_admin_project: 'admin'</codeblock>
+                    <note othertype="note"
+                            >If <codeph>ADMIN</codeph> authentication is disabled for the OpenStack Keystone service, <codeph>keystone_admin_token: ADMIN</codeph> must be removed.</note>
+                </li>
+                <li>Provide the passwords required for installing the OpenStack extensions. They are defined in the <codeph>credentials.yml</codeph> file that is located in the <codeph>/opt/FJSVsvcmm</codeph> directory.<p>Open the <codeph>credentials.yml</codeph> file with your favorite editor. </p><p>Example:</p><codeblock>sudo vim /opt/FJSVsvcmm/credentials.yml</codeblock></li>
+                <li>
+                    <p>Specify the following passwords in the file:</p>
+                    <ul>
+                        <li><codeph>keystone_cmm_operator_user_password</codeph> for Keystone access of the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> operator. The user account for the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> operator is automatically created with the installation.</li>
+                        <li><codeph>keystone_cmm_agent_password</codeph> for Keystone access of the user used for configuration purposes of the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Metrics Agent. The user account is automatically created with the installation.</li>
+                        <li><codeph>keystone_admin_agent_password</codeph> for Keystone access of the user used for configuration purposes of the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Log Agent. The user account is automatically created with the installation.</li>
+                        <li><codeph>keystone_admin_password</codeph> of an OpenStack user account that already exists, for example, <codeph>admin</codeph>. This user account is used for creating the new user accounts with the installation. It is the user account of the OpenStack operator.</li>
+                    </ul>
+                    <note othertype="note">
+                        <p
+                            conref="../../cmmoperator/install/c-cmmoinstcmm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_passwords_must_be_handled_concept_conbody_section_ol_l"
+                        />
+                    </note>
+                </li>
+                <li>
+                    <p>Specify your region name for the OpenStack Keystone service. The region name is defined by the <codeph>keystone_region</codeph> parameter in the <codeph>/opt/FJSVsvcmm/roles/monasca-keystone/defaults/main.yml</codeph> file.</p>
+                    <p>Open the <codeph>main.yml</codeph> file with your favorite editor.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/roles/monasca-keystone/defaults/main.yml</codeblock>
+                </li>
+                <li>
+                    <p>Adapt the <codeph>keystone_region</codeph> parameter in the file to your environment. </p>
+                    <p>Example:</p>
+                    <codeblock>keystone_region: RegionOne</codeblock>
+                </li>
+                <li>
+                    <p>To install the OpenStack extensions, specific configuration settings are required. They are specified in the <codeph>group_vars/openstack_group</codeph> file. </p>
+                    <p>The file contains the default configuration. No changes are required.</p>
+                    <note othertype="note">Make changes only if you have to deviate from the default. </note>
+                    <p>To view the default configuration, you can open the file with your favorite editor.</p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/group_vars/openstack_group</codeblock>
+                    <p>By default, the installer creates the following users, roles, and projects in OpenStack:</p>
+                    <ul>
+                        <li>
+                            <p>A <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                    /> operator who is to monitor <ph
+                                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                            <p>User name: <codeph>cmm-operator</codeph>. Assigned user role: <codeph>cmm-user</codeph> and <codeph>admin</codeph>. Assigned OpenStack project: <codeph>cmm</codeph>.</p>
+                        </li>
+                        <li>
+                            <p>A user for configuration purposes of the agents used for monitoring <ph
+                                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                />. It is recommended that this user account is used only for the agent configurations and not for monitoring and log management tasks.</p>
+                            <p>User name: <codeph>cmm-agent</codeph>. Assigned user role: <codeph>cmm-agent</codeph>. Assigned OpenStack project: <codeph>cmm</codeph>.</p>
+                        </li>
+                        <li>
+                            <p>The OpenStack operator who is to monitor the OpenStack platform uses the existing <codeph>admin</codeph> user account.</p>
+                            <p>Assigned user role: <codeph>cmm-user</codeph> and <codeph>admin</codeph>. Assigned OpenStack project: <codeph>admin</codeph>.</p>
+                        </li>
+                        <li>
+                            <p>A user for configuration purposes of the agents used for monitoring the OpenStack services. It is recommended that this user account is used only for the agent configurations and not for monitoring and log management tasks.</p>
+                            <p>User name: <codeph>admin-agent</codeph>. Assigned user role: <codeph>cmm-agent</codeph>. Assigned OpenStack project: <codeph>admin</codeph>.</p>
+                        </li>
+                    </ul>
+                    <note othertype="note"
+                            >The roles that are created by the installer must be authorized for accessing the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Service. If you change the default configuration of the user accounts, contact your <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> operator. He is responsible for configuring the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</note>
+                </li>
+                <li>
+                    <p>To install the OpenStack extensions, execute the following command:</p>
+                    <codeblock>ansible-playbook /opt/FJSVsvcmm/openstack.yml</codeblock>
+                    <p>The following response is displayed if the installation is successful.</p>
+                    <p>Example: </p>
+                    <codeblock>PLAY RECAP ********************************************************
+horizon-node       : ok=34   changed=21   unreachable=0    failed=0
+keystone-node      : ok=21   changed=3    unreachable=0    failed=0</codeblock>
+                    <note othertype="note"
+                        >There are checks performed during installation that may result in failures or warnings. These failures and warnings are reported but they do not block the installation. It is only this final message that is relevant for a successful installation.</note>
+                </li>
+            </ol>
+            <p>In case the installation fails, check your configuration settings and passwords and retry the installation in verbose mode. To collect debug information, you can execute the following command:</p>
+            <codeblock>ansible-playbook -vvvv /opt/FJSVsvcmm/openstack.yml</codeblock>
+            <p>As soon as the OpenStack extensions are successfully installed, the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator can install the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service. </p>
+            <p>As soon as the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> Service is successfully installed, you can proceed with installing and configuring the agents for monitoring your OpenStack platform. </p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>About this Document</title>
+    <conbody>
+        <section>
+            <p id="This_manual_is_an_introductio_concept_conbody_section_p_1"
+                    >This document is for internal use only. It gives detailed instructions on how to establish an HTTPS connection between the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components.</p>
+            <p>Starting with <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> V1.1, the HTTPS protocol is supported for communication between the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service and the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Log Agent as well as between the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service and the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent. </p>
+            <p>This document is structured as follows: </p>
+            <p>
+                <table colsep="1" frame="all" rowsep="1">
+                    <tgroup cols="2">
+                        <colspec colname="col2" colnum="1" colwidth="2.61*"/>
+                        <colspec colname="col3" colnum="2" colwidth="3.39*"/>
+                        <thead>
+                            <row>
+                                <entry colname="col2">Chapter</entry>
+                                <entry colname="col3">Description</entry>
+                            </row>
+                        </thead>
+                        <tbody>
+                            <row>
+                                <entry colname="col2"><xref href="../../int-https/metrics/c-metrics.xml"/></entry>
+                                <entry colname="col3">Describes how to prepare secure communication between the <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> Service and the <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                    /> Metrics Agent.</entry>
+                            </row>
+                            <row>
+                                <entry colname="col2"><xref href="../../int-https/logs/c-logs.xml"/></entry>
+                                <entry colname="col3">Describes how to prepare secure communication between the <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> Service and the <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                    /> Log Agent.</entry>
+                            </row>
+                        </tbody>
+                    </tgroup>
+                </table>
+            </p>
+        </section>
+    </conbody>
+</concept>

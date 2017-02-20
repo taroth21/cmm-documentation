@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd">
+                         
+<concept id="concept890"
+                xml:lang="en-us">
+    <title>Abbreviations</title>
+    <conbody>
+        <p>This manual uses the following abbreviations:</p>
+        <p>
+            <table
+                colsep="0" frame="none"
+                    rowsep="0">
+                <tgroup
+                        cols="2">
+                    <colspec
+                        colname="col1"
+                        colwidth="1*"/>
+                    <colspec
+                        colname="col2"
+                                    colwidth="3.34*"/>
+                    <tbody>
+                        <row>
+                            <entry><b><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/></b></entry>
+                            <entry>Cloud Monitoring Manager</entry>
+                        </row>
+                        <row>
+                            <entry><b>IaaS</b></entry>
+                            <entry>Infrastructure as a Service</entry>
+                        </row>
+                        <row>
+                            <entry><b>ICMP</b></entry>
+                            <entry>Internet Control Message Protocol</entry>
+                        </row>
+                        <row>
+                            <entry><b>OS</b></entry>
+                            <entry>Operating System</entry>
+                        </row>
+                        <row>
+                            <entry><b>OSS</b></entry>
+                            <entry>Open Source Software</entry>
+                        </row>
+                        <row>
+                            <entry><b>PaaS</b></entry>
+                            <entry>Platform as a Service</entry>
+                        </row>
+                        <row>
+                            <entry><b>SaaS</b></entry>
+                            <entry>Software as a Service</entry>
+                        </row>
+                     </tbody>
+                </tgroup>
+            </table>
+        </p>
+    </conbody>
+</concept>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Distribution Media</title>
+    <conbody>
+        <section>
+            <p><i><b>PENDING</b>: Distribution media for CMM 1.2 has not yet been defined; GA not yet scheduled.</i></p>
+        </section>
+        <section>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is distributed in the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> installation package. It contains the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> software and documentation for installing and configuring <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> in single mode and cluster mode. </p>
+            <p>The package includes:<ul>
+                    <li>
+                        <p><codeph>setup.sh</codeph> script for setting up the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> installer.</p>
+                    </li>
+                    <li>
+                        <p><codeph>Licenses</codeph> subdirectory:</p>
+                        <p>License files of third-party software used by <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+                    </li>
+                    <li>
+                        <p><codeph>Service</codeph> subdirectory:</p>
+                        <p>Installation package for <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, <codeph><ph
+                                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                />-Service-1.2.0.tar.gz</codeph>. It provides the software and setup utilities required by the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> Operator and the OpenStack Operator for installing <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> in either single or cluster mode. </p>
+                        <p><codeph>FJSVsvcmm-1.2.0-1.noarch.rpm</codeph> , an RPM required for checking version information.</p>
+                    </li>
+                    <li>
+                        <p><codeph>Manuals</codeph> subdirectory:</p>
+                        <p>PDF manuals providing an overview of <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                />, as well as information directed to the tenant user, the OpenStack operator, and the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator.</p>
+                    </li>
+                </ul></p>
+        </section>
+    </conbody>
+</concept>

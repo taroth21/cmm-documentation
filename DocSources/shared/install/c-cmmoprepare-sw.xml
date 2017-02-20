@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+        /> Software and Setup Utilities </title>
+    <conbody>
+        <section>
+            <p><i><b>PENDING</b>: Distribution media for CMM 1.2 has not yet been defined; productization not yet scheduled.</i></p>
+        </section>
+        <section>
+            <p>The software and setup utilities are distributed in the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> installation package on the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> DVD. To set up the installation package, you have to mount the DVD and execute the <codeph>setup.sh</codeph> script that is provided. It extracts the utilities required for installing <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>Proceed as follows:</p>
+            <ol>
+                <li>Log in to the Control Machine. </li>
+                <li>
+                    <p>Mount the DVD to a directory of your choice. It is recommended that you explicitly specify the ISO9660 file system.</p>
+                    <p>Execute the following command:</p>
+                    <codeblock># mount -t iso9660 -r /dev/&lt;file_name&gt; &lt;mount_dir&gt;</codeblock>
+                    <p>Replace <codeph>&lt;file_name&gt;</codeph> by the file name of the device and <codeph>&lt;mount_dir&gt;</codeph> by the directory to which you want to mount the DVD.</p>
+                </li>
+                <li>
+                    <p>To run the <codeph>setup.sh</codeph> script, execute the following command:</p>
+                    <codeblock># &lt;mount_dir&gt;/setup.sh</codeblock>
+                    <p>Replace <codeph>&lt;mount_dir&gt;</codeph> by the directory to which you have mounted the DVD.</p>
+                </li>
+            </ol>
+            <p>The content of the installation package is extracted to the <codeph>/opt/FJSVsvcmm</codeph> directory on the Control Machine. After extraction, the following files and directories are available:</p>
+            <ul>
+                <li>
+                    <p><codeph>group_vars</codeph></p>
+                    <p>Directory with the Ansible group variables required for configuring the Control Machine from which <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed. </p>
+                </li>
+                <li>
+                    <p><codeph>host_vars</codeph></p>
+                    <p>Directory with the Ansible host variables required for configuring the Control Machine from which <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed. </p>
+                </li>
+                <li>
+                    <p><codeph>roles</codeph> and <codeph>tasks</codeph></p>
+                    <p>Directories with artifacts required by the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> installer.</p>
+                </li>
+                <li>
+                    <p><codeph>templates</codeph></p>
+                    <p>Directory with sample Ansible configuration files. They can be used for configuring the Control Machine from which <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed.</p>
+                </li>
+                <li>
+                    <p><codeph>*.yml</codeph> files</p>
+                    <p>Ansible playbooks required for installing and uninstalling the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> software components.</p>
+                </li>
+                <li>
+                    <p><codeph>services.sh</codeph></p>
+                    <p>Script for starting, stopping, and viewing the status of the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> agents and services. </p>
+                </li>
+                <li>
+                    <p><codeph>*.txt</codeph> files  <i><b>PENDING</b>: Bug 13216 to be fixed with productization of CMM 1.2 (RPMs and libs consist of 3 parts: (1) Offline Resources (2) RHEL7.3 and OSP8 (3) Delta which cannot be provided for license reasons</i></p>
+                    <p><codeph><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            />12_PythonRequirements.txt</codeph> lists the Python libraries required for the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Service, <codeph>OSP8_PythonRequirements.txt</codeph> lists the Python libraries required for the OpenStack extensions. These libraries are installed to the <codeph>/usr/lib/python2.7/site-packages</codeph> directory.</p>
+                    <note othertype="note">As a prerequisite for the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> Service and the OpenStack extensions, specific versions of the Python libraries must be installed. Make sure that the installed versions are not overwritten in the <codeph>/usr/lib/python2.7/site-packages</codeph> directory.</note>
+                    <p><codeph><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            />12_RPMPackages.txt</codeph> lists the RPM (RedHat Repository Manager) packages required for installing the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                            /> components. <codeph>OSP8_RPMPackages.txt</codeph> lists the RPM packages required for installing the OpenStack extensions.</p>
+                    <note othertype="note">The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> installer automatically installs any missing RPM packages from your YUM repository server. You have to ensure that the required packages are available in your YUM repository. </note>
+                </li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

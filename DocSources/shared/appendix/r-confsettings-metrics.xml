@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN"
+                           "reference.dtd">
+                           
+<reference id="reference832"
+            xml:lang="en-us">
+    <title>Configuration Settings for <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agents</title>
+    <refbody>
+        <section>
+            <p>The configuration settings for the <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent are provided in the following file:</p>
+            <p><codeph>/etc/monasca/agent/agent.yaml</codeph></p>
+            <p>Find below a list of the parameters that are supported by <ph
+                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+            <p>For a description of the available parameters, you can execute the following command:</p>
+            <codeblock>/opt/monasca-agent/bin/monasca-setup --help</codeblock>
+            <ul>
+                <li><codeph>amplifier</codeph></li>
+                <li><codeph>ca_file</codeph></li>
+                <li><codeph>check_frequency </codeph></li>
+                <li><codeph>config_dir</codeph></li>
+                <li><codeph>detection_args</codeph></li>
+                <li><codeph>detection_plugins</codeph></li>
+                <li><codeph>dry_run</codeph></li>
+                <li><codeph>insecure</codeph></li>
+                <li><codeph>keystone_url</codeph></li>
+                <li><codeph>log_dir</codeph></li>
+                <li><codeph>log_level </codeph></li>
+                <li><codeph>monasca_url </codeph></li>
+                <li><codeph>overwrite</codeph></li>
+                <li><codeph>password</codeph></li>
+                <li><codeph>project_domain_id</codeph></li>
+                <li><codeph>project_domain_name</codeph></li>
+                <li><codeph>project_id </codeph></li>
+                <li><codeph>project_name</codeph></li>
+                <li><codeph>remove</codeph></li>
+                <li><codeph>service</codeph></li>
+                <li><codeph>skip_enable</codeph></li>
+                <li><codeph>system_only</codeph></li>
+                <li><codeph>template_dir</codeph></li>
+                <li><codeph>user</codeph></li>
+                <li><codeph>username</codeph></li>
+                <li><codeph>user_domain_id</codeph></li>
+                <li><codeph>user_domain_name</codeph></li>
+                <li><codeph>verbose</codeph></li>
+            </ul>
+            <note othertype="note">
+                <p>The <codeph>dimensions</codeph> parameter is not supported by <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>. The installer auto-detects applications and processes that are running on your machine and saves the corresponding settings to the agent's configuration file. Additional dimensions cannot be specified.</p>
+            </note>
+        </section>
+    </refbody>
+</reference>

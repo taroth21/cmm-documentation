@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Prerequisites</title>
+    <conbody>
+        <section>
+            <p><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> can be installed on a host machine with the following operating systems:</p>
+            <ul>
+                <li>Red Hat Enterprise Linux 7.3 (for Intel64)</li>
+            </ul>
+            <p>As underlying platform technology, the following OpenStack platforms are supported:</p>
+            <ul>
+                <li>Red Hat Enterprise Linux OpenStack Platform 8</li>
+            </ul>
+        </section>
+        <section
+            conref="../../cmmoperator/install/c-cmmoprepare-pre.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/has_been_tested_with_the_fol_concept_conbody_section_2"/>
+    </conbody>
+</concept>

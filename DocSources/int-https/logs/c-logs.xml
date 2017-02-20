@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>HTTPS for Log Management</title>
+    <conbody>
+        <section>
+            <p>By default, the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Log Agent uses the HTTP protocol for communication with the Log API and the OpenStack Keystone service. For a more secure connection, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> can be configured to use the HTTPS protocol.</p>
+            <p>The following sections describe the preparations required for HTTPS, additional installation steps that must be carried out when installing the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Service, as well as configuration steps that must be carried out for the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent.</p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Python Packages</title>
+    <conbody>
+        <section>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> uses pip for installing Python packages. When installing <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> software components, pip V8.1.1 is automatically installed. </p>
+            <note othertype="note">Check whether pip is already installed on the machine on which the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> components are to be installed. The installation fails if V8.1.2 or a version older than V7.0.3 is already installed.</note>
+        </section>
+        <!-- section>
+            <p>When installing <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> software components, the <codeph>pip.conf</codeph> configuration file is automatically created. The installation fails if the <codeph>pip.conf</codeph> file already exists in your environment.</p>
+            <p>Before installing <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> software components, it is therefore required to check whether the <codeph>pip.conf</codeph> file exists. If it does not exist, you can proceed with the installation. If it exists, proceed as follows:</p>
+            <ol>
+                <li>Move your existing <codeph>pip.conf</codeph> file to another directory, or just rename the file.</li>
+                <li>Install the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> software components.</li>
+                <li>Delete the <codeph>pip.conf</codeph> file created by the <ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> installer after the installation.</li>
+                <li>Move your original <codeph>pip.conf</codeph> file to your productive environment again, or rename your original file.</li>
+            </ol>
+        </section -->
+    </conbody>
+</concept>

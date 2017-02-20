@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Uninstallation</title>
+    <conbody>
+        <section>
+            <p><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> ships with uninstallers for automatically uninstalling the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> software components. </p>
+            <p>Before uninstalling, it is recommended that you make a backup of the configuration files, log files, and the data created during operation. For details on backups, refer to <xref
+                    href="../../shared/operationmaintenance/c-backup.xml"/>.</p>
+            <p>When uninstalling the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> software components, stick to the following sequence: </p>
+            <p>
+                <ol>
+                    <li>Uninstall the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> agents. </li>
+                    <li>Uninstall the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service and the OpenStack extensions.</li>
+                    <li>Manually remove remaining <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components if they are no longer required.</li>
+                </ol>
+            </p>
+        </section>
+    </conbody>
+</concept>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                xml:lang="en-us">
+    <title>Status of Services, Servers, and Log Data</title>
+    <conbody>
+        <section>
+            <p>As soon as you have defined an alarm, there is status information displayed for the corresponding service, server, or log data on the <uicontrol>Overview</uicontrol> page. </p>
+            <fig>
+                <image alt="monoverview.png" height="260" href="../../images/monoverview.png" width="435"/>
+            </fig>
+            <p>The color of the boxes in the three sections indicates the status:</p>
+            <ul>
+                <li>
+                    <p>A green box for a service or server indicates that it is up and running. A green box for a log path indicates that a defined threshold for errors or warnings, for example, has not yet been reached or exceeded. There are alarms defined for the services, servers, or log paths that are displayed, but no alarms have been triggered.</p>
+                </li>
+                <li>
+                    <p>A red box for a service, server, or log path indicates that there is a severe problem that needs to be checked. One or multiple alarms defined for a service, a server or log data have been triggered.</p>
+                </li>
+                <li>
+                    <p>A yellow box indicates a problem. One or multiple alarms have already been triggered, yet, the severity of these alarms is low.</p>
+                </li>
+                <li>
+                    <p>A gray box indicates that alarms have been defined, yet, monitoring data has not yet been collected and sent.</p>
+                </li>
+            </ul>
+        </section>
+    </conbody>
+</concept>

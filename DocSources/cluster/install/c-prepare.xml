@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Prerequisites</title>
+    <conbody>
+        <section
+            conref="../../cmmoperator/install/c-cmmoprepare-pre.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/can_be_installed_on_a_host_m_concept_conbody_section_1"/>
+        <section>
+            <p>The following hardware resources have been used for testing <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> in cluster mode:</p>
+            <table colsep="1" frame="all" rowsep="1">
+                <tgroup cols="2">
+                    <colspec colname="col2" colnum="1" colwidth="1*"/>
+                    <colspec colname="col3" colnum="2" colwidth="2.35*"/>
+                    <thead>
+                        <row>
+                            <entry colname="col2">Hardware type</entry>
+                            <entry colname="col3">Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry colname="col2">Model</entry>
+                            <entry colname="col3">
+                                <p>FUJITSU Server PRIMERGY RX2540 M2</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry colname="col2">CPU</entry>
+                            <entry colname="col3">
+                                <p>Intel® Xeon® E5-2650 v3, 2.30 GHz 10C/20T</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry colname="col2">Memory</entry>
+                            <entry colname="col3">
+                                <p>64 GB RAM</p>
+                            </entry>
+                        </row>
+                        <row>
+                            <entry colname="col2">Storage</entry>
+                            <entry colname="col3">1 TB</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <note othertype="note"
+                >These resources provide a reasonable configuration for each node in the default three-node cluster. This is above the minimum configuration required for deploying the default cluster.</note>
+        </section>
+        <section>
+            <p>Red Hat Enterprise Linux 7.2 and the three-node cluster without any data require about 7 GB of disk space. The disk capacity required for log data and metrics data varies considerably depending, for example, on the number of services and servers to be monitored, the number of metrics and logs to be evaluated, or the data retention time.</p>
+            <p>Make sure that enough disk space is provided on each node. If required, mount partitions for storing the log data and the metrics data. The default installation uses the following directories on each node: </p>
+            <ul
+                conref="../../cmmoperator/install/c-cmmoprepare-pre.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_data_directory_of_Elastic_concept_conbody_section_3_ul">
+                <li/>
+            </ul>
+        </section>
+        <section
+            conref="../../cmmoperator/install/c-cmmoprepare-pre.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/has_been_tested_with_the_fol_concept_conbody_section_2"/>
+    </conbody>
+</concept>

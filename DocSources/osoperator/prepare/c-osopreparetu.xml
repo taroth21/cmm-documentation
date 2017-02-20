@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                        xml:lang="en-us">
+    <title>Preparation for Tenant Users</title>
+    <conbody>
+                <section>
+                        <p>Tenant users who have booked a virtual machine in OpenStack can monitor their machine with libvirt. Libvirt provides a comprehensive toolkit for managing virtual machines. The toolkit includes checks for virtual machines that run on a hypervisor.</p>
+                        <p>As an OpenStack operator, you have to prepare the monitoring environment for your tenant users. A <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> Metrics Agent is required for monitoring the hypervisor on the Nova compute node on which the virtual machines are provisioned. On behalf of the tenant user, the agent monitors the hypervisor on which it is installed as well as the provisioned virtual machines.</p>
+                        <p>The following steps are required:</p>
+                        <ol>
+                                <li>Create a role and a user account for libvirt monitoring in OpenStack.</li>
+                                <li>Install a <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> Metrics Agent on the hypervisor where virtual machines are to be monitoried for the tenant users.</li>
+                                <li>Install additional libraries for libvirt monitoring.</li>
+                                <li>Configure the agent.</li>
+                        </ol>
+                        <p>For additional information on libvirt monitoring, you can also refer to the <xref
+                                        format="html"
+                                        href="https://github.com/openstack/monasca-agent/blob/stable/newton/docs/Libvirt.md"
+                                        scope="external"><u><i>Monasca documentation</i></u></xref>.</p>
+                </section>
+    </conbody>
+</concept>

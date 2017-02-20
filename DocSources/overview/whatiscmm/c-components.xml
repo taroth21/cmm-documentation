@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+            xml:lang="en-us">
+    <title>Components</title>
+    <conbody>
+        <section
+                    id="The_following_illustration_pr_concept_conbody_section_1">
+                        <p>The following illustration provides an overview of the main components of <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>:<fig>
+                                        <image href="../../images/structure_new.png" alt="structure_new.png" width="400"
+                                                height="210"/>
+                                </fig>
+                        </p>
+                
+        </section>
+        <section
+                id="OpenStack_concept_conbody_section_2">
+                        <title>OpenStack</title>
+                        <p id="OpenStack_is_the_underlying_p_concept_conbody_section_2_p"><ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> relies on OpenStack as technology for building cloud computing platforms for public and private clouds. OpenStack consists of a series of interrelated projects delivering various components for a cloud infrastructure solution and allowing for the deployment and management of Infrastructure as a Service (IaaS) platforms.</p>
+                        <p
+                    id="For_details_on_OpenStack_ref_concept_conbody_section_2_p">For details on OpenStack, refer to the <xref
+                    format="html" href="http://docs.openstack.org/"
+            scope="external"><u><i>OpenStack documentation</i></u></xref>.</p>
+                </section>
+        <section
+                    id="Service_concept_conbody_section_3">
+            <title><ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service</title>
+            <p
+                    id="The_concept_conbody_section_3_p">The <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is the central <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> component. It is responsible for receiving, persisting, and processing metrics and log data, as well as providing the data to the users.</p>
+            <p>The <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service relies on Monasca. It uses Monasca for high-speed metrics querying and integrates the streaming alarm engine and the notification engine of Monasca. For details, refer to the <xref
+                    format="html"
+                    href="https://wiki.openstack.org/wiki/Monasca"
+                    scope="external"><u><i>Monasca Wiki</i></u></xref>.</p>
+        </section>
+        <section>
+            <title><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Horizon Plugin</title>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> comes with a plugin for the OpenStack Horizon dashboard. The <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> Horizon plugin extends the main dashboard in OpenStack with a view for monitoring. This enables <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> users to access the monitoring and log management functions from a central Web-based graphical user interface. Metrics and log data are visualized on a comfortable and easy-to-use dashboard.</p>
+            <p>For details, refer to the <xref
+                    format="html"
+                    href="http://docs.openstack.org/developer/horizon/"
+            scope="external"><u><i>OpenStack Horizon documentation</i></u></xref>. </p>
+        </section>
+        <section
+                    id="Metrics_Agent_concept_conbody_section_5">
+            <title><ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent</title>
+            <p id="A_concept_conbody_section_5_p">A <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> Metrics Agent is required for retrieving metrics data from the host on which it runs and sending them to the <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> Service. The agent supports metrics from a variety of sources as well as a number of built-in system and service checks. </p>
+                        <p id="A_concept_conbody_section_5_p">A <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> Metrics Agent can be installed on each virtual or physical server to be monitored.</p>
+            <p
+                    id="The_agent_functionality_is_fu_concept_conbody_section_5_p">The agent functionality is fully integrated into the source code base of the Monasca project. For details, refer to the <xref
+                    format="html"
+                    href="https://wiki.openstack.org/wiki/Monasca"
+            scope="external"><u><i>Monasca Wiki</i></u></xref>.</p>
+        </section>
+        <section
+                    id="Log_Agent_concept_conbody_section_6">
+            <title><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent</title>
+            <p>A <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> Log Agent is needed for collecting log data from the host on which it runs and forwarding it to the <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> Service for further processing. It can be installed on each virtual or physical server from which log data is to be retrieved.</p>
+            <p>The agent functionality is fully integrated into the source code base of the Monasca project. For details, refer to the <xref
+                    format="html"
+                    href="https://wiki.openstack.org/wiki/Monasca" scope="external"><u><i>Monasca Wiki</i></u></xref>.</p>
+        </section>
+    </conbody>
+</concept>
