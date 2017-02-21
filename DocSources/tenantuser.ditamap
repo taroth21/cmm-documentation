@@ -43,7 +43,6 @@
         <topicref format="dita" href="tenantuser/intro/c-usagescenario.xml" type="concept"/>
         <topicref format="dita" href="tenantuser/intro/c-tutasks.xml" type="concept"/>
         <topicref format="dita" href="tenantuser/intro/c-tucomponents-new.xml" type="concept"/>
-        <!--topicref format="dita" href="TenantUser/Intro/c_TUComponents.xml" type="concept"/ -->
         <topicref format="dita" href="tenantuser/intro/c-tuusers.xml" type="concept"/>
     </chapter>
     
