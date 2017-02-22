@@ -29,8 +29,8 @@
                         <codeph>kafka_consumer</codeph>, <codeph>kibana</codeph>, <codeph>mysql</codeph>, <codeph>postfix</codeph>, <codeph>process</codeph>, <codeph>zk</codeph>.</p>
                     <p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> Metrics Agent can also run Nagios plugins and send status codes returned by the plugins as metrics to the Monitoring API. For information on how to use Nagios checks in <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        />, contact your FUJITSU support organization.</p>
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, contact your <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> support.</p>
                 </li>
             </ul>
             <note othertype="note">

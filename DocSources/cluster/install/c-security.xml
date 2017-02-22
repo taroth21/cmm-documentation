@@ -13,7 +13,8 @@
         <section>
             <p>The Ansible installer you use to install <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> in cluster mode opens specific ports to ensure connectivity. These ports differ depending on whether you install the default cluster or choose a distributed environment that deviates from this default. For details on the opened ports, contact your FUJITSU support organization.</p>
+                    /> in cluster mode opens specific ports to ensure connectivity. These ports differ depending on whether you install the default cluster or choose a distributed environment that deviates from this default. For details on the opened ports, contact your <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> support.</p>
         </section>
         <section
             conref="../../shared/install/c-cmmoprepare-sec.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/uses_the_following_ports_to_concept_conbody_section_3"/>

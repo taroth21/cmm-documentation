@@ -28,9 +28,9 @@
                     <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                             /> supports the file plugin of Logstash as input mechanism. The file plugin enables Logstash to read log data from any log file on your file system. Logstash supports additional plugins. For details, refer to <xref
                             format="html" href="https://www.elastic.co/guide/en/logstash/2.3/input-plugins.html"
-                            scope="external"
-                            ><u><i>Logstash Input Plugins</i></u></xref>. Contact Fujitsu if you want to integrate a different plugin with <ph
-                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+                            scope="external"><u><i>Logstash Input Plugins</i></u></xref>. Contact your <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> support if you want to integrate a different plugin.</p>
                 </li>
                 <li>
                     <p>The output section specifies all parameters required for retrieving the log data and sending it to the <ph

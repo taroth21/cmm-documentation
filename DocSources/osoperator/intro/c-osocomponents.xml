@@ -11,7 +11,7 @@
         <section
             conref="../../overview/whatiscmm/c-components.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_following_illustration_pr_concept_conbody_section_1"/>
         <section
-            conref="../../tenantuser/intro/c-tucomponents.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/OpenStack_concept_conbody_section_2"/>
+            conref="../../tenantuser/intro/c-tucomponents-new.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/OpenStack_concept_conbody_section_2"/>
         <section
             conref="../../overview/whatiscmm/c-components.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Service_concept_conbody_section_3"/>
                 <section id="Horizon_Plugin_concept_conbody_section_4">

@@ -188,8 +188,10 @@ agentAuthorizedRoles: "cmm-agent"</codeblock>
   - trace 
   - debug 
   - info </codeblock>
-                    <note
-                            othertype="note">Additional evaluations for log data can be prepared and configured by the system operator to provide further types of metrics. If you want to customize the Log Metrics component, contact your FUJITSU support organization for information.</note>
+                    <note othertype="note"
+                            >Additional evaluations for log data can be prepared and configured by the system operator to provide further types of metrics. If you want to customize the Log Metrics component, contact your <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> support for further information.</note>
                 </li>
                 <li>
                     <p>To install the <ph

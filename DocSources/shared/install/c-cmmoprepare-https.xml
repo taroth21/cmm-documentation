@@ -12,7 +12,9 @@
             <p>By default, the <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                     /> components use the HTTP protocol for communication. For a more secure connection, <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                /> can be configured to use the HTTPS protocol. If you want to use the HTTPS protocol, contact your FUJITSU support organization for information.</p>
+                    /> can be configured to use the HTTPS protocol. If you want to use the HTTPS protocol, contact your <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> support for further information.</p>
         </section>
     </conbody>
 </concept>
