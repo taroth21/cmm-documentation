@@ -28,7 +28,9 @@
                             <row>
                                 <entry>1</entry>
                                 <entry><codeph>memcached</codeph></entry>
-                                <entry>Memcached service. CMM uses it for caching authentication and authorization information required for the communication between the Log API and OpenStack Keystone.</entry>
+                                <entry>Memcached service. <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                    /> uses it for caching authentication and authorization information required for the communication between the Log API and OpenStack Keystone.</entry>
                             </row>
                             <row>
                                 <entry>2</entry>

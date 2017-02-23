@@ -32,7 +32,11 @@
                     /> redundantly across different nodes guarantees that <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> is operational and providing its intended monitoring and log management services even if a node fails or needs any maintenance. </p>
-            <p>Failures in operating individual components or complete nodes are instantly detected and automatically trigger internal fail over mechanisms without the need for administrative intervention. If an instance of a CMM component on one node fails, CMM uses another instance of the component on a different node that is up and running. <ph
+            <p>Failures in operating individual components or complete nodes are instantly detected and automatically trigger internal fail over mechanisms without the need for administrative intervention. If an instance of a <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> component on one node fails, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> uses another instance of the component on a different node that is up and running. <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> users do not experience any downtimes. They can rely on operational continuity and an uninterrupted access to <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
@@ -41,8 +45,13 @@
         <section>
             <title>Fault Tolerance</title>
             <p>Maintaining a replicated environment on multiple nodes means providing fault tolerance through functional redundancy. </p>
-            <p>In case of failures of individual CMM components or underlying hardware resources, CMM continues operating properly without sacrificing system performance and operational quality. Continuous monitoring and log management services can be guaranteed for end users, even if multiple problems occur.</p>
-            <p>CMM does not only detect failures, but also switches to redundant components instantly, thus automatically recovering from the detected failures. A node that fails, for example, is able to recover completely autonomously. It restarts and synchronizes with the other nodes automatically before joining the cluster again. </p>
+            <p>In case of failures of individual <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> components or underlying hardware resources, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> continues operating properly without sacrificing system performance and operational quality. Continuous monitoring and log management services can be guaranteed for end users, even if multiple problems occur.</p>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> does not only detect failures, but also switches to redundant components instantly, thus automatically recovering from the detected failures. A node that fails, for example, is able to recover completely autonomously. It restarts and synchronizes with the other nodes automatically before joining the cluster again. </p>
         </section>
         <section>
             <title>Scalability</title>

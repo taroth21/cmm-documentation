@@ -17,7 +17,10 @@
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> in single mode means running the complete monitoring and log management functionality on one host machine. All components of the <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Service are installed on this machine. For details on installing, operating, and maintaining CMM in single mode, refer to the <i>CMM Operator's Guide</i>.</p>
+                    /> Service are installed on this machine. For details on installing, operating, and maintaining <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> in single mode, refer to the <i><ph
+                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Operator's Guide</i>.</p>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> in cluster mode means running the Monitoring as a Service solution on three or more nodes where a node corresponds to a logical server instance and must not necessarily be a separate physical server. </p>
         </section>

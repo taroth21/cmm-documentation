@@ -9,8 +9,10 @@
     <title>Communication</title>
     <conbody>
         <section>
-            <p>There are components in CMM, for example Apache Storm, that require a Fully Qualified Domain Name (FQDN) that absolutely and uniquely identifies the corresponding host machine in your <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> environment. </p>
+            <p>There are components in <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        />, for example Apache Storm, that require a Fully Qualified Domain Name (FQDN) that absolutely and uniquely identifies the corresponding host machine in your <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> environment. </p>
             <p>Before installing <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     />, it is therefore required to define the mapping of IP addresses, host names, and FQDNs. You can either specify the DNS, or you can map your IP addresses in the <codeph>/etc/hosts</codeph> file on your <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> host.</p>
