@@ -12,7 +12,7 @@ The following documentation on CMM is available:
 
 Released versions of these guides will be published to http://rapidonboarding.fcip.global.fujitsu.com/ui/ by the end of April.
 
-## Overview of Important Branches ##
+## Overview of Branches ##
 
 The master branch provides the documentation sources for the Beta Release of CMM 1.2.
 
