@@ -21,15 +21,15 @@
         </section>
         <section>
       <title>apache.yaml</title>
-      <p>Apache Web Server checks gather metrics from an Apache Web Server. If you want the installer to automatically configure the checks, update the <codeph>apache.cnf</codeph> file in the <codeph>root</codeph> directory before installing the agent.</p>
+      <p>Apache Web Server checks collect metrics from an Apache Web Server. If you want the installer to automatically configure the checks, update the <codeph>apache.cnf</codeph> file in the <codeph>root</codeph> directory before installing the agent.</p>
       <p>Example configuration for <codeph>apache.cnf</codeph>: </p>
       <codeblock>[client]
 url=http://localhost/server-status?auto
 user=root
 password=password</codeblock>
-      <p>Specify the configuration information in the <codeph>apache.yaml</codeph> file after the installation. It must contain the URL of the server, as well as the user name and password for accessing it.</p>
+      <p>Specify the configuration information in the <codeph>apache.yaml</codeph> file after the installation.</p>
       <p>Example configuration:</p>
-      <codeblock>init_config:
+      <codeblock>init_config: null
 
 instances:
   - apache_status_url: http://localhost/server-status?auto
@@ -38,16 +38,16 @@ instances:
     </section>
     <section>
             <title>crash.yaml</title>
-            <p>Crash checks provide information on system crash dumps. The configuration file must specify the directory where the crash dumps are provided.</p>
+            <p>Crash checks provide information on system crash dumps. The default directory where the crash dumps are provided is <codeph>/var/crash</codeph>.</p>
       <p>The agent installer automatically checks whether a crash kernel is loaded on an OpenStack or <ph
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           /> host. If so, the detected settings are saved to the <codeph>crash.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
             <p>Example configuration:</p>
-            <codeblock>init_config:
-  crash_dir: /var/crash
+            <codeblock>init_config: null
 
 instances:
-  - name: crash_stats</codeblock>
+  - built_by: Crash
+  name: crash_stats</codeblock>
     </section>
         <section>
             <title>elastic.yaml</title>
@@ -57,7 +57,7 @@ instances:
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           /> host. If so, the detected settings are saved to the <codeph>elastic.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
             <p>Example configuration:</p>
-            <codeblock>init_config:
+            <codeblock>init_config: null
 
 instances:
   - url: http://localhost:9200
@@ -80,35 +80,21 @@ instances:
         </section -->
         <section>
       <title>host_alive.yaml</title>
-      <p>Host alive checks perform active checks on a remote host to determine whether it is alive. The checks use ping (ICMP) or SSH.</p>
-      <p>SSH checks provide extensive tests on the availability of remote host machines. They check the banner that is returned. A remote host machine may still respond to a ping request but may not return an SSH banner. Therefore it is recommended that you use SSH checks instead of ping checks if possible.</p>
+      <p>Host alive checks perform checks on a remote host to determine whether it is alive. The checks use ping (ICMP) or SSH.</p>
+      <p>SSH checks provide extensive tests on the availability of remote host machines. They check the banner that is returned. A remote host machine may still respond to a ping request but may not return an SSH banner. Therefore it is recommended that you use SSH checks instead of ping checks.</p>
       <p>The agent installer auto-detects applications and processes that are running on an OpenStack or <ph
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           /> node. It saves the detected settings to the <codeph>host_alive.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory.</p>
       <p>Example configuration:</p>
       <codeblock>init_config:
-  ssh_port: 22
-
-  # ssh_timeout is a floating point number (seconds)
-  ssh_timeout: 0.5
-
-  # ping_timeout is an integer number (seconds)
-  ping_timeout: 1
-
+    ping_timeout: 1
+    ssh_port: 22
+    ssh_timeout: 0.5
+ 
 instances:
-  # alive_test can be either "ssh" for an SSH banner test (port 22)
-  # or "ping" for ICMP ping test instances:
-  - name: ssh to somehost
-    host_name: somehost.somedomain.net
-    alive_test: ssh
-
-  - name: ping gateway
-    host_name: gateway.somedomain.net
-    alive_test: ping
-
-  - name: ssh to 192.168.0.221
-    host_name: 192.168.0.221
-    alive_test: ssh </codeblock>
+-   alive_test: ssh
+    host_name: 10.140.18.53
+    name: openstack</codeblock>
     </section>
         <section>
             <title>http_check.yaml</title>
@@ -118,14 +104,17 @@ instances:
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           /> node. It saves the detected settings to the <codeph>http_check.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory.</p>
             <p>Example configuration:</p>
-            <codeblock>init_config:
+            <codeblock>init_config: null
   
 instances:
-  url: http://192.168.0.254/healthcheck
-  timeout: 1
-  include_content: true
-  collect_response_time: true
-  match_pattern: '.*OK.*OK.*OK.*OK.*OK'</codeblock>
+- built_by: MonAPI
+  dimensions:
+    component: monasca-api
+    service: monitoring
+  include_content: false
+  name: monitoring-monasca-api healthcheck
+  timeout: 5
+  url: http://localhost:8081/healthcheck</codeblock>
         </section>
     <section>
       <title>http_metrics.yaml</title>
@@ -134,16 +123,26 @@ instances:
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           /> node. It saves the detected settings to the <codeph>http_metrics.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory.</p>
       <p>Example configuration:</p>
-      <codeblock>init_config:
+      <codeblock>init_config: null
 
 instances:
-       url: http://192.168.0.254/metrics
-       timeout: 1
-       collect_response_time: true
-       whitelist:
-              name: jvm.memory.total.max,
-              path: gauges/jvm.memory.total.max/value
-              type: gauge </codeblock>
+- built_by: MonAPI
+  dimensions:
+    component: monasca-api
+    service: monitoring
+  name: monitoring-monasca-api metrics
+  timeout: 5
+  url: http://localhost:8081/metrics
+  whitelist:
+  - name: jvm.memory.total.max
+    path: gauges/jvm.memory.total.max/value
+    type: gauge
+  - name: jvm.memory.total.used
+    path: gauges/jvm.memory.total.used/value
+    type: gauge
+  - name: metrics.published
+    path: meters/monasca.api.app.MetricService.metrics.published/count
+    type: rate</codeblock>
     </section>
         <section>
             <title>kafka_consumer.yaml</title>
@@ -156,21 +155,30 @@ instances:
 # deactivate </codeblock>
       <p>The agent installer automatically detects services that are consuming Kafka topics on the node where the agent is installed. If such services are detected, the corresponding settings are saved to the <codeph>kafka_consumer.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
             <p>Example configuration:</p>
-            <codeblock>init_config:
+            <codeblock>init_config: null
 
 instances:
 - built_by: Kafka
   consumer_groups:
+    1_alarm-state-transitions:
+      alarm-state-transitions: []
     1_metrics:
       metrics: []
+    log-metric:
+      transformed-log: []
+    logstash-persister:
+      transformed-log: []
+    monasca-notification:
+      TOPIC: []
     thresh-event:
       events: []
     thresh-metric:
       metrics: []
-  kafka_connect_str: 192.168.10.6:9092
-  name: 192.168.10.6:9092
-  per_partition: false
-  full_output: false    </codeblock>
+    transformer-logstash-consumer:
+      log: []
+  kafka_connect_str: 10.140.18.49:9092
+  name: 10.140.18.49:9092
+  per_partition: false  </codeblock>
         </section>
         <section>
             <title>kibana.yaml </title>
@@ -178,16 +186,17 @@ instances:
       <p>The agent installer automatically checks whether a Kibana server instance is installed on the node where the agent is installed. If a Kibana server instance is detected, the corresponding settings are saved to the <codeph>kibana.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
             <p>Example configuration:</p>
             <codeblock>init_config:
-  url: http://localhost:5601/api/status
+  url: http://10.140.18.49:5601/api/status
 
 instances:
 - built_by: Kibana
   metrics:
-    - heap_size
-    - heap_used
-    - load
-    - req_sec
-    - resp_time_avg</codeblock>
+  - load
+  - heap_size
+  - heap_used
+  - req_sec
+  - resp_time_max
+  - resp_time_avg</codeblock>
         </section>
         <section>
             <title>libvirt.yaml</title>
@@ -234,18 +243,26 @@ password=password</codeblock>
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           /> host. If so, the detected settings are saved to the <codeph>mysql.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
       <p>Example configuration:</p>
-      <codeblock>init_config:
+      <codeblock>init_config: null
 
+init_config: null
 instances:
-    defaults_file: /root/.my.cnf
-    server: localhost
-    user: root</codeblock>
+- built_by: MySQL
+  name: localhost
+  pass: ''
+  port: 3306
+  server: localhost
+  sock: /var/lib/mysql/mysql.sock
+  ssl_ca: null
+  ssl_cert: null
+  ssl_key: null
+  user: root</codeblock>
     </section>
         <section>
             <title>ntp.yaml</title>
-            <p>Network Time Protocol checks monitor the time offset between the NTP server and the host machine. The configuration file must specify the host name, the port number, version information, and the timeout.</p>
+            <p>Network Time Protocol checks monitor the time offset between the NTP server and the host machine. The configuration file must specify the parameters that you want to monitor.</p>
             <p>Example configuration:</p>
-            <codeblock>init_config:
+            <codeblock>init_config: null
 
 instances:
   - host: pool.ntp.org
@@ -278,22 +295,23 @@ instances:
     </section>
         <section>
             <title>postfix.yaml</title>
-            <p>Postfix checks monitor a Postfix mail server. For running the Postfix checks, the user who executes the installer must have passwordless <codeph>sudo</codeph> access to the <codeph>find</codeph> command. The passwordless <codeph>sudo</codeph> access must be configured before installing the agent.</p>
+            <p>Postfix checks monitor a Postfix mail server. For running the Postfix checks, the user who installs the agent must have passwordless <codeph>sudo</codeph> access to the <codeph>find</codeph> command. The passwordless <codeph>sudo</codeph> access must be configured before installing the agent.</p>
             <p>Example for a corresponding entry in the <codeph>/etc/sudoers</codeph> file:</p>
             <codeblock>monasca-agent ALL=(ALL) NOPASSWD:/usr/bin/find</codeblock>
       <p>The agent installer automatically checks whether a Postfix mail server instance is installed on an OpenStack or <ph
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           /> host. If so, the detected settings are saved to the <codeph>postfix.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
             <p>Example configuration:</p>
-            <codeblock>init_config:
+            <codeblock>init_config: null
 
 instances:
-  - name: /var/spool/postfix
-    directory: /var/spool/postfix
-    queues:
-      - incoming
-      - active
-      - deferred</codeblock>
+- built_by: Postfix
+  directory: /var/spool/postfix
+  name: /var/spool/postfix
+  queues:
+  - incoming
+  - active
+  - deferred</codeblock>
         </section>
         <section>
             <title>postgres.yaml</title>
@@ -306,7 +324,7 @@ instances:
 # pip install psycopg2
 # deactivate</codeblock>
             <p>Example configuration:</p>
-            <codeblock>init_config:
+            <codeblock>init_config: null
 
 instances:
   - host: localhost
@@ -325,12 +343,11 @@ instances:
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           /> node. It saves the detected settings to the <codeph>process.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory.</p>
             <p>Example configuration:</p>
-            <codeblock>init_config:
+            <codeblock>init_config: null
   
 instances: 
   - name: ssh
     search_string: ['ssh', 'sshd']
-
   - name: mysql
     search_string: ['mysql']
     exact_match: True</codeblock>
@@ -349,27 +366,29 @@ exchanges=nova,cinder,ceilometer,glance,keystone,neutron,heat</codeblock>
             <codeblock>rabbitmq-plugins enable rabbitmq_management</codeblock>
       <p>Specify the configuration information in the <codeph>rabbitmq.yaml</codeph> file after the installation. It must specify the names of the exchanges and queues to be monitored.</p>
             <p>Example configuration:</p>
-            <codeblock>init_config:
+            <codeblock>init_config: null
 
 instances:
   - exchanges: [nova, cinder, ceilometer, glance, keystone, neutron, heat]
     nodes: [rabbit@devstack]
     queues: [conductor]
     rabbitmq_api_url: http://localhost:15672/api
-    rabbitmq_user: guest
-    rabbitmq_pass: guest</codeblock>
+    rabbitmq_user: user
+    rabbitmq_pass: pass</codeblock>
         </section>
         <section>
             <title>zk.yaml</title>
             <p>ZooKeeper checks gather metrics on nodes and connections covered by ZooKeeper, a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. The check parses the result of the ZooKeeper <codeph>stat</codeph> admin command.</p>
       <p>The agent installer automatically checks whether a Zookeeper instance is installed on the node where the agent is installed. If a Zookeper instance is detected, the corresponding settings are saved to the <codeph>zk.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
             <p>Example configuration:</p>
-            <codeblock>init_config:
+            <codeblock>init_config: null
 
 instances:
-    host: localhost
-    port: 2181
-    timeout: 3</codeblock>
+- built_by: Zookeeper
+  host: localhost
+  name: localhost
+  port: 2181
+  timeout: 3</codeblock>
         </section>
     </refbody>
 </reference>
