@@ -154,9 +154,7 @@ instances:
             <codeblock># source /opt/monasca-agent/bin/activate 
 # pip install kafka-python 
 # deactivate </codeblock>
-      <p>The agent installer automatically detects services that are consuming Kafka topics on a <ph
-          conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-          /> host. The detected settings are saved to the <codeph>kafka_consumer.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
+      <p>The agent installer automatically detects services that are consuming Kafka topics on the node where the agent is installed. If such services are detected, the corresponding settings are saved to the <codeph>kafka_consumer.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
             <p>Example configuration:</p>
             <codeblock>init_config:
 
@@ -177,9 +175,7 @@ instances:
         <section>
             <title>kibana.yaml </title>
       <p>Kibana checks gather metrics from a Kibana server. The checks access the status endpoint of Kibana (<codeph>curl -XGET http://localhost:5601/api/status</codeph>). The configuration information in the <codeph>kibana.yaml</codeph> file corresponds to the Kibana configuration.  </p>
-      <p>The agent installer automatically checks whether a Kibana server instance is installed on a <ph
-          conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-          /> node. If so, the detected settings are saved to the <codeph>kibana.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
+      <p>The agent installer automatically checks whether a Kibana server instance is installed on the node where the agent is installed. If a Kibana server instance is detected, the corresponding settings are saved to the <codeph>kibana.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
             <p>Example configuration:</p>
             <codeblock>init_config:
   url: http://localhost:5601/api/status
@@ -366,9 +362,7 @@ instances:
         <section>
             <title>zk.yaml</title>
             <p>ZooKeeper checks gather metrics on nodes and connections covered by ZooKeeper, a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. The check parses the result of the ZooKeeper <codeph>stat</codeph> admin command.</p>
-      <p>The agent installer automatically checks whether a Zookeeper instance is installed on a <ph
-          conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-          /> host. If so, the detected settings are saved to the <codeph>zk.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
+      <p>The agent installer automatically checks whether a Zookeeper instance is installed on the node where the agent is installed. If a Zookeper instance is detected, the corresponding settings are saved to the <codeph>zk.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
             <p>Example configuration:</p>
             <codeblock>init_config:
 
