@@ -9,7 +9,7 @@
     <title>Bash Script Failures</title>
     <conbody>
         <section>
-            <p>When executing the <codeph>sudo</codeph> command in bash scripts during installation, services may fail to start properly. This may be caused by the <codeph>tty</codeph>specification in the <codeph>/etc/sudoers</codeph> file. </p>
+            <p>When executing the <codeph>sudo</codeph> command in bash scripts during installation, services may fail to start properly. This may be caused by the <codeph>tty</codeph> specification in the <codeph>/etc/sudoers</codeph> file. </p>
             <p>To prevent failures, proceed as follows:</p>
             <ol>
                 <li>
