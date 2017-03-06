@@ -1,65 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright FUJITSU LIMITED 2017 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                     xml:lang="en-us">
     <title>The OpenStack Operator's Tasks</title>
     <conbody>
         <section>
-            <p>In order to use <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> for monitoring your OpenStack services and servers, you must install and configure so-called agents:<ul>
-                    <li>A <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> Metrics Agent is required for monitoring your services and servers. </li>
-                    <li>A <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> Log Agent is required for collecting the log data that is generated for your services and servers.</li>
+            <p>In order to use <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> for monitoring your OpenStack services and servers, you must install and configure so-called agents:<ul>
+                    <li>A <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent is required for monitoring your services and servers. </li>
+                    <li>A <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent is required for collecting the log data that is generated for your services and servers.</li>
                 </ul></p>
         </section>
         <section>
             <title>Monitoring </title>
-            <p>A <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Metrics Agent can be installed on each virtual or physical server where services to be monitored are provisioned. The agent is responsible for querying metrics and sending them to the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Service for further processing.</p>
+            <p>A <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent can be installed on each virtual or physical server where services to be monitored are provisioned. The agent is responsible for querying metrics and sending them to the <ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service for further processing.</p>
             <p
                 conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Metrics_represent_self-descri_concept_conbody_section_3_p"/>
             <p
                 conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_concept_conbody_section_3_p"/>
             <ul
-                conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/System_metrics_for_example_concept_conbody_section_3_ul">
+                    conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/System_metrics_for_example_concept_conbody_section_3_ul">
                 <li/>
             </ul>
             <p>Your individual agent configuration determines which metrics are available for monitoring your services and servers. For details on installing and configuring a <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent, refer to <xref
                     href="../install/c-osoinstmetricsagent.xml"/>.</p>
             <p>As soon as an agent is available, you have access to the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> monitoring features. You work with a graphical user interface that is seamlessly integrated into your cloud infrastructure. Based on OpenStack Horizon, the user interface enables access to all monitoring functionality and the resulting large-scale monitoring data. A comfortable dashboard visualizes the health and status of your cloud resources.</p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> monitoring features. You work with a graphical user interface that is seamlessly integrated into your cloud infrastructure. Based on OpenStack Horizon, the user interface enables access to all monitoring functionality and the resulting large-scale monitoring data. A comfortable dashboard visualizes the health and status of your cloud resources.</p>
             <p>
-                <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> provides functions for alarm and notification management. <ph
-                    conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Template-based_alarm_definiti_concept_conbody_section_4_p"
-                /></p>
-            <p>For details on the monitoring functions, refer to <xref href="../../shared/monitor/c-osomonitor.xml"
-                />.</p>
+                <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> provides functions for alarm and notification management. <ph
+                    conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Template-based_alarm_definiti_concept_conbody_section_4_p"/></p>
+            <p>For details on the monitoring functions, refer to <xref
+                    href="../../shared/monitor/c-monitor.xml"/>.</p>
         </section>
         <section>
             <title>Log Management</title>
-            <p>A <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Log Agent can be installed and configured on each physical and virtual server where log data is to be retrieved. The agent collects the log data from the services and servers and sends them to the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Service for further processing. For details on installing and configuring a <ph
+            <p>A <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent can be installed and configured on each physical and virtual server where log data is to be retrieved. The agent collects the log data from the services and servers and sends them to the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service for further processing. For details on installing and configuring a <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent, refer to <xref
                     href="../install/c-osoinstlogagent.xml"/>.</p>
-            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> stores the log data in a central database. This forms the basis for visualizing the log data for the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> users. Advanced data analysis and visualization of the log data is supported in a variety of charts, tables, and maps. Visualizations can easily be combined in dynamic dashboards that display changes to search queries in real time. </p>
+            <p><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> stores the log data in a central database. This forms the basis for visualizing the log data for the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users. Advanced data analysis and visualization of the log data is supported in a variety of charts, tables, and maps. Visualizations can easily be combined in dynamic dashboards that display changes to search queries in real time. </p>
             <p>Based on OpenStack Horizon, the customizable dashboards are seamlessly integrated into your cloud infrastructure. They enable user access to all log management functionality.</p>
             <p>GUI-based alarm and notification management is also supported for log data. Based on a template mechanism, you can configure alarms and notifications to monitor the number of critical log events over time. Compound alarms can be created to analyze more complex log events. This automation of log handling guarantees that you can identify problems in your their infrastructure early and find the root cause quickly.</p>
-            <p>For details on the log management functions, refer to <xref href="../../shared/logging/c-osologging.xml"
-                />.</p>
+            <p>For details on the log management functions, refer to <xref href="../../shared/logging/c-osologging.xml"/>.</p>
         </section>
     </conbody>
 </concept>

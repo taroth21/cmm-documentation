@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Working with Data Visualizations</title>
+    <conbody>
+        <section
+            conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_user_interface_for_monito_concept_conbody_section_1"/>
+        <section
+            conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Preconfigured_Dashboard_for_O_concept_conbody_section_2"/>
+        <section
+            conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Configuring_and_Customizing_D_concept_conbody_section_4"
+        />
+    </conbody>
+</concept>

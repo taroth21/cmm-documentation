@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Overview</title>
+    <conbody>
+        <section>
+            <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> provides one convenient access point to your monitoring data. Use <uicontrol>Monitoring &gt; Overview</uicontrol> to keep track of your services and servers and quickly check their status. The overview also indicates any irregularities in the log data of the system components you are monitoring. </p>
+                        <p>On the <uicontrol>Overview</uicontrol> page, you can:</p>
+                        <ul>
+                <li>
+                    <p>View the status of your services, servers, and log data at a glance. As soon as you have defined an alarm for a service, a server, or log data, there is status information displayed on the <uicontrol>Overview</uicontrol> page. Different colors are used for the different statuses. This makes it is easy to instantly detect any problem. </p>
+                    <p>For details on defining alarms, refer to <xref href="c-monitor-alarm.xml"
+                            />. For details on the status information, refer to <xref href="c-monitor-statusinfo.xml"
+                        />.</p>
+                </li>
+                                <li>
+                                        <p>Access a preconfigured dashboard that visualizes your metrics data. Starting from this preconfigured dashboard, you can create your own dashboards for visualizing your monitoring data as required. For details, refer to <xref
+                            href="c-monitor-grafana.xml"/>. </p>
+                                </li>
+                                <li>
+                                        <p>Access a preconfigured dashboard that visualizes your log data. Starting from this preconfigured dashboard, you can create your own dashboards for visualizing your log data as required. For details, refer to <xref
+                            href="../logging/c-osolog-kibana.xml"/>.</p>
+                                </li>
+                        </ul>
+        </section>
+    </conbody>
+</concept>

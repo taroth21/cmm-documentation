@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright FUJITSU LIMITED 2017 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
             xml:lang="en-us">
     <title>Overview</title>
     <conbody>
         <section
                 id="provides_a_comfortable_statu_concept_conbody_section">
-            <p id="provides_a_comfortable_statu_concept_conbody_section_p_1"><ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> provides a comfortable status overview of your virtual machines. Use <uicontrol>Monitoring > Overview</uicontrol> to view their status at a glance. </p>
+            <p
+                    id="provides_a_comfortable_statu_concept_conbody_section_p_1"><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> provides a comfortable status overview of your virtual machines. Use <uicontrol>Monitoring &gt; Overview</uicontrol> to view their status at a glance. </p>
             <p>The <uicontrol>Overview</uicontrol> page enables access to all available monitoring data. Use the options at the top border of the page to access preconfigured <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> metrics dashboards. You have to create your own dashboard that visualizes your monitoring data. For details, refer to <xref
-                    href="c-tumon-grafana.xml"/>. </p>
-            <p id="provides_a_comfortable_statu_concept_conbody_section_p_2"
-                                        >As soon as you have defined an alarm for a virtual machine, there is status information displayed for it on the <uicontrol>Overview</uicontrol> page. For details on defining alarms, refer to <xref
-                                        href="../../shared/monitor/c-osomon-alarm.xml"/>. </p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> metrics dashboards. You have to create your own dashboard that visualizes your monitoring data. For details, refer to <xref
+                href="c-tumon-grafana.xml"/>. </p>
+            <p
+                    id="provides_a_comfortable_statu_concept_conbody_section_p_2">As soon as you have defined an alarm for a virtual machine, there is status information displayed for it on the <uicontrol>Overview</uicontrol> page. For details on defining alarms, refer to <xref
+                href="../../shared/monitor/c-monitor-alarm.xml"/>. </p>
                         <p>The color of the boxes indicates the status of the virtual machine:</p>
-            <ul
-                    id="A_service_or_server_in_a_gree_concept_conbody_section_ul_1">
+            <ul id="A_service_or_server_in_a_gree_concept_conbody_section_ul_1">
                 <li>A virtual machine in a green box indicates that it is up and running. There are alarms defined for it, but the defined thresholds have not yet been reached or exceeded.</li>
                 <li>A virtual machine in a red box indicates that there is a severe problem that needs to be checked. One or multiple alarms defined for the virtual machine have been triggered. </li>
                 <li>A virtual machine in a yellow box indicates a problem. One or multiple alarms have already been triggered, yet, the severity of these alarms is low.</li>

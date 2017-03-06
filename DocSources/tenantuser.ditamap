@@ -2,15 +2,16 @@
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
                          "">
 <!-- Copyright FUJITSU LIMITED 2017 -->
-
-<bookmap xml:lang="en_US">
+<bookmap
+                    xml:lang="en_US">
 
     <title>Tenant User's Guide</title>
     <bookmeta>
         <prodinfo>
             <prodname>ServerView</prodname>
             <vrmlist>
-                <vrm version="1.2"/>
+                <vrm
+                version="1.2"/>
             </vrmlist>
             <brand>FUJITSU Software</brand>
             <prognum>Cloud Monitoring Manager V1.2</prognum>
@@ -22,37 +23,75 @@
             <booknumber> </booknumber>
         </bookid>
         <bookrights>
-            <bookowner name="."/>
+            <bookowner
+            name="."/>
         </bookrights>
     </bookmeta>
    
     <frontmatter>
-        <preface format="dita" href="tenantuser/about/c-about.xml" type="concept">
-            <topicref href="tenantuser/about/c-readers.xml" type="concept"/>
-            <topicref href="shared/gettingstarted/intro-convent.xml" type="concept"/>
-            <topicref href="shared/gettingstarted/intro-abbrev.xml" type="concept"/>
-            <topicref href="shared/gettingstarted/intro-availabledoc.xml" type="concept"/>
-            <topicref href="shared/gettingstarted/c-webreferences.xml" type="concept"/>
-            <topicref href="shared/gettingstarted/intro-trademarks.xml" type="concept"/>
-            <topicref href="shared/gettingstarted/intro-copyright.xml" type="concept"/>
-            <topicref href="shared/gettingstarted/intro-export.xml" type="concept"/>
+        <preface
+            format="dita" href="tenantuser/about/c-about.xml"
+                type="concept">
+            <topicref
+                href="tenantuser/about/c-readers.xml"
+                type="concept"/>
+            <topicref
+                href="shared/gettingstarted/intro-convent.xml"
+                type="concept"/>
+            <topicref
+                href="shared/gettingstarted/intro-abbrev.xml"
+                type="concept"/>
+            <topicref
+                href="shared/gettingstarted/intro-availabledoc.xml"
+                type="concept"/>
+            <topicref
+                href="shared/gettingstarted/c-webreferences.xml"
+                type="concept"/>
+            <topicref
+                href="shared/gettingstarted/intro-trademarks.xml"
+                type="concept"/>
+            <topicref
+                href="shared/gettingstarted/intro-copyright.xml"
+                type="concept"/>
+            <topicref
+                href="shared/gettingstarted/intro-export.xml"
+        type="concept"/>
         </preface>
     </frontmatter>
     
-    <chapter href="tenantuser/intro/c-intro.xml">
-        <topicref format="dita" href="tenantuser/intro/c-usagescenario.xml" type="concept"/>
-        <topicref format="dita" href="tenantuser/intro/c-tutasks.xml" type="concept"/>
-        <topicref format="dita" href="tenantuser/intro/c-tucomponents-new.xml" type="concept"/>
-        <topicref format="dita" href="tenantuser/intro/c-tuusers.xml" type="concept"/>
+    <chapter
+            href="tenantuser/intro/c-intro.xml">
+        <topicref
+            format="dita" href="tenantuser/intro/c-usagescenario.xml"
+            type="concept"/>
+        <topicref format="dita"
+            href="tenantuser/intro/c-tutasks.xml"
+            type="concept"/>
+        <topicref format="dita"
+            href="tenantuser/intro/c-tucomponents-new.xml"
+            type="concept"/>
+        <topicref format="dita"
+            href="tenantuser/intro/c-tuusers.xml"
+        type="concept"/>
     </chapter>
     
-    <chapter href="tenantuser/access/c-tuaccess.xml"/>
+    <chapter
+        href="tenantuser/access/c-tuaccess.xml"/>
    
-    <chapter href="tenantuser/monitor/c-tumonitor.xml">
-        <topicref format="dita" href="tenantuser/monitor/c-tumon-overview.xml" type="concept"/>
-        <topicref format="dita" href="tenantuser/monitor/c-tumon-grafana.xml" type="concept"/>
-        <topicref format="dita" href="shared/monitor/c-osomon-alarm.xml" type="concept"/>
-        <topicref format="dita" href="shared/monitor/c-osomon-alert.xml" type="concept"/>
+    <chapter
+            href="tenantuser/monitor/c-tumonitor.xml">
+        <topicref
+            format="dita" href="tenantuser/monitor/c-tumon-overview.xml"
+            type="concept"/>
+        <topicref format="dita"
+            href="tenantuser/monitor/c-tumon-grafana.xml"
+            type="concept"/>
+        <topicref format="dita"
+            href="shared/monitor/c-monitor-alarm.xml"
+            type="concept"/>
+        <topicref format="dita"
+            href="shared/monitor/c-monitor-alert.xml"
+        type="concept"/>
     </chapter>
     
     <appendix href="shared/glossary/r-glossary.xml"/>

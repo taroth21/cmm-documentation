@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright FUJITSU LIMITED 2017 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                     xml:lang="en-us">
     <title>Monitoring</title>
     <conbody>
                 <section>
-                        <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> offers various monitoring features which support you in proactively managing your cloud resources. The large number of available metrics in combination with early warnings about problems and outages assists you in analyzing and troubleshooting any issue you encounter in your environment.</p>
+                        <p><ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> offers various monitoring features which support you in proactively managing your cloud resources. The large number of available metrics in combination with early warnings about problems and outages assists you in analyzing and troubleshooting any issue you encounter in your environment.</p>
                         <p>The monitoring features of <ph
-                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> include: </p>
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> include: </p>
                         <ul>
                                 <li>A comfortable monitoring overview which allows you to access all monitoring information. </li>
                                 <li>Dashboards for visualizing your monitoring data.</li>
@@ -22,14 +20,14 @@
                         <p>In the following sections, you will find information on the monitoring overview and the integrated dashboards as well as details on how to define and handle alarms and notifications.</p>
                 </section>
                 <section>
-                        <title>Accessing <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/></title>
-                        <p>For accessing <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> and performing monitoring tasks, the following prerequisites must be fulfilled:</p>
+                        <title>Accessing <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/></title>
+                        <p>For accessing <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> and performing monitoring tasks, the following prerequisites must be fulfilled:</p>
                         <ul>
                                 <li>
                                         <p>You must have access to the OpenStack platform as a user with the <codeph>cmm-user</codeph> role or any other role that is authorized to use the <ph
-                                                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                                                /> monitoring functions. Additional roles are optional. </p>
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> monitoring functions. Additional roles are optional. </p>
                                 </li>
                                 <li>
                                         <p>You must be assigned to the OpenStack project you want to monitor.</p>
@@ -37,7 +35,7 @@
                         </ul>
                         <p>Log in to the OpenStack platform with your user name and password. This allows you to access the OpenStack Horizon dashboard. The tabs and functions you can access in the dashboard depend on your access permissions. </p>
                         <p>The <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> functionality is available on the <uicontrol>Monitoring</uicontrol> tab. It provides access to the monitoring data of all projects to which you are assigned. Before you start, select the project you want to monitor from the drop-down menu at the top left of the dashboard. </p>
+                    /> functionality is available on the <uicontrol>Monitoring</uicontrol> tab. It provides access to the monitoring data of all projects to which you are assigned. Before you start, select the project you want to monitor. </p>
                 </section>
         </conbody>
 </concept>

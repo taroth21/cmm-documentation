@@ -10,9 +10,7 @@
     <conbody>
         <section>
             <p>As soon as you have defined an alarm, there is status information displayed for the corresponding service, server, or log data on the <uicontrol>Overview</uicontrol> page. </p>
-            <fig>
-                <image alt="monoverview.png" height="260" href="../../images/monoverview.png" width="435"/>
-            </fig>
+            <p><i><b>PENDING</b>: Screenshot to be inserted.</i></p>
             <p>The color of the boxes in the three sections indicates the status:</p>
             <ul>
                 <li>
@@ -28,6 +26,7 @@
                     <p>A gray box indicates that alarms have been defined, yet, monitoring data has not yet been collected and sent.</p>
                 </li>
             </ul>
+            <p>### Alarms start with an UNDEFINED state which is changed to OK as long as the expression is not triggered. Once it is, the state changes to ALARM and the Notification Engine will start notifying people.</p>
         </section>
     </conbody>
 </concept>

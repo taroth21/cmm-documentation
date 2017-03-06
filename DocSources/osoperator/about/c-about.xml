@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright FUJITSU LIMITED 2017 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                     xml:lang="en-us">
     <title>About this Manual</title>
     <conbody>
         <section>
             <p>This manual describes how system operators can monitor their OpenStack platforms with FUJITSU ServerView <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"
-                    /> - hereafter referred to as <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"/> - hereafter referred to as <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"/> (<ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>).</p>
             <p>The manual is structured as follows: </p>
@@ -62,7 +60,7 @@
                             <row>
                                 <entry
                                     colname="col2"><xref
-                                    href="../../shared/monitor/c-osomonitor.xml"/></entry>
+                                    href="../../shared/monitor/c-monitor.xml"/></entry>
                                 <entry
                                     colname="col3">Describes the basic tasks involved in monitoring the OpenStack services and servers.</entry>
                             </row>

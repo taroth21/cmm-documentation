@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright FUJITSU LIMITED 2017 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                     xml:lang="en-us">
     <title>About this Manual</title>
@@ -62,7 +61,7 @@
                             <row>
                                 <entry
                                     colname="col2"><xref
-                                    href="../../shared/monitor/c-osomonitor.xml"/></entry>
+                                    href="../../shared/monitor/c-monitor.xml"/></entry>
                                 <entry
                                     colname="col3">Describes the basic tasks involved in monitoring services and servers.</entry>
                             </row>
