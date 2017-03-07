@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright FUJITSU LIMITED 2017 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
             xml:lang="en-us">
     <title><ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Architecture and Components</title>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Architecture and Components</title>
     <conbody>
         <section>
             <p>The following illustration provides an overview of the main components of <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> and their interaction: </p>
             <fig>
-                <image alt="CSI-architecture2.png" height="260" href="../../images/cmm-architecture2.png" width="435"/>
+                <image
+                    alt="CSI-architecture2.png" height="260"
+                    href="../../images/cmm-architecture.png"
+            width="435"/>
             </fig>
         </section>
         <section
@@ -22,16 +24,16 @@
                     id="Service_concept_conbody_section_3">
             <title><ph
                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service</title>
-            <p id="The_concept_conbody_section_3_p">The <ph
+            <p
+                    id="The_concept_conbody_section_3_p">The <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is the central <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> component. It is responsible for receiving, persisting, and processing monitoring and log data, as well as providing the data to the users.</p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> component. It is responsible for receiving, persisting, and processing monitoring and log data, as well as providing the data to the users.</p>
             <p>The <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service relies on Monasca, an open source Monitoring as a Service solution. It uses Monasca for high-speed metrics querying and integrates the Threshold Engine (streaming alarm engine) and the Notification Engine of Monasca.</p>
         </section>
         <section>
-            <p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Service consists of the following components:</p>
+            <p>The <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service consists of the following components:</p>
             <p>
                 <ul>
                     <li><b>Monitoring API</b><p>A RESTful API for monitoring. It is primarily focused on the following areas: </p><ul>
@@ -66,10 +68,8 @@
                     </li>
                     <li><b>Log API</b>
                         <p>A RESTful API for log management. The Log API gathers log data from the <ph
-                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> Log Agents and forwards it to the Message Queue. </p><p>The <ph
-                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> log management is based on Logstash, a tool for receiving, processing, and publishing all kinds of logs. It provides a powerful pipeline for querying and analyzing logs. Elasticsearch is used as the backend datastore, and Kibana as the front-end tool for retrieving and visualizing the log data.</p></li>
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agents and forwards it to the Message Queue. </p><p>The <ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> log management is based on Logstash, a tool for receiving, processing, and publishing all kinds of logs. It provides a powerful pipeline for querying and analyzing logs. Elasticsearch is used as the backend datastore, and Kibana as the front-end tool for retrieving and visualizing the log data.</p></li>
                     <li><b>Log Transformer</b>
                         <p>A Logstash component that consumes the log data from the Message Queue, performs transformation and aggregation operations on the data, and publishes the data that it creates back to the Message Queue.</p></li>
                     <li><b>Log Metrics</b>
@@ -80,19 +80,19 @@
                     <li><b>Log Database</b><p>An Elasticsearch database for storing the log data. </p></li>
                 </ul>
             </p>
-            <note othertype="note">
+            <note
+                        othertype="note">
                 <p>The installation of the <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service includes the installation of all <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> third-party components that are required. From time to time, it may be necessary to install bug fixes or security patches for these third-party components. In order to guarantee for the interoperability and integrity of your entire <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> installation, you should obtain such fixes and patches solely from your <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> support organization.</p>
+            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> support organization.</p>
             </note>
         </section>
         <section
             conref="../../osoperator/intro/c-osocomponents.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Horizon_Plugin_concept_conbody_section_4"/>
         <section
             conref="../../overview/whatiscmm/c-components.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Metrics_Agent_concept_conbody_section_5"/>
-        <section
-            conref="../../overview/whatiscmm/c-components.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Log_Agent_concept_conbody_section_6"/>
+        <section conref="../../overview/whatiscmm/c-components.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Log_Agent_concept_conbody_section_6"/>
     </conbody>
 </concept>

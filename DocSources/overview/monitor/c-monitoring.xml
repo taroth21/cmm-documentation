@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright FUJITSU LIMITED 2017 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                 xml:lang="en-us">
     <title>Monitoring</title>
     <conbody>
         <section>
-            <p id="The_monitoring_solution_of_concept_conbody_section_1_p">The monitoring solution of <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> addresses the requirements of large-scale public and private clouds where high numbers of physical and virtual servers need to be monitored and huge amounts of monitoring data need to be managed. <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> consolidates metrics, alarms, and notifications, as well as health and status information from multiple systems, thus reducing the complexity and allowing for a higher level analysis of the monitoring data.</p>
-            <p id="covers_all_aspects_of_a_Moni_concept_conbody_section_1_p"><ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> covers all aspects of a Monitoring as a Service solution:</p>
+            <p
+                    id="The_monitoring_solution_of_concept_conbody_section_1_p">The monitoring solution of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> addresses the requirements of large-scale public and private clouds where high numbers of physical and virtual servers need to be monitored and huge amounts of monitoring data need to be managed. <ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> consolidates metrics, alarms, and notifications, as well as health and status information from multiple systems, thus reducing the complexity and allowing for a higher level analysis of the monitoring data.</p>
+            <p
+                    id="covers_all_aspects_of_a_Moni_concept_conbody_section_1_p"><ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> covers all aspects of a Monitoring as a Service solution:</p>
             <ul
                 compact="no"
-                    id="Storage_of_monitoring_data_in_concept_conbody_section_1_ul">
+                id="Storage_of_monitoring_data_in_concept_conbody_section_1_ul">
                 <li>Storage of monitoring data in a resilient way.</li>
                 <li>Multi-tenancy architecture for submitting and streaming metrics. The architecture ensures the secure isolation of metrics data.</li>
                 <li>Horizontal and vertical scalability to support constantly evolving cloud infrastructures. When physical and virtual servers are scaled up or down to varying loads, the monitoring solution can be adapted accordingly.</li>
@@ -33,7 +31,8 @@
             <fig>
                 <image
                     align="left" alt="monitoring.png" height="298"
-                    href="../../images/monitoring.png" placement="break"
+                    href="../../images/overview-monitoring.png"
+                    placement="break"
                 width="700"/>
             </fig>
             <p
@@ -41,17 +40,16 @@
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator</b> is responsible for providing the monitoring services to the tenant users and the OpenStack operator. This enables the tenant users and the OpenStack operator to focus on operation and ensure the quality of their services without having to carry out the tedious tasks implied by setting up and administrating their own system monitoring software. The <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator uses the monitoring services himself for monitoring the operation of <ph
                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p id="Tenant_users_concept_conbody_section_2_p"
-                    ><b>Tenant users</b> monitor the virtual machines on which they provide services to <b>end users</b> or services they need for their development activities. They ensure that the physical and virtual servers on which their services are provided are up and running as required.</p>
-            <p id="TheOS_concept_conbody_section_2_p"
-                >The <b>OpenStack operator</b> monitors physical and virtual servers, hypervisors, and services of the underlying platform. In addition, he is responsible for the middleware components, for example, the database services. </p>
+            <p
+                id="Tenant_users_concept_conbody_section_2_p"><b>Tenant users</b> monitor the virtual machines on which they provide services to <b>end users</b> or services they need for their development activities. They ensure that the physical and virtual servers on which their services are provided are up and running as required.</p>
+            <p
+                    id="TheOS_concept_conbody_section_2_p">The <b>OpenStack operator</b> monitors physical and virtual servers, hypervisors, and services of the underlying platform. In addition, he is responsible for the middleware components, for example, the database services. </p>
         </section>
         <section>
             <title>Metrics</title>
-            <p>A <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Metrics Agent can be installed and configured on each physical and virtual server where cloud resources are to be monitored. The agent is responsible for querying metrics and sending the data to the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Service for further processing. </p>
+            <p>A <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent can be installed and configured on each physical and virtual server where cloud resources are to be monitored. The agent is responsible for querying metrics and sending the data to the <ph
+                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service for further processing. </p>
             <p
                 id="Metrics_represent_self-descri_concept_conbody_section_3_p">Metrics are self-describing data structures that are uniquely identified by a name and a set of dimensions. Each dimension consists of a key/value pair that allows for a flexible and concise description of the data to be monitored, for example, region, availability zone, service tier, or resource ID.</p>
             <p
@@ -72,24 +70,19 @@
         </section>
         <section>
             <title>Data Visualization and Analysis</title>
-            <p>All <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> user groups work with a graphical user interface that is seamlessly integrated into their cloud infrastructure. <ph
-                    id="Based_on_OpenStack_Horizon_t_concept_conbody_section_4_p"
-                    >Based on OpenStack Horizon, the user interface enables access to all monitoring functionality and the resulting large-scale monitoring data.</ph>
+            <p>All <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> user groups work with a graphical user interface that is seamlessly integrated into their cloud infrastructure. <ph
+                id="Based_on_OpenStack_Horizon_t_concept_conbody_section_4_p">Based on OpenStack Horizon, the user interface enables access to all monitoring functionality and the resulting large-scale monitoring data.</ph>
             </p>
-            <p id="A_comfortable_dashboard_visua_concept_conbody_section_4_p"
-                    >A comfortable dashboard visualizes the health and status of the cloud resources. It allows <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> users to experiment with many ways of analyzing the performance of their cloud resources in real-time. They cannot only view but also share and explore visualizations of their monitoring data.</p>
+            <p
+                    id="A_comfortable_dashboard_visua_concept_conbody_section_4_p">A comfortable dashboard visualizes the health and status of the cloud resources. It allows <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users to experiment with many ways of analyzing the performance of their cloud resources in real-time. They cannot only view but also share and explore visualizations of their monitoring data.</p>
         </section>
         <section>
             <title>Alarms and Notifications</title>
-            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> supports GUI-based alarm and notification management. <ph
-                    id="Template-based_alarm_definiti_concept_conbody_section_4_p"
-                        >Template-based alarm definitions allow for monitoring a dynamically changing set of resources without the need for reconfiguration. While the number of underlying virtual machines is changing, for example, this ensures the efficient monitoring of scalable cloud services. Alarm definitions allow you to specify expressions that are evaluated based on the metrics data that is received. Alarm definitions can be combined to form compound alarms. Compound alarms allow you to track and process even more complex events. Notifications can be configured in order to inform <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> users when an alarm is triggered.</ph></p>
+            <p><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> supports GUI-based alarm and notification management. <ph
+                        id="Template-based_alarm_definiti_concept_conbody_section_4_p">Template-based alarm definitions allow for monitoring a dynamically changing set of resources without the need for reconfiguration. While the number of underlying virtual machines is changing, for example, this ensures the efficient monitoring of scalable cloud services. Alarm definitions allow you to specify expressions that are evaluated based on the metrics data that is received. Alarm definitions can be combined to form compound alarms. Compound alarms allow you to track and process even more complex events. Notifications can be configured in order to inform <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users when an alarm is triggered.</ph></p>
         </section>
     </conbody>
 </concept>
