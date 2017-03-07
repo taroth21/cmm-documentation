@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright FUJITSU LIMITED 2017 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                     xml:lang="en-us">
         <title>Components</title>
@@ -13,7 +12,10 @@
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components: </p>
                  
             <fig>
-                <image href="../../images/tu-struct-upd.png" alt="tu-struct-upd.png" width="300" height="130"/>
+                <image
+                    alt="tu-struct-upd.png" height="130"
+                    href="../../images/tenantuser-comp.png"
+            width="300"/>
             </fig>
                 </section>
                 <section
@@ -26,10 +28,10 @@
                     id="Service_concept_conbody_section_3">
                         <title><ph
                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service</title>
-                        <p id="The_concept_conbody_section_3_p">The <ph
+                        <p
+                    id="The_concept_conbody_section_3_p">The <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is the central <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> component. It is responsible for receiving, persisting, and processing metrics and log data, as well as providing the data to the users.</p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> component. It is responsible for receiving, persisting, and processing metrics and log data, as well as providing the data to the users.</p>
                         <p>The <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service relies on Monasca, an open source Monitoring as a Service solution. It uses Monasca for high-speed metrics querying and integrates the streaming alarm engine and the notification engine of Monasca.</p>
                 </section>
