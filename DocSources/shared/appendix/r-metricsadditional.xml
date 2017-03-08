@@ -8,8 +8,8 @@
     <title>Additional Metrics </title>
     <refbody>
         <section>
-            <p><ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> supports the additional metrics described below for monitoring specific servers and services. The metrics are grouped by metrics types. Each metrics type references a set of related metrics.</p>
+            <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+        /> supports the additional metrics described below for monitoring specific servers and services. The metrics are grouped by metrics types. Each metrics type references a set of related metrics.</p>
             <p>Depending on the services running on the host where you install a <ph
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           /> Metrics Agent, some or all of these metrics are automatically added to the agent configuration. You should check the individual <codeph>yaml</codeph> files and change or correct the settings as required, or remove individual <codeph>yaml</codeph> files from the agent configuration if you do not want to monitor the metrics they include. </p>
@@ -49,7 +49,7 @@ instances:
             <title>elastic.yaml</title>
             <p>Elastic checks gather metrics for Elasticsearch databases, such as the Log Database of <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>. The configuration file must specify the URL for HTTP requests. If basic authentication is used, for example, <codeph>elasticsearch-http-basic</codeph>, the configuration file must also specify the user name and password for every instance that requires authentication.</p>
-      <p>The agent installer automatically checks whether an Elasticsearch database instance is installed on the machine where the agent is installed. If so, the detected settings are saved to the <codeph>elastic.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. </p>
+      <p>The agent installer automatically creates the <codeph>elastic.yaml</codeph> configuration file in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. If there is an Elasticsearch database instance installed on the machine where the agent is installed, you have to specify the configuration information in the <codeph>elastic.yaml</codeph> file after the installation.</p>
             <p>Example configuration:</p>
             <codeblock>init_config: null
 instances:
@@ -77,7 +77,7 @@ instances:
       <title>host_alive.yaml</title>
       <p>Host alive checks perform checks on a remote host to determine whether it is alive. The checks use ping (ICMP) or SSH.</p>
       <p>SSH checks provide extensive tests on the availability of remote host machines. They check the banner that is returned. A remote host machine may still respond to a ping request but may not return an SSH banner. Therefore it is recommended that you use SSH checks instead of ping checks.</p>
-      <p>The agent installer auto-detects applications and processes that are running on the machine where the agent is installed. It saves the detected settings to the <codeph>host_alive.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory.</p>
+      <p>The agent installer automatically creates the <codeph>host_alive.yaml</codeph> configuration file in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory. If there are applications and processes running on the machine where the agent is installed, you have to specify the configuration information in the <codeph>host_alive.yaml</codeph> file after the installation.</p>
       <p>Example configuration:</p>
       <codeblock>init_config:
     ping_timeout: 1
