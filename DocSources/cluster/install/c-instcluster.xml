@@ -184,6 +184,25 @@ agentAuthorizedRoles: "cmm-agent"</codeblock>
     }</codeblock>
                 </li>
                 <li>
+                    <p>Configure the interfaces for Keepalived. <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> uses Keepalived to handle the virtual IP address from which data is relayed to HAProxy. </p>
+                    <p>To configure the interfaces, open the <codeph>host_vars/keepalived-node-<i>n</i></codeph> file with your favorite editor. There is a separate configuration file for each node. </p>
+                    <p>Example:</p>
+                    <codeblock>sudo vim /opt/FJSVsvcmm/host_vars/keepalived-node-1</codeblock>
+                    <p>Define the following parameters in the file:</p>
+                    <ul>
+                        <li><codeph>keepalived_binding_interface</codeph> for the network interface to which to bind the virtual IP address. This interface must be accessible from all nodes in the <ph
+                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> cluster.</li>
+                        <li><codeph>keepalived_tracked_interfaces</codeph> for additional interfaces to be monitored by Keepalived. </li>
+                    </ul>
+                    <p>Example:</p>
+                    <codeblock>keepalived_binding_interface: "eth0"
+keepalived_tracked_interfaces:
+  - "eth0"</codeblock>
+                    <p>Configure the parameters for each node.</p>
+                </li>
+                <li>
                     <p>To provide metrics for log data to system operators, specific configuration settings are required. They are specified in the <codeph>group_vars/monasca_log_metrics_group</codeph> file.</p>
                     <p>The settings define which log levels are to be evaluated for the log data retrieved by a <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
