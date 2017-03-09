@@ -54,8 +54,8 @@ instances:
             <codeblock>init_config: null
 instances:
 - dimensions:
-  component: elasticsearch
-  service: monitoring
+    component: elasticsearch
+    service: monitoring
   url: http://localhost:9200
   username: username
   password: password</codeblock>
