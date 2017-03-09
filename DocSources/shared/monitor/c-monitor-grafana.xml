@@ -10,15 +10,13 @@
             id="The_user_interface_for_monito_concept_conbody">
         <section
             id="The_user_interface_for_monito_concept_conbody_section_1">
-            <p>The user interface for monitoring your services, servers, and log data integrates with Grafana, an open source application for visualizing large-scale monitoring data on metrics dashboards. </p>
-            <p>Use <uicontrol>Monitoring &gt; Overview</uicontrol> in the OpenStack Horizon dashboard to access Grafana. The options at the top border of the <uicontrol>Overview</uicontrol> page allow you to access preconfigured dashboards. You can use them as a starting point for creating your own dashboards, or you can customize them to meet your individual requirements.</p>
+            <p>The user interface for monitoring your services, servers, and log data integrates with Grafana, an open source application for visualizing large-scale monitoring data. Use the options at the top border of the <uicontrol>Overview</uicontrol> page to access Grafana. </p>
+            <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /> ships with preconfigured metrics dashboards. You can instantly use them for monitoring your environment. You can also use them as a starting point for creating your own dashboards.</p>
         </section>
         <section
                     id="Preconfigured_Dashboard_for_O_concept_conbody_section_2">
-            <title>Preconfigured Dashboard for OpenStack</title>
-            <p><ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> ships with two dashboards: a dashboard for the OpenStack Operator and a dashboard for the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Operator.</p>
+            <title>Preconfigured Metrics Dashboard for OpenStack</title>
             <p>As an OpenStack Operator, you use the <uicontrol>Dashboard</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the OpenStack services. The <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                     /> Operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the <ph
@@ -51,11 +49,8 @@
         </section>
         <section
                     id="Preconfigured_Dashboard_for_concept_conbody_section_3">
-            <title>Preconfigured Dashboard for <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/></title>
-            <p><ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> ships with two dashboards: a dashboard for the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Operator and a dashboard for the OpenStack Operator.</p>
+            <title>Preconfigured Metrics Dashboard for <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /></title>
             <p>As a <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                     /> Operator, you use the <uicontrol>Monasca Health</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"
@@ -71,7 +66,7 @@
                 <li>
                     <p>Status of the main <ph
                             conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> components (<codeph>UP</codeph> or <codeph>DOWN</codeph>). </p>
-                    <p>In the upper part of the dashboard the components are grouped into metrics and log management components as well as common components that are used by metrics-based as well as log-based monitoring.</p>
+                    <p>In the upper part of the dashboard the components are grouped into metrics and log management components as well as common components that are used by metrics-based and log-based monitoring.</p>
                 </li>
                 <li>
                     <p>Information on system resources.</p>

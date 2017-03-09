@@ -8,13 +8,19 @@
                 xml:lang="en-us">
     <title>Status of Services, Servers, and Log Data</title>
     <conbody>
-        <section>
-            <p>As soon as you have defined an alarm, there is status information displayed for the corresponding service, server, or log data on the <uicontrol>Overview</uicontrol> page. </p>
-            <p><i><b>PENDING</b>: Screenshot to be inserted.</i></p>
-            <p>The color of the boxes in the three sections indicates the status:</p>
-            <ul>
+        <section><p>An alarm definition for a service, server, or log data is evaluated over the interval specified in the alarm expression. The alarm definition is re-evaluated in each subsequent interval. The following alarm status are distinguished:</p><ul>
                 <li>
-                    <p>A green box for a service or server indicates that it is up and running. A green box for a log path indicates that a defined threshold for errors or warnings, for example, has not yet been reached or exceeded. There are alarms defined for the services, servers, or log paths that are displayed, but no alarms have been triggered.</p>
+                    <p><codeph>Alarm</codeph>. The alarm expression has evaluated to <codeph>true</codeph>. An alarm has been triggered for the cloud resource.</p>
+                </li>
+                <li>
+                    <p><codeph>OK</codeph>. The alarm expression has evaluated to <codeph>false</codeph>. </p>
+                </li>
+                <li>
+                    <p><codeph>Undetermined</codeph>. No metrics data has been received within the defined interval.</p>
+                </li>
+            </ul><p>As soon as you have defined an alarm for a cloud resource, there is status information displayed for it on the <uicontrol>Overview</uicontrol> page. </p><p>The color of the boxes in the three sections indicates the status:</p><ul>
+                <li>
+                    <p>A green box for a service or server indicates that it is up and running. A green box for a log path indicates that a defined threshold for errors or warnings, for example, has not yet been reached or exceeded. There are alarms defined for the services, servers, or log paths, but no alarms have been triggered.</p>
                 </li>
                 <li>
                     <p>A red box for a service, server, or log path indicates that there is a severe problem that needs to be checked. One or multiple alarms defined for a service, a server or log data have been triggered.</p>
@@ -23,10 +29,8 @@
                     <p>A yellow box indicates a problem. One or multiple alarms have already been triggered, yet, the severity of these alarms is low.</p>
                 </li>
                 <li>
-                    <p>A gray box indicates that alarms have been defined, yet, monitoring data has not yet been collected and sent.</p>
+                    <p>A gray box indicates that alarms have been defined. Yet, metrics data has not been received.</p>
                 </li>
-            </ul>
-            <p>### Alarms start with an UNDEFINED state which is changed to OK as long as the expression is not triggered. Once it is, the state changes to ALARM and the Notification Engine will start notifying people.</p>
-        </section>
+            </ul><p>The status information on the <uicontrol>Overview</uicontrol> page results from one or multiple alarms that have been defined for the corresponding resource. If multiple alarms are defined, the severity of the individual alarms controls the status color on the <uicontrol>Overview</uicontrol> page.</p>You can click on a resource to display details on the related alarms. The details show the status of each individual alarm and the expression that is evaluated. For each alarm, you can display an alarm history with detailed information on the status transitions that have been recorded. </section>
     </conbody>
 </concept>

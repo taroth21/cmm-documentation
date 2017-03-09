@@ -8,7 +8,7 @@
     <title>Defining Alarms</title>
     <conbody>
         <section>
-            <p>An alarm definition specifies the metrics to be collected and the threshold at which an alarm is to be triggered. If the specified threshold is reached or exceeded for a cloud resource, the alarm is triggered and notifications can be sent to inform users. By default, an alarm definition is evaluated every minute. </p>
+            <p>You have to define alarms to monitor your cloud resources. An alarm definition specifies the metrics to be collected and the threshold at which an alarm is to be triggered for a cloud resource. If the specified threshold is reached or exceeded, the alarm is triggered and notifications can be sent to inform users. By default, an alarm definition is evaluated every minute. </p>
             <p>To handle a large variety of monitoring requirements, you can create either simple alarm definitions that refer to one metrics only, or compound alarm definitions that combine multiple metrics and allow you to track and process more complex events. </p>
             <p>Example for a simple alarm definition that checks whether the system-level load of the CPU exceeds a threshold of 90 percent:</p>
             <codeblock>cpu.system_perc{hostname=cmm} &gt; 90</codeblock>
@@ -18,7 +18,7 @@
             <codeblock>avg(cpu.system_perc{hostname=cmm}) &gt; 90 OR 
 max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
             <p>To create, edit, and delete alarms, use <uicontrol>Monitoring &gt; Alarm Definitions</uicontrol>. </p>
-            <p>The elements that define an alarm are described in the following sections. They are grouped into <uicontrol>Details</uicontrol>, <uicontrol>Expression</uicontrol>, and <uicontrol>Notifications</uicontrol>.</p>
+            <p>The elements that define an alarm are grouped into <uicontrol>Details</uicontrol>, <uicontrol>Expression</uicontrol>, and <uicontrol>Notifications</uicontrol>. They are described in the following sections. </p>
         </section>
         <section>
             <title>Details</title>
@@ -41,14 +41,14 @@ max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
             <fig>
                 <image alt="alarm-expression.png" height="260" href="../../images/alarm-expression.png" width="435"/>
             </fig>
-            <p>The alarm expression defines how to evaluate a metrics. The syntax for the alarm expression is based on a simple expressive grammar. For syntax details, refer to the Monasca API documentation on <xref
+            <p>The expression defines how to evaluate a metrics. The expression syntax is based on a simple expressive grammar. For details, refer to the <xref
                     format="html"
-                    href="https://github.com/openstack/monasca-api/blob/stable/newton/docs/monasca-api-spec.md#alarm-definition-expressions"
-                    scope="external"><u><i>Alarm Definition Expressions</i></u></xref>. </p>
+                    href="https://github.com/openstack/monasca-api/blob/stable/newton/docs/monasca-api-spec.md"
+                    scope="external"><u><i>Monasca API documentation</i></u></xref>. </p>
             <p>To define the alarm expression, proceed as follows:</p>
             <ol>
                 <li>
-                    <p>Select the metrics you want to monitor. </p>
+                    <p>Select the metrics to be evaluated.</p>
                 </li>
                 <li>
                     <p>Select a statistical function for the metrics: <codeph>min</codeph> to monitor the minimum values, <codeph>max</codeph> to monitor the maximum values, <codeph>sum</codeph> to monitor the sum of the values, <codeph>count</codeph> for the monitored number, or <codeph>avg</codeph> for the arithmetic average.</p>
@@ -60,21 +60,14 @@ max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
                 </li>
                 <li>Enter the threshold value at which an alarm is to be triggered, and combine it with a relational operator <codeph>&lt;</codeph>, <codeph>&gt;</codeph>, <codeph>&lt;=</codeph>, or <codeph>&gt;=</codeph>. <p>The unit of the threshold value is related to the metrics for which you define the threshold, for example, the unit is percentage for <codeph>cpu.idle_perc</codeph> or MB for <codeph>disk.total_used_space_mb</codeph>. </p></li>
                 <li>
-                    <p>Switch on the <uicontrol>Deterministic</uicontrol> option if you evaluate a metrics for which data is received only sporadically. The option must be switched on, for example, for all log metrics. This ensures that the alarm state is <codeph>OK</codeph> and displayed as a green box on the <uicontrol>Overview</uicontrol> page although metrics data has not yet been received. </p>
+                    <p>Switch on the <uicontrol>Deterministic</uicontrol> option if you evaluate a metrics for which data is received only sporadically. The option should be switched on, for example, for all log metrics. This ensures that the alarm state is <codeph>OK</codeph> and displayed as a green box on the <uicontrol>Overview</uicontrol> page although metrics data has not yet been received. </p>
                     <p>Do not switch on the option if you evaluate a metrics for which data is received regularly. This ensures that you instantly notice, for example, that a host machine is offline for any reason and that there is no metrics data for the agent to collect. On the <uicontrol>Overview</uicontrol> page, the alarm state therefore changes from <codeph>OK</codeph> to <codeph>UNDETERMINED</codeph> and is displayed as a gray box.</p>
                 </li>
+                <li><p>Enter one or multiple dimensions in the <uicontrol>Match by</uicontrol> field if you want these dimensions to be taken into account for triggering alarms. </p>Example: If you enter <codeph>hostname</codeph> as dimension, individual alarms will be created for each host machine on which metrics data is collected. The expression you have defined is not evaluated as a whole but individually for each host machine in your environment. <p>If <uicontrol>Match by</uicontrol> is set to a dimension, the number of alarms depends on the number of dimension values on which metrics data is received. An empty <uicontrol>Match by</uicontrol> field results in exactly one alarm. </p><p>To enter a dimension, you can simply type the name of the dimension in the <uicontrol>Match by</uicontrol> field. The dimensions you enter cannot be changed once the alarm definition is saved.</p></li>
                 <li>
-                    <p>Enter one or multiple dimensions in the <uicontrol>Match by</uicontrol> field if you want these dimensions to be taken into account for triggering alarms. To enter a dimension, you can simply type the name of the dimension in the field.</p>
-                    <p>If you want the dimensions to be ignored in the expression that is to be evaluated, leave the field empty. The dimensions you specify cannot be changed once the alarm definition is saved.</p>
-                    <p>Example: If you enter <codeph>hostname</codeph> as dimension, individual alarms will be created for each host machine on which metrics data is collected. The expression you have defined is not evaluated as a whole but individually for each host machine in the monitored environment. </p>
-                    <p>An empty <uicontrol>Match by</uicontrol> field produces exactly one alarm. If <uicontrol>Match by</uicontrol> is set to a dimension, the number of alarms depends on the number of dimension values on which metrics data is collected.</p>
-                </li>
-                <li>
-                    <p>Build a compound alarm definition if it is required to combine multiple metrics in one expression. Using the logical operators <codeph>AND</codeph> or <codeph>OR</codeph>, you can combine any number of sub-expressions. </p>
+                    <p>Build a compound alarm definition to combine multiple metrics in one expression. Using the logical operators <codeph>AND</codeph> or <codeph>OR</codeph>, any number of sub-expressions can be combined.</p>
                     <p>Use the <uicontrol>Add</uicontrol> button to create a second expression, and choose either <codeph>AND</codeph> or <codeph>OR</codeph> as <uicontrol>Operator</uicontrol> to connect it to the one you have already defined. Proceed with the second expression as described in Step 1 to Step 6 above. </p>
-                </li>
-                <li>
-                    <p>If required, reorganize your compound alarm definition. The following options are provided:</p>
+                    <p>The following options are provided for creating and organizing compound alarm definitions:</p>
                     <ul>
                         <li>Create additional sub-expressions using the <uicontrol>Add</uicontrol> button.</li>
                         <li>Finish editing a sub-expression using the <uicontrol>Submit</uicontrol> button.</li>
@@ -83,8 +76,13 @@ max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
                     </ul>
                 </li>
             </ol>
-            <note othertype="note"
-                    >In addition to using the options of the graphical user interface, you can also edit the expression syntax directly. For this purpose, save your alarm definition and update it later. The <uicontrol>Edit Alarm Definition</uicontrol> option allows you to directly edit the syntax. </note>
+            <note othertype="note">
+                <p>You can also edit the expression syntax directly. For this purpose, save your alarm definition and update it using the <uicontrol>Edit Alarm Definition</uicontrol> option.</p>
+                <p>By default, an alarm definition is evaluated every minute. When updating the alarm definition, you can change this interval. For syntax details, refer to the Monasca API documentation on <xref
+                        format="html"
+                        href="https://github.com/openstack/monasca-api/blob/stable/newton/docs/monasca-api-spec.md#alarm-definition-expressions"
+                        scope="external"><u><i>Alarm Definition Expressions</i></u></xref>.</p>
+            </note>
         </section>
         <section>
             <title>Notifications</title>
@@ -92,12 +90,12 @@ max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
                 <image alt="alarm-notifications.png" height="260" href="../../images/alarm-notifications.png"
                     width="435"/>
             </fig>
-            <p>You can optionally enable notifications for an alarm definition. As soon as an alarm is triggered, the enabled notifications will be sent.</p>
-            <p>The <uicontrol>Notifications</uicontrol> tab allows you to select the notifications you want to sent from the notifications that have been predefined in your environment. For a selected notification, you can decide for which state change you want to send it: </p>
+            <p>You can enable notifications for an alarm definition. As soon as an alarm is triggered, the enabled notifications will be sent.</p>
+            <p>The <uicontrol>Notifications</uicontrol> tab allows you to select the notifications from the ones that are predefined in your environment. For a selected notification, you specify for which state change you want to send it: </p>
             <ul>
-                <li>For a state change to <codeph>Alarm</codeph> when an alarm is triggered. The box for the service, server, or log path turns red on the <uicontrol>Overview</uicontrol> page.</li>
-                <li>For a state change to <codeph>OK</codeph> when metrics data has been received for the metrics and there is no need to trigger an alarm. The box for the service, server, or log path turns green on the <uicontrol>Overview</uicontrol> page.</li>
-                <li>For a state change to <codeph>Undetermined</codeph> when no metrics data has been received for the metrics. The box for the service, server, or log path turns grey on the <uicontrol>Overview</uicontrol> page.</li>
+                <li>For a status change to <codeph>Alarm</codeph> when an alarm is triggered.</li>
+                <li>For a status change to <codeph>OK</codeph> when there is no need to trigger an alarm. </li>
+                <li>For a status change to <codeph>Undetermined</codeph> when no metrics data has been collected. </li>
             </ul>
             <p>For details on defining notifications, refer to <xref href="c-monitor-alert.xml"/>.</p>
         </section>
