@@ -31,6 +31,6 @@
                 <li>
                     <p>A gray box indicates that alarms have been defined. Yet, metrics data has not been received.</p>
                 </li>
-            </ul><p>The status information on the <uicontrol>Overview</uicontrol> page results from one or multiple alarms that have been defined for the corresponding resource. If multiple alarms are defined, the severity of the individual alarms controls the status color on the <uicontrol>Overview</uicontrol> page.</p>You can click on a resource to display details on the related alarms. The details show the status of each alarm and the expression that is evaluated. For each alarm, you can display an alarm history with detailed information on the status transitions that have been recorded for the resource. </section>
+            </ul><p>The status information on the <uicontrol>Overview</uicontrol> page results from one or multiple alarms that have been defined for the corresponding resource. If multiple alarms are defined, the severity of the individual alarms controls the status color.</p>You can click on a resource on the <uicontrol>Overview</uicontrol> page to display details on the related alarms. The details show the status of each alarm and the expression that is evaluated. For each alarm, you can display an alarm history. To narrow donw the cause of the alarm, the history presents detailed information on the status transitions that have been recorded. </section>
     </conbody>
 </concept>

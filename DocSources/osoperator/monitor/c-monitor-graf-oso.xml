@@ -12,7 +12,14 @@
         <section
             conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Preconfigured_Dashboard_for_O_concept_conbody_section_2"/>
         <section
-            conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Configuring_and_Customizing_D_concept_conbody_section_4"
-        />
+            conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Building_Dashboards_concept_conbody_section_4"/>
+        <section
+            conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Creating_a_Dashboard_concept_conbody_section_5"/>
+        <section
+            conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Editing_Rows_concept_conbody_section_6"/>
+        <section
+            conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Editing_Panels_concept_conbody_section_7"/>
+        <section
+            conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Saving_and_Sharing_Dashboards_concept_conbody_section_8"/>
     </conbody>
 </concept>
