@@ -7,25 +7,45 @@
                     xml:lang="en-us">
     <title>Overview</title>
     <conbody>
-        <section>
+        <section id="provides_one_convenient_acce_concept_conbody_section_1">
             <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                     /> provides one convenient access point to your monitoring data. Use <uicontrol>Monitoring &gt; Overview</uicontrol> to keep track of your services and servers and quickly check their status. The overview also indicates any irregularities in the log data of the system components you are monitoring. </p>
-                        <p>On the <uicontrol>Overview</uicontrol> page, you can:</p>
-                        <ul>
+        </section>
+        <section id="On_the_concept_conbody_section_2">
+            <p>On the <uicontrol>Overview</uicontrol> page, you can:</p>
+            <ul>
                 <li>
                     <p>View the status of your services, servers, and log data at a glance. As soon as you have defined an alarm for a service, a server, or log data and metrics data has been received, there is status information displayed on the <uicontrol>Overview</uicontrol> page. Different colors are used for the different statuses. This makes it is easy to instantly detect any problem. </p>
                     <p>For details on the status information, refer to <xref href="c-monitor-statusinfo.xml"
                             />. For details on defining alarms, refer to <xref href="c-monitor-alarm.xml"/>. </p>
                 </li>
-                                <li>
-                                        <p>Access a preconfigured dashboard that visualizes your metrics data. Starting from this dashboard, you can create your own dashboards for visualizing your data as required. For details, refer to <xref
-                            href="c-monitor-grafana.xml"/>. </p>
-                                </li>
-                                <li>
-                                        <p>Access a preconfigured dashboard that visualizes your log data. Starting from this dashboard, you can create your own dashboards for visualizing your data as required. For details, refer to <xref
+                <li>
+                    <p>Access a preconfigured dashboard that visualizes your metrics data. Starting from this dashboard, you can create your own dashboards for visualizing your data as required. For details, refer to <xref
+                            href="../../osoperator/monitor/c-monitor-graf-oso.xml"/>. </p>
+                </li>
+                <li>
+                    <p>Access a preconfigured dashboard that visualizes your log data. Starting from this dashboard, you can create your own dashboards for visualizing your data as required. For details, refer to <xref
                             href="../logging/c-osolog-kibana.xml"/>.</p>
-                                </li>
-                        </ul>
+                </li>
+            </ul>
+        </section>
+        <section id="On_the_concept_conbody_section_3">
+            <p>On the <uicontrol>Overview</uicontrol> page, you can:</p>
+            <ul>
+                <li>
+                    <p>View the status of your services, servers, and log data at a glance. As soon as you have defined an alarm for a service, a server, or log data and metrics data has been received, there is status information displayed on the <uicontrol>Overview</uicontrol> page. Different colors are used for the different statuses. This makes it is easy to instantly detect any problem. </p>
+                    <p>For details on the status information, refer to <xref href="c-monitor-statusinfo.xml"
+                            />. For details on defining alarms, refer to <xref href="c-monitor-alarm.xml"/>. </p>
+                </li>
+                <li>
+                    <p>Access a preconfigured dashboard that visualizes your metrics data. Starting from this dashboard, you can create your own dashboards for visualizing your data as required. For details, refer to <xref
+                            href="../../cmmoperator/monitor/c-monitor-graf-cmmo.xml"/>. </p>
+                </li>
+                <li>
+                    <p>Access a preconfigured dashboard that visualizes your log data. Starting from this dashboard, you can create your own dashboards for visualizing your data as required. For details, refer to <xref
+                            href="../logging/c-osolog-kibana.xml"/>.</p>
+                </li>
+            </ul>
         </section>
     </conbody>
 </concept>

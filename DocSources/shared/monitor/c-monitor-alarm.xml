@@ -91,13 +91,9 @@ max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
                     width="435"/>
             </fig>
             <p>You can enable notifications for an alarm definition. As soon as an alarm is triggered, the enabled notifications will be sent.</p>
-            <p>The <uicontrol>Notifications</uicontrol> tab allows you to select the notifications from the ones that are predefined in your environment. For a selected notification, you specify for which state change you want to send it: </p>
-            <ul>
-                <li>For a status change to <codeph>Alarm</codeph> when an alarm is triggered.</li>
-                <li>For a status change to <codeph>OK</codeph> when there is no need to trigger an alarm. </li>
-                <li>For a status change to <codeph>Undetermined</codeph> when no metrics data has been collected. </li>
-            </ul>
-            <p>For details on defining notifications, refer to <xref href="c-monitor-alert.xml"/>.</p>
+            <p>The <uicontrol>Notifications</uicontrol> tab allows you to select the notifications from the ones that are predefined in your environment. For a selected notification, you specify whether you want to send it for a status transition to <codeph>Alarm</codeph>, <codeph>OK</codeph>, and/or <codeph>Undetermined</codeph>. </p>
+            <p>For details on defining notifications, refer to <xref href="c-monitor-alert.xml"
+                    />. For details on alarm statuses, refer to <xref href="c-monitor-statusinfo.xml"/>.</p>
         </section>
     </conbody>
 </concept>

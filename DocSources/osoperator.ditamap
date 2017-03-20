@@ -174,7 +174,7 @@
     <chapter
             href="shared/monitor/c-monitor.xml">
         <topicref
-            format="dita" href="shared/monitor/c-monitor-overview.xml"
+            format="dita" href="osoperator/monitor/c-monitor-overview-oso.xml"
             type="concept"/>
         <topicref format="dita"
             href="osoperator/monitor/c-monitor-graf-oso.xml"
