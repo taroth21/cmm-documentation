@@ -18,12 +18,12 @@
                                         /> monitoring functions. Additional roles are optional. Contact your OpenStack operator for more information.</li>
                                 <li>You must be assigned to the project you want to monitor.</li>
                         </ul>
-                        <p>To perform your tasks, log in to the OpenStack platform using the user name and password provided as login information by OpenStack. This allows you to access the OpenStack Horizon dashboard.  The tabs and functions you can access in the dashboard depend on your access permissions. </p>
+                        <p>Log in to the OpenStack platform using the user name and password provided as login information by OpenStack. This allows you to access the OpenStack Horizon dashboard. The tabs and functions you can access in OpenStack Horizon depend on your access permissions. </p>
                         <p>For monitoring your services and virtual machines, you use the <ph
                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> monitoring user interface which is integrated into the OpenStack Horizon dashboard. The <ph
+                                        /> monitoring user interface which is integrated into OpenStack Horizon. The <ph
                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> functionality is available on the <uicontrol>Monitoring</uicontrol> tab. The tab provides access to all monitoring data of the project to which you are assigned. If you are assigned to more than one project, select the project you want to monitor from the drop-down menu at the top left of the dashboard. </p>
+                                        /> functionality is available on the <uicontrol>Monitoring</uicontrol> tab. It provides access to the monitoring data of the project to which you are assigned. If you are assigned to more than one project, select the project you want to work on from the drop-down menu at the top left of the dashboard. </p>
         </section>
                 <section>
                         <title>Supported Web Browsers</title>

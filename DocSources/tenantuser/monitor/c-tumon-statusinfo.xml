@@ -6,9 +6,9 @@
 
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                 xml:lang="en-us">
-    <title>Status of Services, Servers, and Log Data</title>
+    <title>Status of Services and Virtual Machines</title>
     <conbody>
-        <section><p>An alarm definition for a service, server, or log data is evaluated over the interval specified in the alarm expression. The alarm definition is re-evaluated in each subsequent interval. The following alarm statuses are distinguished:</p><ul>
+        <section><p>An alarm definition for a service or virtual machine is evaluated over the interval specified in the alarm expression. The alarm definition is re-evaluated in each subsequent interval. The following alarm statuses are distinguished:</p><ul>
                 <li>
                     <p><codeph>Alarm</codeph>. The alarm expression has evaluated to <codeph>true</codeph>. An alarm has been triggered for the cloud resource.</p>
                 </li>
@@ -20,16 +20,16 @@
                 </li>
             </ul><p>As soon as you have defined an alarm for a cloud resource, there is status information displayed for it on the <uicontrol>Overview</uicontrol> page. </p><p>The color of the boxes in the three sections indicates the status:</p><ul>
                 <li>
-                    <p>A green box for a service or server indicates that it is up and running. A green box for a log path indicates that a defined threshold for errors or warnings, for example, has not yet been reached or exceeded. There are alarms defined for the services, servers, or log paths, but no alarms have been triggered.</p>
+                    <p>A virtual machine or service in a green box indicates that it is up and running. There are alarms defined for it, but the defined thresholds have not yet been reached or exceeded. No alarm has been triggered.</p>
                 </li>
                 <li>
-                    <p>A red box for a service, server, or log path indicates that there is a severe problem that needs to be checked. One or multiple alarms defined for a service, a server or log data have been triggered.</p>
+                    <p>A virtual machine or service in a red box indicates that there is a severe problem that needs to be checked. One or multiple alarms have been triggered.</p>
                 </li>
                 <li>
-                    <p>A yellow box indicates a problem. One or multiple alarms have already been triggered, yet, the severity of these alarms is low.</p>
+                    <p>A virtual machine or service in a yellow box indicates a problem. One or multiple alarms have already been triggered, yet, the severity of these alarms is low.</p>
                 </li>
                 <li>
-                    <p>A gray box indicates that alarms have been defined. Yet, metrics data has not been received.</p>
+                    <p>A virtual machine in a gray box indicates that alarms have been defined. Yet, monitoring data has not been received.</p>
                 </li>
             </ul><p>The status information on the <uicontrol>Overview</uicontrol> page results from one or multiple alarms that have been defined for the corresponding resource. If multiple alarms are defined, the severity of the individual alarms controls the status color.</p>You can click a resource on the <uicontrol>Overview</uicontrol> page to display details on the related alarms. The details show the status of each alarm and the expression that is evaluated. For each alarm, you can drill down on the alarm history. To narrow down the problem, the history presents detailed information on the status transitions. </section>
     </conbody>

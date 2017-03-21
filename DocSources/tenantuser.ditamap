@@ -92,6 +92,9 @@
         <topicref format="dita"
             href="shared/monitor/c-monitor-alert.xml"
         type="concept"/>
+        <topicref format="dita"
+            href="tenantuser/monitor/c-tumon-statusinfo.xml"
+        type="concept"/>
     </chapter>
     
     <appendix href="shared/glossary/r-glossary.xml"/>
