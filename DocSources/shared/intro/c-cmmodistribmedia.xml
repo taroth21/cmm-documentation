@@ -9,7 +9,7 @@
     <title>Distribution Media</title>
     <conbody>
         <section>
-            <p><i><b>PENDING</b>: Distribution media for CMM 1.2 has not yet been defined; GA not yet scheduled.</i></p>
+            <p><i><b>PENDING</b>: Distribution media for CMM 1.2 has not yet been defined; CMM 1.2 is in Beta status.</i></p>
         </section>
         <section>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is distributed in the <ph
