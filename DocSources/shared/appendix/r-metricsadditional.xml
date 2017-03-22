@@ -153,8 +153,6 @@ instances:
       transformed-log: []
     logstash-persister:
       transformed-log: []
-    monasca-notification:
-      TOPIC: []
     thresh-event:
       events: []
     thresh-metric:
