@@ -13,14 +13,14 @@
             <p>On the <uicontrol>Overview</uicontrol> page, you can:</p>
             <ul>
                 <li>
-                    <p>View the status of your cloud resources at a glance. As soon as you have defined an alarm for a service or a virtual machine and metrics data has been received, there is status information displayed on the <uicontrol>Overview</uicontrol> page. Different colors are used for the different statuses. This makes it is easy to instantly detect any problem. </p>
+                    <p>View the status of your cloud resources at a glance. As soon as you have defined an alarm for a service or a virtual machine and metrics data has been received, there is status information displayed on the <uicontrol>Overview</uicontrol> page. Different colors are used for the different statuses.</p>
                     <p>For details on the status information, refer to <xref
                             href="c-tumon-statusinfo.xml"/>. For details on defining alarms, refer to <xref
                             href="../../shared/monitor/c-monitor-alarm.xml"/>. </p>
                 </li>
                 <li>
-                    <p>Access preconfigured  dashboards. Starting from these dashboard, you can create your own dashboard that visualizes your data as required. For details, refer to <xref
-                    href="c-tumon-grafana.xml"/>.</p>
+                    <p>Access preconfigured dashboards. Starting from these dashboards, you can create your own dashboard that visualizes your metrics data as required. For details, refer to <xref
+                            href="c-tumon-grafana.xml"/>.</p>
                 </li>
             </ul>
         </section>

@@ -9,17 +9,15 @@
     <conbody>
                 <section>
                         <p><ph
-                conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> offers various monitoring features which support you in proactively managing your cloud resources. The large number of available metrics in combination with early warnings about problems and outages assists you in analyzing and troubleshooting any issue you encounter in your environment.</p>
-                        <p
-                    id="The_monitoring_features_of_concept_conbody_section_1_p">The monitoring features of <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> offers various monitoring features which support you in proactively managing your cloud resources. The large number of available metrics in combination with early warnings about problems and outages assists you in analyzing and troubleshooting any issue you encounter in your environment.</p>
+                        <p>The monitoring features of <ph
                 conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> include: </p>
                         <ul
-                    id="A_comfortable_monitoring_over_concept_conbody_section_1_ul">
-                                <li
-                id="A_comfortable_monitoring_over_concept_conbody_section_1_u">A comfortable monitoring overview which allows you to access all monitoring information. </li>
-                                <li>Metrics dashboards for visualizing your monitoring data.</li>
-                                <li>Alerting features for monitoring. </li>
-                        </ul>
+                id="A_comfortable_monitoring_over_concept_conbody_section_1_ul">
+                <li>A comfortable monitoring overview which allows you to access all monitoring information. </li>
+                <li>Metrics dashboards for visualizing your monitoring data.</li>
+                <li>Alerting features for monitoring. </li>
+            </ul>
                         <p
                     id="In_the_following_sections_yo_concept_conbody_section_1_p">In the following sections, you will find information on the monitoring overview and the metrics dashboards as well as details on how to define and handle alarms and notifications.</p>
                 </section>

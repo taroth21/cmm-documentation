@@ -11,13 +11,13 @@
         <section id="offers_various_features_for_concept_conbody_section">
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> offers various features for monitoring your services and the virtual machines on which your services are provisioned. The large number of available metrics in combination with early warnings about problems and outages assist you in analyzing and troubleshooting any issue you encounter in your environment.</p>
-            <p
-                conref="../../shared/monitor/c-monitor.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_monitoring_features_of_concept_conbody_section_1_p">
-                <ul
-                    conref="../../shared/monitor/c-monitor.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/A_comfortable_monitoring_over_concept_conbody_section_1_ul">
-                    <li/>
-                </ul>
-            </p>
+            <p>The monitoring features of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> include:</p>
+            <ul
+                conref="../../shared/monitor/c-monitor.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/A_comfortable_monitoring_over_concept_conbody_section_1_ul">
+                <li/>
+            </ul>
+            
             <p
                 conref="../../shared/monitor/c-monitor.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/In_the_following_sections_yo_concept_conbody_section_1_p"/>
         </section>
