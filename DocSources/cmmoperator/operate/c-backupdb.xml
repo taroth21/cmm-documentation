@@ -121,7 +121,7 @@
                                         <codeblock>$ systemctl stop influxdb</codeblock>
                                 </li>
                                 <li>
-                                        <p>Log in to the InfluxDB database as a user who is allowed to run the <codeph>influxdb</codeph> service.</p>
+                                        <p>Log in to the InfluxDB database as a user who is allowed to run the <codeph>influxdb</codeph> service. </p>
                                         <p>Example:</p>
                                         <codeblock>$ su influxdb </codeblock>
                                 </li>

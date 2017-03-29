@@ -43,7 +43,7 @@
                 />'s monitoring and log management services. </p>
         </section>
         <section>
-            <title>Fault Tolerance</title>
+            <title>Fault Tolerance and Recoverability</title>
             <p>Maintaining a replicated environment on multiple nodes means providing fault tolerance through functional redundancy. </p>
             <p>In case of failures of individual <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
