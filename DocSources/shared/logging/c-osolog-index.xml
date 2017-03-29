@@ -8,29 +8,36 @@
     <title>Configuring Index Patterns</title>
     <conbody>
         <section>
-            <p>Index patterns are used to identify the Elasticsearch index to run search and analytics against. They are also used to automatically configure the fields displayed in the log management dashboard.</p>
             <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                /> enables dynamic mapping of fields. After configuring an index pattern, the indices that match the pattern are automatically scanned to display a list of the index fields. This guarantees that the fields are correctly visualized in the dashboard.</p>
+                /> enables dynamic mapping of fields. After configuring an index pattern, the indices that match the pattern are automatically scanned to display the list of the index fields. This guarantees that the fields are correctly visualized in the dashboard.</p>
             <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                /> ships with a preconfigured index pattern that allows you to instantly explore your Elasticsearch indices when accessing the dashboard for the first time. </p>
-            <p>You can create additional patterns to view and analyze different sets of data, if required. One or multiple patterns can be created per project. You can also create index patterns for different projects. When you create additional patterns, you have to set one of them as the default.</p>
-            <p>To configure an additional index pattern, use ##Settings >  Indices tab > Add New##. Indices that match the pattern you define must exist in the Elasticsearch database. They must contain data.</p>
-            <p>To select a pattern as the default, use ##Settings > Indices##.</p>
+                /> ships with a preconfigured index pattern that allows you to instantly explore your Elasticsearch indices when accessing the dashboard for the first time. You can create additional patterns to view and analyze specific sets of data. One or multiple patterns can be created per project. You can also create index patterns for different projects. When you create additional patterns, you have to set one of them as the default.</p>
+            <p>To configure an additional index pattern, use <uicontrol>Settings > Indices</uicontrol>. Select the index pattern that is currently set as default and marked with an asterisk in the <uicontrol>Index Patterns</uicontrol> field on the left, and use the <uicontrol>Add New</uicontrol> option.</p>
+            <p>Indices that match the pattern you define must exist in the Elasticsearch database, and they must contain data.</p>
             <p>For an index pattern, you specify the following elements:</p>
             <ul>
-                <li><uicontrol>Index contains time-based events</uicontrol>. It is recommended that this option is selected. This improves search performance by enabling searches only on those indices that contain data on time-based events. </li>
-                <li><uicontrol>Use event times to create index names</uicontrol>. It is recommended that this option is selected. This improves search performance by enabling searches only on those indices that contain data in the time range you specify. </li>
-                <li><uicontrol>Index pattern interval</uicontrol>. Select <codeph>Daily</codeph> as index pattern interval. Daily intervals are supported by the <ph
-                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</li>
+                <li>
+                    <p><uicontrol>Index contains time-based events</uicontrol>. It is recommended that this option is selected. This improves search performance by enabling searches only on those indices that contain data on time-based events. </p>
+                </li>
+                <li>
+                    <p><uicontrol>Use event times to create index names</uicontrol>. It is recommended that this option is selected. This improves search performance by enabling searches only on those indices that contain data in the time range you specify. </p>
+                </li>
+                <li>
+                    <p><uicontrol>Index pattern interval</uicontrol>. Select <codeph>Daily</codeph> as index pattern interval. Daily intervals are supported by the <ph
+                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</p>
+                </li>
                 <li>
                     <p><uicontrol>Index name or pattern</uicontrol>. The pattern allows you to define dynamic index names. Static text in a pattern is denoted using brackets. Replace the predefined pattern (<codeph>[logstash-]*</codeph> or <codeph>[logstash-]YYYY.MM.DD</codeph>) as follows: </p>
-                    <p>Replace <codeph>logstash-</codeph> by the project ID of of the OpenStack project whose log data is to be visualized in the dashboard.</p>
+                    <p>Replace <codeph>logstash-</codeph> by the project ID of the OpenStack project whose log data is to be visualized in the dashboard.</p>
                     <p>Replace <codeph>*</codeph> or <codeph>YYYY.MM.DD</codeph> by <codeph>YYYY-MM-DD</codeph> as naming pattern. This naming pattern is supported by the <ph
                             conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service. </p>
                     <p>Example: <codeph>[557aff4bf007473d84069aca202a1633-]YYYY-MM-DD</codeph></p>
                 </li>
-                <li><uicontrol>Time-field name</uicontrol>. Select <codeph>@timestamp</codeph> as time-field name. <codeph>@timestamp</codeph> matches the <codeph>YYYY-MM-DD</codeph> naming pattern.</li>
+                <li>
+                    <p><uicontrol>Time-field name</uicontrol>. Select <codeph>@timestamp</codeph> as time-field name. <codeph>@timestamp</codeph> matches the <codeph>YYYY-MM-DD</codeph> naming pattern.</p>
+                </li>
             </ul>
+            <p>When you access Kibana, the default index pattern is automatically loaded. It is marked with an asterisk in front of the pattern name in the <uicontrol>Index Patterns</uicontrol> list at the top left corner of the <uicontrol>Settings</uicontrol> page. Select the pattern you want to set as the default. The content of the log management dashboard is instantly updated.</p>
         </section>
     </conbody>
 </concept>

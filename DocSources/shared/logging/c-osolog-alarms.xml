@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright FUJITSU LIMITED 2017 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                     xml:lang="en-us">
-    <title>Preparing Log Data Monitoring</title>
+    <title>Monitoring Log Data</title>
     <conbody>
         <section>
             <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> provides alerting features for monitoring your log data. So-called log metrics support you in checking the severity of your log data. By default, <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> supports the following log metrics:</p>
+                    /> provides alerting features for monitoring your log data. Specific log metrics support you in checking the severity of entries in your log files. Log metrics are handled like any other metrics in <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                />. They complete the monitoring features and support you in analyzing and troubleshooting any issue that you encounter in your log data. </p>
+            <p>By default, <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /> supports the following log metrics:</p>
             <ul>
-                <li><codeph>log.warning</codeph> to count warning messages in your log data.</li>
-                <li><codeph>log.error</codeph> to count error messages in your log data. </li>
+                <li><codeph>log.warning</codeph> to count warnings in your log data.</li>
+                <li><codeph>log.error</codeph> to count errors in your log data. </li>
                 <li><codeph>log.fatal</codeph> to count fatal errors in your log data. </li>
                 <li><codeph>log.critical</codeph> to count critical errors in your log data. </li>
             </ul>
             <note othertype="note"
-                    >Your installation might deviate from this default. The log levels that can be evaluated have been specified during installation of <ph
+                    >Your installation might deviate from this default. The log levels that can be evaluated have been specified during the installation of <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>. </note>
-            <p>Metrics for log data are handled like any other metrics that are available in <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                    />. You can use them to define either simple or compound alarms. You can also define notifications that specify how <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                /> users are informed when a threshold value for the number of warnings or errors is reached or exceeded.</p>
-            <p>For details on alarms, refer to <xref href="../monitor/c-osomon-alarm.xml"
-                    />. For details on notifications, refer to <xref href="../monitor/c-osomon-alert.xml"/>.</p>
+            <p>Using the log metrics for monitoring corresponds to using any other metrics: </p>
+            <ul>
+                <li>
+                    <p>Use <uicontrol>Monitoring &gt; Alarm Definitions</uicontrol> to create, edit, and delete alarms for log data.</p>
+                </li>
+                <li>
+                    <p>Use <uicontrol>Monitoring &gt; Notifications</uicontrol> to create, edit, and delete notifications for alarms.</p>
+                </li>
+                <li>
+                    <p>Use <uicontrol>Monitoring &gt; Overview</uicontrol> to check whether there are any irregularities in your log data. As soon as you have defined an alarm for your log data and metrics data has been received, there is status information displayed on the <uicontrol>Overview</uicontrol> page.</p>
+                </li>
+            </ul>
+            <p>For details on using the log metrics, refer to <xref href="../../shared/monitor/c-monitor.xml"/>.</p>
         </section>
     </conbody>
 </concept>
