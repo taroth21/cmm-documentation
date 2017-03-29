@@ -87,8 +87,8 @@ sudo ./bin/monasca-setup \
                 <li>
                     <p>Adapt the configuration settings as required. </p>
                     <p>For a list of the parameters that are supported by <ph
-                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>, refer to <xref
-                    href="../appendix/r-confsettings-metrics.xml"/>.</p>
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, refer to <xref
+                            href="../appendix/r-confsettings-metrics.xml"/>.</p>
                 </li>
                 <li>
                     <p>To start the agent again, execute the following command:</p>
@@ -101,9 +101,10 @@ sudo ./bin/monasca-setup \
             <title>Activating Additional Metrics</title>
             <p>The installer automatically activates standard metrics for monitoring your services and servers. They include system checks, for example, on CPU usage, disk space, or the average system load. No manual configuration is required for these system checks. The installer automatically configures them to retrieve monitoring data from the server where your agent is installed. For details on these metrics, refer to <xref
                     href="../appendix/r-metricsstandard.xml"/>.</p>
-            <p>As enhancement to the standard metrics, <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+            <p>As enhancement to the standard metrics, <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> allows you to activate additional metrics. For a list of the metrics that are supported by <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>, refer to <xref
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, refer to <xref
                     href="../appendix/r-metricsadditional.xml"/>. </p>
             <p>The agent ships with metrics templates that you can adapt to your environment and use for monitoring your services and servers.</p>
             <p>To activate additional metrics, proceed as follows: </p>

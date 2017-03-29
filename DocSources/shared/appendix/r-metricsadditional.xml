@@ -11,7 +11,7 @@
             <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
         /> supports the additional metrics described below for monitoring specific servers and services. The metrics are grouped by metrics types. Each metrics type references a set of related metrics.</p>
             <p>Depending on the services running on the host where you install a <ph
-          conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+          conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
           /> Metrics Agent, some or all of these metrics are automatically added to the agent configuration. You should check the individual <codeph>yaml</codeph> files and change or correct the settings as required, or remove individual <codeph>yaml</codeph> files from the agent configuration if you do not want to monitor the metrics they include. </p>
             <p>Note that in addition to the metrics below, many more metrics are provided by the Monasca project. These are not automatically installed by <ph
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
