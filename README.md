@@ -14,7 +14,7 @@ Released versions of these guides will be published to http://rapidonboarding.fc
 
 ## Overview of Branches ##
 
-The master branch provides the documentation sources for the Beta Release of CMM 1.2.
+The master branch provides the documentation sources for the Beta Release of CMM 1.3.
 
 ## License ##
 
