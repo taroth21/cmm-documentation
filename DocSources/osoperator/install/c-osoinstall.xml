@@ -41,7 +41,7 @@
                                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                         /> operator only.</li>
                         </ol>
-                        <p>As an OpenStack operator, you also install and configure the agents you use for monitoring your OpenStack services. Your tenant users who have booked a virtual machine in OpenStack monitor their machine with libvirt. As an OpenStack operator, you have to make the required libvirt preparations for your tenant users. For details, refer to refer to <xref
+                        <p>As an OpenStack operator, you also install and configure the agents you use for monitoring your OpenStack services. Your tenant users who have booked a virtual machine in OpenStack monitor their machine with libvirt. As an OpenStack operator, you have to make the required libvirt preparations for your tenant users. For details, refer to <xref
                                         href="../prepare/c-osopreparetu.xml"/>.</p>
                         <p><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> ships with an installer that is based on Ansible. You use it for installing the OpenStack extensions and the required agents. </p>
