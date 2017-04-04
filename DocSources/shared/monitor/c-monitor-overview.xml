@@ -11,7 +11,7 @@
             <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                     /> provides one convenient access point to your monitoring data. Use <uicontrol>Monitoring &gt; Overview</uicontrol> to keep track of your services and servers and quickly check their status. The overview also indicates any irregularities in the log data of the system components you are monitoring. </p>
         </section>
-        <section id="On_the_concept_conbody_section_2">
+        <section id="On_the_overview_page_os">
             <p>On the <uicontrol>Overview</uicontrol> page, you can:</p>
             <ul>
                 <li>
@@ -30,7 +30,7 @@
                 </li>
             </ul>
         </section>
-        <section id="On_the_concept_conbody_section_3">
+        <section id="On_the_overview_page_cmm">
             <p>On the <uicontrol>Overview</uicontrol> page, you can:</p>
             <ul>
                 <li>
@@ -40,7 +40,7 @@
                 </li>
                 <li>
                     <p>Access a preconfigured dashboard that visualizes your metrics data. Starting from this dashboard, you can create your own dashboards for visualizing your metrics data as required. For details, refer to <xref
-                            href="../../cmmoperator/monitor/c-monitor-graf-cmmo.xml"/>. </p>
+                            href="../../cmmoperator/monitor/c-monitor-graf-cmmo.xml"/>.</p>
                 </li>
                 <li>
                     <p>Access the <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"

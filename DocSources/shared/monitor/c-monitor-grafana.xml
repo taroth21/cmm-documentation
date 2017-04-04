@@ -105,7 +105,7 @@
         <section
                     id="Creating_a_Dashboard_concept_conbody_section_5">
             <title>Creating a Dashboard</title>
-            <p>To create a new dashboard, you use the <uicontrol>Open Dashboard</uicontrol> option in the top left corner of your dashboard window. The option provides access to various features for administrating dashboards. Use <uicontrol>New</uicontrol> to create an empty dashboard that may serve as a starting point for adding rows and panels.</p>
+            <p>To create a new dashboard, you use <uicontrol>Open Dashboard</uicontrol> in the top right corner of your dashboard window. The option provides access to various features for administrating dashboards. Use <uicontrol>New</uicontrol> to create an empty dashboard that can serve as a starting point for adding rows and panels.</p>
             <fig>
                 <image
                     alt="grafana-cmm.png" height="260"
@@ -118,7 +118,7 @@
         <section
             id="Editing_Rows_concept_conbody_section_6">
             <title>Editing Rows</title>
-            <p>Features for editing rows can be accessed via the green rectangle that is displayed to the right of each row. </p>
+            <p>Features for editing rows can be accessed via the green rectangle that is displayed to the left of each row. </p>
             <p>In addition to adding panels to a row, you can collapse or remove a row, move the position of the row within your dashboard, or set the row height. Row settings allows you, for example, to insert a row title or to hide the <uicontrol>Row</uicontrol> menu so that the row can no longer be edited.</p>
         </section>
         <section
@@ -142,7 +142,7 @@
             </ul>
             <p>A large number of display and formatting features are provided to customize how the content is presented in a panel. Click the panel title to access the corresponding options. The menu that is displayed also allows you to duplicate or remove a panel. To change the size of a panel, click the <uicontrol>+</uicontrol> and <uicontrol>-</uicontrol> icons.</p>
             <p>You can move panels on your dashboard by simply dragging and dropping them within and between rows.</p>
-            <p>By default, the time range for panels is controlled by dashboard settings. Use the time picker in the top left corner of your dashboard window to define relative or absolute time ranges. You can also set auto-refresh intervals, and you can manually refresh the data that is displayed in your dashboard. </p>
+            <p>By default, the time range for panels is controlled by dashboard settings. Use the time picker in the top right corner of your dashboard window to define relative or absolute time ranges. You can also set an auto-refresh interval, and you can manually refresh the data that is displayed. </p>
         </section>
         <section
                     id="Saving_and_Sharing_Dashboards_concept_conbody_section_8">
@@ -150,7 +150,7 @@
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> allows you to save your metrics dashboards locally. Saving a dashboard means exporting it to a JSON file. The JSON file can be edited, it can be shared with other users, and it can be imported to <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> again.</p>
-            <p>To save a dashboard, use the <uicontrol>Save</uicontrol> option in the top left corner of your dashboard window. The option allows you to directly view the JSON syntax and export the dashboard to a JSON file. To import a JSON file, use the <uicontrol>Open dashboard</uicontrol> option in the top left corner of the dashboard window.</p>
+            <p>To save a dashboard, use <uicontrol>Save</uicontrol> in the top right corner of your dashboard window. The option allows you to directly view the JSON syntax and export the dashboard to a JSON file. The JSON file can be forwarded to other users, if required. To import a JSON file, use <uicontrol>Open dashboard</uicontrol> in the top left corner of the dashboard window.</p>
         </section>
     </conbody>
 </concept>

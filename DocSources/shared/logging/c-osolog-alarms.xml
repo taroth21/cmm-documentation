@@ -9,9 +9,9 @@
     <conbody>
         <section>
             <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> provides alerting features for monitoring your log data. Specific log metrics support you in checking the severity of entries in your log files. Log metrics are handled like any other metrics in <ph
+                    /> provides alerting features for monitoring your log data. Specific log metrics support you in checking the severity of the entries in your log files. Log metrics are handled like any other metrics in <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                />. They complete the monitoring features and support you in analyzing and troubleshooting any issue that you encounter in your log data. </p>
+                />. They complete the log management features and support you in analyzing and troubleshooting any issue that you encounter in your log data. </p>
             <p>By default, <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                 /> supports the following log metrics:</p>
             <ul>

@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright FUJITSU LIMITED 2017 -->
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
-
+<!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
-                        xml:lang="en-us">
+                    xml:lang="en-us">
     <title>Working with the Log Management Window</title>
     <conbody>
         <section>
             <p>Index patterns determine which data from the underlying Elasticsearch database can be viewed and analyzed in <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                />'s log management window. Index patterns are used to identify the Elasticsearch indices to run search and analytics against. </p>
-            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> ships with a preconfigured index pattern which allows you to instantly view and analyze your log data when accessing the log management window for the first time.  You can configure additional index patterns to view and analyze different data from different indices, as required. For details, refer to <xref
-                    href="c-osolog-index.xml"/>. </p>
-            <p>Search queries allow you to search the Elasticsearch indices for data that match your information requirements. Query results can be graphically represented in visualizations, and visualizations can be organized in dashboards.  </p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>'s log management window. Index patterns are used to identify the Elasticsearch indices to run search and analytics against. </p>
+            <p><ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> ships with a preconfigured index pattern which allows you to instantly view and analyze your log data when accessing the log management window for the first time. You can configure additional index patterns to view and analyze different data from different indices. For details, refer to <xref
+                href="c-osolog-index.xml"/>. </p>
+            <p>Search queries allow you to search the Elasticsearch indices for data that match your information requirements. The query results can be graphically represented in visualizations, and visualizations can be organized in dashboards. </p>
             <p>The log management window provides features for:</p>
-            <ul compact="yes">
+            <ul
+                    compact="yes">
                 <li>
                     <p>Querying log data. </p>
                 </li>
@@ -35,16 +34,20 @@
                 </li>
             </ul>
             <p>The following sections provide an introduction to queries, visualizations, and dashboards. For additional details, refer to the <xref
-                    format="html" href="https://www.elastic.co/guide/en/kibana/4.5/index.html" scope="external"
-                            ><u><i>Kibana documentation</i></u></xref>.</p>
+                    format="html"
+                    href="https://www.elastic.co/guide/en/kibana/4.5/index.html"
+                    scope="external"><u><i>Kibana documentation</i></u></xref>.</p>
         </section>
         <section>
             <title>Querying Log Data</title>
-            <p>For querying log data, you use the <uicontrol>Discover</uicontrol> page in the log management window. It is instantly displayed when you access the log management window. It shows the most recently collected log data:</p>
+            <p>For querying log data, you use the <uicontrol>Discover</uicontrol> page in the log management window. It is instantly displayed when you access the window. It shows the most recently collected log data:</p>
             <fig>
-                <image alt="kibana.png" height="260" href="../../images/kibana-discover.png" width="435"/>
+                <image
+                    alt="kibana.png" height="260"
+                    href="../../images/kibana-discover.png"
+                            width="435"/>
             </fig>
-            <p>The <uicontrol>Discover</uicontrol> page allows you to access the log data in every index that matches the currently selected index pattern. In addition to submitting queries, you can view, filter, and analyze the log data that is returned by your queries.</p>
+            <p>The <uicontrol>Discover</uicontrol> page allows you to access the log data in every index that matches the current index pattern. In addition to submitting queries, you can view, filter, and analyze the log data that is returned by your queries.</p>
             <p>On the <uicontrol>Discover</uicontrol> page the following elements assist you in analyzing your log data: </p>
             <ul>
                 <li>
@@ -58,26 +61,25 @@
                 <li>
                     <p>Use the <b>clock icon</b> at the top right border of the log management window to define a time range for filtering the log data. By default, <ph
                             conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> displays the log data collected during the last 15 minutes. You can deviate from this default. Multiple options are provided for defining relative or absolute time ranges.</p>
-                    <p>The time range you define is instantly applied to all log data that is displayed.</p>
+                        /> displays the log data collected during the last 15 minutes. You can deviate from this default. Multiple options are provided for defining relative or absolute time ranges. The time range you define is instantly applied to all log data.</p>
                 </li>
                 <li>
                     <p>In the bottom right part of the <uicontrol>Discover</uicontrol> page, you can view the <b>log data</b> returned by your search queries. Depending on whether you have filtered the data by index fields, the log data is either restricted to these fields or entire records are displayed.</p>
                 </li>
                 <li>
                     <p>On the left side of the <uicontrol>Discover</uicontrol> page below the search box, you see the <b>index fields</b> from the indices that match the current index pattern. You can select individual fields to modify which log data is displayed on the right side.</p>
-                    <p>Select a field from the <uicontrol>Available Fields</uicontrol> section for this purpose and use the <uicontrol>Add</uicontrol> option. To remove a field, select it in the <uicontrol>Selected Fields</uicontrol> section and use the <uicontrol>Remove</uicontrol> option.</p>
+                    <p>Select a field from the <uicontrol>Available Fields</uicontrol> section for this purpose and use <uicontrol>Add</uicontrol>. To remove a field, select it in the <uicontrol>Selected Fields</uicontrol> section and use <uicontrol>Remove</uicontrol>.</p>
                     <p>From the field list, you can expand a field by simply clicking it. This shows the most common values for the field. You can also set field values as filter, or you can exclude log data with specific field values. </p>
                 </li>
                 <li>
                     <p>If a time field is configured for the current index pattern, the distribution of log entries over time is displayed in a <b>histogram</b> in the top right part of the <uicontrol>Discover</uicontrol> page. </p>
-                    <p>By default, the histogram shows the number of logs entries versus time, matched by the underlying query and time filter. You can click the bars in the historgram to narrow down the time filter.</p>
+                    <p>By default, the histogram shows the number of logs entries versus time, matched by the underlying query and time filter. You can click the bars in the histogram to narrow down the time filter.</p>
                 </li>
             </ul>
             <p>Queries can be saved and re-used. They can also be shared with other users. For this purpose, use the options to the right of the search box at the top border of the log management window:</p>
             <ul>
                 <li>
-                    <p>To save a query for future use, use <uicontrol>Save Search</uicontrol>. Saving a query means saving both the query syntax and the currently selected index pattern. </p>
+                    <p>To save a query, use <uicontrol>Save Search</uicontrol>. Saving a query means saving both the query syntax and the current index pattern. </p>
                 </li>
                 <li>
                     <p>To load a query, use <uicontrol>Load Saved Search</uicontrol>. A saved query can be loaded and used by any OpenStack or <ph
@@ -85,19 +87,26 @@
                 </li>
                 <li>
                     <p>To share a query with other users, use <uicontrol>Share Search</uicontrol>. The option displays a direct link to the query that you can forward. As a prerequisite for using a direct link, a user must have <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> access.</p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> access.</p>
                 </li>
             </ul>
         </section>
         <section>
             <title>Visualizing Query Results</title>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> supports you in building graphical representations of your query results. You can choose from different visualization types, for example, data tables, line charts, pie charts, or vertical bar charts.</p>
-            <p>For visualizing your results, use the <uicontrol>Visualize</uicontrol> page in the log management window. To create a visualization, you use the <uicontrol>New Visualization</uicontrol> option to the right of the search box at the top border of the log management window. You have to select a visualization type and the query to be used. You can either create a new query or load a query you have already saved. A visualization editor supports you in constructing the graphical representation. Multiple editing options and a preview function are provided for creating, modifying, and viewing a visualization.</p>
+                    /> supports you in building graphical representations of your query results. You can choose from different visualization types, for example, pie charts, data tables, line charts, or vertical bar charts. For visualizing your results, you use the <uicontrol>Visualize</uicontrol> page in the log management window:</p>
+            <fig>
+                <image
+                    alt="kibana.png" height="260"
+                    href="../../images/kibana-visualize.png"
+                            width="435"/>
+            </fig>
+            <p>To create a visualization, use <uicontrol>New Visualization</uicontrol> to the right of the search box at the top border of the window. You have to select a visualization type and the query to be used. You can either create a new query or load a query you have already saved.</p>
+            <p>Based on the visualization type and the query, you can proceed with designing the graphical representation in a visualization editor. Multiple design options and a preview function are provided for creating, modifying, and viewing the graphical representation.</p>
             <p>You can save and re-use visualizations. You can also share them with other users. For this purpose, use the options to the right of the search box at the top border of the log management window:</p>
             <ul>
                 <li>
-                    <p>To save a visualization for future use, use <uicontrol>Save Visualization</uicontrol>. </p>
+                    <p>To save a visualization, use <uicontrol>Save Visualization</uicontrol>. </p>
                 </li>
                 <li>
                     <p>To load a visualization, use <uicontrol>Load Saved Visualization</uicontrol>. A saved visualization can be loaded and used by any OpenStack or <ph
@@ -105,16 +114,23 @@
                 </li>
                 <li>
                     <p>To share a visualization with other users, use <uicontrol>Share Visualization</uicontrol>. The option displays an HTML snippet that can be used to embed the visualization in a Web page. It also displays a direct link to the visualization that you can forward. As a prerequisite for using an embedded visualization or a direct link, a user must have <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> access.</p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> access.</p>
                 </li>
             </ul>
         </section>
         <section>
             <title>Combining Visualizations in Dashboards</title>
-            <p>For correlating related information or providing an overview, you can combine visualizations in dashboards. Use the <uicontrol>Dashboard</uicontrol> page in the log management window for this purpose. </p>
-            <p>To create a dashboard from scratch, you use the <uicontrol>New Dashboard</uicontrol> option to the right of the search box at the top border of the log management window. To add a visualization from a list of existing visualizations, use the <uicontrol>Add Visualization</uicontrol> option. You need at least one saved visualization to create a dashboard. In addition to adding visualizations, you can also place the tabular output of query results on your dashboards. Switch to the <uicontrol>Searches</uicontrol> tab when adding a visualization, and select a saved query. This adds the query result to your dashboard.</p>
+            <p>For correlating related information or providing an overview, you can combine visualizations in dashboards. Use the <uicontrol>Dashboard</uicontrol> page in the log management window for this purpose: </p>
+            <fig>
+                <image
+                    alt="kibana.png" height="260"
+                    href="../../images/kibana-dashboard.png"
+                width="435"/>
+            </fig>
+            <p>To create a dashboard from scratch, you use <uicontrol>New Dashboard</uicontrol> to the right of the search box at the top border of the window. To add a visualization from a list of existing visualizations, use <uicontrol>Add Visualization</uicontrol>. You need at least one saved visualization to create a dashboard. In addition to adding visualizations, you can also place the tabular output of query results on your dashboards. Switch to the <uicontrol>Searches</uicontrol> tab when adding a visualization, and select a saved query. This adds the query result to your dashboard.</p>
             <p>A visualization or query result is displayed in a container on your dashboard. Various options are provided for arranging containers:</p>
-            <ul>
+            <ul
+                            compact="no">
                 <li>
                     <p>Move a container by clicking and dragging its title bar.</p>
                 </li>
@@ -122,16 +138,16 @@
                     <p>Resize a container by dragging its bottom right corner.</p>
                 </li>
                 <li>
-                    <p>Remove a container using the <uicontrol>Delete</uicontrol> option in the top right corner of the container.</p>
+                    <p>Remove a container using <uicontrol>Delete</uicontrol> in the top right corner of the container.</p>
                 </li>
             </ul>
-            <p>Using the <uicontrol>Edit</uicontrol> option in the top right corner of a container, you can switch to the <uicontrol>Visualize</uicontrol> or <uicontrol>Discover</uicontrol> page. This allows you to edit the graphical representation or query. To view the raw data behind a visualization, you can click the bar at the bottom of the container. This replaces your visualization by the underlying raw data. You can export the raw data, if required.</p>
-            <p>For each dashboard, you can configure a refresh interval to automatically refresh its content with the latest index data. The current interval is displayed in the top right border of the log management window. Click the interval if you want to change it. You can define the interval in absolute or relative terms. Use the <uicontrol>Auto-Refresh</uicontrol> option next to the interval in the border of the log management window to instantly submit the underlying queries and refresh the dashboard content. </p>
+            <p>Using <uicontrol>Edit</uicontrol> in the top right corner of a container, you can switch to the <uicontrol>Visualize</uicontrol> or <uicontrol>Discover</uicontrol> page. This allows you to design the graphical representation or edit the query. To view the raw data behind a visualization, you can click the bar at the bottom of the container. This replaces your visualization by the underlying raw data. You can export the raw data, if required.</p>
+            <p>For each dashboard, you can configure a refresh interval to automatically refresh its content with the latest index data. The current interval is displayed in the top right border of the log management window. Click the interval if you want to change it. You can define the interval in absolute or relative terms. Use <uicontrol>Auto-Refresh</uicontrol> next to the interval in the border of the log management window to instantly submit the underlying queries and refresh the dashboard content. </p>
             <p>By default, dashboards are displayed with a light background. Using <uicontrol>Options</uicontrol> in the top right border of the log management window, you can switch to a dark color scheme. </p>
         </section>
         <section>
             <title>Filtering Query Results in Dashboards</title>
-            <p>By submitting a query on all data that is displayed in a dashboard, you can filter out specific data that you want to aggregate while not changing the logic of the individual visualizations.</p>
+            <p>By submitting a query on the data displayed in a dashboard, you can filter out specific sets of data that you want to aggregate while not changing the logic of the individual visualizations.</p>
             <p>Use the search box below the main navigation bar at the top of the log management window for entering a query on the whole dashboard. If a visualization is already based on a saved query, both queries apply. </p>
         </section>
         <section>
@@ -146,8 +162,7 @@
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator. </p>
                 </li>
                 <li>
-                    <p>To share a dashboard with other users, use <uicontrol>Share Dashboard</uicontrol>. The option displays an HTML snipped that can be used to embed the dashboard in a Web page. It also displays a direct link to the dashboard that you can forward. As a prerequisite for using an embedded dashboard or a direct link, a user must have <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> access.</p>
+                    <p>To share a dashboard with other users, use <uicontrol>Share Dashboard</uicontrol>. The option displays an HTML snippet that can be used to embed the dashboard in a Web page. It also displays a direct link to the dashboard that you can forward. As a prerequisite for using an embedded dashboard or a direct link, a user must have <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> access.</p>
                 </li>
             </ul>
         </section>

@@ -3,7 +3,7 @@
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
 <!-- Copyright FUJITSU LIMITED 2017 -->
-<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1OS"
                     xml:lang="en-us">
     <title>Working with Data Visualizations</title>
     <conbody>

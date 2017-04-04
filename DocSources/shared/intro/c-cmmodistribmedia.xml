@@ -9,7 +9,7 @@
     <title>Distribution Media</title>
     <conbody>
         <section>
-            <p><i><b>PENDING</b>: Distribution media for CMM 1.2 has not yet been defined; CMM 1.2 is in Beta status.</i></p>
+            <p><i><b>PENDING</b>: Distribution media for CMM 1.3 has not yet been defined.</i></p>
         </section>
         <section>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is distributed in the <ph
@@ -34,12 +34,12 @@
                         <p>Installation package for <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, <codeph><ph
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                />-Service-1.2.0.tar.gz</codeph>. It provides the software and setup utilities required by the <ph
+                                />-Service-1.3.0.tar.gz</codeph>. It provides the software and setup utilities required by the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> Operator and the OpenStack Operator for installing <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> in either single or cluster mode. </p>
-                        <p><codeph>FJSVsvcmm-1.2.0-1.noarch.rpm</codeph> , an RPM required for checking version information.</p>
+                        <p><codeph>FJSVsvcmm-1.3.0-1.noarch.rpm</codeph> , an RPM required for checking version information.</p>
                     </li>
                     <li>
                         <p><codeph>Manuals</codeph> subdirectory:</p>

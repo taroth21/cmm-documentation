@@ -3,13 +3,13 @@
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
 <!-- Copyright FUJITSU LIMITED 2017 -->
-<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
-                    xml:lang="en-us">
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB" xml:lang="en-us">
     <title>Overview</title>
     <conbody>
         <section
             conref="../../shared/monitor/c-monitor-overview.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/provides_one_convenient_acce_concept_conbody_section_1"/>
         <section
-            conref="../../shared/monitor/c-monitor-overview.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/On_the_concept_conbody_section_2"/>
+            conref="../../shared/monitor/c-monitor-overview.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/On_the_overview_page_os"
+        />
     </conbody>
 </concept>

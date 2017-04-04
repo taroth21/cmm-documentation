@@ -9,12 +9,11 @@
     <conbody>
         <section>
             <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                /> enables dynamic mapping of fields. After configuring an index pattern, the indices that match the pattern are automatically scanned to display the list of the index fields. This guarantees that the fields are correctly visualized in the dashboard.</p>
+                /> enables the dynamic mapping of fields. After configuring an index pattern, the indices that match the pattern are automatically scanned to display the list of index fields. This guarantees that the fields are correctly visualized in the dashboard.</p>
             <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                /> ships with a preconfigured index pattern that allows you to instantly explore your Elasticsearch indices when accessing the dashboard for the first time. You can create additional patterns to view and analyze specific sets of data. One or multiple patterns can be created per project. You can also create index patterns for different projects. When you create additional patterns, you have to set one of them as the default.</p>
-            <p>To configure an additional index pattern, use <uicontrol>Settings > Indices</uicontrol>. Select the index pattern that is currently set as default and marked with an asterisk in the <uicontrol>Index Patterns</uicontrol> field on the left, and use the <uicontrol>Add New</uicontrol> option.</p>
-            <p>Indices that match the pattern you define must exist in the Elasticsearch database, and they must contain data.</p>
-            <p>For an index pattern, you specify the following elements:</p>
+                /> ships with a preconfigured index pattern that allows you to instantly explore your Elasticsearch indices when accessing the dashboard for the first time. You can create additional patterns to view and analyze specific sets of data. One or multiple patterns can be created per project. When you create additional patterns, you have to set one of them as the default.</p>
+            <p>To configure an additional index pattern, use <uicontrol>Settings > Indices</uicontrol>. Click the index pattern that is displayed in the <uicontrol>Index Patterns</uicontrol> field on the left, and use the <uicontrol>Add New</uicontrol> option.</p>
+            <p>Indices that match the pattern you define must exist in the Elasticsearch database, and they must contain data. For an index pattern, you specify the following elements:</p>
             <ul>
                 <li>
                     <p><uicontrol>Index contains time-based events</uicontrol>. It is recommended that this option is selected. This improves search performance by enabling searches only on those indices that contain data on time-based events. </p>
@@ -37,7 +36,7 @@
                     <p><uicontrol>Time-field name</uicontrol>. Select <codeph>@timestamp</codeph> as time-field name. <codeph>@timestamp</codeph> matches the <codeph>YYYY-MM-DD</codeph> naming pattern.</p>
                 </li>
             </ul>
-            <p>When you access Kibana, the default index pattern is automatically loaded. It is marked with an asterisk in front of the pattern name in the <uicontrol>Index Patterns</uicontrol> list at the top left corner of the <uicontrol>Settings</uicontrol> page. Select the pattern you want to set as the default. The content of the log management dashboard is instantly updated.</p>
+            <p>The default index pattern is automatically loaded when you access the log management window. It is marked with an asterisk in front of the pattern name in the <uicontrol>Index Patterns</uicontrol> field at the top left corner of the <uicontrol>Settings</uicontrol> page. Select the pattern you want to set as the default from the the <uicontrol>Index Patterns</uicontrol> field. The content of the log management window is instantly updated.</p>
         </section>
     </conbody>
 </concept>

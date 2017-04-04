@@ -3,8 +3,8 @@
                          "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
 ]>
 <!-- Copyright FUJITSU LIMITED 2017 -->
-<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
-                    xml:lang="en-us">
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB" 
+                 xml:lang="en-us">
     <title>Monitoring</title>
     <conbody>
                 <section>
@@ -35,7 +35,7 @@
                                         <p>You must be assigned to the OpenStack project you want to monitor.</p>
                                 </li>
                         </ul>
-                        <p>Log in to the OpenStack platform with your user name and password. This allows you to access the OpenStack Horizon dashboard. The tabs and functions you can access in OpenStack Horizon depend on your access permissions. </p>
+                        <p>Log in to the OpenStack platform with your user name and password. This allows you to access the OpenStack Horizon dashboard. The functions you can use in OpenStack Horizon depend on your access permissions. </p>
                         <p>The <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> functionality is available on the <uicontrol>Monitoring</uicontrol> tab. It provides access to the monitoring data of all projects to which you are assigned. Before you start, select the project you want to work on. </p>
                 </section>
         </conbody>
