@@ -43,7 +43,7 @@ Using database mon</codeblock>
                 <li
                             id="To_update_your_data_retention_concept_conbody_section_ol_l">
                     <p>To update your data retention policy, use the <codeph>ALTER RETENTION POLICY</codeph> command:</p>
-                    <codeblock>ALTER RETENTION POLICY &lt;policy_name&gt; ON &lt;db_name&gt; DURATION &lt;duration&gt; REPLICATION &lt;n&gt; [DEFAULT]</codeblock>
+                    <codeblock>ALTER RETENTION POLICY &lt;policy_name&gt; ON &lt;db_name&gt; DURATION &lt;duration&gt; REPLICATION &lt;n&gt; [SHARD DURATION &lt;shard_duration&gt;] [DEFAULT]</codeblock>
                     <p>Replace <codeph>&lt;policy_name&gt;</codeph> with the name of the retention policy you define. Multiple policies can be defined, one of them is set as default. <codeph>persister_all</codeph> is the name of the policy that is initially installed by <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
                     <p>Replace <codeph>&lt;db_name&gt;</codeph> with the name of your database.</p>
@@ -57,6 +57,8 @@ Using database mon</codeblock>
                             conref="../install/c-cmmoinstcmm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Only_single_units_are_support_concept_conbody_section_ol_l"/>
                     <p>Replace <codeph>&lt;n&gt;</codeph> with the number of nodes on which the InfluxDB database is installed. The replication factor is only relevant if <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed in cluster mode.</p>
+                    <p>Use <codeph>[SHARD DURATION]</codeph> to define shard groups that deviate from your retention period. When a retention policy is enforced, entire shard groups are removed, and not individual data points. This means that specifying a shorter time range for shard groups than the retention period allows you to remove data more efficiently. If your retention policy defines a duration of one day and you have a shard group duration of one hour, for example, the data from hourly intervals is removed as soon as the retention period is reached.</p>
+                    <p>Replace <codeph>&lt;shard_duration&gt;</codeph> with the time span for shard groups. You can use the same options as for the retention period, except for <codeph>INF</codeph>. If you do not explicitly specify a time span, the shard group duration corresponds to the retention period.  </p>
                     <p>Use <codeph>[DEFAULT]</codeph> to set the new retention policy as the default retention policy for your database.</p>
                     <p>Example for deleting data if it is older than 30 days:</p>
                     <codeblock>ALTER RETENTION POLICY my_policy ON mon DURATION 30d REPLICATION 1 DEFAULT </codeblock>
@@ -69,10 +71,10 @@ Using database mon</codeblock>
             <p
                     id="For_an_introduction_to_the_In_concept_conbody_section_p_3">For an introduction to the InfluxDB command line interface, refer to the <xref
                     format="html"
-                    href="https://docs.influxdata.com/influxdb/v0.10/tools/shell/"
+                    href="https://docs.influxdata.com/influxdb/v1.1/tools/shell/"
                     scope="external"><u><i>InfluxDB CLI/Shell documentation</i></u></xref>. For details on data retention, refer to <xref
                     format="html"
-                    href="https://docs.influxdata.com/influxdb/v0.10/query_language/database_management/#retention-policy-management" scope="external"><u><i>Retention Policy Management</i></u></xref>. </p>
+                    href="https://docs.influxdata.com/influxdb/v1.1/query_language/database_management/#retention-policy-management" scope="external"><u><i>Retention Policy Management</i></u></xref>. </p>
         </section>
     </conbody>
 </concept>

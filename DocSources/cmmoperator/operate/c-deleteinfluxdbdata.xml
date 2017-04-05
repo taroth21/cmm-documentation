@@ -59,7 +59,26 @@ mon
 Using database mon</codeblock>
                         </p>
                     </li>
-                    <li>Delete the desired data.<ul>
+                    <li>
+                        <p>Check the outdated or unnecessary data to be deleted.</p>
+                        <ul>
+                            <li>
+                                <p>You can view all measurements for a specific project as follows: </p>
+                                <p>
+                                    <codeblock>SHOW MEASUREMENTS WHERE _tenant_id = '&lt;project ID&gt;'</codeblock>
+                                </p>
+                            </li>
+                            <li>
+                                <p>You can view the series for a specific metric and project, for example, as follows: </p>
+                                <p>
+                                    <codeblock>SHOW SERIES FROM "cpu.user_perc" WHERE _tenant_id = '&lt;project ID&gt;'</codeblock>
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Delete the desired data.</p>
+                        <ul>
                             <li>When a project is no longer relevant or a specific tenant is no longer used, delete all series for the project as follows:<p>
                                     <codeblock>DROP SERIES WHERE _tenant_id = '&lt;project ID&gt;'</codeblock>
                                 </p><p>Example: </p><p>
@@ -70,25 +89,20 @@ Using database mon</codeblock>
                                 </p><p>Example: </p><p>
                                     <codeblock>DROP SERIES FROM "cpu.user_perc" WHERE _tenant_id = '27620d7e'</codeblock>
                                 </p></li>
-                            <li>In order to avoid that the entire database becomes too large, you can, for example, create a backup, then drop the database and create a new, empty one: <p>
+                            <!-- li>In order to avoid that the entire database becomes too large, you can, for example, create a backup, then drop the database and create a new, empty one: <p>
                                     <codeblock>DROP DATABASE mon</codeblock>
                                 </p><p>
                                     <codeblock>CREATE DATABASE mon</codeblock>
-                                </p></li>
+                                </p></li -->
                         </ul>
                     </li>
-                    <li>Restart the <codeph>influxdb</codeph> service, for example, as follows: <p>
+                    <li>
+                        <p>Restart the <codeph>influxdb</codeph> service, for example, as follows: </p>
+                        <p>
                             <codeblock>sudo systemctl restart influxdb</codeblock>
-                        </p></li>
+                        </p>
+                    </li>
                 </ol>
-            </p>
-            <p>You can view all measurements for a specific project as follows: </p>
-            <p>
-                <codeblock>SHOW MEASUREMENTS WHERE _tenant_id = '&lt;project ID&gt;'</codeblock>
-            </p>
-            <p>You can view the series for a specific metric and project, for example, as follows: </p>
-            <p>
-                <codeblock>SHOW SERIES FROM "cpu.user_perc" WHERE _tenant_id = '&lt;project ID&gt;'</codeblock>
             </p>
         </section>
     </conbody>
