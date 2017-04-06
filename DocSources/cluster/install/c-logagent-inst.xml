@@ -77,14 +77,14 @@ and check to make sure that only the key(s) you wanted were added.</codeblock>
                             href="../../shared/appendix/r-confsettings-logs.xml"/>.</p>
                     <p>To define the minimum set of parameters, insert the following content into each configuration file. Replace the user credentials with the credentials of a valid OpenStack user who is authorized to send monitoring data to the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> Service. Contact your OpenStack Operator. He is responsible for creating the required users and roles.</p>
+                        /> Service. Contact your OpenStack operator. He is responsible for creating the required users and roles.</p>
                     <p>Example:</p>
-                    <codeblock># file: host_vars/cmm-monasca-log-agent
+                    <codeblock># file: host_vars/monasca-log-agent
 
 # logstash monasca user credentials
-monasca_log_agent_project: cmm
-monasca_log_agent_user: cmm-agent
-monasca_log_agent_password: "{{ keystone_cmm_agent_password }}"
+monasca_log_agent_project: monasca
+monasca_log_agent_user: monasca-agent
+monasca_log_agent_password: "{{ keystone_monasca_agent_password }}"
 user_domain_name: default
 project_domain_name: default</codeblock>
                     <note othertype="note"
@@ -96,7 +96,7 @@ project_domain_name: default</codeblock>
                     <p>Specify the following passwords in the file:</p>
                     <ul>
                         <li>
-                            <p><codeph>keystone_cmm_agent_password</codeph> for Keystone access of the user used for configuration purposes of the agents on the <ph
+                            <p><codeph>keystone_monasca_agent_password</codeph> for Keystone access of the user used for configuration purposes of the agents on the <ph
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> hosts. The user account is automatically created with the installation.</p>
                         </li>

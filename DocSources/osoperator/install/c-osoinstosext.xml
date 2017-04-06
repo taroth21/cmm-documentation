@@ -40,12 +40,12 @@ keystone_admin_project: 'admin'</codeblock>
                 <li>
                     <p>Specify the following passwords in the file:</p>
                     <ul>
-                        <li><codeph>keystone_cmm_operator_user_password</codeph> for Keystone access of the <ph
+                        <li><codeph>keystone_monasca_operator_password</codeph> for Keystone access of the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> operator. The user account for the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> operator is automatically created with the installation.</li>
-                        <li><codeph>keystone_cmm_agent_password</codeph> for Keystone access of the user used for configuration purposes of the <ph
+                        <li><codeph>keystone_monasca_agent_password</codeph> for Keystone access of the user used for configuration purposes of the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> Metrics Agent. The user account is automatically created with the installation.</li>
                         <li><codeph>keystone_admin_agent_password</codeph> for Keystone access of the user used for configuration purposes of the <ph
@@ -83,21 +83,21 @@ keystone_admin_project: 'admin'</codeblock>
                             <p>A <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                     /> operator who is to monitor <ph
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-                            <p>User name: <codeph>cmm-operator</codeph>. Assigned user role: <codeph>cmm-user</codeph> and <codeph>admin</codeph>. Assigned OpenStack project: <codeph>cmm</codeph>.</p>
+                            <p>User name: <codeph>monasca-operator</codeph>. Assigned user role: <codeph>monasca-user</codeph> and <codeph>admin</codeph>. Assigned OpenStack project: <codeph>monasca</codeph>.</p>
                         </li>
                         <li>
                             <p>A user for configuration purposes of the agents used for monitoring <ph
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 />. It is recommended that this user account is used only for the agent configurations and not for monitoring and log management tasks.</p>
-                            <p>User name: <codeph>cmm-agent</codeph>. Assigned user role: <codeph>cmm-agent</codeph>. Assigned OpenStack project: <codeph>cmm</codeph>.</p>
+                            <p>User name: <codeph>monasca-agent</codeph>. Assigned user role: <codeph>monasca-agent</codeph>. Assigned OpenStack project: <codeph>monasca</codeph>.</p>
                         </li>
                         <li>
                             <p>The OpenStack operator who is to monitor the OpenStack platform uses the existing <codeph>admin</codeph> user account.</p>
-                            <p>Assigned user role: <codeph>cmm-user</codeph> and <codeph>admin</codeph>. Assigned OpenStack project: <codeph>admin</codeph>.</p>
+                            <p>Assigned user role: <codeph>monasca-user</codeph> and <codeph>admin</codeph>. Assigned OpenStack project: <codeph>admin</codeph>.</p>
                         </li>
                         <li>
                             <p>A user for configuration purposes of the agents used for monitoring the OpenStack services. It is recommended that this user account is used only for the agent configurations and not for monitoring and log management tasks.</p>
-                            <p>User name: <codeph>admin-agent</codeph>. Assigned user role: <codeph>cmm-agent</codeph>. Assigned OpenStack project: <codeph>admin</codeph>.</p>
+                            <p>User name: <codeph>admin-agent</codeph>. Assigned user role: <codeph>monasca-agent</codeph>. Assigned OpenStack project: <codeph>admin</codeph>.</p>
                         </li>
                     </ul>
                     <note othertype="note"

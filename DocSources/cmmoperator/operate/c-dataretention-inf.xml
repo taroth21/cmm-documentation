@@ -22,9 +22,10 @@
                         <codeblock>cd /usr/bin</codeblock>
                     </p></li>
                 <li>Connect to InfluxDB using the InfluxDB command line interface as follows: <p>
-                        <codeblock>./influx -host &lt;cmm_host_ip&gt;</codeblock>
-                    </p><p>Replace <codeph>&lt;cmm_host_ip&gt;</codeph> with the IP address of the machine on which <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed.</p><p>The output of this command is, for example, as follows: </p><p>
+                        <codeblock>./influx -host &lt;host_ip&gt;</codeblock>
+                    </p><p>Replace <codeph>&lt;host_ip&gt;</codeph> with the IP address of the machine on which <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                        /> is installed.</p><p>The output of this command is, for example, as follows: </p><p>
                         <codeblock>Connected to http://localhost:8086 version 0.9.1
 InfluxDB shell 0.9.1</codeblock>
                     </p></li>

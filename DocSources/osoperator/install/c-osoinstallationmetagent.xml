@@ -87,14 +87,11 @@ monasca_agent_project: admin</codeblock>
             <li>
               <p><codeph>keystone_admin_agent_password</codeph> for Keystone access of the user used for configuration purposes of the agents on the OpenStack hosts. The user account is automatically created with the installation.</p>
             </li>
-            <!--li>
-              <p><codeph>cmm_monasca_agent_database_password</codeph> for agent access to the Maria DB database. Removed with bug 13149.</p>
-            </li -->
             <li>
-                            <p><codeph>keystone_cmm_agent_password</codeph> for Keystone access of the user used for configuration purposes of the agents on the <ph
+              <p><codeph>keystone_monasca_agent_password</codeph> for Keystone access of the user used for configuration purposes of the agents on the <ph
                   conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> host. The user account is automatically created with the installation.</p>
-                        </li>
+            </li>
           </ul>
           <note othertype="note">
             <p

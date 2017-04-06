@@ -57,7 +57,7 @@
             <ul>
                 <li>
                     <p>As <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> Operator, you have to prepare the Control Machine for installing the offline resources, the <ph
+                            /> operator, you have to prepare the Control Machine for installing the offline resources, the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> components and the agents for monitoring the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
@@ -67,10 +67,10 @@
                         /> components and the required agents on three nodes. The offline resources are installed on one node only. </p>
                 </li>
                 <li>
-                    <p>The OpenStack Operator prepares the Control Machine for installing the OpenStack extensions and the required agents for monitoring the OpenStack Keystone and the OpenStack Horizon service. The OpenStack Operator and the <ph
+                    <p>The OpenStack operator prepares the Control Machine for installing the OpenStack extensions and the required agents for monitoring the OpenStack Keystone and the OpenStack Horizon service. The OpenStack operator and the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> Operator can use one machine as Control Machine or implement there installation steps from two different Control Machines as depicted above.</p>
-                    <p>Depending on the OpenStack environment, Keystone and Horizon can either be installed on the same or on two separate hosts. The OpenStack Operator can install additional agents for monitoring additional OpenStack services as required.</p>
+                        /> operator can use one machine as Control Machine or implement there installation steps from two different Control Machines as depicted above.</p>
+                    <p>Depending on the OpenStack environment, Keystone and Horizon can either be installed on the same or on two separate hosts. The OpenStack operator can install additional agents for monitoring additional OpenStack services as required.</p>
                 </li>
             </ul>
             <p>The Control Machines manage the remote machines via SSH. The offline resources, the <ph

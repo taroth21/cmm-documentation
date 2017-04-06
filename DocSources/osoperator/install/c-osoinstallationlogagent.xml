@@ -73,7 +73,7 @@ and check to make sure that only the key(s) you wanted were added.</codeblock>
                                                             <p>To define the minimum set of parameters, insert the following content into each configuration file. Replace the user credentials with the credentials of a valid OpenStack user who is authorized to send monitoring data to the <ph
 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</p>
                                                             <p>Example:</p>
-                                                            <codeblock># file: host_vars/cmm-monasca-log-agent
+                                                            <codeblock># file: host_vars/monasca-log-agent
 
 # logstash monasca user credentials
 monasca_log_agent_project: admin
@@ -92,7 +92,7 @@ project_domain_name: default</codeblock>
 <p><codeph>keystone_admin_agent_password</codeph> for Keystone access of the user used for configuration purposes of the agents on the OpenStack hosts. The user account is automatically created with the installation.</p>
 </li>
 <li>
-<p><codeph>keystone_cmm_agent_password</codeph> for Keystone access of the user used for configuration purposes of the agents on the <ph
+<p><codeph>keystone_monasca_agent_password</codeph> for Keystone access of the user used for configuration purposes of the agents on the <ph
 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
 /> host. The user account is automatically created with the installation.</p>
 </li>

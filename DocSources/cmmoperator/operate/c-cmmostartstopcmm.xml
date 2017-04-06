@@ -161,13 +161,15 @@
                 <codeblock>cd /opt/FJSVsvcmm
 vim services.yml</codeblock>
             </p>
-            <p><codeph>- hosts: cmm-node</codeph> defines the host where <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed. The host name must match the host name specified for the <ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> host in the <codeph>/etc/ansible/hosts</codeph> file on the Ansible Master, for example: </p>
+            <p><codeph>- hosts: monasca-node</codeph> defines the host where <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> is installed. The host name must match the host name specified for the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> host in the <codeph>/etc/ansible/hosts</codeph> file on the Ansible Master, for example: </p>
             <p>
                 <codeblock># Monasca Hosts
 [monasca_group]
-cmm-node        ansible_ssh_host=192.168.10.4 ansible_ssh_user=administrator</codeblock>
+monasca-node        ansible_ssh_host=192.168.10.4 ansible_ssh_user=administrator</codeblock>
             </p>
             <note
                             othertype="note">Do not change the sequence of the services defined in the <codeph>services.yml</codeph> file.</note>

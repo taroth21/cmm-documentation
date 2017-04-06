@@ -37,16 +37,16 @@ monasca_host: 192.168.10.4
 keystone_host: 192.168.10.5
 keepalived_virtual_ip: 192.168.10.69</codeblock></li -->
                 <li>
-                    <p>Enter the user credentials of a valid OpenStack user in the <codeph>Monasca Api</codeph> section. Contact your OpenStack Operator for this purpose. He is responsible for creating the required users and roles.</p>
+                    <p>Enter the user credentials of a valid OpenStack user in the <codeph>Monasca Api</codeph> section. Contact your OpenStack operator for this purpose. He is responsible for creating the required users and roles.</p>
                     <p>The user you enter must have full access to the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> Service. He must be assigned a role that authorizes him to read and write data. The role must be specified for <codeph>defaultAuthorizedRoles</codeph> (see Step 8 below).</p>
                     <p>Example:</p>
                     <codeblock># Monasca Api CLI - Credentials
 monasca_user:
-  user: cmm-operator
-  password: "{{ keystone_cmm_operator_user_password }}"
-  project: cmm</codeblock>
+  user: monasca-operator
+  password: "{{ keystone_monasca_operator_password }}"
+  project: monasca</codeblock>
                 </li>
                 <!-- li>
                     <p>If you want to use HTTPS for communication between the Log Agent and the Log API as well as between the Log Agent and the OpenStack Keystone service, change the URL specification in the <codeph>URL service definition</codeph> section from <codeph>http</codeph> to <codeph>https</codeph>:</p>
@@ -82,17 +82,17 @@ monasca_log_api_keyfile: /home/vagrant/ssl/server.key</codeblock>
                         <li><codeph>database_monapi_password:</codeph> for the Monitoring API user accessing the MariaDB database. </li>
                         <li><codeph>database_thresh_password:</codeph> for the Threshold Engine user accessing the MariaDB database.</li>
                         <!-- li><codeph>database_logapi_password:</codeph> for the Log API user accessing the MariaDB database. Removed with Bug 13149.</li -->
-                        <li><codeph>keystone_cmm_operator_user_password:</codeph> for Keystone access of the <ph
+                        <li><codeph>keystone_monasca_operator_password:</codeph> for Keystone access of the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> operator (see Step 4 above). The user account for the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> operator is automatically created with the installation.</li>
                         <li><codeph>keystone_admin_password</codeph> of an OpenStack user account that already exists, for example, <codeph>admin</codeph>. This user account is used for creating new user accounts with the installation. It is the user account of the OpenStack operator.</li>
-                        <li><codeph>keystone_cmm_agent_password:</codeph> : for Keystone access of the user used for configuration purposes of the <ph
+                        <li><codeph>keystone_monasca_agent_password:</codeph> : for Keystone access of the user used for configuration purposes of the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> Metrics and Log Agents on the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> host. The user account (<codeph>cmm-agent</codeph>) is automatically created with the installation.</li>
+                                /> host. The user account (<codeph>monasca-agent</codeph>) is automatically created with the installation.</li>
                         <li><codeph>keystone_admin_agent_password:</codeph> for Keystone access of the user used for configuration purposes of the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> Metrics and Log Agents on the OpenStack hosts. The user account (<codeph>admin-agent</codeph>) is automatically created with the installation.</li>
@@ -119,8 +119,8 @@ monasca_log_api_keyfile: /home/vagrant/ssl/server.key</codeblock>
                         <li><codeph>agentAuthorizedRoles</codeph> specifies the roles which grant agent access only. The users' access is restricted to sending monitoring data.</li>
                     </ul>
                     <p>Example:</p>
-                    <codeblock>defaultAuthorizedRoles: "user,domainuser,domainadmin,cmm-user"
-agentAuthorizedRoles: "cmm-agent"</codeblock>
+                    <codeblock>defaultAuthorizedRoles: "user,domainuser,domainadmin,monasca-user"
+agentAuthorizedRoles: "monasca-agent"</codeblock>
                 </li>
                 <li>
                     <p>Specify a file system for backing up the Elasticsearch database in the <codeph>elasticsearch</codeph> section of the <codeph>group_vars/monasca_group</codeph> file. The file system you specify must later be used for backing up your Elasticsearch database. </p>
@@ -226,7 +226,7 @@ keepalived_tracked_interfaces:
                     <p>The following response is displayed if the installation is successful.</p>
                     <p>Example:  </p>
                     <codeblock>PLAY RECAP ********************************************************
-cmm-node  :  ok=262     changed=189     unreachable=0     failed=0</codeblock>
+monasca-node  :  ok=262     changed=189     unreachable=0     failed=0</codeblock>
                     <note othertype="note"
                         >There are checks performed during installation that may result in failures or warnings. These failures and warnings are reported but they do not block the installation. It is only this final message that is relevant for a successful installation.</note>
                 </li>

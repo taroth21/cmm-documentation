@@ -17,8 +17,9 @@
         <section
                     id="Preconfigured_Dashboard_for_O_concept_conbody_section_2">
             <title>Preconfigured Metrics Dashboard for OpenStack</title>
-            <p>As an OpenStack Operator, you use the <uicontrol>Dashboard</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the OpenStack services. The <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the <ph
+            <p>As an OpenStack operator, you use the <uicontrol>Dashboard</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the OpenStack services. The <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</p>
             <fig>
                 <image
@@ -51,9 +52,10 @@
                     id="Preconfigured_Dashboard_for_concept_conbody_section_3">
             <title>Preconfigured Metrics Dashboard for <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"/></title>
-            <p>As a <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Operator, you use the <uicontrol>Monasca Health</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service. The OpenStack operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the OpenStack services.</p>
+            <p>As a <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> operator, you use the <uicontrol>Monasca Health</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> Service. The OpenStack operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the OpenStack services.</p>
             <fig>
                 <image
                     alt="grafana-cmm.png" height="260"

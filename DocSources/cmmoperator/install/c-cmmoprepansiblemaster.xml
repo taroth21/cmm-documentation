@@ -53,7 +53,7 @@ ssh_args = -o ControlMaster=auto -o BatchMode=yes -o ForwardAgent=yes</codeblock
                             <li><codeph>Monasca Host</codeph> for the <ph
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</li>
                             <li><codeph>OpenStack Host</codeph> for the OpenStack Keystone service. </li>
-                            <li><codeph>&lt;cmm_component></codeph> for installing the individual <ph
+                            <li><codeph>&lt;component></codeph> for installing the individual <ph
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> components.</li>
                             <li><codeph>Monasca Agent Hosts</codeph> for installing a <ph
@@ -88,16 +88,16 @@ ssh_args = -o ControlMaster=auto -o BatchMode=yes -o ForwardAgent=yes</codeblock
                 <li>
                     <p>To copy the SSH key to the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> host, execute the following command:</p>
-                    <codeblock>ssh-copy-id &lt;user_name&gt;@&lt;cmm_host_ip&gt;</codeblock>
-                    <p>Replace <codeph>user_name</codeph> by the user name to be used for accessing the host, and replace <codeph>cmm_host_ip</codeph> by the IP address of the host.</p>
+                    <codeblock>ssh-copy-id &lt;user_name&gt;@&lt;host_ip&gt;</codeblock>
+                    <p>Replace <codeph>user_name</codeph> by the user name to be used for accessing the host, and replace <codeph>host_ip</codeph> by the IP address of the host.</p>
                     <p>Example response for a successful connection to the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> host:</p>
                     <codeblock>/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
 /usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
-&lt;user_name&gt;@&lt;cmm_host_ip&gt;'s password:
+&lt;user_name&gt;@&lt;host_ip&gt;'s password:
 
 Number of key(s) added: 1
 
-Now try logging into the machine, with:   "ssh '&lt;user_name&gt;@&lt;cmm_host_ip&gt;'"
+Now try logging into the machine, with:   "ssh '&lt;user_name&gt;@&lt;host_ip&gt;'"
 and check to make sure that only the key(s) you wanted were added.</codeblock>
                 </li>
             </ol>

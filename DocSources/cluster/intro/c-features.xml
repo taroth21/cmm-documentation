@@ -17,7 +17,7 @@
             </ul>
             <p>As multiple hosts and additional hardware are used in a clustered solution, monitoring the solution is becoming increasingly difficult. As a <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Operator, you simply use the monitoring and log management features of <ph
+                    /> operator, you simply use the monitoring and log management features of <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. A <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent and a <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"

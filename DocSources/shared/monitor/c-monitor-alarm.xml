@@ -11,11 +11,11 @@
             <p>You have to define alarms to monitor your cloud resources. An alarm definition specifies the metrics to be collected and the threshold at which an alarm is to be triggered for a cloud resource. If the specified threshold is reached or exceeded, the alarm is triggered and notifications can be sent to inform users. By default, an alarm definition is evaluated every minute. </p>
             <p>To handle a large variety of monitoring requirements, you can create either simple alarm definitions that refer to one metrics only, or compound alarm definitions that combine multiple metrics and allow you to track and process more complex events. </p>
             <p>Example for a simple alarm definition that checks whether the system-level load of the CPU exceeds a threshold of 90 percent:</p>
-            <codeblock>cpu.system_perc{hostname=cmm} &gt; 90</codeblock>
+            <codeblock>cpu.system_perc{hostname=monasca} &gt; 90</codeblock>
             <p>Example for a simple alarm definition that checks the average time of the system-level load of the CPU over a period of 480 seconds. The alarm is triggered only if this average is greater than 95 percent: </p>
-            <codeblock>avg(cpu.system_perc{hostname=cmm}, 120) &gt; 95 times 4</codeblock>
+            <codeblock>avg(cpu.system_perc{hostname=monasca}, 120) &gt; 95 times 4</codeblock>
             <p>Example for a compound alarm definition that evaluates two metrics. The alarm is triggered if either the system-level load of the CPU exceeds a threshold of 90 percent, or if the disk space that is used by the specified service exceeds a threshold of 90 percent:</p>
-            <codeblock>avg(cpu.system_perc{hostname=cmm}) &gt; 90 OR 
+            <codeblock>avg(cpu.system_perc{hostname=monasca}) &gt; 90 OR 
 max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
             <p>To create, edit, and delete alarms, use <uicontrol>Monitoring &gt; Alarm Definitions</uicontrol>. </p>
             <p>The elements that define an alarm are grouped into <uicontrol>Details</uicontrol>, <uicontrol>Expression</uicontrol>, and <uicontrol>Notifications</uicontrol>. They are described in the following sections. </p>

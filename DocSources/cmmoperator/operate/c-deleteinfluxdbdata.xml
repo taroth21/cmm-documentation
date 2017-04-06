@@ -28,7 +28,7 @@
                     <li>Determine the ID of the OpenStack project for the data to be deleted:<p>Log in to the OpenStack dashboard and go to <b>Identity &gt; Projects</b>.</p><p>The following OpenStack projects are initially relevant for metrics and alarms management: </p><p>
                             <ul>
                                 <li><codeph>admin</codeph>: All metrics data related to OpenStack.</li>
-                                <li><codeph>cmm</codeph>: All metrics data related to <ph
+                                <li><codeph>monasca</codeph>: All metrics data related to <ph
                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</li>
                             </ul>
                         </p><p>In the course of the productive operation of <ph
@@ -40,8 +40,8 @@
                             <codeblock>cd /usr/bin</codeblock>
                         </p></li>
                     <li>Connect to InfluxDB using the InfluxDB command line interface as follows: <p>
-                            <codeblock>./influx -host &lt;cmm_host_ip&gt;</codeblock>
-                        </p><p>Replace <codeph>cmm_host_ip</codeph> with the IP address of the machine on which <ph
+                            <codeblock>./influx -host &lt;host_ip&gt;</codeblock>
+                        </p><p>Replace <codeph>host_ip</codeph> with the IP address of the machine on which <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> is installed.</p><p>The output of this command is, for example, as follows: </p><p>
                             <codeblock>Connected to http://localhost:8086 version 0.9.1

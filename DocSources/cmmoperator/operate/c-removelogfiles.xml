@@ -36,8 +36,8 @@
                     <li>Determine the ID of the OpenStack project for the data to be deleted:<p>Log in to the OpenStack dashboard and go to <b>Identity &gt; Projects</b>.</p><p>The following OpenStack projects are relevant for log management: </p><p>
                             <ul>
                                 <li><codeph>admin</codeph>: All log information related to OpenStack.</li>
-                                <li><codeph>cmm</codeph>: All log information related to <ph
-                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</li>
+                                <li><codeph>monasca</codeph>: All log information related to <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</li>
                             </ul>
                         </p><p>In the course of the productive operation of <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, additional projects may be created.</p><p>The <b>Project ID</b> field shows the relevant ID. </p></li>

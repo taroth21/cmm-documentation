@@ -78,20 +78,20 @@
             <ul>
                 <li>
                     <p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> Operator installs the offline resources, the <ph
+                            /> operator installs the offline resources, the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> components, and the required agents on one host (<ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> host).</p>
                 </li>
                 <li>
-                    <p>The OpenStack Operator installs the OpenStack extensions and the required agents for the OpenStack Keystone service and the OpenStack Horizon service. Depending on the OpenStack environment, Keystone and Horizon can either be installed on the same or on two separate hosts.</p>
-                    <p>The OpenStack Operator can install additional agents for monitoring additional OpenStack services as required.</p>
+                    <p>The OpenStack operator installs the OpenStack extensions and the required agents for the OpenStack Keystone service and the OpenStack Horizon service. Depending on the OpenStack environment, Keystone and Horizon can either be installed on the same or on two separate hosts.</p>
+                    <p>The OpenStack operator can install additional agents for monitoring additional OpenStack services as required.</p>
                 </li>
             </ul>
             <p>The installation of the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> components is managed from a so-called Control Machine. You have to prepare a Control Machine for installing the <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> host. The OpenStack Operator prepares a Control Machine for installing the OpenStack extensions on the Keystone host and the Horizon host.</p>
+                /> host. The OpenStack operator prepares a Control Machine for installing the OpenStack extensions on the Keystone host and the Horizon host.</p>
         </section>
     </conbody>
 </concept>

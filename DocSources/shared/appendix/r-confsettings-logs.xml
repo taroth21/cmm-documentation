@@ -28,12 +28,12 @@
         <section>
             <title>project_name </title>
             <p>Mandatory. The name of the OpenStack project for which log data is to be retrieved by the agent.</p>
-            <p>Example: <codeph>cmm</codeph></p>
+            <p>Example: <codeph>monasca</codeph></p>
         </section>
         <section>
             <title>username</title>
             <p>Mandatory. The user to be used for authenticating the agent against Keystone.</p>
-            <p>The user specified here must have the <codeph>cmm-agent</codeph> role in OpenStack and be assigned to the OpenStack project that is to be monitored by the agent. The project is specified in <codeph>project_name</codeph>.</p>
+            <p>The user specified here must have the <codeph>monasca-agent</codeph> role in OpenStack and be assigned to the OpenStack project that is to be monitored by the agent. The project is specified in <codeph>project_name</codeph>.</p>
             <p>It is recommended that this user is used only for configuration purposes and not for actually monitoring services and servers.</p>
             <p>Example: <codeph>admin-agent</codeph></p>
         </section>

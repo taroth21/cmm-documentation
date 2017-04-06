@@ -77,21 +77,21 @@ and check to make sure that only the key(s) you wanted were added.</codeblock>
                             href="../../shared/appendix/r-confsettings-metrics.xml"/>.</p>
                     <p>To define the minimum set of parameters, insert the following content into each configuration file. Specify the user credentials of a valid OpenStack user who is authorized to send monitoring data to the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> Service. Contact your OpenStack Operator. He is responsible for creating the required users and roles.</p>
+                        /> Service. Contact your OpenStack operator. He is responsible for creating the required users and roles.</p>
                     <p>Example:</p>
-                    <codeblock># file: host_vars/cmm-monasca-agent
+                    <codeblock># file: host_vars/monasca-agent
 
 # Monasca Agent user credentials
-monasca_agent_user: cmm-agent
-monasca_agent_password: "{{ keystone_cmm_agent_password }}"
-monasca_agent_project: cmm</codeblock>
+monasca_agent_user: monasca-agent
+monasca_agent_password: "{{ keystone_monasca_agent_password }}"
+monasca_agent_project: monasca</codeblock>
                 </li>
                 <li>Provide the passwords required for installing an agent. They are defined in the <codeph>credentials.yml</codeph> file that is located in the <codeph>/opt/FJSVsvcmm</codeph> directory.<p>Open the <codeph>credentials.yml</codeph> file with your favorite editor. </p><p>Example:</p><codeblock>sudo vim /opt/FJSVsvcmm/credentials.yml</codeblock></li>
                 <li>
                     <p>Specify the following passwords in the file:</p>
                     <ul>
                         <li>
-                            <p><codeph>keystone_cmm_agent_password</codeph> for Keystone access of the user used for configuration purposes of the agents on the <ph
+                            <p><codeph>keystone_monasca_agent_password</codeph> for Keystone access of the user used for configuration purposes of the agents on the <ph
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> hosts. The user account is automatically created with the installation.</p>
                         </li>

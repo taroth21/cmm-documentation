@@ -60,7 +60,7 @@
                                 <li>
                                         <p>By default, the <ph
                                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                        /> Operator installs the offline resources, the <ph
+                                                        /> operator installs the offline resources, the <ph
                                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                                         /> components, and the required agents on one host (<ph
                                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
@@ -69,7 +69,7 @@
                                                 /> can also be clustered and installed on multiple hosts. This does not affect your tasks as an OpenStack operator.</p>
                                 </li>
                                 <li>
-                                        <p>As an OpenStack Operator, you install the OpenStack extensions and the required agents for the OpenStack Keystone service and the OpenStack Horizon service. Depending on your OpenStack environment, Keystone and Horizon can either be installed on the same or on two separate hosts.</p>
+                                        <p>As an OpenStack operator, you install the OpenStack extensions and the required agents for the OpenStack Keystone service and the OpenStack Horizon service. Depending on your OpenStack environment, Keystone and Horizon can either be installed on the same or on two separate hosts.</p>
                                         <p>You can install additional agents for monitoring additional OpenStack services as required.</p>
                                 </li>
                         </ul>

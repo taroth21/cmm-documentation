@@ -36,7 +36,7 @@
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 />-Service-1.3.0.tar.gz</codeph>. It provides the software and setup utilities required by the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> Operator and the OpenStack Operator for installing <ph
+                                /> operator and the OpenStack operator for installing <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> in either single or cluster mode. </p>
                         <p><codeph>FJSVsvcmm-1.3.0-1.noarch.rpm</codeph> , an RPM required for checking version information.</p>

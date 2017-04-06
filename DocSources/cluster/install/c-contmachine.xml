@@ -51,7 +51,7 @@ ssh_args = -o ControlMaster=auto -o BatchMode=yes -o ForwardAgent=yes</codeblock
                     <ul>
                         <li><codeph>Offline Host</codeph> for installing the offline resources required for the installation.</li>
                         <li><codeph>OpenStack Hosts</codeph> for installing the OpenStack extensions on the Horizon host and the Keystone host.</li>
-                        <li><codeph>&lt;cmm_component></codeph> for installing the individual <ph
+                        <li><codeph>&lt;component></codeph> for installing the individual <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> components on the cluster nodes.</li>
                         <li><codeph>Monasca Agent Nodes for Cluster</codeph> for installing a <ph
