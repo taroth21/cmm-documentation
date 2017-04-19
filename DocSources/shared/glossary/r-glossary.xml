@@ -9,10 +9,8 @@
     <title>Glossary</title>
     <refbody>
         <section>
-            <title><ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Operator</title>
-            <p>A person responsible for maintaining and administrating <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <title>Application Operator</title>
+            <p>A person with limited access to cloud resources in OpenStack. An application operator provides services to end users or hosts services for his own development activities.</p>
         </section>
         <section>
             <title>Dimension</title>
@@ -37,6 +35,12 @@
             <p>The delivery of computer infrastructure (typically a platform virtualization environment) as a service.</p>
         </section>
         <section>
+            <title>InfluxDB</title>
+            <p>An open source time-series database that supports high write loads and large data set storage. <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /> uses InfluxDB as the underlying technology for storing metrics and the alarm history.</p>
+        </section>
+        <section>
             <title>Kibana</title>
             <p>An open source analytics and visualization platform designed to work with Elasticsearch. <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> integrates with Kibana for visualizing the <ph
@@ -49,6 +53,12 @@
                 /> integrates with Logstash for collecting, processing, and outputting logs. </p>
         </section>
         <section>
+            <title>MariaDB</title>
+            <p>An open source relational database that provides an SQL-compliant interface for accessing data. <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /> uses MariaDB as the underlying technology for storing configuration information, alarm definitions, and notification methods.</p>
+        </section>
+        <section>
             <title>Metrics</title>
             <p>Self-describing data structures that allow for a flexible and concise description of the data to be monitored. Metrics values represent the actual monitoring data that is collected and presented in <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
@@ -56,6 +66,11 @@
         <section>
             <title>Monasca</title>
             <p>An open source Monitoring as a Service solution that integrates with OpenStack. It forms the core of <ph
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+        </section>
+        <section>
+            <title>Monitoring Service Operator</title>
+            <p>A person responsible for maintaining and administrating <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
         </section>
         <section>
@@ -69,10 +84,6 @@
         <section>
             <title>Software as a Service (SaaS)</title>
             <p>A model of software deployment where a provider licenses an application to customers for use as a service on demand.</p>
-        </section>
-        <section>
-            <title>Tenant User</title>
-            <p>A person with limited access to cloud resources in OpenStack. A tenant user provides services to end users or hosts services for his own development activities.</p>
         </section>
     </refbody>
 </reference>
