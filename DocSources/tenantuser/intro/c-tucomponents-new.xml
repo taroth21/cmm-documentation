@@ -26,18 +26,14 @@
                 </section>
                 <section
                     id="Service_concept_conbody_section_3">
-                        <title><ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service</title>
-                        <p
-                    id="The_concept_conbody_section_3_p">The <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is the central <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> component. It is responsible for receiving, persisting, and processing metrics and log data, as well as providing the data to the users.</p>
-                        <p>The <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service relies on Monasca, an open source Monitoring as a Service solution. It uses Monasca for high-speed metrics querying and integrates the streaming alarm engine and the notification engine of Monasca.</p>
+                        <title>Monitoring Service</title>
+                        <p id="The_concept_conbody_section_3_p">The Monitoring Service is the central <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> component. It is responsible for receiving, persisting, and processing metrics and log data, as well as providing the data to the users.</p>
+                        <p>The Monitoring Service relies on Monasca, an open source Monitoring as a Service solution. It uses Monasca for high-speed metrics querying and integrates the streaming alarm engine and the notification engine of Monasca.</p>
                 </section>
                 <section>
-                        <title><ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Horizon Plugin</title>
+                        <title>Horizon Plugin</title>
                         <p><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> comes with a plugin for the OpenStack Horizon dashboard. The plugin extends the main dashboard in OpenStack with a view for monitoring. This enables <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users to access the monitoring functions from a central Web-based graphical user interface.</p>
                         <p>Monitoring data is visualized on a comfortable and easy-to-use dashboard which fully integrates with Grafana, an open source application for visualizing large-scale measurement data.</p>

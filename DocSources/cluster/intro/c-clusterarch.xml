@@ -15,9 +15,7 @@
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> either in single mode or in cluster mode.</p>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> in single mode means running the complete monitoring and log management functionality on one host machine. All components of the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Service are installed on this machine. For details on installing, operating, and maintaining <ph
+                    /> in single mode means running the complete monitoring and log management functionality on one host machine. All components of the Monitoring Service are installed on this machine. For details on installing, operating, and maintaining <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                         /> in single mode, refer to the <i><ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Operator's Guide</i>.</p>
@@ -27,9 +25,7 @@
         <section>
             <title>Default Cluster</title>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> supports a default cluster that consists of three nodes with a fully replicated <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Service on each node. The default cluster is based on a limited set of hardware. It provides the minimum configuration required to ensure high availability.</p>
+                /> supports a default cluster that consists of three nodes with a fully replicated Monitoring Service on each node. The default cluster is based on a limited set of hardware. It provides the minimum configuration required to ensure high availability.</p>
             <p>The following illustration provides a simplified overview of the components involved in the default cluster:</p>
             <fig>
                 <image alt="cluster-default.png" height="260" href="../../images/cluster-default.png" width="435"/>
@@ -37,9 +33,7 @@
             <p>Instances of the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> components are available on each of the three nodes. An external load balancer is responsible for distributing the workload across the components on the individual nodes. The load balancer is not part of <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
-            <p>Each node in the cluster is monitored by a <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent and a <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent. </p>
+            <p>Each node in the cluster is monitored by a Metrics Agent and a Log Agent. </p>
         </section>
         <section>
             <title>Customizing the Default Cluster</title>

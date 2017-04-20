@@ -15,13 +15,9 @@
                 <li>Fault tolerance and recoverability</li>
                 <li>Scalability</li>
             </ul>
-            <p>As multiple hosts and additional hardware are used in a clustered solution, monitoring the solution is becoming increasingly difficult. As a <ph
+            <p>As multiple hosts and additional hardware are used in a clustered solution, monitoring the solution is becoming increasingly difficult. As a Monitoring Service operator, you simply use the monitoring and log management features of <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> operator, you simply use the monitoring and log management features of <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. A <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent and a <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Log Agent are installed on each node. They constantly check the quality of your cluster and guarantee that it is successfully used to manage, track, and optimize your cloud infrastructure and the services that are provided.</p>
+                />. A Metrics Agent and a Log Agent are installed on each node. They constantly check the quality of your cluster and guarantee that it is successfully used to manage, track, and optimize your cloud infrastructure and the services that are provided.</p>
         </section>
         <section>
             <title>High Availability</title>

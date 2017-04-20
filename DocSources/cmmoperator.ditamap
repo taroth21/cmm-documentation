@@ -4,7 +4,7 @@
 <!-- Copyright FUJITSU LIMITED 2017 -->
 <bookmap
                     xml:lang="en_US">
-    <title>CMM Operator's Guide</title>
+    <title>Monitoring Service Operator's Guide</title>
     <bookmeta>
         <prodinfo>
             <prodname>ServerView</prodname>
@@ -15,7 +15,7 @@
             <brand>FUJITSU Software</brand>
             <prognum>Cloud Monitoring Manager V1.3</prognum>
             <component/>
-            <series>CMM Operator's Guide</series>
+            <series>Monitoring Service Operator's Guide</series>
         </prodinfo>
         <bookid>
             <edition>Beta Version (2017-04-19)</edition>

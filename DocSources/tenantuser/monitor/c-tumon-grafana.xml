@@ -12,7 +12,7 @@
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> ships with preconfigured dashboards for <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> and OpenStack operators. As a tenant user, you can configure your own dashboards as required. </p>
+                /> and OpenStack operators. As an application operator, you can configure your own dashboards as required. </p>
             <p>Use <uicontrol>Monitoring > Overview</uicontrol> in the OpenStack Horizon dashboard and one of the options at the top border of the <uicontrol>Overview</uicontrol> page to access the preconfigured metrics dashboards. Use them as the starting point for creating your own dashboard with the data you want to visualize.</p>
         </section>
         <section

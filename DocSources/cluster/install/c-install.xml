@@ -10,9 +10,7 @@
     <conbody>
         <section>
             <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> comprises several steps. They are partially executed by the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> operator, and partially by the OpenStack operator.</p>
+                /> comprises several steps. They are partially executed by the Monitoring Service operator, and partially by the OpenStack operator.</p>
         </section>
         <section>
             <fig>
@@ -22,25 +20,15 @@
             <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> comprises the following steps: </p>
             <ol>
-                <li>Preparing the installation environment - done by the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> operator and the OpenStack operator.</li>
-                <li>Configuring the Control Machine - done by the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> operator and the OpenStack operator.</li>
-                <li>Installing the offline resources - done by the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator only. </li>
-                <li>Installing the OpenStack extensions required for the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Service - done by the OpenStack operator only. </li>
-                <li>Installing the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> Service - done by the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator only.</li>
+                <li>Preparing the installation environment - done by the Monitoring Service operator and the OpenStack operator.</li>
+                <li>Configuring the Control Machine - done by the Monitoring Service operator and the OpenStack operator.</li>
+                <li>Installing the offline resources - done by the Monitoring Service operator only. </li>
+                <li>Installing the OpenStack extensions required for the Monitoring Service - done by the OpenStack operator only. </li>
+                <li>Installing the Monitoring Service - done by the Monitoring Service operator only.</li>
             </ol>
-            <p>As a <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> operator, you also install and configure the agents for monitoring <ph
+            <p>As a Monitoring Service operator, you also install and configure the agents for monitoring <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                />. The OpenStack operator installs and configures the agents for monitoring the OpenStack platform. He also prepares the monitoring environment for the tenant users who have booked a virtual machine in OpenStack.</p>
+                />. The OpenStack operator installs and configures the agents for monitoring the OpenStack platform. He also prepares the monitoring environment for the application operators who have booked a virtual machine in OpenStack.</p>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> ships with an installer that is based on Ansible. You use it for installing the required software components.</p>
         </section>
@@ -56,8 +44,7 @@
                 /> is managed from a so-called Control Machine:</p>
             <ul>
                 <li>
-                    <p>As <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> operator, you have to prepare the Control Machine for installing the offline resources, the <ph
+                    <p>As Monitoring Service operator, you have to prepare the Control Machine for installing the offline resources, the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> components and the agents for monitoring the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
@@ -67,9 +54,7 @@
                         /> components and the required agents on three nodes. The offline resources are installed on one node only. </p>
                 </li>
                 <li>
-                    <p>The OpenStack operator prepares the Control Machine for installing the OpenStack extensions and the required agents for monitoring the OpenStack Keystone and the OpenStack Horizon service. The OpenStack operator and the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> operator can use one machine as Control Machine or implement there installation steps from two different Control Machines as depicted above.</p>
+                    <p>The OpenStack operator prepares the Control Machine for installing the OpenStack extensions and the required agents for monitoring the OpenStack Keystone and the OpenStack Horizon service. The OpenStack operator and the Monitoring Service operator can use one machine as Control Machine or implement there installation steps from two different Control Machines as depicted above.</p>
                     <p>Depending on the OpenStack environment, Keystone and Horizon can either be installed on the same or on two separate hosts. The OpenStack operator can install additional agents for monitoring additional OpenStack services as required.</p>
                 </li>
             </ul>
