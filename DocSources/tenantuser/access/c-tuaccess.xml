@@ -9,8 +9,7 @@
     <title>Accessing <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/></title>
     <conbody>
         <section>
-                        <p>As a <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> tenant user, you must fulfill the following prerequisites:</p>
+                        <p>As an application operator, you must fulfill the following prerequisites:</p>
                         <ul>
                                 <li>You must be registered as an OpenStack user.</li>
                                 <li>You must have access to the OpenStack platform as a user with the <codeph>monasca-user</codeph> role or any other role that is authorized to use the <ph

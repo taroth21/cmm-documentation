@@ -5,7 +5,7 @@
 <bookmap
                     xml:lang="en_US">
 
-    <title>Tenant User's Guide</title>
+    <title>Application Operator's Guide</title>
     <bookmeta>
         <prodinfo>
             <prodname>ServerView</prodname>
@@ -16,7 +16,7 @@
             <brand>FUJITSU Software</brand>
             <prognum>Cloud Monitoring Manager V1.3</prognum>
             <component/>
-            <series>Tenant User's Guide</series>
+            <series>Application Operator's Guide</series>
         </prodinfo>
         <bookid>
             <edition>Beta Version (2017-04-19)</edition>

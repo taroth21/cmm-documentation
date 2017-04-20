@@ -6,11 +6,10 @@
 
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                     xml:lang="en-us">
-    <title>The Tenant User's Tasks</title>
+    <title>The Application Operator's Tasks</title>
     <conbody>
         <section>
-            <p>The <ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator and the OpenStack operator are responsible for preparing your monitoring environment. The OpenStack operator configures which metrics are available to you. He explicitly activates the metrics that you can use for monitoring the virtual machines you have booked. </p>
+            <p>The Monitoring Service operator and the OpenStack operator are responsible for preparing your monitoring environment. The OpenStack operator configures which metrics are available to you. He explicitly activates the metrics that you can use for monitoring the virtual machines you have booked. </p>
         </section>
         <section>
             <title>Metrics</title>
@@ -48,7 +47,7 @@
                     /> provides functions for alarm and notification management. <ph
                     conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Template-based_alarm_definiti_concept_conbody_section_4_p"
                 /></p>
-            <p>As a tenant user, you can:</p>
+            <p>As an application operator, you can:</p>
             <ul>
                 <li>Monitor the status of your virtual machines.</li>
                 <li>View, share, and explore visualizations of the monitoring data.</li>
