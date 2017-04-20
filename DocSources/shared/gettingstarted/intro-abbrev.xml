@@ -14,16 +14,12 @@
                     rowsep="0">
                 <tgroup
                         cols="2">
-                    <colspec
-                        colname="col1"
-                        colwidth="1*"/>
-                    <colspec
-                        colname="col2"
-                                    colwidth="3.34*"/>
+                    <colspec colname="col1" colwidth="1*"/>
+                    <colspec colname="col2" colwidth="3.25*"/>
                     <tbody>
                         <row>
                             <entry><b><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/></b></entry>
-                            <entry>Cloud Monitoring Manager</entry>
+                            <entry><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"/></entry>
                         </row>
                         <row>
                             <entry><b>IaaS</b></entry>

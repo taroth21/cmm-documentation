@@ -69,12 +69,9 @@
                 <li>
                     <p><codeph>*.txt</codeph> files <i><b>PENDING</b>: Bug 13216 to be fixed with productization of CMM 1.3 (RPMs and libs consist of 3 parts: (1) Offline Resources (2) RHEL7.3 and OSP8 (3) Delta which cannot be provided for license reasons</i></p>
                     <p><codeph><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            />13_PythonRequirements.txt</codeph> lists the Python libraries required for the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> Service, <codeph>OSP8_PythonRequirements.txt</codeph> lists the Python libraries required for the OpenStack extensions. These libraries are installed to the <codeph>/usr/lib/python2.7/site-packages</codeph> directory.</p>
-                    <note othertype="note">As a prerequisite for the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> Service and the OpenStack extensions, specific versions of the Python libraries must be installed. Make sure that the installed versions are not overwritten in the <codeph>/usr/lib/python2.7/site-packages</codeph> directory.</note>
+                            />13_PythonRequirements.txt</codeph> lists the Python libraries required for the Monitoring Service, <codeph>OSP8_PythonRequirements.txt</codeph> lists the Python libraries required for the OpenStack extensions. These libraries are installed to the <codeph>/usr/lib/python2.7/site-packages</codeph> directory.</p>
+                    <note othertype="note"
+                            >As a prerequisite for the Monitoring Service and the OpenStack extensions, specific versions of the Python libraries must be installed. Make sure that the installed versions are not overwritten in the <codeph>/usr/lib/python2.7/site-packages</codeph> directory.</note>
                     <p><codeph><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             />13_RPMPackages.txt</codeph> lists the RPM (RedHat Repository Manager) packages required for installing the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"

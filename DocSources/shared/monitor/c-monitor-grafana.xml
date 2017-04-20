@@ -17,10 +17,7 @@
         <section
                     id="Preconfigured_Dashboard_for_O_concept_conbody_section_2">
             <title>Preconfigured Metrics Dashboard for OpenStack</title>
-            <p>As an OpenStack operator, you use the <uicontrol>Dashboard</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the OpenStack services. The <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</p>
+            <p>As an OpenStack operator, you use the <uicontrol>Dashboard</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the OpenStack services. The Monitoring Service operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the Monitoring Service.</p>
             <fig>
                 <image
                     alt="grafana-os.png" height="260"
@@ -52,18 +49,14 @@
                     id="Preconfigured_Dashboard_for_concept_conbody_section_3">
             <title>Preconfigured Metrics Dashboard for <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"/></title>
-            <p>As a <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> operator, you use the <uicontrol>Monasca Health</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Service. The OpenStack operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the OpenStack services.</p>
+            <p>As a Monitoring Service operator, you use the <uicontrol>Monasca Health</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the Monitoring Service. The OpenStack operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the OpenStack services.</p>
             <fig>
                 <image
                     alt="grafana-cmm.png" height="260"
                     href="../../images/grafana-cmm.png"
                             width="435"/>
             </fig>
-            <p>To monitor the <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Service, the preconfigured dashboard shows the following: </p>
+            <p>The preconfigured dashboard shows the following data on the Monitoring Service: </p>
             <ul>
                 <li>
                     <p>Status of the main <ph

@@ -10,9 +10,7 @@
         <section>
             <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
         /> supports the additional metrics described below for monitoring specific servers and services. The metrics are grouped by metrics types. Each metrics type references a set of related metrics.</p>
-            <p>Depending on the services running on the host where you install a <ph
-          conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-          /> Metrics Agent, some or all of these metrics are automatically added to the agent configuration. You should check the individual <codeph>yaml</codeph> files and change or correct the settings as required, or remove individual <codeph>yaml</codeph> files from the agent configuration if you do not want to monitor the metrics they include. </p>
+            <p>Depending on the services running on the host where you install a Metrics Agent, some or all of these metrics are automatically added to the agent configuration. You should check the individual <codeph>yaml</codeph> files and change or correct the settings as required, or remove individual <codeph>yaml</codeph> files from the agent configuration if you do not want to monitor the metrics they include. </p>
             <p>Note that in addition to the metrics below, many more metrics are provided by the Monasca project. These are not automatically installed by <ph
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           />. For details on the complete set of metrics provided by the Monasca project, refer to the <xref
@@ -90,8 +88,7 @@ instances:
     </section>
         <section>
             <title>http_check.yaml</title>
-            <p>HTTP endpoint checks perform up/down checks on HTTP endpoints. Based on a list of URLs, the agent sends an HTTP request and reports success or failure to the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</p>
+            <p>HTTP endpoint checks perform up/down checks on HTTP endpoints. Based on a list of URLs, the agent sends an HTTP request and reports success or failure to the Monitoring Service.</p>
       <p>The agent installer auto-detects HTTP endpoints on the machine where the agent is installed. It saves the detected settings to the <codeph>http_check.yaml</codeph> configuration file, and the configuration is automatically provided in the <codeph>/etc/monasca/agent/conf.d/</codeph> directory.</p>
             <p>Example configuration:</p>
             <codeblock>init_config: null
@@ -134,8 +131,7 @@ instances:
             <title>kafka_consumer.yaml</title>
             <p>Kafka consumer checks gather metrics related to services consuming Kafka topics, such as the Persister or Notification Engine of <ph
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
-            <p>For Kafka consumer checks, the Kafka consumer module (<codeph>kafka-python</codeph>) must be installed in the virtualenv environment of the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent. To install it in the default directory, execute the following command: </p>
+            <p>For Kafka consumer checks, the Kafka consumer module (<codeph>kafka-python</codeph>) must be installed in the virtualenv environment of the Metrics Agent. To install it in the default directory, execute the following command: </p>
             <codeblock># source /opt/monasca-agent/bin/activate 
 # pip install kafka-python 
 # deactivate </codeblock>
@@ -214,9 +210,7 @@ user=root
 password=password</codeblock>
       <note othertype="note"
         >Make sure that the password is set correctly. The agent installer fails if you specify the password enclosed in quotation marks.</note>
-      <p>In addition, the MySQL module (<codeph>pymysql</codeph>) must be installed in the virtualenv environment of the <ph
-          conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-        /> Metrics Agent. To install it in the default directory, execute the following command: </p>
+      <p>In addition, the MySQL module (<codeph>pymysql</codeph>) must be installed in the virtualenv environment of the Metrics Agent. To install it in the default directory, execute the following command: </p>
       <codeblock># source /opt/monasca-agent/bin/activate 
 # pip install pymysql
 # deactivate </codeblock>
@@ -287,9 +281,7 @@ instances:
         <section>
             <title>postgres.yaml</title>
             <p>Postgres checks gather metrics from a PostgreSQL database. </p>
-      <p>For PostgreSQL checks, the <codeph>postgresql-devel</codeph> RPM package and the <codeph>psycopg2</codeph> Python package are required. The Python package must be installed in the virtualenv environment of the <ph
-          conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-        /> Metrics Agent. To install the packages in the default directory, execute the following command:</p>
+      <p>For PostgreSQL checks, the <codeph>postgresql-devel</codeph> RPM package and the <codeph>psycopg2</codeph> Python package are required. The Python package must be installed in the virtualenv environment of the Metrics Agent. To install the packages in the default directory, execute the following command:</p>
       <codeblock># yum install postgresql-devel
 # source /opt/monasca-agent/bin/activate
 # pip install psycopg2

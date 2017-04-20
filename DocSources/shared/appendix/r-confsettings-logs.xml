@@ -5,19 +5,16 @@
                            
 <reference id="reference832"
             xml:lang="en-us">
-    <title>Configuration Settings for <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent</title>
+    <title>Configuration Settings for the Log Agent</title>
     <refbody>
         <section>
-            <p>The configuration settings for the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent are provided in the following file:</p>
+            <p>The configuration settings for the Log Agent are provided in the following file:</p>
             <p><codeph>/etc/monasca/monasca-log-agent/agent.conf</codeph></p>
             <p>Below you find a detailed description of the individual settings.</p>
         </section>
         <section>
             <title>monasca_log_api_url</title>
-            <p>Mandatory. The URL used to access the machine where the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service is installed. </p>
+            <p>Mandatory. The URL used to access the machine where the Monitoring Service is installed. </p>
             <p>Example: <codeph>http://192.168.10.4:5607/v3.0</codeph></p>
         </section>
         <section>

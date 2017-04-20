@@ -27,8 +27,8 @@
         <section>
             <title>Grafana</title>
             <p>An open source application for visualizing large-scale measurement data. <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> integrates with Grafana for visualizing the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> monitoring data.</p>
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /> integrates with Grafana for visualizing the monitoring data.</p>
         </section>
         <section>
             <title>Infrastructure as a Service (IaaS)</title>
@@ -43,8 +43,8 @@
         <section>
             <title>Kibana</title>
             <p>An open source analytics and visualization platform designed to work with Elasticsearch. <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> integrates with Kibana for visualizing the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> log data.</p>
+                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
+                /> integrates with Kibana for visualizing the log data.</p>
         </section>
         <section>
             <title>Logstash</title>

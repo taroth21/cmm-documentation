@@ -19,10 +19,10 @@
                     width="700"/>
             </fig>
             <p id="A_concept_conbody_section_p_2"
-                                        >A <b>tenant user</b> acts as a service provider in the OpenStack environment. He books virtual machines to provide services to <b>end users</b> or to host services that he needs for his own development activities. <ph
+                                        >An <b>application operator</b> acts as a service provider in the OpenStack environment. He books virtual machines to provide services to <b>end users</b> or to host services that he needs for his own development activities. <ph
                                         conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> helps tenant users ensure that their services and the servers on which they are provided are configured and working as required.</p>
-            <p>As an <b>OpenStack operator</b>, you are a special tenant user who is responsible for administrating and maintaining the underlying OpenStack platform. The monitoring and log management services of <ph
+                                /> helps application operators ensure that their services and the servers on which they are provided are configured and working as required.</p>
+            <p>As an <b>OpenStack operator</b>, you are a special application operator who is responsible for administrating and maintaining the underlying OpenStack platform. The monitoring and log management services of <ph
                                         conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                                         /> enable you to ensure the availability and quality of your platform. You use <ph
                                         conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> for:</p>
@@ -33,10 +33,7 @@
                                         <li>Retrieving and analyzing the log data of the OpenStack services and servers, the middleware components, and the operating system.</li>
                                 </ul>
                         </p>
-            <p>The <b><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> operator</b> is responsible for providing the monitoring and log management services to the tenant users and the OpenStack operator. This enables them to focus on operation and the quality of their services and servers without having to carry out the tedious tasks implied by setting up and administrating their own monitoring software. The <ph
-                                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> operator uses the monitoring services himself for ensuring the quality of <ph
+            <p>The <b>Monitoring Service operator</b> is responsible for providing the monitoring and log management features to the application operators and the OpenStack operator. This enables them to focus on operation and the quality of their services and servers without having to carry out the tedious tasks implied by setting up and administrating their own monitoring software. The Monitoring Service operator uses the monitoring services himself for ensuring the quality of <ph
                                         conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
         </section>
     </conbody>

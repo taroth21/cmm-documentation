@@ -17,11 +17,9 @@
                     <p>Log in to the server where the agent is installed.</p>
                 </li>
                 <li>
-                    <p>To start a <ph
-                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent, execute the following command:</p>
+                    <p>To start a Metrics Agent, execute the following command:</p>
                     <codeblock>sudo systemctl start monasca-agent	</codeblock>
-                    <p>To start a <ph
-                conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent, execute the following command:</p>
+                    <p>To start a Log Agent, execute the following command:</p>
                     <codeblock>sudo systemctl start monasca-log-agent	</codeblock>
                 </li>
             </ol>
@@ -32,10 +30,9 @@
                     <p>Log in to the server where the agent is installed.</p>
                 </li>
                 <li>
-                    <p>To stop a <ph
-                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent, execute the following command:</p>
+                    <p>To stop a Metrics Agent, execute the following command:</p>
                     <codeblock>sudo systemctl stop monasca-agent</codeblock>
-                    <p>To stop a <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent, execute the following command:</p>
+                    <p>To stop a Log Agent, execute the following command:</p>
                     <codeblock>sudo systemctl stop monasca-log-agent</codeblock>
                 </li>
             </ol>

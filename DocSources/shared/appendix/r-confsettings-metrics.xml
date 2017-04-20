@@ -5,12 +5,10 @@
                            
 <reference id="reference832"
             xml:lang="en-us">
-    <title>Configuration Settings for <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agents</title>
+    <title>Configuration Settings for the Metrics Agent</title>
     <refbody>
         <section>
-            <p>The configuration settings for the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent are provided in the following file:</p>
+            <p>The configuration settings for the Metrics Agent are provided in the following file:</p>
             <p><codeph>/etc/monasca/agent/agent.yaml</codeph></p>
             <p>Find below a list of the parameters that are supported by <ph
                         conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>

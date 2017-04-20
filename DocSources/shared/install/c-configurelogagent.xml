@@ -14,15 +14,13 @@
         </section>
         <section>
             <title>Configuration File</title>
-            <p>The installer stores all configuration settings of the <ph
-                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent in the following file:</p>
+            <p>The installer stores all configuration settings of the Log Agent in the following file:</p>
             <p><codeph>/etc/monasca/monasca-log-agent/agent.conf</codeph></p>
             <p>The file is composed of an input and an output section:</p>
             <ul>
                 <li>
                     <p>The input section specifies which log data is to be retrieved. </p>
-                    <p>The <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> Log Agent is based on the so-called ELK stack, a solution for searching and analyzing log data that combines the open source projects Elasticsearch, Logstash, and Kibana. For details on the ELK stack, refer to the documentation on <xref
+                    <p>The Log Agent is based on the so-called ELK stack, a solution for searching and analyzing log data that combines the open source projects Elasticsearch, Logstash, and Kibana. For details on the ELK stack, refer to the documentation on <xref
                             format="html" href="https://www.elastic.co/guide/index.html" scope="external"
                                     ><u><i>Elasticsearch, Logstash, and Kibana</i></u></xref>. </p>
                     <p><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
@@ -33,8 +31,7 @@
                         /> support if you want to integrate a different plugin.</p>
                 </li>
                 <li>
-                    <p>The output section specifies all parameters required for retrieving the log data and sending it to the <ph
-                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Server for further processing. </p>
+                    <p>The output section specifies all parameters required for retrieving the log data and sending it to the Monitoring Service for further processing. </p>
                 </li>
             </ul>
         </section>

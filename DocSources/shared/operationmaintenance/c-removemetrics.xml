@@ -6,13 +6,10 @@
 
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
             xml:lang="en-us">
-    <title>Disabling Metrics for a <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent</title>
+    <title>Disabling Metrics for a Metrics Agent</title>
     <conbody>
         <section>
-            <p>To disable the monitoring of a specific metrics that is no longer needed in the configuration of a <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Metrics Agent, you have to delete the corresponding <codeph>.yaml</codeph> file. Proceed as follows:</p>
+            <p>To disable the monitoring of a specific metrics that is no longer needed in the configuration of a Metrics Agent, you have to delete the corresponding <codeph>.yaml</codeph> file. Proceed as follows:</p>
             <ol compact="no">
                 <li>
                     <p>Log in to the server where the agent is installed.</p>

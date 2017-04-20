@@ -22,14 +22,12 @@
                     <p><uicontrol>Use event times to create index names</uicontrol>. It is recommended that this option is selected. This improves search performance by enabling searches only on those indices that contain data in the time range you specify. </p>
                 </li>
                 <li>
-                    <p><uicontrol>Index pattern interval</uicontrol>. Select <codeph>Daily</codeph> as index pattern interval. Daily intervals are supported by the <ph
-                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</p>
+                    <p><uicontrol>Index pattern interval</uicontrol>. Select <codeph>Daily</codeph> as index pattern interval. Daily intervals are supported by the Monitoring Service.</p>
                 </li>
                 <li>
                     <p><uicontrol>Index name or pattern</uicontrol>. The pattern allows you to define dynamic index names. Static text in a pattern is denoted using brackets. Replace the predefined pattern (<codeph>[logstash-]*</codeph> or <codeph>[logstash-]YYYY.MM.DD</codeph>) as follows: </p>
                     <p>Replace <codeph>logstash-</codeph> by the project ID of the OpenStack project whose log data is to be visualized in the dashboard.</p>
-                    <p>Replace <codeph>*</codeph> or <codeph>YYYY.MM.DD</codeph> by <codeph>YYYY-MM-DD</codeph> as naming pattern. This naming pattern is supported by the <ph
-                            conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Service. </p>
+                    <p>Replace <codeph>*</codeph> or <codeph>YYYY.MM.DD</codeph> by <codeph>YYYY-MM-DD</codeph> as naming pattern. This naming pattern is supported by the Monitoring Service. </p>
                     <p>Example: <codeph>[557aff4bf007473d84069aca202a1633-]YYYY-MM-DD</codeph></p>
                 </li>
                 <li>

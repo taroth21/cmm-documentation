@@ -13,9 +13,8 @@
                         conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> retains the data stored in the Elasticsearch database and the InfluxDB database for 60 days. Older data is automatically deleted. You can change the default data retention configuration for the databases, if required. In addition to implementing your data retention requirements, you should check for the amount and size of the collected metrics and log data at regular intervals, and delete any unnecessary data to free disk space. </p>
             <p>This section describes how to:</p>
             <ul>
-                <li>Disable the monitoring of specific metrics in the configuration of a <ph
-                        conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent.</li>
-                <li>Disable the collection of specific log data in the configuration of a <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent.</li>
+                <li>Disable the monitoring of specific metrics in the configuration of a Metrics Agent.</li>
+                <li>Disable the collection of specific log data in the configuration of a Log Agent.</li>
                 <li>Configure data retention for the InfluxDB database.</li>
                 <li>Configure data retention for the Elasticsearch database.</li>
                 <li>Remove metrics data from the InfluxDB database.</li>

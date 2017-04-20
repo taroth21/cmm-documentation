@@ -6,11 +6,10 @@
 
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
             xml:lang="en-us">
-    <title>Disabling Log Data for a <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent</title>
+    <title>Disabling Log Data for a Log Agent</title>
     <conbody>
         <section>
-            <p>To disable the collection of specific log data that is no longer needed in the configuration of a <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent, you have to delete the corresponding entries in the <codeph>agent.conf</codeph> configuration file. Proceed as follows:</p>
+            <p>To disable the collection of specific log data that is no longer needed in the configuration of a Log Agent, you have to delete the corresponding entries in the <codeph>agent.conf</codeph> configuration file. Proceed as follows:</p>
             <ol>
                 <li>
                     <p>Log in to the server where the agent is installed.</p>

@@ -82,8 +82,7 @@
                     <p>To save a query, use <uicontrol>Save Search</uicontrol>. Saving a query means saving both the query syntax and the current index pattern. </p>
                 </li>
                 <li>
-                    <p>To load a query, use <uicontrol>Load Saved Search</uicontrol>. A saved query can be loaded and used by any OpenStack or <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator. </p>
+                    <p>To load a query, use <uicontrol>Load Saved Search</uicontrol>. A saved query can be loaded and used by any OpenStack or Monitoring Service operator. </p>
                 </li>
                 <li>
                     <p>To share a query with other users, use <uicontrol>Share Search</uicontrol>. The option displays a direct link to the query that you can forward. As a prerequisite for using a direct link, a user must have <ph
@@ -109,8 +108,7 @@
                     <p>To save a visualization, use <uicontrol>Save Visualization</uicontrol>. </p>
                 </li>
                 <li>
-                    <p>To load a visualization, use <uicontrol>Load Saved Visualization</uicontrol>. A saved visualization can be loaded and used by any OpenStack or <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator. </p>
+                    <p>To load a visualization, use <uicontrol>Load Saved Visualization</uicontrol>. A saved visualization can be loaded and used by any OpenStack or Monitoring Service operator. </p>
                 </li>
                 <li>
                     <p>To share a visualization with other users, use <uicontrol>Share Visualization</uicontrol>. The option displays an HTML snippet that can be used to embed the visualization in a Web page. It also displays a direct link to the visualization that you can forward. As a prerequisite for using an embedded visualization or a direct link, a user must have <ph
@@ -158,8 +156,7 @@
                     <p>To save a dashboard, use <uicontrol>Save Dashboard</uicontrol>. By default, saving a dashboard also saves the time filter that is defined at the time of saving. You can disable this default by clearing the <uicontrol>Store time with dashboard</uicontrol> option. Disabling the default means that the time filter is set to the currently selected time each time the dashboard is loaded.</p>
                 </li>
                 <li>
-                    <p>To load a dashboard, use <uicontrol>Load Saved Dashboard</uicontrol>. A saved dashboard can be loaded and used by any OpenStack or <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator. </p>
+                    <p>To load a dashboard, use <uicontrol>Load Saved Dashboard</uicontrol>. A saved dashboard can be loaded and used by any OpenStack or Monitoring Service operator. </p>
                 </li>
                 <li>
                     <p>To share a dashboard with other users, use <uicontrol>Share Dashboard</uicontrol>. The option displays an HTML snippet that can be used to embed the dashboard in a Web page. It also displays a direct link to the dashboard that you can forward. As a prerequisite for using an embedded dashboard or a direct link, a user must have <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> access.</p>
