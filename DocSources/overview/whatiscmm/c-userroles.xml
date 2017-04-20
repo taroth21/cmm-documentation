@@ -13,24 +13,20 @@
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users can be grouped by their role. The following user roles are distinguished:</p>
             <ul>
                 <li>
-                    <p>A <b>tenant user</b> acts as a service provider in the OpenStack environment. He books virtual machines in OpenStack to provide services to end users or to host services that he needs for his own development activities. <ph
+                    <p>An <b>application operator</b> acts as a service provider in the OpenStack environment. He books virtual machines in OpenStack to provide services to end users or to host services that he needs for his own development activities. <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> helps tenant users to ensure the quality of their services in the cloud.</p>
-                    <p>For details on the tasks of the tenant user, refer to the <i>Tenant User's Guide</i>.</p>
+                        /> helps application operators to ensure the quality of their services in the cloud.</p>
+                    <p>For details on the tasks of the application operator, refer to the <i>Application Operator's Guide</i>.</p>
                 </li>
                 <li>
-                    <p>The<b> OpenStack operator</b> is a special tenant user. He is responsible for administrating and maintaining the underlying OpenStack platform and ensures the availability and quality of the OpenStack services (e.g. Heat, Nova, Cinder, Swift, Glance, or Keystone).</p>
+                    <p>The<b> OpenStack operator</b> is a special application operator. He is responsible for administrating and maintaining the underlying OpenStack platform and ensures the availability and quality of the OpenStack services (e.g. Heat, Nova, Cinder, Swift, Glance, or Keystone).</p>
                     <p>For details on the tasks of the OpenStack operator, refer to the <i>OpenStack Operator's Guide</i>.</p>
                 </li>
                 <li>
-                    <p>The <b><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> operator</b> is responsible for administrating and maintaining <ph
+                    <p>The <b>Monitoring Service operator</b> is responsible for administrating and maintaining <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            />. He provides the cloud monitoring services to the other users and ensures the quality of the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</p>
-                    <p>For details on the tasks of the <ph
-                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator, refer to the <i><ph
-            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Operator's Guide</i>.</p>
+                        />. He provides the cloud monitoring services to the other users and ensures the quality of the Monitoring Service.</p>
+                    <p>For details on the tasks of the Monitoring Service operator, refer to the <i>Monitoring Service Operator's Guide</i>.</p>
                 </li>
             </ul>
         </section>
@@ -54,7 +50,7 @@
                 /> users are created and administrated in OpenStack:</p>
             <ul id="Each_user_assumes_a_role_in_O_concept_conbody_section_2_ul">
                 <li>Each user assumes a role in OpenStack to perform a specific set of operations. The OpenStack role specifies a set of rights and privileges.</li>
-                <li>Each user is assigned to at least one project in OpenStack. A project is an organizational unit that defines a set of resources which can be accessed by the assigned users. <p>Tenant users in <ph
+                <li>Each user is assigned to at least one project in OpenStack. A project is an organizational unit that defines a set of resources which can be accessed by the assigned users. <p>Application operators in <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                         /> can monitor the set of resources that is defined for the projects to which they are assigned.</p></li>
             </ul>

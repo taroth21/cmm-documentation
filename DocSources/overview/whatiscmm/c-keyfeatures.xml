@@ -13,10 +13,12 @@
                                         /> is an out-of-the-box solution for monitoring OpenStack-based cloud environments. It is provided as a cloud service to users. <ph
                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> meets different challenges, ranging from small-scale deployments to high-availability deployments and deployments with high levels of scalability. </p>
-            <p>The core of <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is Monasca, an open source Monitoring as a Service solution that integrates with OpenStack. The key features of <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> form an integral part of the Monasca project. <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> extends the source code base of the project through active contributions.</p>
+            <p>The core of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> is Monasca, an open source Monitoring as a Service solution that integrates with OpenStack. The key features of <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> form an integral part of the Monasca project. <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> extends the source code base of the project through active contributions.</p>
             <p>Compared to the Monasca community edition, <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> provides the following added value:</p>
             <ul>

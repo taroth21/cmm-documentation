@@ -9,10 +9,12 @@
     <conbody>
         <section>
             <p>Services and servers in a cloud infrastructure generate huge amounts of log data, from simply announcing that everything is healthy to detailed information on events or processes. The logs are distributed over many physical and virtual servers. <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> collects, stores, and queries these logs and makes them accessible to <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users in one central place. </p>
-            <p><ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> covers all aspects of an enterprise-class log management solution:</p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> collects, stores, and queries these logs and makes them accessible to <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> users in one central place. </p>
+            <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> covers all aspects of an enterprise-class log management solution:</p>
             <ul
                     compact="no">
                 <li
@@ -24,25 +26,22 @@
         </section>
         <section>
             <title>Basic Usage Scenario</title>
-            <p>The basic usage scenario of setting up and using the log management services of <ph
+            <p>The basic usage scenario of setting up and using the log management features of <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> looks as follows:</p>
             <fig>
                 <image
                     align="left" alt="logmanagement.png" height="298"
-                    href="../../images/overview_logmgmt.png"
+                    href="../../images/overview-logmgmt.png"
                     placement="break"
                         width="700"/>
             </fig>
-            <p>The <b><ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator</b> is responsible for providing the log management services to the OpenStack operator. He uses the log management services himself for retrieving log data on <ph
+            <p>The <b>Monitoring Service operator</b> is responsible for providing the log management features to the OpenStack operator. He uses the log management features himself for retrieving log data on <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p>The <b>OpenStack operator</b> uses the log management services for retrieving log data on the OpenStack services and the middleware components that make up the underlying OpenStack platform.</p>
+            <p>The <b>OpenStack operator</b> uses the log management features for retrieving log data on the OpenStack services and the middleware components that make up the underlying OpenStack platform.</p>
         </section>
         <section>
             <title>Data Collection</title>
-            <p>A <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent can be installed and configured on each physical and virtual server where log data is to be retrieved. The agent is responsible for collecting the log data from the cloud resources and sending them to the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service for further processing. </p>
+            <p>A Log Agent can be installed and configured on each physical and virtual server where log data is to be retrieved. The agent is responsible for collecting the log data from the cloud resources and sending them to the Monitoring Service for further processing. </p>
             <p><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> stores the log data in a central database. The central database forms the basis for visualizing the log data for the <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users.</p>

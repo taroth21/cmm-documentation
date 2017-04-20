@@ -25,8 +25,8 @@
         </section>
         <section>
             <title>Basic Usage Scenario</title>
-            <p
-                    id="The_basic_usage_scenario_of_s_concept_conbody_section_2_p">The basic usage scenario of setting up and using the monitoring services of <ph
+            <p id="The_basic_usage_scenario_of_s_concept_conbody_section_2_p"
+                    >The basic usage scenario of setting up and using the monitoring features of <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> looks as follows:</p>
             <fig>
                 <image
@@ -35,34 +35,28 @@
                     placement="break"
                 width="700"/>
             </fig>
-            <p
-                        id="The_concept_conbody_section_2_p">The <b><ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator</b> is responsible for providing the monitoring services to the tenant users and the OpenStack operator. This enables the tenant users and the OpenStack operator to focus on operation and ensure the quality of their services without having to carry out the tedious tasks implied by setting up and administrating their own system monitoring software. The <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator uses the monitoring services himself for monitoring the operation of <ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p
-                id="Tenant_users_concept_conbody_section_2_p"><b>Tenant users</b> monitor the virtual machines on which they provide services to <b>end users</b> or services they need for their development activities. They ensure that the physical and virtual servers on which their services are provided are up and running as required.</p>
+            <p id="The_concept_conbody_section_2_p"
+                    >The <b>Monitoring Service operator</b> is responsible for providing the monitoring features to the application operators and the OpenStack operator. This enables the application operators and the OpenStack operator to focus on operation and ensure the quality of their services without having to carry out the tedious tasks implied by setting up and administrating their own system monitoring software. The Monitoring Service operator uses the monitoring features himself for monitoring the operation of <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
+            <p id="Tenant_users_concept_conbody_section_2_p"
+                    ><b>Application operators</b> monitor the virtual machines on which they provide services to <b>end users</b> or services they need for their development activities. They ensure that the physical and virtual servers on which their services are provided are up and running as required.</p>
             <p
                     id="TheOS_concept_conbody_section_2_p">The <b>OpenStack operator</b> monitors physical and virtual servers, hypervisors, and services of the underlying platform. In addition, he is responsible for the middleware components, for example, the database services. </p>
         </section>
         <section>
             <title>Metrics</title>
-            <p>A <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent can be installed and configured on each physical and virtual server where cloud resources are to be monitored. The agent is responsible for querying metrics and sending the data to the <ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service for further processing. </p>
+            <p>A Metrics Agent can be installed and configured on each physical and virtual server where cloud resources are to be monitored. The agent is responsible for querying metrics and sending the data to the Monitoring Service for further processing. </p>
             <p
                 id="Metrics_represent_self-descri_concept_conbody_section_3_p">Metrics are self-describing data structures that are uniquely identified by a name and a set of dimensions. Each dimension consists of a key/value pair that allows for a flexible and concise description of the data to be monitored, for example, region, availability zone, service tier, or resource ID.</p>
-            <p
-                    id="The_concept_conbody_section_3_p">The <ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent supports various types of metrics including the following:</p>
+            <p id="The_concept_conbody_section_3_p"
+                >The Metrics Agent supports various types of metrics including the following:</p>
             <ul
                 compact="no"
                         id="System_metrics_for_example_concept_conbody_section_3_ul">
                 <li>System metrics, for example, CPU usage, consumed disk space, or network traffic.</li>
                 <li>Host alive checks. The agent can perform active checks on a host to determine whether it is alive using ping (ICMP) or SSH.</li>
                 <li>Process checks. The agent can check and monitor a process, for example, the number of instances, memory size, or number of threads.</li>
-                <li>HTTP endpoint checks. The agent can perform up/down checks on HTTP endpoints by sending an HTTP request and reporting success or failure to the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</li>
+                <li>HTTP endpoint checks. The agent can perform up/down checks on HTTP endpoints by sending an HTTP request and reporting success or failure to the Monitoring Service.</li>
                 <li>Service checks. The agent can check middleware services, for example, MySQL, Kafka, or RabbitMQ.</li>
                 <li>OpenStack services. The agent can perform specific checks on each process that is part of an OpenStack service.</li>
                 <li>Log metrics. The agent can check and monitor the number of critical log entries in the log data retrieved from the cloud resources.</li>
