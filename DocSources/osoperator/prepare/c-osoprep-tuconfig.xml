@@ -6,13 +6,10 @@
 
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
             xml:lang="en-us">
-    <title>Configuring the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent</title>
+    <title>Configuring the Metrics Agent</title>
     <conbody>
                 <section>
-                        <p>The installation of the <ph
-                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> Metrics Agent includes its initial configuration. To prepare the environment for tenant users, you have to reconfigure the agent. It is necessary to explicitly activate the libvirt metrics that the tenant users use for monitoring. </p>
+                        <p>The installation of the Metrics Agent includes its initial configuration. To prepare the environment for application operators, you have to reconfigure the agent. It is necessary to explicitly activate the libvirt metrics that the application operators use for monitoring. </p>
                         <p>To reconfigure the agent, proceed as follows:</p>
                         <ol compact="no">
                                 <li>
@@ -27,7 +24,7 @@
                                         <codeblock># nova service-list</codeblock>
                                 </li>
                         </ol>
-            <p>As soon as the agent is started again, the tenant users can use the libvirt metrics for monitoring.</p>
+            <p>As soon as the agent is started again, the application operators can use the libvirt metrics for monitoring.</p>
                 </section>
         </conbody>
 </concept>

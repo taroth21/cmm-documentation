@@ -9,9 +9,8 @@
     <title>Installation</title>
     <conbody>
                 <section>
-                        <p>The installation of <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> comprises several steps. They are partially executed by the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator, and partially by the OpenStack operator.</p>
+                        <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> comprises several steps. They are partially executed by the Monitoring Service operator, and partially by the OpenStack operator.</p>
                 </section>
                 <section>
                         <fig>
@@ -23,25 +22,13 @@
                         <p>The installation of <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> comprises the following steps: </p>
                         <ol>
-                                <li>Preparing the installation environment - done by the OpenStack operator and the <ph
-                                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> operator.</li>
-                                <li>Configuring the Control Machine  - done by the OpenStack operator and the <ph
-                                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> operator.</li>
-                                <li>Installing the offline resources - done by the <ph
-                                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> operator only. </li>
-                                <li>Installing the OpenStack extensions required for the <ph
-                                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> Service - done by the OpenStack operator only. </li>
-                                <li>Installing the <ph
-                                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                /> Service - done by the <ph
-                                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> operator only.</li>
+                                <li>Preparing the installation environment - done by the OpenStack operator and the Monitoring Service operator.</li>
+                                <li>Configuring the Control Machine - done by the OpenStack operator and the Monitoring Service operator.</li>
+                                <li>Installing the offline resources - done by the Monitoring Service operator only. </li>
+                                <li>Installing the OpenStack extensions required for the Monitoring Service - done by the OpenStack operator only. </li>
+                                <li>Installing the Monitoring Service - done by the Monitoring Service operator only.</li>
                         </ol>
-                        <p>As an OpenStack operator, you also install and configure the agents you use for monitoring your OpenStack services. Your tenant users who have booked a virtual machine in OpenStack monitor their machine with libvirt. As an OpenStack operator, you have to make the required libvirt preparations for your tenant users. For details, refer to <xref
+                        <p>As an OpenStack operator, you also install and configure the agents you use for monitoring your OpenStack services. Your application operators who have booked a virtual machine in OpenStack monitor their machine with libvirt. As an OpenStack operator, you have to make the required libvirt preparations for your application operators. For details, refer to <xref
                                         href="../prepare/c-osopreparetu.xml"/>.</p>
                         <p><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> ships with an installer that is based on Ansible. You use it for installing the OpenStack extensions and the required agents. </p>
@@ -58,9 +45,7 @@
                         </fig>
                         <ul>
                                 <li>
-                                        <p>By default, the <ph
-                                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                        /> operator installs the offline resources, the <ph
+                                        <p>By default, the Monitoring Service operator installs the offline resources, the <ph
                                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                                         /> components, and the required agents on one host (<ph
                                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"

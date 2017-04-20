@@ -6,16 +6,11 @@
 
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
             xml:lang="en-us">
-    <title>Installing the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent</title>
+    <title>Installing the Metrics Agent</title>
     <conbody>
         <section>
-            <p>For monitoring your OpenStack services, a <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Metrics Agent must be installed on each OpenStack node where services you want to monitor are provided. </p>
-            <p>As a prerequisite for installing an agent, the offline resources, the OpenStack extensions, and the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Service must have been installed.</p>
+            <p>For monitoring your OpenStack services, a Metrics Agent must be installed on each OpenStack node where services you want to monitor are provided. </p>
+            <p>As a prerequisite for installing an agent, the offline resources, the OpenStack extensions, and the Monitoring Service must have been installed.</p>
             <p>The installation consists of the following steps:</p>
             <ol>
                 <li>Installing the agent.</li>
@@ -25,7 +20,7 @@
                 <p>If you want to use ApacheWeb Server, MySQL, Postfix, or RabbitMQ checks, there are additional preparations you need to take <b>before</b> installing the agent. For details on the preparations, refer to <xref
                         href="../../shared/appendix/r-metricsadditional.xml"/>.</p>
             </note>
-            <p>As an OpenStack operator, you are also responsible for preparing the monitoring environment for your tenant users who have booked a virtual machine in OpenStack. They monitor their virtual machines on the compute nodes with libvirt. For details, refer to <xref
+            <p>As an OpenStack operator, you are also responsible for preparing the monitoring environment for your application operators who have booked a virtual machine in OpenStack. They monitor their virtual machines on the compute nodes with libvirt. For details, refer to <xref
                     href="../prepare/c-osopreparetu.xml"/>.</p>
         </section>
     </conbody>

@@ -15,7 +15,7 @@
         <section
             conref="../../overview/whatiscmm/c-components.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Service_concept_conbody_section_3"/>
                 <section id="Horizon_Plugin_concept_conbody_section_4">
-            <title><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Horizon Plugin</title>
+            <title>Horizon Plugin</title>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> comes with a plugin for the OpenStack Horizon dashboard. The plugin extends the main dashboard in OpenStack with a view for monitoring. This enables <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"

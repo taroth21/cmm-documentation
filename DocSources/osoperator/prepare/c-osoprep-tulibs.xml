@@ -15,8 +15,7 @@
                 <li><codeph>libvirt-devel</codeph>
                 </li>
             </ul>
-            <p>You have to install the following Python libraries in the virtualenv environment of the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent:</p>
+            <p>You have to install the following Python libraries in the virtualenv environment of the Metrics Agent:</p>
             <ul>
                 <li><codeph>libvirt-python</codeph>
                 </li>
@@ -24,7 +23,7 @@
                 <li><codeph>python-neutronclient</codeph></li>
                 <li><codeph>python-novaclient</codeph>. Version 2.26 is required.</li>
             </ul>
-            <p>By default, the virtualenv environment of the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent is located in the <codeph>/opt/monasca-agent</codeph> directory. </p>
+            <p>By default, the virtualenv environment of the Metrics Agent is located in the <codeph>/opt/monasca-agent</codeph> directory. </p>
             <p>To install the RPM package and the libraries in the default directory, execute the following command:</p>
             <codeblock># yum install libvirt-devel
 # source /opt/monasca-agent/bin/activate

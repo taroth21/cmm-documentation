@@ -12,10 +12,8 @@
             <p>Regular operation and maintenance includes:</p>
             <ul>
                 <li>Starting and stopping the agents.</li>
-                <li>Disabling the monitoring of specific metrics in the configuration of a <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent.</li>
-                <li>Disabling the collection of specific log data in the configuration of a <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent.</li>
+                <li>Disabling the monitoring of specific metrics in the configuration of a Metrics Agent.</li>
+                <li>Disabling the collection of specific log data in the configuration of a Log Agent.</li>
                 <li>Collecting the agent log files.</li>
                 <li>Backup and recovery.</li>
             </ul>

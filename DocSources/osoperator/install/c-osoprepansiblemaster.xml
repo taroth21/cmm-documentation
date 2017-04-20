@@ -48,16 +48,10 @@ ssh_args = -o ControlMaster=auto -o BatchMode=yes -o ForwardAgent=yes</codeblock
                 </li>
                 <li>
                     <p>Replace all variables in the host definitions section: <ul>
-                            <li><codeph>Offline Host</codeph> for the offline resources required for the installation. Contact your <ph
-                                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> operator for the IP address. He has already installed the offline resources.</li>
+                            <li><codeph>Offline Host</codeph> for the offline resources required for the installation. Contact your Monitoring Service operator for the IP address. He has already installed the offline resources.</li>
                             <li><codeph>OpenStack Hosts</codeph> for installing the OpenStack extensions on the Horizon host and the Keystone host.</li>
-                            <li><codeph>Monasca Agent Hosts</codeph> for installing a <ph
-                                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> Metrics Agent on the Horizon host and the Keystone host.</li>
-                            <li><codeph>Monasca Log Agent Hosts</codeph> for installing a <ph
-                                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> Log Agent on the Horizon host and the Keystone host.</li>
+                            <li><codeph>Monasca Agent Hosts</codeph> for installing a Metrics Agent on the Horizon host and the Keystone host.</li>
+                            <li><codeph>Monasca Log Agent Hosts</codeph> for installing a Log Agent on the Horizon host and the Keystone host.</li>
                         </ul></p>
                     <p>Replace <codeph>{{ *_host }}</codeph> with the IP address of the remote machine on which you want to install the corresponding <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> component. </p>

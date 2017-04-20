@@ -9,8 +9,7 @@
     <title>Installation</title>
     <conbody>
                                 <section>
-                                                <p>To install a <ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent, proceed as follows:</p>
+                                                <p>To install a Log Agent, proceed as follows:</p>
                                                 <ol
                             compact="no">
                                                             <li>
@@ -66,12 +65,10 @@ and check to make sure that only the key(s) you wanted were added.</codeblock>
 <p>Replace <codeph>&lt;file_name&gt;</codeph> with the alias for the host machine. <codeph>&lt;file_name&gt;</codeph> must be identical to the alias specified in the configuration file of the Control Machine (see Step 3 above).</p>
                                                             </li>
                                                             <li>
-                                                            <p>Configure the agents. The following example shows the minimum set of parameters that must be configured to start an agent. The minimum set is restricted to the credentials of an OpenStack user used for the communication between the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service and the agent.</p>
+                                                            <p>Configure the agents. The following example shows the minimum set of parameters that must be configured to start an agent. The minimum set is restricted to the credentials of an OpenStack user used for the communication between the Monitoring Service and the agent.</p>
                                                             <p>You can specify additional configuration settings, if required. For details on the configuration settings, refer to <xref
                             href="../../shared/appendix/r-confsettings-logs.xml"/>.</p>
-                                                            <p>To define the minimum set of parameters, insert the following content into each configuration file. Replace the user credentials with the credentials of a valid OpenStack user who is authorized to send monitoring data to the <ph
-conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</p>
+                                                            <p>To define the minimum set of parameters, insert the following content into each configuration file. Replace the user credentials with the credentials of a valid OpenStack user who is authorized to send monitoring data to the Monitoring Service.</p>
                                                             <p>Example:</p>
                                                             <codeblock># file: host_vars/monasca-log-agent
 

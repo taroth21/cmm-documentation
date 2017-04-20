@@ -23,8 +23,7 @@
                 </li>
                 <li>
                     <p>The following additional metrics: <codeph>apache</codeph>, <codeph>crash</codeph>, <codeph>host_alive</codeph>, <codeph>http_check</codeph>, <codeph>http_metrics</codeph>, <codeph>libvirt</codeph>, <codeph>mysql</codeph>, <codeph>ntp</codeph>, <codeph>ovs</codeph>, <codeph>postfix</codeph>, <codeph>process</codeph>, <codeph>rabbitmq</codeph>.</p>
-                    <p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> Metrics Agent can also run Nagios plugins and send status codes returned by the plugins as metrics to the Monitoring API. For information on how to use Nagios checks in <ph
+                    <p>The Metrics Agent can also run Nagios plugins and send status codes returned by the plugins as metrics to the Monitoring API. For information on how to use Nagios checks in <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, contact your <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> support.</p>
                 </li>

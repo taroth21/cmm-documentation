@@ -10,15 +10,11 @@
     <conbody>
         <section>
             <p>As an OpenStack operator you are responsible for uninstalling <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> agents, if required. The OpenStack extensions you have installed for your platform are uninstalled by the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator who is responsible for uninstalling the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service.</p>
-            <p>Before uninstalling a <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> agent, it is recommended that you make a backup of the configuration files created for operation. For details on backups, refer to <xref
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> agents, if required. The OpenStack extensions you have installed for your platform are uninstalled by the Monitoring Service operator.</p>
+            <p>Before uninstalling an agent, it is recommended that you make a backup of the configuration files created for operation. For details on backups, refer to <xref
                     href="c-osobackup.xml"/>.</p>
-            <p>To uninstall a <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent or a <ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent , proceed as follows:</p>
+            <p>To uninstall a Metrics Agent or a Log Agent , proceed as follows:</p>
             <ol
                             compact="no">
                 <li>
@@ -35,10 +31,9 @@
                     <note othertype="note">The user who uninstalls the agent must have access to the corresponding hosts. Access as a user with root privileges is required. </note>
                 </li>
                 <li>
-                    <p>To run the uninstaller for one or multiple instances of a <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent, execute the following command:</p>
+                    <p>To run the uninstaller for one or multiple instances of a Metrics Agent, execute the following command:</p>
                     <codeblock>ansible-playbook /opt/FJSVsvcmm/monasca-agent-uninstaller.yml</codeblock>
-                    <p>To run the uninstaller for one or multiple instances of a <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent, execute the following command:</p>
+                    <p>To run the uninstaller for one or multiple instances of a Log Agent, execute the following command:</p>
                     <codeblock>ansible-playbook /opt/FJSVsvcmm/monasca-log-agent-uninstaller.yml</codeblock>
                 </li>
                 <li>
