@@ -18,10 +18,8 @@
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> software components, stick to the following sequence: </p>
             <p>
                 <ol>
-                    <li>Uninstall the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> agents. </li>
-                    <li>Uninstall the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service and the OpenStack extensions.</li>
+                    <li>Uninstall the agents. </li>
+                    <li>Uninstall the Monitoring Service and the OpenStack extensions.</li>
                     <li>Manually remove remaining <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components if they are no longer required.</li>
                 </ol>
             </p>

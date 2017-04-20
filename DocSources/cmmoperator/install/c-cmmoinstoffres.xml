@@ -9,9 +9,7 @@
     <title>Installing the Offline Resources</title>
     <conbody>
         <section>
-            <p>To install the offline resources that are required for installing the OpenStack extensions and the  <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Service, proceed as follows:</p>
+            <p>To install the offline resources that are required for installing the OpenStack extensions and the Monitoring Service, proceed as follows:</p>
             <ol compact="no">
                 <li>
                     <p>Log in to the Control Machine.</p>
@@ -61,9 +59,7 @@ offline-resources-host : ok=40  changed=23  unreachable=0  failed=0</codeblock>
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     />. Refer to the <i>OpenStack Operator's Guide</i> for details on the tasks of the OpenStack operator. He has to install the required OpenStack extensions and has to create the users and roles in OpenStack required for installing and working with <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
-            <p>Before proceeding with the installation of the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Service, contact your OpenStack operator and make the corresponding arrangements.</p>
+            <p>Before proceeding with the installation of the Monitoring Service, contact your OpenStack operator and make the corresponding arrangements.</p>
         </section>
     </conbody>
 </concept>

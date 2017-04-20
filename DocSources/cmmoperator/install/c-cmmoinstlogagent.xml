@@ -6,17 +6,13 @@
 
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
             xml:lang="en-us">
-    <title>Installing the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent</title>
+    <title>Installing the Log Agent</title>
     <conbody>
         <section>
-            <p>For monitoring <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, a <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent must be installed on your <ph
+            <p>For monitoring <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    />, a Log Agent must be installed on your <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> host.</p>
-            <p>As a prerequisite for installing the agent, the offline resources, the OpenStack extensions, and the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Service must have been installed.</p>
+            <p>As a prerequisite for installing the agent, the offline resources, the OpenStack extensions, and the Monitoring Service must have been installed.</p>
             <p>The installation consists of the following steps:</p>
             <ol>
                 <li>Installing the agent.</li>

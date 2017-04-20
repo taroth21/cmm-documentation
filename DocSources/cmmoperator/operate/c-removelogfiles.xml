@@ -13,8 +13,7 @@
                 >Log data is stored in the Elasticsearch database. Elasticsearch stores the data in indices. One index per day is created for every OpenStack project.</p>
         </section>
         <section id="By_default_the_indices_are_s_concept_conbody_section_2">
-            <p>By default, the indices are stored in the following directory on the host where the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is installed: </p>
+            <p>By default, the indices are stored in the following directory on the host where the Monitoring Service is installed: </p>
             <p><codeph>/var/data/elasticsearch/&lt;cluster-name&gt;/nodes/&lt;node-name&gt;</codeph></p>
             <p>Example:</p>
             <p><codeph>/var/data/elasticsearch/elasticsearch/nodes/0</codeph></p>

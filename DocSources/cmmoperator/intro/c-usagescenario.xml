@@ -20,39 +20,33 @@
             </fig>
                         <p
                                 conref="../../shared/intro/c-usagescenario.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/A_concept_conbody_section_p_2"/>
-            <p>The <b>OpenStack operator</b> is a special tenant user who is responsible for administrating and maintaining the underlying OpenStack platform. The monitoring and log management services of <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> enable him to ensure the availability and quality of the platform. He uses <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> for:</p>
+            <p>The <b>OpenStack operator</b> is a special application operator who is responsible for administrating and maintaining the underlying OpenStack platform. The monitoring and log management services of <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                        /> enable him to ensure the availability and quality of the platform. He uses <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> for:</p>
                         <ul
                                 conref="../../shared/intro/c-usagescenario.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Monitoring_physical_and_virtu_concept_conbody_section_p_4">
                                 <li/>
                         </ul>
-            <p>As the <b><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> operator</b>, you are responsible for providing the monitoring and log management services to the tenant users and the OpenStack operator. This enables the tenant users and the OpenStack operator to focus on operation and the quality of their services and servers without having to carry out the tedious tasks implied by setting up and administrating their own monitoring software. You use the monitoring services yourself for ensuring the quality of <ph
+            <p>As the <b>Monitoring Service operator</b>, you are responsible for providing the monitoring and log management features to the application operators and the OpenStack operator. This enables the application operators and the OpenStack operator to focus on operation and the quality of their services and servers without having to carry out the tedious tasks implied by setting up and administrating their own monitoring software. You use the monitoring features yourself for ensuring the quality of <ph
                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
         </section>
-                <section><title>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> Operator's Tasks</title>As the <ph
-                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator, you have the following responsibilities: <ul>
-                                <li>Installation and setup of the <ph
+                <section><title>The Monitoring Service Operator's Tasks</title>As the Monitoring Service operator, you have the following responsibilities: <ul>
+                                <li>Installation and setup of the Monitoring Service, thus providing the monitoring features to the application operators, and the monitoring and log management features to the OpenStack operator. </li>
+                                <li>Installation of the Metrics Agent and Log Agent on the <ph
                                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> Service, thus providing the monitoring services to the tenant users, and the monitoring and log management services to the OpenStack operator. </li>
-                                <li>Installation of the <ph
+                                                /> host. The agents are required for monitoring <ph
                                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                /> Metrics Agent and Log Agent on the <ph
-                                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                /> host. The agents are required for monitoring the <ph
-                                                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> Service.</li>
+                                        />.</li>
                                 <li>Regular maintenance of the components and services <ph
                                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                         /> consists of. </li>
                                 <li>Backup of the <ph
                                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                         /> databases, configuration files, and customized dashboards.</li>
-                                <li>Monitoring of the <ph
+                                <li>Monitoring of <ph
                                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                /> Service to ensure the <ph
+                                                /> to ensure the <ph
                                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                         /> quality. For monitoring, you use a graphical user interface that is seamlessly integrated into the cloud infrastructure. Based on OpenStack Horizon, the user interface visualizes the health and status of your cloud resources and enables user access to all monitoring and log management functionality.</li>
                         </ul></section>

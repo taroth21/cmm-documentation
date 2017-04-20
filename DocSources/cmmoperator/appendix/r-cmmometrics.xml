@@ -16,8 +16,7 @@
                     <li>Additional metrics for monitoring specific servers and services.</li>
                 </ul>
             </p>
-            <p>For you as the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> operator, the following metrics are of relevance for monitoring the services <ph
+            <p>For you as the Monitoring Service operator, the following metrics are of relevance for monitoring the services <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> consists of and the server or servers on which they are installed:</p>
             <ul>
@@ -27,8 +26,7 @@
                 <li>
                     <p>The following additional metrics: <codeph>crash</codeph>, <codeph>elastic</codeph>, <codeph>host_alive</codeph>, <codeph>http_check</codeph>, <codeph>http_metrics</codeph>
                         <codeph>kafka_consumer</codeph>, <codeph>kibana</codeph>, <codeph>mysql</codeph>, <codeph>postfix</codeph>, <codeph>process</codeph>, <codeph>zk</codeph>.</p>
-                    <p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> Metrics Agent can also run Nagios plugins and send status codes returned by the plugins as metrics to the Monitoring API. For information on how to use Nagios checks in <ph
+                    <p>The Metrics Agent can also run Nagios plugins and send status codes returned by the plugins as metrics to the Monitoring API. For information on how to use Nagios checks in <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, contact your <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> support.</p>
                 </li>

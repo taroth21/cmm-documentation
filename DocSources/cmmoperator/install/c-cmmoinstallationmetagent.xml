@@ -9,8 +9,7 @@
     <title>Installation</title>
     <conbody>
         <section>
-            <p>To install a <ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent, proceed as follows:</p>
+            <p>To install a Metrics Agent, proceed as follows:</p>
             <ol
                             compact="no">
                 <li>
@@ -66,13 +65,10 @@ and check to make sure that only the key(s) you wanted were added.</codeblock>
                     <p>Replace <codeph>&lt;file_name&gt;</codeph> with the alias for the host machine. <codeph>&lt;file_name&gt;</codeph> must be identical to the alias specified in the configuration file of the Control Machine (see Step 3 above).</p>
                 </li>
                 <li>
-                    <p>Configure the agents. The following example shows the minimum set of parameters that must be configured to start an agent. The minimum set is restricted to the credentials of an OpenStack user used for the communication between the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service and the agent.</p>
+                    <p>Configure the agents. The following example shows the minimum set of parameters that must be configured to start an agent. The minimum set is restricted to the credentials of an OpenStack user used for the communication between the Monitoring Service and the agent.</p>
                     <p>You can specify additional configuration settings, if required. For a list of the configuration settings that are supported, refer to <xref
                             href="../../shared/appendix/r-confsettings-metrics.xml"/>.</p>
-                    <p>To define the minimum set of parameters, insert the following content into each configuration file. Specify the user credentials of a valid OpenStack user who is authorized to send monitoring data to the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> Service. Contact your OpenStack operator. He is responsible for creating the required users and roles.</p>
+                    <p>To define the minimum set of parameters, insert the following content into each configuration file. Specify the user credentials of a valid OpenStack user who is authorized to send monitoring data to the Monitoring Service. Contact your OpenStack operator. He is responsible for creating the required users and roles.</p>
                     <p>Example:</p>
                     <codeblock># file: host_vars/monasca-agent
 
@@ -117,10 +113,7 @@ monasca-agent  :  ok=40    changed=23    unreachable=0    failed=0</codeblock>
             <p>In case the installation fails, check your configuration settings and passwords and retry the installation in verbose mode. To collect debug information, you can execute the following command:</p>
             <codeblock>ansible-playbook -vvvv /opt/FJSVsvcmm/monasca-agent.yml</codeblock>
             <p>The agents are installed, configured, and automatically started after a successful installation. The installer creates a startup script that automatically starts the agent when the machine is booted. </p>
-            <p>A <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Metrics Agent is installed in a virtualenv environment. By default, the virtualenv environment of the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Metrics Agent is located in the <codeph>/opt/monasca-agent</codeph> directory.</p>
+            <p>A Metrics Agent is installed in a virtualenv environment. By default, the virtualenv environment of the Metrics Agent is located in the <codeph>/opt/monasca-agent</codeph> directory.</p>
             <p>An agent is provided as a LINUX service.</p>
         </section>
     </conbody>

@@ -6,12 +6,10 @@
 
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
             xml:lang="en-us">
-    <title>Uninstalling the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-        /> Service and the OpenStack Extensions</title>
+    <title>Uninstalling the Monitoring Service and the OpenStack Extensions</title>
     <conbody>
         <section>
-            <p>To uninstall the <ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service and the OpenStack extensions, proceed as follows:</p>
+            <p>To uninstall the Monitoring Service and the OpenStack extensions, proceed as follows:</p>
             <ol
                             compact="no">
                 <li>

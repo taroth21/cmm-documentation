@@ -9,9 +9,7 @@
     <title>Configuration Files</title>
     <conbody>
         <section>
-            <p>Below you find a list of the configuration files of the agents and the individual services included in the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Service. Back up these files at least after you have installed and configured <ph
+            <p>Below you find a list of the configuration files of the agents and the individual services included in the Monitoring Service. Back up these files at least after you have installed and configured <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> and after each change in the configuration.</p>
         </section>

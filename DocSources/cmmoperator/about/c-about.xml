@@ -84,10 +84,8 @@
                                 <entry
                                     colname="col2"><xref
                                     href="../../shared/appendix/r-confsettings.xml"/></entry>
-                                <entry
-                                    colname="col3">Describes the configuration settings for the <ph
-                                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Metrics Agent and the <ph
-                                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Log Agent.</entry>
+                                <entry colname="col3"
+                                    >Describes the configuration settings for the Metrics Agent and the Log Agent.</entry>
                             </row>
                             <row>
                                 <entry

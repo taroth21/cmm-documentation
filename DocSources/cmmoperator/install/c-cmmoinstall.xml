@@ -11,21 +11,15 @@
         <section>
             <!-- p><i>Pending: SSH related steps to be moved to prerequisites?</i></p -->
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> provides two installation options: <ul>
-                    <li>It can be installed in single mode. This means that the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> Service is installed on one host machine. The details on installing <ph
+                    <li>It can be installed in single mode. This means that the Monitoring Service is installed on one host machine. The details on installing <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                         /> in single mode are described in the following sections. </li>
-                    <li>To ensure high availability and improve scalability, the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> Service can also be clustered and installed on multiple hosts. For details on clustering <ph
+                    <li>To ensure high availability and improve scalability, the Monitoring Service can also be clustered and installed on multiple hosts. For details on clustering <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             />, refer to the <i>Cluster Management Guide</i>.</li>
                 </ul></p>
             <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> in single and cluster mode comprises several steps. They are partially executed by the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> operator, and partially by the OpenStack operator.</p>
+                /> in single and cluster mode comprises several steps. They are partially executed by the Monitoring Service operator, and partially by the OpenStack operator.</p>
         </section>
         <section>
             <fig>
@@ -37,24 +31,15 @@
             <p>The installation of <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> comprises the following steps: </p>
             <ol>
-                <li>Preparing the installation environment - done by the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> operator and the OpenStack operator.</li>
-                <li>Configuring the Control Machine  - done by the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> operator and the OpenStack operator.</li>
-                <li>Installing the offline resources - done by the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator only. </li>
-                <li>Installing the OpenStack extensions required for the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> Service - done by the OpenStack operator only. </li>
-                <li>Installing the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> Service - done by the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator only.</li>
+                <li>Preparing the installation environment - done by the Monitoring Service operator and the OpenStack operator.</li>
+                <li>Configuring the Control Machine - done by the Monitoring Service operator and the OpenStack operator.</li>
+                <li>Installing the offline resources - done by the Monitoring Service operator only. </li>
+                <li>Installing the OpenStack extensions required for the Monitoring Service - done by the OpenStack operator only. </li>
+                <li>Installing the Monitoring Service - done by the Monitoring Service operator only.</li>
             </ol>
-            <p>As a <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> operator, you also install and configure the agents for monitoring <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. The OpenStack operator installs and configures the agents for monitoring the OpenStack platform. He also prepares the monitoring environment for the tenant users who have booked a virtual machine in OpenStack.</p>
+            <p>As a Monitoring Service operator, you also install and configure the agents for monitoring <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                />. The OpenStack operator installs and configures the agents for monitoring the OpenStack platform. He also prepares the monitoring environment for the application operators who have booked a virtual machine in OpenStack.</p>
             <p><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> ships with an installer that is based on Ansible. You use it for installing the required software components.</p>
         </section>
@@ -77,8 +62,7 @@
             
             <ul>
                 <li>
-                    <p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> operator installs the offline resources, the <ph
+                    <p>The Monitoring Service operator installs the offline resources, the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> components, and the required agents on one host (<ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> host).</p>

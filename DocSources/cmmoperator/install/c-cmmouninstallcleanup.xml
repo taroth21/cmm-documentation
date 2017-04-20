@@ -9,9 +9,7 @@
     <title>Cleanup</title>
     <conbody>
         <section>
-            <p>The automatic uninstallation of the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> Service and the OpenStack extensions does not include the removal of the MariaDB database, the InfluxDB database, and the Elasticsearch database. In this way, possible dependencies to other systems are not broken deliberately. </p>
+            <p>The automatic uninstallation of the Monitoring Service and the OpenStack extensions does not include the removal of the MariaDB database, the InfluxDB database, and the Elasticsearch database. In this way, possible dependencies to other systems are not broken deliberately. </p>
             <p>If you no longer need one of the above components, and want to manually remove it, proceed as follows: </p>
             <ol compact="no">
                 <li>
