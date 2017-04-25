@@ -40,7 +40,7 @@
             <p>The system operator of the cloud infrastructure and the service providers do not have to care for system monitoring software any longer. They use <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> to check whether their services and servers are working appropriately. </p>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> provides comprehensive and configurable metrics with reasonable defaults for monitoring the status, capacity, throughput, and latency of cloud systems. The <ph
+                                        /> provides comprehensive and configurable metrics with reasonable defaults for monitoring the status, capacity, throughput, and latency of cloud systems. <ph
                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> users can set their own warnings and critical thresholds and can combine multiple warnings and thresholds to support the processing of complex events. Combined with a notification system, these alerting features enable them to quickly analyze and resolve problems in the cloud infrastructure. </p>
             <p>For details, refer to <xref
@@ -56,7 +56,7 @@
                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> thus provides valuable insights into the log data, even with large amounts of data resulting from highly complex environments.</p>
                         <p>Based on <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                />'s alerting features and notification system, the users can also configure warnings and critical thresholds for log data. If the number of critical log entries reaches a defined threshold, the users receive a warning and can instantly analyze their logs and start troubleshooting.</p>
+                                />'s alerting features and notification system, users can also configure warnings and critical thresholds for log data. If the number of critical log entries reaches a defined threshold, the users receive a warning and can instantly analyze their logs and start troubleshooting.</p>
                         <p>For details, refer to <xref href="../log/c-logmanagement.xml"/>.</p>
                 </section>
         <section>

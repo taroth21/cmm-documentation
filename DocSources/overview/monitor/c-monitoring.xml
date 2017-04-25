@@ -36,7 +36,7 @@
                 width="700"/>
             </fig>
             <p id="The_concept_conbody_section_2_p"
-                    >The <b>Monitoring Service operator</b> is responsible for providing the monitoring features to the application operators and the OpenStack operator. This enables the application operators and the OpenStack operator to focus on operation and ensure the quality of their services without having to carry out the tedious tasks implied by setting up and administrating their own system monitoring software. The Monitoring Service operator uses the monitoring features himself for monitoring the operation of <ph
+                    >The <b>Monitoring Service operator</b> is responsible for providing the monitoring features to the application operators and the OpenStack operator. This enables the application operators and the OpenStack operator to focus on operation and ensure the quality of their services without having to carry out the tedious tasks implied by setting up and administrating their own system monitoring software. The Monitoring Service operator uses the features himself for monitoring the operation of <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
             <p id="Tenant_users_concept_conbody_section_2_p"
                     ><b>Application operators</b> monitor the virtual machines on which they provide services to <b>end users</b> or services they need for their development activities. They ensure that the physical and virtual servers on which their services are provided are up and running as required.</p>

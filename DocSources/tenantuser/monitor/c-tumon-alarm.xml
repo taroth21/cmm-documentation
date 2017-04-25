@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN"
+                         "concept.dtd" [<!ENTITY % entities PUBLIC '-//XDOC//ENTITIES//FujitsuUserDoc' 'entities.dtd'>
+]>
+<!-- Copyright FUJITSU LIMITED 2017 -->
+<concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
+                    xml:lang="en-us">
+    <title>Defining Alarms</title>
+    <conbody>
+        <section
+            conref="../../shared/monitor/c-monitor-alarm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/You_have_to_define_alarms_to_concept_conbody_section_1"/>
+        <section
+            conref="../../shared/monitor/c-monitor-alarm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Details_concept_conbody_section_2"/>
+        <section
+            conref="../../shared/monitor/c-monitor-alarm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Expression_concept_conbody_section_3"/>
+        <section>
+            <title>Notifications</title>
+            <fig>
+                <image
+                    alt="alarm-notifications.png" height="260"
+                    href="../../images/alarm-notifications.png"
+                    width="435"/>
+            </fig>
+            <p>You can enable notifications for an alarm definition. As soon as an alarm is triggered, the enabled notifications will be sent.</p>
+            <p>The <uicontrol>Notifications</uicontrol> tab allows you to select the notifications from the ones that are predefined in your environment. For a selected notification, you specify whether you want to send it for a status transition to <uicontrol>Alarm</uicontrol>, <uicontrol>OK</uicontrol>, and/or <uicontrol>Undetermined</uicontrol>. </p>
+            <p>For details on defining notifications, refer to <xref
+                href="../../shared/monitor/c-monitor-alert.xml"/>. For details on alarm statuses, refer to <xref href="c-tumon-statusinfo.xml"/>.</p>
+        </section>
+    </conbody>
+</concept>

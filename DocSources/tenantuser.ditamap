@@ -87,7 +87,7 @@
             href="tenantuser/monitor/c-tumon-grafana.xml"
             type="concept"/>
         <topicref format="dita"
-            href="shared/monitor/c-monitor-alarm.xml"
+            href="tenantuser/monitor/c-tumon-alarm.xml"
             type="concept"/>
         <topicref format="dita"
             href="shared/monitor/c-monitor-alert.xml"

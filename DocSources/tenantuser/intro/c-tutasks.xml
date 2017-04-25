@@ -41,7 +41,7 @@
             <title>Monitoring Functions</title>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> provides a graphical user interface that is seamlessly integrated into your cloud infrastructure. Based on OpenStack Horizon, it visualizes the health and status of your virtual machines and enables access to all monitoring functionality and the resulting large-scale monitoring data.</p>
-            <p>A comfortable dashboard visualizes the health and status of your virtual machines. It allows you to experiment with many ways of visualizing the performance of your resources in real-time. You cannot only view but also share and explore visualizations of your monitoring data.</p>
+            <p>A comfortable dashboard visualizes the health and status of your virtual machines. It allows you to experiment with many ways of visualizing the performance of your resources in real time. You cannot only view but also share and explore visualizations of your monitoring data.</p>
             <p>For monitoring your virtual machines, <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> provides functions for alarm and notification management. <ph

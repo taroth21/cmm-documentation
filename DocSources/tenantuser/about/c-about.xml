@@ -38,7 +38,7 @@
                             <row>
                                 <entry
                                     colname="col2"><xref
-                                    href="../../shared/intro/c-intro.xml"/></entry>
+                                    href="../intro/c-intro.xml"/></entry>
                                 <entry
                                     colname="col3">Introduces <ph
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> and the basic usage scenario of monitoring cloud resources.</entry>

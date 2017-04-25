@@ -55,7 +55,7 @@
                     id="Metrics_Agent_concept_conbody_section_5">
             <title>Metrics Agent</title>
             <p id="A_concept_conbody_section_5_p"
-                                >A Metrics Agent is required for retrieving metrics data from the host on which it runs and sending them to the Monitoring Service. The agent supports metrics from a variety of sources as well as a number of built-in system and service checks. </p>
+                                >A Metrics Agent is required for retrieving metrics data from the host on which it runs and sending it to the Monitoring Service. The agent supports metrics from a variety of sources as well as a number of built-in system and service checks. </p>
                         <p id="A_concept_conbody_section_5_p"
                                 >A Metrics Agent can be installed on each virtual or physical server to be monitored.</p>
             <p

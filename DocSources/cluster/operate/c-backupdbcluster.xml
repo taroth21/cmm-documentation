@@ -44,9 +44,7 @@
                                         <p
                                                 conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_example_registers_a_share_concept_conbody_section_2_o"/>
                                         <note othertype="note">
-                                                <p>The directory for storing snapshots must be specified as configured during the installation of the <ph
-                                                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                            /> Service in the <codeph>group_vars/monasca_group</codeph> file. The directory must be manually mounted before creating the snapshot. It must be accessible from all nodes on which an Elasticsearch database instance is installed. The <codeph>elastic</codeph> user must be specified as the owner of the directory.</p>
+                                                <p>The directory for storing snapshots must be specified as configured during the installation of the Monitoring Service in the <codeph>group_vars/monasca_group</codeph> file. The directory must be manually mounted before creating the snapshot. It must be accessible from all nodes on which an Elasticsearch database instance is installed. The <codeph>elastic</codeph> user must be specified as the owner of the directory.</p>
                                         </note>
                                         <p
                                                 conref="../../cmmoperator/operate/c-backupdb.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/compress_concept_conbody_section_2_o"/>

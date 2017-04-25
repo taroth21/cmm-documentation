@@ -18,7 +18,7 @@
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> on a single node only. In case of a breakdown of an individual machine or irregularities in the operation of individual <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> components, all processes and data are redirected and the workload is redistributed within the cluster. Typically, the tenant user or system operator who monitors the quality of his services in the cloud experiences no or only a very limited failure.</p>
+                /> components, all processes and data are redirected and the workload is redistributed within the cluster. Typically, the system operator who monitors the quality of his services in the cloud experiences no or only a very limited failure.</p>
             <p>The following illustration provides an overview of the main components of a <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> cluster:</p>
             <fig>

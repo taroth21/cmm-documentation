@@ -35,7 +35,7 @@
                     placement="break"
                         width="700"/>
             </fig>
-            <p>The <b>Monitoring Service operator</b> is responsible for providing the log management features to the OpenStack operator. He uses the log management features himself for retrieving log data on <ph
+            <p>The <b>Monitoring Service operator</b> is responsible for providing the log management features to the OpenStack operator. He uses the features himself for retrieving log data on <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
             <p>The <b>OpenStack operator</b> uses the log management features for retrieving log data on the OpenStack services and the middleware components that make up the underlying OpenStack platform.</p>
         </section>

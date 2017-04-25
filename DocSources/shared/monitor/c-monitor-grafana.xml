@@ -100,7 +100,7 @@
         <section
                     id="Creating_a_Dashboard_concept_conbody_section_5">
             <title>Creating a Dashboard</title>
-            <p>To create a new dashboard, you use <uicontrol>Open Dashboard</uicontrol> in the top right corner of your dashboard window. The option provides access to various features for administrating dashboards. Use <uicontrol>New</uicontrol> to create an empty dashboard that can serve as a starting point for adding rows and panels.</p>
+            <p>To create a new dashboard, you use <uicontrol>Open Dashboard</uicontrol> in the top right corner of your dashboard window. The option provides access to various features for administrating dashboards. Use <uicontrol>New</uicontrol> to create an empty dashboard that serves as a starting point for adding rows and panels.</p>
             <fig>
                 <image
                     alt="grafana-cmm.png" height="260"
@@ -137,7 +137,7 @@
             </ul>
             <p>A large number of display and formatting features are provided to customize how the content is presented in a panel. Click the panel title to access the corresponding options. The menu that is displayed also allows you to duplicate or remove a panel. To change the size of a panel, click the <uicontrol>+</uicontrol> and <uicontrol>-</uicontrol> icons.</p>
             <p>You can move panels on your dashboard by simply dragging and dropping them within and between rows.</p>
-            <p>By default, the time range for panels is controlled by dashboard settings. Use the time picker in the top right corner of your dashboard window to define relative or absolute time ranges. You can also set an auto-refresh interval, and you can manually refresh the data that is displayed. </p>
+            <p>By default, the time range for panels is controlled by dashboard settings. Use the time picker in the top right corner of your dashboard window to define relative or absolute time ranges. You can also set an auto-refresh interval, or manually refresh the data that is displayed. </p>
         </section>
         <section
                     id="Saving_and_Sharing_Dashboards_concept_conbody_section_8">

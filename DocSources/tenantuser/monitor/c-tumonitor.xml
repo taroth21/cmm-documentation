@@ -10,7 +10,7 @@
     <conbody>
         <section id="offers_various_features_for_concept_conbody_section">
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> offers various features for monitoring your services and the virtual machines on which your services are provisioned. The large number of available metrics in combination with early warnings about problems and outages assist you in analyzing and troubleshooting any issue you encounter in your environment.</p>
+                /> offers various features for monitoring your services and the virtual machines on which they are provisioned. The large number of available metrics in combination with early warnings about problems and outages assist you in analyzing and troubleshooting any issue you encounter in your environment.</p>
             <p>The monitoring features of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                 /> include:</p>
             <ul

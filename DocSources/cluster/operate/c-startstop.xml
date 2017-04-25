@@ -147,14 +147,12 @@
                             <row>
                                 <entry>21</entry>
                                 <entry><codeph>monasca-agent</codeph></entry>
-                                <entry><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                    /> Metrics Agent.</entry>
+                                <entry>Metrics Agent.</entry>
                             </row>
                             <row>
                                 <entry>22</entry>
                                 <entry><codeph>monasca-log-agent</codeph></entry>
-                                <entry><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                    /> Log Agent.</entry>
+                                <entry>Log Agent.</entry>
                             </row>
                             <!--row>
                                 <entry>18</entry>
