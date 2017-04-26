@@ -18,9 +18,9 @@
                 </li>
                 <li>
                     <p>To start a Metrics Agent, execute the following command:</p>
-                    <codeblock>sudo systemctl start monasca-agent	</codeblock>
+                    <codeblock>sudo systemctl start openstack-monasca-agent	</codeblock>
                     <p>To start a Log Agent, execute the following command:</p>
-                    <codeblock>sudo systemctl start monasca-log-agent	</codeblock>
+                    <codeblock>sudo systemctl start openstack-monasca-log-agent	</codeblock>
                 </li>
             </ol>
             <p>To stop an agent, proceed as follows:</p>
@@ -31,9 +31,9 @@
                 </li>
                 <li>
                     <p>To stop a Metrics Agent, execute the following command:</p>
-                    <codeblock>sudo systemctl stop monasca-agent</codeblock>
+                    <codeblock>sudo systemctl stop openstack-monasca-agent</codeblock>
                     <p>To stop a Log Agent, execute the following command:</p>
-                    <codeblock>sudo systemctl stop monasca-log-agent</codeblock>
+                    <codeblock>sudo systemctl stop openstack-monasca-log-agent</codeblock>
                 </li>
             </ol>
         </section>

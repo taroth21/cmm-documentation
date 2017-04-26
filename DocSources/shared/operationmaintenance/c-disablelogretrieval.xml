@@ -16,7 +16,7 @@
                 </li>
                 <li>
                     <p>To stop the agent, execute the following command:</p>
-                    <codeblock>sudo systemctl stop monasca-log-agent</codeblock>
+                    <codeblock>sudo systemctl stop openstack-monasca-log-agent</codeblock>
                 </li>
                 <li>
                     <p>Open the agent configuration file with your favorite editor.</p>
@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <p>To start the agent again, execute the following command:</p>
-                    <codeblock>sudo systemctl start monasca-log-agent</codeblock>
+                    <codeblock>sudo systemctl start openstack-monasca-log-agent</codeblock>
                 </li>
             </ol>
         </section>

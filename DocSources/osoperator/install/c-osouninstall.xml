@@ -47,7 +47,7 @@ userdel -r mon-log-agent</codeblock>
             <p>The agents and their dependencies are uninstalled: </p>
             <ul>
                 <li>The agents are stopped.</li>
-                <li>The corresponding services are removed (<codeph>monasca-agent</codeph> or <codeph>monasca-log-agent</codeph>).</li>
+                <li>The corresponding services are removed (<codeph>openstack-monasca-agent</codeph> or <codeph>openstack-monasca-log-agent</codeph>).</li>
                 <li>The agents' configuration files and the directories where they are located are removed.</li>
             </ul>
         </section>

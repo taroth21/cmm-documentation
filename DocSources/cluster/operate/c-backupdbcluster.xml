@@ -104,10 +104,10 @@
                                         <p>Stop all MariaDB-related services on this node to avoid errors during the restore operation:</p>
                                         <codeblock>systemctl stop mariadb
 systemctl stop mariadbchk.socket
-systemctl stop monasca-api
-systemctl stop monasca-thresh
-systemctl stop monasca-agent
-systemctl stop monasca-log-agent</codeblock>
+systemctl stop openstack-monasca-api
+systemctl stop openstack-monasca-thresh
+systemctl stop openstack-monasca-agent
+systemctl stop openstack-monasca-log-agent</codeblock>
                                 </li>
                                 <li>
                                         <p>Repeat Step 1 and 2 for the other nodes in your cluster.</p>
@@ -133,10 +133,10 @@ systemctl stop monasca-log-agent</codeblock>
                                         <p>Start the MariaDB-related services:</p>
                                         <codeblock>systemctl start mariadb
 systemctl start mariadbchk.socket
-systemctl start monasca-api
-systemctl start monasca-thresh
-systemctl start monasca-agent
-systemctl start monasca-log-agent</codeblock>
+systemctl start openstack-monasca-api
+systemctl start openstack-monasca-thresh
+systemctl start openstack-monasca-agent
+systemctl start openstack-monasca-log-agent</codeblock>
                                 </li>
                         </ol>
                         <p

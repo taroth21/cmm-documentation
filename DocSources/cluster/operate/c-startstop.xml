@@ -15,8 +15,8 @@
                 <table colsep="1" frame="all" rowsep="1">
                     <tgroup cols="3">
                         <colspec colname="c1" colnum="1" colwidth="1*"/>
-                        <colspec colname="c2" colnum="2" colwidth="6.31*"/>
-                        <colspec colname="c3" colnum="3" colwidth="13.64*"/>
+                        <colspec colname="c2" colnum="2" colwidth="9.00*"/>
+                        <colspec colname="c3" colnum="3" colwidth="11.00*"/>
                         <thead>
                             <row>
                                 <entry>#</entry>
@@ -57,22 +57,22 @@
                             </row>
                             <row>
                                 <entry>6</entry>
-                                <entry><codeph>monasca-log-api</codeph></entry>
+                                <entry><codeph>openstack-monasca-log-api</codeph></entry>
                                 <entry>Log API.</entry>
                             </row>
                             <row>
                                 <entry>7</entry>
-                                <entry><codeph>monasca-log-transformer</codeph></entry>
+                                <entry><codeph>openstack-monasca-log-transformer</codeph></entry>
                                 <entry>Log Transformer. </entry>
                             </row>
                             <row>
                                 <entry>8</entry>
-                                <entry><codeph>monasca-log-persister</codeph></entry>
+                                <entry><codeph>openstack-monasca-log-persister</codeph></entry>
                                 <entry>Log Persister. </entry>
                             </row>
                             <row>
                                 <entry>9</entry>
-                                <entry><codeph>monasca-log-metrics</codeph></entry>
+                                <entry><codeph>openstack-monasca-log-metrics</codeph></entry>
                                 <entry>Log Metrics.</entry>
                             </row>
                             <row>
@@ -126,32 +126,32 @@
                             </row>
                             <row>
                                 <entry>17</entry>
-                                <entry><codeph>monasca-thresh</codeph></entry>
+                                <entry><codeph>openstack-monasca-thresh</codeph></entry>
                                 <entry>Threshold Engine. </entry>
                             </row>
                             <row>
                                 <entry>18</entry>
-                                <entry><codeph>monasca-notification</codeph></entry>
+                                <entry><codeph>openstack-monasca-notification</codeph></entry>
                                 <entry>Notification Engine. </entry>
                             </row>
                             <row>
                                 <entry>19</entry>
-                                <entry><codeph>monasca-persister </codeph></entry>
+                                <entry><codeph>openstack-monasca-persister </codeph></entry>
                                 <entry>Persister. </entry>
                             </row>
                             <row>
                                 <entry>20</entry>
-                                <entry><codeph>monasca-api</codeph></entry>
+                                <entry><codeph>openstack-monasca-api</codeph></entry>
                                 <entry>Monitoring API.</entry>
                             </row>
                             <row>
                                 <entry>21</entry>
-                                <entry><codeph>monasca-agent</codeph></entry>
+                                <entry><codeph>openstack-monasca-agent</codeph></entry>
                                 <entry>Metrics Agent.</entry>
                             </row>
                             <row>
                                 <entry>22</entry>
-                                <entry><codeph>monasca-log-agent</codeph></entry>
+                                <entry><codeph>openstack-monasca-log-agent</codeph></entry>
                                 <entry>Log Agent.</entry>
                             </row>
                             <!--row>
@@ -175,10 +175,10 @@
                     <li><codeph>kafka</codeph></li>
                     <li><codeph>elasticsearch</codeph></li>
                     <li><codeph>kibana</codeph></li>
-                    <li><codeph>monasca-log-api</codeph></li>
-                    <li><codeph>monasca-log-transformer</codeph></li>
-                    <li><codeph>monasca-log-persister</codeph></li>
-                    <li><codeph>monasca-log-metrics</codeph></li>
+                    <li><codeph>openstack-monasca-log-api</codeph></li>
+                    <li><codeph>openstack-monasca-log-transformer</codeph></li>
+                    <li><codeph>openstack-monasca-log-persister</codeph></li>
+                    <li><codeph>openstack-monasca-log-metrics</codeph></li>
                     <li><codeph>storm-nimbus</codeph></li>
                     <li><codeph>storm-supervisor</codeph></li>
                     <li><codeph>mariadb</codeph></li>
@@ -186,12 +186,12 @@
                     <li><codeph>influxdb</codeph></li>
                     <li><codeph>keepalived</codeph></li>
                     <li><codeph>haproxy</codeph></li>
-                    <li><codeph>monasca-thresh</codeph></li>
-                    <li><codeph>monasca-notification</codeph></li>
-                    <li><codeph>monasca-persister </codeph></li>
-                    <li><codeph>monasca-api</codeph></li>
-                    <li><codeph>monasca-agent</codeph></li>
-                    <li><codeph>monasca-log-agent</codeph></li>
+                    <li><codeph>openstack-monasca-thresh</codeph></li>
+                    <li><codeph>openstack-monasca-notification</codeph></li>
+                    <li><codeph>openstack-monasca-persister </codeph></li>
+                    <li><codeph>openstack-monasca-api</codeph></li>
+                    <li><codeph>openstack-monasca-agent</codeph></li>
+                    <li><codeph>openstack-monasca-log-agent</codeph></li>
                 </ol>
             </p>
             <p>When stopping individual services, proceed in the reverse order.</p>
