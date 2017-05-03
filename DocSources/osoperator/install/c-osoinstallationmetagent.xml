@@ -68,7 +68,7 @@ and check to make sure that only the key(s) you wanted were added.</codeblock>
                                                             <p>Configure the agents. The following example shows the minimum set of parameters that must be configured to start an agent. The minimum set is restricted to the credentials of an OpenStack user used for the communication between the Monitoring Service and the agent.</p>
                                                             <p>You can specify additional configuration settings, if required. For a list of the configuration settings that are supported, refer to <xref
                             href="../../shared/appendix/r-confsettings-metrics.xml"/>.</p>
-                                                            <p>To define the minimum set of parameters, insert the following content into each configuration file. Specify the user credentials of a valid OpenStack user who is authorized the send monitoring data to the Monitoring Service.</p>
+                                                            <p>To define the minimum set of parameters, insert the following content into each configuration file. Specify the user credentials of a valid OpenStack user who is authorized to send monitoring data to the Monitoring Service.</p>
                                                             <p>Example:</p>
                                                             <codeblock># file: host_vars/horizon-monasca-agent
 

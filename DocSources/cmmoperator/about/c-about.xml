@@ -91,9 +91,8 @@
                                 <entry
                                     colname="col2"><xref
                                     href="../appendix/r-cmmometrics.xml"/></entry>
-                                <entry
-                                    colname="col3">Describes the metrics that are supported by <ph
-                                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </entry>
+                                <entry colname="col3">Describes the metrics supported by <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </entry>
                             </row>
                             <row>
                                 <entry

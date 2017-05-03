@@ -9,7 +9,7 @@
     <title>Configuration</title>
     <conbody>
         <section>
-            <p>The installation of an agent includes its initial configuration. The configuration files that are required for monitoring the services on the server where the agent is installed are created automatically. The following configuration files are provided:</p>
+            <p>The installation of an agent includes its initial configuration. The required configuration files are created automatically. The following configuration files are provided:</p>
             <ul>
                 <li>
                     <p><codeph>agent.yaml</codeph> located in the <codeph>/etc/monasca/agent</codeph> directory.</p>

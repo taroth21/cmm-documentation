@@ -25,7 +25,7 @@
                 </li>
                 <li>
                     <p>Enter the user credentials of a valid OpenStack user in the <codeph>Monasca Api</codeph> section. Contact your OpenStack operator for this purpose. He is responsible for creating the required users and roles.</p>
-                    <p>The user you enter must have full access to the Monitoring Service. He must be assigned a role that authorizes him to read and write data. The role must be specified for <codeph>defaultAuthorizedRoles</codeph> (see Step 8 below).</p>
+                    <p>The user you enter must have full access to the Monitoring Service. He must be assigned a role that authorizes him to read and write data. The role must be specified for <codeph>defaultAuthorizedRoles</codeph> (see Step 7 below).</p>
                     <p>Example:</p>
                     <codeblock># Monasca Api CLI - Credentials
 monasca_user:
@@ -60,19 +60,19 @@ monasca_log_api_keyfile: /home/vagrant/ssl/server.key</codeblock>
                                 id="Specify_the_following_passwor_concept_conbody_section_ol_l">
                     <p>Specify the following passwords in the file:</p>
                     <ul>
-                        <li><codeph>influxdb_mon_api_password:</codeph> for the Monitoring API user accessing the InfluxDB.</li>
-                        <li><codeph>influxdb_mon_persister_password:</codeph> for the Persister user accessing the InfluxDB.</li>
-                        <li><codeph>database_notification_password:</codeph> for the Notification Engine user accessing the MariaDB database. </li>
-                        <li><codeph>database_monapi_password:</codeph> for the Monitoring API user accessing the MariaDB database.</li>
-                        <li><codeph>database_thresh_password:</codeph> for the Threshold Engine user accessing the MariaDB database.</li>
-                        <!-- li><codeph>database_logapi_password:</codeph> for the Log API user accessing the MariaDB database. Removed with  Bug 13149.</li -->
-                        <li><codeph>keystone_monasca_operator_password:</codeph> for Keystone access of the Monitoring Service operator (see Step 4 above). The user account for the Monitoring Service operator (<codeph>monasca-operator</codeph>) is automatically created with the installation.</li>
+                        <li><codeph>influxdb_mon_api_password</codeph> for the Monitoring API user accessing the InfluxDB.</li>
+                        <li><codeph>influxdb_mon_persister_password</codeph> for the Persister user accessing the InfluxDB.</li>
+                        <li><codeph>database_notification_password</codeph> for the Notification Engine user accessing the MariaDB database. </li>
+                        <li><codeph>database_monapi_password</codeph> for the Monitoring API user accessing the MariaDB database.</li>
+                        <li><codeph>database_thresh_password</codeph> for the Threshold Engine user accessing the MariaDB database.</li>
+                        <!-- li><codeph>database_logapi_password</codeph> for the Log API user accessing the MariaDB database. Removed with  Bug 13149.</li -->
+                        <li><codeph>keystone_monasca_operator_password</codeph> for Keystone access of the Monitoring Service operator (see Step 3 above). The user account for the Monitoring Service operator (<codeph>monasca-operator</codeph>) is automatically created with the installation.</li>
                         <li>
                             <codeph>keystone_admin_password</codeph> of an OpenStack user account that already exists, for example, <codeph>admin</codeph>. This user account is used for creating new user accounts with the installation. It is the user account of the OpenStack operator.</li>
-                        <li><codeph>keystone_monasca_agent_password:</codeph> : for Keystone access of the user used for configuration purposes of the Metrics and Log Agents on the <ph
+                        <li><codeph>keystone_monasca_agent_password</codeph> for Keystone access of the user used for configuration purposes of the Metrics and Log Agents on the <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                 /> host. The user account (<codeph>monasca-agent</codeph>) is automatically created with the installation.</li>
-                        <li><codeph>keystone_admin_agent_password:</codeph> for Keystone access of the user used for configuration purposes of the Metrics and Log Agents on the OpenStack hosts. The user account (<codeph>admin-agent</codeph>) is automatically created with the installation.</li>
+                        <li><codeph>keystone_admin_agent_password</codeph> for Keystone access of the user used for configuration purposes of the Metrics and Log Agents on the OpenStack hosts. The user account (<codeph>admin-agent</codeph>) is automatically created with the installation.</li>
                     </ul>
                     <note
                             othertype="note">
@@ -83,7 +83,7 @@ monasca_log_api_keyfile: /home/vagrant/ssl/server.key</codeblock>
                 <li>
                     <p>To install the <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components, specific configuration settings are required. They are specified in the <codeph>group_vars/monasca_group</codeph> file. </p>
-                    <p>The file contains the default configuration. No changes are required for the individual components. You have to specify only the authorized OpenStack roles (see Step 8 below) and a file system for backing up the Elasticsearch database (see Step 9 below).</p>
+                    <p>The file contains the default configuration. No changes are required for the individual components. You have to specify only the authorized OpenStack roles (see Step 7 below) and a file system for backing up the Elasticsearch database (see Step 8 below).</p>
                     <note
                             othertype="note">Make changes for the individual components only if you have to deviate from the default. </note>
                     <p>To view the default configuration, you can open the file with your favorite editor.</p>
@@ -161,7 +161,7 @@ agentAuthorizedRoles: "monasca-agent"</codeblock>
     }</codeblock>
                 </li>
                 <li>
-                    <p>To provide metrics for log data to system operators, specific configuration settings are required. They are specified in the <codeph>group_vars/monasca_log_metrics_group</codeph> file.</p>
+                    <p>To provide metrics for log data to system operators, specific configuration settings are required in the <codeph>group_vars/monasca_log_metrics_group</codeph> file.</p>
                     <p>The settings define which log levels are to be evaluated for the log data retrieved by a Log Agent. The example below shows all types of log metrics that are supported by <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. By default, <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"

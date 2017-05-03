@@ -6,17 +6,18 @@
 
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                     xml:lang="en-us">
-    <title><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-        /> Software and Setup Utilities </title>
+    <title>Software and Setup Utilities </title>
     <conbody>
         <section>
             <p><i><b>PENDING</b>: Distribution media for CMM 1.3 has not yet been defined.</i></p>
         </section>
         <section>
             <p>The software and setup utilities are distributed in the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> installation package on the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> DVD. To set up the installation package, you have to mount the DVD and execute the <codeph>setup.sh</codeph> script that is provided. It extracts the utilities required for installing <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> installation package on the <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                    /> DVD. You have to mount the DVD and execute the <codeph>setup.sh</codeph> script that is provided. It extracts the utilities required for installing <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
             <p>Proceed as follows:</p>
             <ol>
                 <li>Log in to the Control Machine. </li>

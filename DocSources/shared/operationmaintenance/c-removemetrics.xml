@@ -19,12 +19,12 @@
                     <codeblock>sudo systemctl stop openstack-monasca-agent</codeblock>
                 </li>
                 <li>
-                    <p>Change to the directory that stores the metrics used for monitoring.</p>
+                    <p>Change to the directory that stores the metrics.</p>
                     <p>Example: </p>
                     <codeblock>cd /etc/monasca/agent/conf.d</codeblock>
                 </li>
                 <li>
-                    <p>Delete the <codeph>.yaml</codeph> file that is no longer needed.</p>
+                    <p>Delete the <codeph>.yaml</codeph> file.</p>
                     <p>Example:</p>
                     <codeblock>sudo rm -i process.yaml</codeblock>
                 </li>

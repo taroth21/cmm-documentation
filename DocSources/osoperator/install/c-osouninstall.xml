@@ -14,7 +14,7 @@
                 /> agents, if required. The OpenStack extensions you have installed for your platform are uninstalled by the Monitoring Service operator.</p>
             <p>Before uninstalling an agent, it is recommended that you make a backup of the configuration files created for operation. For details on backups, refer to <xref
                     href="c-osobackup.xml"/>.</p>
-            <p>To uninstall a Metrics Agent or a Log Agent , proceed as follows:</p>
+            <p>To uninstall a Metrics Agent or a Log Agent, proceed as follows:</p>
             <ol
                             compact="no">
                 <li>

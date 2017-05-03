@@ -55,7 +55,7 @@
                     id="Metrics_Agent_concept_conbody_section_5">
             <title>Metrics Agent</title>
             <p id="A_concept_conbody_section_5_p"
-                                >A Metrics Agent is required for retrieving metrics data from the host on which it runs and sending it to the Monitoring Service. The agent supports metrics from a variety of sources as well as a number of built-in system and service checks. </p>
+                                >A Metrics Agent is required for retrieving metrics data from the host on which it runs and sending the metrics data to the Monitoring Service. The agent supports metrics from a variety of sources as well as a number of built-in system and service checks. </p>
                         <p id="A_concept_conbody_section_5_p"
                                 >A Metrics Agent can be installed on each virtual or physical server to be monitored.</p>
             <p
@@ -67,7 +67,7 @@
         <section
                     id="Log_Agent_concept_conbody_section_6">
             <title>Log Agent</title>
-            <p>A Log Agent is needed for collecting log data from the host on which it runs and forwarding it to the Monitoring Service for further processing. It can be installed on each virtual or physical server from which log data is to be retrieved.</p>
+            <p>A Log Agent is needed for collecting log data from the host on which it runs and forwarding the log data to the Monitoring Service for further processing. It can be installed on each virtual or physical server from which log data is to be retrieved.</p>
             <p>The agent functionality is fully integrated into the source code base of the Monasca project. For details, refer to the <xref
                     format="html"
                     href="https://wiki.openstack.org/wiki/Monasca" scope="external"><u><i>Monasca Wiki</i></u></xref>.</p>

@@ -46,9 +46,7 @@
         <section>
             <title>dimensions </title>
             <p>Optional. Meta information to be collected with the log data that is retrieved by the agent. The information can be defined as an array.</p>
-            <p>The meta information defined by a dimension is attached to each log entry. It is represented as one or more fields in the <ph
-                    conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                /> log management dashboard. For the user who is working with the log data, dimensions provide additional filtering options.</p>
+            <p>The meta information defined by a dimension is attached to each log entry. It is represented as one or more fields in the log management window. For the user who is working with the log data, dimensions provide additional filtering options.</p>
             <p>Example: <codeph>['app_type:kafka', 'priority:high']</codeph></p>
         </section>
         <section>

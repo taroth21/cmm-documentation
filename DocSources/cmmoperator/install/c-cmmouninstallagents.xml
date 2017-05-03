@@ -32,7 +32,7 @@
                     <codeblock>ansible-playbook /opt/FJSVsvcmm/monasca-log-agent-uninstaller.yml</codeblock>
                 </li>
                 <li>
-                    <p>To remove the technical users that were used by <ph
+                    <p>To remove the technical users used by <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                         />, execute the following commands:</p>
                     <codeblock>userdel -r mon-agent

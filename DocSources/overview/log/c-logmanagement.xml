@@ -41,7 +41,7 @@
         </section>
         <section>
             <title>Data Collection</title>
-            <p>A Log Agent can be installed and configured on each physical and virtual server where log data is to be retrieved. The agent is responsible for collecting the log data from the cloud resources and sending them to the Monitoring Service for further processing. </p>
+            <p>A Log Agent can be installed and configured on each physical and virtual server where log data is to be retrieved. The agent is responsible for collecting the log data from the cloud resources and sending it to the Monitoring Service for further processing. </p>
             <p><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> stores the log data in a central database. The central database forms the basis for visualizing the log data for the <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users.</p>

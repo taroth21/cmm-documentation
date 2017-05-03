@@ -25,7 +25,7 @@
                                                             <codeblock># Monasca Log Agent Hosts
 openstack-monasca-log-agent   ansible_ssh_host={{ openstack_host }} ansible_ssh_user={{ ssh_user_openstack }}</codeblock>
 <p>If required, you can add a line for installing an additional agent on a different host. The installer allows you to install one or multiple instances of an agent at a time. </p>
-<p>When adding a line for an additional agent, you have to specify a unique alias for the host machine on which to install the agent.  In addition, you have to add the agent in the <codeph>[monasca_log_agent_group]</codeph> section: </p>
+<p>When adding a line for an additional agent, you have to specify a unique alias for the host machine on which to install the agent. In addition, you have to add the agent in the <codeph>[monasca_log_agent_group]</codeph> section: </p>
 <codeblock>[monasca_log_agent_group] 
 openstack-monasca-log-agent</codeblock>
                                                             </li>

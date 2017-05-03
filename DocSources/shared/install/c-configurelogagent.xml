@@ -54,9 +54,7 @@
                 <li>
                     <p>Adapt the input section, if required.</p>
                     <p>If you want to add files to be monitored, add a corresponding file block.</p>
-                    <p>If you want to define dimensions for the log files of a file block, define them with <codeph>add_field</codeph>. Dimensions allow you to collect meta information with the log data that is retrieved by the agent. The meta information is attached to each log entry. It is represented as a field in the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> log management dashboard. For the user who is working with the log data, dimensions provide additional filtering options.</p>
+                    <p>If you want to define dimensions for the log files of a file block, define them with <codeph>add_field</codeph>. Dimensions allow you to collect meta information with the log data that is retrieved by the agent. The meta information is attached to each log entry. It is represented as a field in the log management window. For the user who is working with the log data, dimensions provide additional filtering options.</p>
                     <p>Example configuration:</p>
                     <codeblock>input {
   file {

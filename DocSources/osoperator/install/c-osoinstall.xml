@@ -28,10 +28,11 @@
                                 <li>Installing the OpenStack extensions required for the Monitoring Service - done by the OpenStack operator only. </li>
                                 <li>Installing the Monitoring Service - done by the Monitoring Service operator only.</li>
                         </ol>
-                        <p>As an OpenStack operator, you also install and configure the agents you use for monitoring your OpenStack services. Your application operators who have booked a virtual machine in OpenStack monitor their machine with libvirt. As an OpenStack operator, you have to make the required libvirt preparations for your application operators. For details, refer to <xref
+                        <p>As an OpenStack operator, you also install and configure the agents you use for monitoring your OpenStack services. Your application operators who have booked a virtual machine in OpenStack monitor their machine with libvirt. As an OpenStack operator, you have to make the required libvirt preparations for them. For details, refer to <xref
                                         href="../prepare/c-osopreparetu.xml"/>.</p>
-                        <p><ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> ships with an installer that is based on Ansible. You use it for installing the OpenStack extensions and the required agents. </p>
+                        <p>For installing the OpenStack extensions and the required agents, <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> ships with an installer that is based on Ansible. </p>
                 </section>
                 <section>
                         <title>Recommended Installation Environment</title>
@@ -54,7 +55,7 @@
                                                 /> can also be clustered and installed on multiple hosts. This does not affect your tasks as an OpenStack operator.</p>
                                 </li>
                                 <li>
-                                        <p>As an OpenStack operator, you install the OpenStack extensions and the required agents for the OpenStack Keystone service and the OpenStack Horizon service. Depending on your OpenStack environment, Keystone and Horizon can either be installed on the same or on two separate hosts.</p>
+                                        <p>As an OpenStack operator, you install the OpenStack extensions and the required agents for the OpenStack Keystone and the OpenStack Horizon service. Depending on your OpenStack environment, Keystone and Horizon are either installed on the same or on two separate hosts.</p>
                                         <p>You can install additional agents for monitoring additional OpenStack services as required.</p>
                                 </li>
                         </ul>

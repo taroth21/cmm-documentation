@@ -34,7 +34,7 @@
                 <ul>
                     <li><b>Monitoring API</b><p>A RESTful API for monitoring. It is primarily focused on the following areas: </p><ul>
                             <li>
-                                <p>Metrics: Store and query massive amounts of metrics in real-time. </p>
+                                <p>Metrics: Store and query massive amounts of metrics in real time. </p>
                             </li>
                             <li>
                                 <p>Statistics: Provide statistics for metrics. </p>
@@ -63,16 +63,16 @@
                         <p>A MariaDB database used for storing configuration information, alarm definitions, and notification methods. </p>
                     </li>
                     <li><b>Log API</b>
-                        <p>A RESTful API for log management. The Log API gathers log data from the Log Agents and forwards it to the Message Queue. </p><p>The <ph
+                        <p>A RESTful API for log management. It gathers log data from the Log Agents and forwards it to the Message Queue. </p><p>The <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> log management is based on Logstash, a tool for receiving, processing, and publishing all kinds of logs. It provides a powerful pipeline for querying and analyzing logs. Elasticsearch is used as the backend datastore, and Kibana as the front-end tool for retrieving and visualizing the log data.</p></li>
+                            /> log management is based on Logstash, a tool for receiving, processing, and publishing all kinds of logs. It provides a powerful pipeline for querying and analyzing logs. Elasticsearch is used as the back-end datastore, and Kibana as the front-end tool for retrieving and visualizing the log data.</p></li>
                     <li><b>Log Transformer</b>
                         <p>A Logstash component that consumes the log data from the Message Queue, performs transformation and aggregation operations on the data, and publishes the data that it creates back to the Message Queue.</p></li>
                     <li><b>Log Metrics</b>
                         <p>A Monasca component that consumes log data from the Message Queue, filters the data according to severity, and generates metrics for specific severities, for example, for errors or warnings. The generated metrics are published to the Message Queue and can be further processed by the Threshold Engine like any other metrics. </p></li>
-                    <li><b>Log Persister </b><p>A Logstash component that consumes the transformed and aggregated log data from the Message Queue and stores them in the Log Database (Elasticsearch).</p></li>
+                    <li><b>Log Persister </b><p>A Logstash component that consumes the transformed and aggregated log data from the Message Queue and stores it in the Log Database.</p></li>
                     <li><b>Kibana Server</b>
-                        <p>A Web browser-based analytics and search interface to Elasticsearch.</p></li>
+                        <p>A Web browser-based analytics and search interface to the Log Database.</p></li>
                     <li><b>Log Database</b><p>An Elasticsearch database for storing the log data. </p></li>
                 </ul>
             </p>
@@ -80,7 +80,7 @@
                         othertype="note">
                 <p>The installation of the Monitoring Service includes the installation of all <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> third-party components that are required. From time to time, it may be necessary to install bug fixes or security patches for these third-party components. In order to guarantee for the interoperability and integrity of your entire <ph
+                        /> third-party components that are required. From time to time, it may be necessary to install bug fixes or security patches for these third-party components. In order to guarantee for the interoperability and integrity of your <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                         /> installation, you should obtain such fixes and patches solely from your <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> support organization.</p>

@@ -64,9 +64,10 @@ ssh_args = -o ControlMaster=auto -o BatchMode=yes -o ForwardAgent=yes</codeblock
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> component. </p>
                     <note othertype="note"><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                         /> supports and has been tested with IPv4. IPv6 and FQDN are not supported.</note>
-                    <p>Replace <codeph>{{ssh_user_*}}</codeph> with the user name of the user who is to install it.</p>
-                    <note othertype="note">The user who is to install the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> component must have the privilege to execute sudo commands without password. Check your sudo configuration for this purpose.</note>
+                    <p>Replace <codeph>{{ssh_user_*}}</codeph> with the user name of the user who is to install the <ph
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> component. </p>
+                    <note othertype="note"
+                        >The user who is to install the component must have the privilege to execute sudo commands without password. Check your sudo configuration for this purpose.</note>
                     <p>Check that you have removed all curly brackets with your replacements.</p>
                 </li>
                 <li>

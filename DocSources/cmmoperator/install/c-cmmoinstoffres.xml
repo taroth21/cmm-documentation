@@ -57,7 +57,7 @@ offline-resources-host : ok=40  changed=23  unreachable=0  failed=0</codeblock>
             </ol>
             <p>As soon as the offline resources are successfully installed, the OpenStack operator must prepare the OpenStack platform for <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    />. Refer to the <i>OpenStack Operator's Guide</i> for details on the tasks of the OpenStack operator. He has to install the required OpenStack extensions and has to create the users and roles in OpenStack required for installing and working with <ph
+                    />. Refer to the <i>OpenStack Operator's Guide</i> for details on the tasks of the OpenStack operator. He installs the required OpenStack extensions and creates the users and roles in OpenStack required for installing and working with <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</p>
             <p>Before proceeding with the installation of the Monitoring Service, contact your OpenStack operator and make the corresponding arrangements.</p>
         </section>

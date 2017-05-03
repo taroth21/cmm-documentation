@@ -25,7 +25,7 @@
                 <li>
                     <p>The installer creates OpenStack user accounts for working with <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            />. For this purpose, specify your access credentials for the OpenStack Keystone service in the <codeph>Keystone Admin credentials</codeph> section:</p>
+                            />. For this purpose, specify your access credentials for the OpenStack Keystone service in the <codeph>Keystone Admin credentials</codeph> section.</p>
                     <p>Example:</p>
                     <codeblock># Keystone Admin credentials
 keystone_admin_token: ADMIN

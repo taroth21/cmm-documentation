@@ -11,8 +11,8 @@
         <section>
             <p>This manual is written for operators who install, operate, and maintain <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    />, and who monitor the host on which <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed. </p>
+                    />. It also describes how the operator uses <ph
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> for monitoring. </p>
             <p>The manual assumes that you have profound knowledge of OpenStack and <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     />, especially the individual services <ph
