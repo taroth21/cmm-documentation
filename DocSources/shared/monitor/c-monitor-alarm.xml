@@ -52,7 +52,7 @@ max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
             </fig>
             <p>The expression defines how to evaluate a metrics. The expression syntax is based on a simple expressive grammar. For details, refer to the <xref
                     format="html"
-                    href="https://github.com/openstack/monasca-api/blob/stable/newton/docs/monasca-api-spec.md"
+                    href="https://github.com/openstack/monasca-api/blob/stable/ocata/docs/monasca-api-spec.md"
                 scope="external"><u><i>Monasca API documentation</i></u></xref>. </p>
             <p>To define an alarm expression, proceed as follows:</p>
             <ol>
@@ -90,7 +90,7 @@ max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
                 <p>You can also edit the expression syntax directly. For this purpose, save your alarm definition and update it using the <uicontrol>Edit Alarm Definition</uicontrol> option.</p>
                 <p>By default, an alarm definition is evaluated every minute. When updating the alarm definition, you can change this interval. For syntax details, refer to the Monasca API documentation on <xref
                         format="html"
-                        href="https://github.com/openstack/monasca-api/blob/stable/newton/docs/monasca-api-spec.md#alarm-definition-expressions"
+                        href="https://github.com/openstack/monasca-api/blob/stable/ocata/docs/monasca-api-spec.md#alarm-definition-expressions"
                     scope="external"><u><i>Alarm Definition Expressions</i></u></xref>.</p>
             </note>
         </section>

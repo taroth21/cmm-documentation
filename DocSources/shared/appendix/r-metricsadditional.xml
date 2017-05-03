@@ -14,7 +14,7 @@
             <p>Note that in addition to the metrics below, many more metrics are provided by the Monasca project. These are not automatically installed by <ph
           conref="../product-name.xml#ProductNameTopic/Product_Abbr"
           />. For details on the complete set of metrics provided by the Monasca project, refer to the <xref
-          format="html" href="https://github.com/openstack/monasca-agent/blob/stable/newton/docs/Plugins.md"
+          format="html" href="https://github.com/openstack/monasca-agent/blob/stable/ocata/docs/Plugins.md"
           scope="external"><u><i>Monasca documentation</i></u></xref>.</p>
         </section>
         <section>

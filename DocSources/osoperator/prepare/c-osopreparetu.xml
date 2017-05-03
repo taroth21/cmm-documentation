@@ -20,7 +20,7 @@
                         </ol>
                         <p>For additional information on libvirt monitoring, you can also refer to the <xref
                                         format="html"
-                                        href="https://github.com/openstack/monasca-agent/blob/stable/newton/docs/Libvirt.md"
+                                        href="https://github.com/openstack/monasca-agent/blob/stable/ocata/docs/Libvirt.md"
                                         scope="external"><u><i>Monasca documentation</i></u></xref>.</p>
                 </section>
     </conbody>
