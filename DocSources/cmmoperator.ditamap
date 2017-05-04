@@ -7,13 +7,13 @@
     <title>Monitoring Service Operator's Guide</title>
     <bookmeta>
         <prodinfo>
-            <prodname>ServerView</prodname>
+            <prodname><!--ServerView--></prodname>
             <vrmlist>
                 <vrm
-                version="1.2"/>
+                version="1.0"/>
             </vrmlist>
-            <brand>FUJITSU Software</brand>
-            <prognum>Cloud Monitoring Manager V1.3</prognum>
+            <brand><!--FUJITSU Software--></brand>
+            <prognum>SUSE OpenStack Cloud Monitoring 1.0</prognum>
             <component/>
             <series>Monitoring Service Operator's Guide</series>
         </prodinfo>
@@ -222,7 +222,7 @@
             href="shared/logging/c-osolog-alarms.xml"
         type="concept"/>
     </chapter>
-    <appendix format="dita"
+   <!-- <appendix format="dita"
         href="shared/appendix/r-confsettings.xml"
             type="reference">
         <topicref format="dita"
@@ -231,7 +231,7 @@
         <topicref format="dita"
             href="shared/appendix/r-confsettings-logs.xml"
         type="reference"/>
-    </appendix>
+    </appendix>-->
     <appendix format="dita"
         href="cmmoperator/appendix/r-cmmometrics.xml"
             type="reference">

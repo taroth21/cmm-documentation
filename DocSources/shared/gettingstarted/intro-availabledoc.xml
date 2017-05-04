@@ -16,9 +16,6 @@
                                 <li><i>Overview:</i> A manual introducing <ph
                         conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>. It is written for everybody interested in <ph
                             conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>.</li>
-                                <li><i>Application Operator's Guide:</i> A manual for application operators describing how <ph
-                                                conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> supports them in monitoring their services and virtual machines in OpenStack.</li>
                                 <li><i>OpenStack Operator's Guide:</i> A manual for OpenStack operators describing how to prepare their OpenStack platform for <ph
                                                 conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                                                 />. The manual also describes how the operators use <ph
@@ -29,9 +26,6 @@
                                                 /> in single mode. The manual also describes how the operators use <ph
                                                 conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                                         /> for monitoring their environment.</li>
-                                <li><i>Cluster Management Guide:</i> A manual for system operators describing how to install, operate, and maintain <ph
-                                                conref="../product-name.xml#ProductNameTopic/Product_Abbr"
-                                        /> in cluster mode.</li>
                         </ul>
                 </section>
         </conbody>

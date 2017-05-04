@@ -4,10 +4,10 @@
                       "task.dtd" >
                       
 <task id="ProductNameTopic" xml:lang="en-us">
-  <title>Cloud Monitoring Manager</title>
+  <title>SUSE OpenStack Cloud Monitoring</title>
   <taskbody>
-    <context><ph id="Product_Name">Cloud Monitoring Manager</ph>
-      <ph id="Product_Abbr">CMM</ph>
+    <context><ph id="Product_Name">SUSE OpenStack Cloud Monitoring</ph>
+      <ph id="Product_Abbr">SUSE OpenStack Cloud Monitoring</ph>
     </context>
   </taskbody>
 </task>

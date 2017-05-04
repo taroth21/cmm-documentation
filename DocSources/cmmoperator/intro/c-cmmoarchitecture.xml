@@ -76,7 +76,7 @@
                     <li><b>Log Database</b><p>An Elasticsearch database for storing the log data. </p></li>
                 </ul>
             </p>
-            <note
+           <!-- <note
                         othertype="note">
                 <p>The installation of the Monitoring Service includes the installation of all <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
@@ -84,7 +84,7 @@
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                         /> installation, you should obtain such fixes and patches solely from your <ph
                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> support organization.</p>
-            </note>
+            </note>-->
         </section>
         <section
             conref="../../osoperator/intro/c-osocomponents.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Horizon_Plugin_concept_conbody_section_4"/>

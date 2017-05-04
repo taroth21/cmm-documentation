@@ -16,7 +16,7 @@
                     <p>An <b>application operator</b> acts as a service provider in the OpenStack environment. He books virtual machines in OpenStack to provide services to end users or to host services that he needs for his own development activities. <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                         /> helps application operators to ensure the quality of their services in the cloud.</p>
-                    <p>For details on the tasks of the application operator, refer to the <i>Application Operator's Guide</i>.</p>
+                    <!--<p>For details on the tasks of the application operator, refer to the <i>Application Operator's Guide</i>.</p>-->
                 </li>
                 <li>
                     <p>The<b> OpenStack operator</b> is a special application operator. He is responsible for administrating and maintaining the underlying OpenStack platform and ensures the availability and quality of the OpenStack services (e.g. Heat, Nova, Cinder, Swift, Glance, or Keystone).</p>

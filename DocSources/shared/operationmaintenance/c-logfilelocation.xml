@@ -17,8 +17,8 @@
                     /> services under the control of <codeph>systemd</codeph>. <codeph>journald</codeph> provides a centralized management solution for the logging of all processes that are controlled by <codeph>systemd</codeph>. The logs are collected and managed in a so-called journal controlled by the <codeph>journald</codeph> daemon.</p>
             <p>For details on the <codeph>systemd</codeph> and <codeph>journald</codeph> utilities, refer to the <xref
                     format="html"
-                    href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/System_Administrators_Guide/part-Basic_System_Configuration.html"
-                    scope="external"><u><i>Red Hat Enterprise LINUX documentation</i></u></xref>.</p>
+                    href="https://www.suse.com/documentation/sles-12/singlehtml/book_sle_admin/book_sle_admin.html#part.system"
+                    scope="external"><u><i>SUSE Linux Enterprise Server documentation</i></u></xref>.</p>
         </section>
         
     </conbody>

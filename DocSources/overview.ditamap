@@ -8,12 +8,12 @@
 	<title>Overview</title>
 	<bookmeta>
 		<prodinfo>
-			<prodname>ServerView</prodname>
+			<prodname><!--ServerView--></prodname>
 			<vrmlist>
 				<vrm version="1.2" />
 			</vrmlist>
-			<brand>FUJITSU Software</brand>
-			<prognum>Cloud Monitoring Manager V1.3</prognum>
+			<brand><!--FUJITSU Software--></brand>
+			<prognum>SUSE OpenStack Cloud Monitoring 1.0</prognum>
 			<component />
 			<series>Overview</series>
 		</prodinfo>

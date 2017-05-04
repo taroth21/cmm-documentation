@@ -6,13 +6,13 @@
 
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1AB"
                     xml:lang="en-us">
-    <title>Starting and Stopping Agents and Services</title>
+    <title><!--Starting and Stopping -->Agents and Services</title>
     <conbody>
         <section>
-            <p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+            <!--<p>The <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> installation package contains a script that you can use to start, stop, and view the status of the <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> agents and services. <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> consists of:</p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> consists of:</p>-->
             <p
                     id="concept_conbody_section_1_p">
                 <table
@@ -149,130 +149,6 @@
                         </tbody>
                     </tgroup>
                 </table>
-            </p>
-        </section>
-        <section>
-            <title>Configuration</title>
-            <p>For starting and stopping agents and services, the script must be configured in the <codeph>services.yml</codeph> file. This file is contained in the installation package for <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, <codeph><ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    />-Service-1.1.0.tar.gz</codeph>, which you have extracted to <codeph>/opt/FJSVsvcmm</codeph> on the Control Machine.</p>
-            <p>In the configuration file, specify the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> host where the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> services and agents are installed. To do this, proceed, for example, as follows: </p>
-            <p>
-                <codeblock>cd /opt/FJSVsvcmm
-vim services.yml</codeblock>
-            </p>
-            <p><codeph>- hosts: monasca-node</codeph> defines the host where <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> is installed. The host name must match the host name specified for the <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> host in the <codeph>/etc/ansible/hosts</codeph> file on the Ansible Master, for example: </p>
-            <p>
-                <codeblock># Monasca Hosts
-[monasca_group]
-monasca-node        ansible_ssh_host=192.168.10.4 ansible_ssh_user=administrator</codeblock>
-            </p>
-            <note
-                            othertype="note">Do not change the sequence of the services defined in the <codeph>services.yml</codeph> file.</note>
-        </section>
-        <section>
-            <title>Usage</title>
-            <p>Proceed as follows to run the script:</p>
-            <p>
-                <ol>
-                    <li>Log in to the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                        /> host.</li>
-                    <li>Connect to the Control Machine via SSH. </li>
-                    <li>Go to the directory where the <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                            /> installation package is located.<p>Example:</p><p>
-                            <codeblock>cd /opt/FJSVsvcmm</codeblock>
-                        </p></li>
-                    <li>Execute the script with the appropriate options:
-                        <ul><li>To display help information: <p>
-                                    <codeblock>./services.sh --help</codeblock>
-                                </p></li>
-                    <li>
-                        <p>To start all <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                    /> agents and services: </p>
-                        <p>
-                            <codeblock>./services.sh start -i /etc/ansible/hosts</codeblock>
-                        </p>
-                    </li>
-                    <li>
-                        <p>To stop all <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                    /> agents and services: </p>
-                        <p>
-                            <codeblock>./services.sh stop -i /etc/ansible/hosts</codeblock>
-                        </p>
-                    </li>
-                    <li>
-                        <p>To view the status of all <ph
-                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                    /> agents and services: </p>
-                        <p>
-                            <codeblock>./services.sh status -i /etc/ansible/hosts</codeblock>
-                        </p>
-                    </li></ul></li>
-                </ol>
-            </p>
-        </section>
-        <section>
-            <title>Starting and Stopping Individual Agents and Services</title>
-            <p>You can start or stop the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                /> agents and services individually. When doing so, you need to stick to the following sequence:</p>
-            <p id="zookeeper_concept_conbody_section_4_p">
-                <ol>
-                    <li><codeph>zookeeper</codeph></li>
-                    <li><codeph>storm-nimbus</codeph></li>
-                    <li><codeph>storm-supervisor</codeph></li>
-                    <li><codeph>mariadb</codeph></li>
-                    <li><codeph>kafka</codeph></li>
-                    <li><codeph>influxdb</codeph></li>
-                    <li><codeph>elasticsearch</codeph></li>
-                    <li><codeph>memcached</codeph></li>
-                    <li><codeph>openstack-monasca-notification</codeph></li>
-                    <li><codeph>openstack-monasca-thresh</codeph></li>
-                    <li><codeph>openstack-monasca-log-transformer</codeph></li>
-                    <li><codeph>openstack-monasca-log-api</codeph></li>
-                    <li><codeph>openstack-monasca-persister </codeph></li>
-                    <li><codeph>openstack-monasca-api</codeph></li>
-                    <li><codeph>openstack-monasca-agent</codeph></li>
-                    <li><codeph>kibana</codeph></li>
-                    <li><codeph>openstack-monasca-log-persister</codeph></li>
-                    <li><codeph>openstack-monasca-log-metrics</codeph></li>
-                    <li><codeph>openstack-monasca-log-agent</codeph></li>
-                </ol>
-            </p>
-            <p>When stopping individual services, proceed in the reverse order. </p>
-        </section>
-        <section id="Use_the_following_command_to_concept_conbody_section_5">
-            <p>Use the following command to start an individual service: </p>
-            <p>
-                <codeblock>sudo systemctl start &lt;service&gt;</codeblock>
-            </p>
-            <p>Example: </p>
-            <p>
-                <codeblock>sudo systemctl start openstack-monasca-api</codeblock>
-            </p>
-            <p>Use the following command to stop an individual service: </p>
-            <p>
-                <codeblock>sudo systemctl stop &lt;service&gt;</codeblock>
-            </p>
-            <p>Example: </p>
-            <p>
-                <codeblock>sudo systemctl stop openstack-monasca-api</codeblock>
-            </p>
-            <p>Use the following command to view the status of an individual service: </p>
-            <p>
-                <codeblock>sudo systemctl status &lt;service&gt;</codeblock>
-            </p>
-            <p>Example: </p>
-            <p>
-                <codeblock>sudo systemctl status openstack-monasca-api</codeblock>
             </p>
         </section>
     </conbody>

@@ -6,12 +6,12 @@
     <title>OpenStack Operator's Guide</title>
     <bookmeta>
         <prodinfo>
-            <prodname>ServerView</prodname>
+            <prodname><!--ServerView--></prodname>
             <vrmlist>
-                <vrm version="1.2"/>
+                <vrm version="1.0"/>
             </vrmlist>
-            <brand>FUJITSU Software</brand>
-            <prognum>Cloud Monitoring Manager V1.3</prognum>
+            <brand><!--FUJITSU Software--></brand>
+            <prognum>SUSE OpenStack Cloud Monitoring 1.0</prognum>
             <component/>
             <series>OpenStack Operator's Guide</series>
         </prodinfo>
@@ -88,10 +88,10 @@
         <topicref format="dita" href="shared/logging/c-osolog-index.xml" type="concept"/>
         <topicref format="dita" href="shared/logging/c-osolog-alarms.xml" type="concept"/>
     </chapter>
-    <appendix format="dita" href="shared/appendix/r-confsettings.xml" type="reference">
+    <!--<appendix format="dita" href="shared/appendix/r-confsettings.xml" type="reference">
         <topicref format="dita" href="shared/appendix/r-confsettings-metrics.xml" type="reference"/>
         <topicref format="dita" href="shared/appendix/r-confsettings-logs.xml" type="reference"/>
-    </appendix>
+    </appendix>-->
     <appendix format="dita" href="osoperator/appendix/r-osometrics.xml" type="reference">
         <topicref format="dita" href="shared/appendix/r-metricsstandard.xml" type="reference"/>
         <topicref format="dita" href="shared/appendix/r-metricsadditional.xml" type="reference"/>

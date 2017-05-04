@@ -11,11 +11,15 @@
         <section>
             <p>LINUX is a registered trademark of Linus Torvalds.</p>
             <p>The OpenStack® Word Mark and OpenStack logo are registered trademarks/service marks or trademarks/service marks of the OpenStack Foundation in the United States and other countries and are used with the OpenStack Foundation's permission. FUJITSU LIMITED is not endorsed or sponsored by the OpenStack Foundation, or the OpenStack community.</p>
-            <p>Red Hat is a trademark or a registered trademark of Red Hat Inc. in the United States and other countries.</p>
-            <p>Java® is a registered trademark of Oracle and/or its affiliates.</p>
-            <p>Python and PyCon are trademarks or registered trademarks of the Python Software Foundation.</p>
-            <p>ServerView and Systemwalker are registered trademarks of FUJITSU LIMITED.</p>
-            <p>Other company names and product names are trademarks or registered trademarks of their respective owners.</p>
+            <p>For SUSE trademarks, see
+                <xref
+                    format="html"
+                    href="http://www.suse.com/company/legal/"
+                    scope="external"></xref>. All other
+               third-party trademarks are the property of their respective owners. Trademark
+               symbols (®, ™ etc.) denote trademarks of SUSE and its affiliates.
+               Asterisks (*) denote third-party trademarks.
+            </p>
         </section>
     </conbody>
 </concept>
