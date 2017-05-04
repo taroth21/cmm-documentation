@@ -8,7 +8,7 @@
     <title>About this Manual</title>
     <conbody>
         <section>
-            <p>This manual describes how system operators can monitor their OpenStack platforms with FUJITSU ServerView <ph
+            <p>This manual describes how system operators can monitor their OpenStack platforms with <!--FUJITSU ServerView --><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"
                     />. <!--- hereafter referred to as <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"/> (<ph
