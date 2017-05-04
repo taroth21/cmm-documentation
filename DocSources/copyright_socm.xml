@@ -6,7 +6,8 @@
      xml tags will be stripped, the rest of the formatting will appear
      in the txt file as is.
 -->
-<legalnotice>
+<section>
+ <title>Copyright</title>
  <para>
   Copyright FUJITSU LIMITED 2015 - 2017
  </para>
@@ -43,7 +44,7 @@
   SUSE LLC, its affiliates, the authors nor the translators shall be held
   liable for possible errors or the consequences thereof.
  </para>
-</legalnotice>
+</section>
 <!--
  This documentation is a fork of the Fujitsu CMM documentation that
  can be found at
