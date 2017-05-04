@@ -10,9 +10,9 @@
         <section>
             <p>This manual describes how system operators can monitor their OpenStack platforms with FUJITSU ServerView <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"
-                    /> - hereafter referred to as <ph
+                    />. <!--- hereafter referred to as <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"/> (<ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>).</p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>).--></p>
             <p>The manual is structured as follows: </p>
             <p>
                 <table

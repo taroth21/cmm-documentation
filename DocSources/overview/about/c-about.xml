@@ -12,9 +12,9 @@
             <p id="This_manual_is_an_introductio_concept_conbody_section_p_1"
                     >This manual is an introduction to <!--FUJITSU ServerView --><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"
-                    /> - hereafter referred to as <ph
+                    />.<!-- - hereafter referred to as <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"/> (<ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>). </p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>).--> </p>
             <p>The manual is structured as follows: </p>
             <p>
                 <table

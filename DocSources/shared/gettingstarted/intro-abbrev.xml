@@ -17,10 +17,10 @@
                     <colspec colname="col1" colwidth="1*"/>
                     <colspec colname="col2" colwidth="3.25*"/>
                     <tbody>
-                        <row>
+                        <!--<row>
                             <entry><b><ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"/></b></entry>
                             <entry><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"/></entry>
-                        </row>
+                        </row>-->
                         <row>
                             <entry><b>IaaS</b></entry>
                             <entry>Infrastructure as a Service</entry>
