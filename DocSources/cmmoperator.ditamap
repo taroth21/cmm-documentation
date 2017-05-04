@@ -45,9 +45,9 @@
             <topicref
                 href="shared/gettingstarted/c-webreferences.xml"
                 type="concept"/>
-            <topicref
+            <!--<topicref
                 href="shared/gettingstarted/intro-trademarks.xml"
-                type="concept"/>
+                type="concept"/>-->
             <topicref
                 href="shared/gettingstarted/intro-copyright.xml"
                 type="concept"/>

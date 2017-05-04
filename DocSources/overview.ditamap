@@ -35,8 +35,8 @@
 				type="concept" />
 			<topicref href="shared/gettingstarted/intro-availabledoc.xml"
 				type="concept" />
-			<topicref href="shared/gettingstarted/intro-trademarks.xml"
-				type="concept" />
+			<!--<topicref href="shared/gettingstarted/intro-trademarks.xml"
+				type="concept" />-->
 			<topicref href="shared/gettingstarted/intro-copyright.xml"
 				type="concept" />
 			<topicref href="shared/gettingstarted/intro-export.xml"
