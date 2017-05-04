@@ -26,41 +26,47 @@
                     </p><p>Replace <codeph>&lt;host_ip&gt;</codeph> with the IP address of the machine on which <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                         /> is installed.</p><p>The output of this command is, for example, as follows: </p><p>
-                        <codeblock>Connected to http://localhost:8086 version 0.9.1
-InfluxDB shell 0.9.1</codeblock>
+                        <codeblock>Connected to http://localhost:8086 version 1.1.1
+InfluxDB shell version: 1.1.1
+</codeblock>
                     </p></li>
                 <li
                         id="Connect_to_the_InfluxDB_datab_concept_conbody_section_ol_l">Connect to the InfluxDB database of <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> (<codeph>mon</codeph>): <p>
                         <codeblock>&gt; show databases
 name: databases
-----------------
 name
+----
 mon
+_internal
 
 &gt; use mon
 Using database mon</codeblock>
                     </p></li>
-                <li
-                            id="To_update_your_data_retention_concept_conbody_section_ol_l">
+                <li id="To_update_your_data_retention_concept_conbody_section_ol_l">
                     <p>To update your data retention policy, use the <codeph>ALTER RETENTION POLICY</codeph> command:</p>
-                    <codeblock>ALTER RETENTION POLICY &lt;policy_name&gt; ON &lt;db_name&gt; DURATION &lt;duration&gt; REPLICATION &lt;n&gt; [DEFAULT]</codeblock>
+                    <codeblock>ALTER RETENTION POLICY &lt;policy_name&gt; ON &lt;db_name&gt; DURATION &lt;duration&gt; [SHARD DURATION &lt;shard_duration&gt;] [DEFAULT]</codeblock>
                     <p>Replace <codeph>&lt;policy_name&gt;</codeph> with the name of the retention policy you define. Multiple policies can be defined, one of them is set as default. <codeph>persister_all</codeph> is the name of the policy that is initially installed by <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
+                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </p>
                     <p>Replace <codeph>&lt;db_name&gt;</codeph> with the name of your database.</p>
-                    <p
-                        id="Replace_concept_conbody_section_ol_l">Replace <codeph>&lt;duration&gt;</codeph> with the time period after which the data is to be deleted. The minimum retention period is one hour. You can use the following options for specifying the time period:</p>
+                    <p id="Replace_concept_conbody_section_ol_l"
+                        >Replace <codeph>&lt;duration&gt;</codeph> with the time period after which the data is to be deleted. The minimum retention period is one hour. You can use the following options for specifying the time period:</p>
                     <ul
                         conref="../install/c-cmmoinstcmm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/m_concept_conbody_section_ol_l">
                         <li/>
                     </ul>
                     <p
-                            conref="../install/c-cmmoinstcmm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Only_single_units_are_support_concept_conbody_section_ol_l"/>
-                    <p>Replace <codeph>&lt;n&gt;</codeph> with the number of nodes on which the InfluxDB database is installed. The replication factor is only relevant if <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed in cluster mode.</p>
+                        conref="../install/c-cmmoinstcmm.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Only_single_units_are_support_concept_conbody_section_ol_l"/>
+                    <p>Use <codeph>[SHARD DURATION]</codeph> to define the time span covered by a shard group. When a retention policy is enforced for the database, entire shard groups are removed, and not individual data points. This means that specifying a shorter time range for shard groups than the database retention period allows you to remove data more efficiently. By default, the shard group duration is determined by the database retention period as follows:</p>
+                    <ul>
+                        <li>A database retention period &lt; 2 days corresponds to a shard group duration of 1 hour.</li>
+                        <li>A database retention period >= 2 days and &lt;= 6 months means a shard group duration of 1 day.</li>
+                        <li>A database retention period > 6 months means a shard group duration of 7 days</li>
+                    </ul>
+                    <p>To deviate from the default, you can replace  <codeph>&lt;shard_duration&gt;</codeph> with a time span for shard groups. You can use the same options as for the database retention period, except for <codeph>INF</codeph>.</p>
                     <p>Use <codeph>[DEFAULT]</codeph> to set the new retention policy as the default retention policy for your database.</p>
                     <p>Example for deleting data if it is older than 30 days:</p>
-                    <codeblock>ALTER RETENTION POLICY my_policy ON mon DURATION 30d REPLICATION 1 DEFAULT </codeblock>
+                    <codeblock>ALTER RETENTION POLICY persister_all my_policy ON mon DURATION 30d DEFAULT </codeblock>
                 </li>
                 <li
                 id="Restart_the_concept_conbody_section_ol_l">Restart the <codeph>influxdb</codeph> service, for example, as follows: <p>
@@ -70,10 +76,10 @@ Using database mon</codeblock>
             <p
                     id="For_an_introduction_to_the_In_concept_conbody_section_p_3">For an introduction to the InfluxDB command line interface, refer to the <xref
                     format="html"
-                    href="https://docs.influxdata.com/influxdb/v0.10/tools/shell/"
+                    href="https://docs.influxdata.com/influxdb/v1.1/tools/shell/"
                     scope="external"><u><i>InfluxDB CLI/Shell documentation</i></u></xref>. For details on data retention, refer to <xref
                     format="html"
-                    href="https://docs.influxdata.com/influxdb/v0.10/query_language/database_management/#retention-policy-management" scope="external"><u><i>Retention Policy Management</i></u></xref>. </p>
+                    href="https://docs.influxdata.com/influxdb/v1.1/query_language/database_management/#retention-policy-management" scope="external"><u><i>Retention Policy Management</i></u></xref>. </p>
         </section>
     </conbody>
 </concept>

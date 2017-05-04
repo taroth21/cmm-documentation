@@ -9,8 +9,7 @@
     <title>Databases</title>
     <conbody>
         <section>
-                        <p>You need to create regular backups of the following databases on the host where the <ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is installed:</p>
+                        <p>You need to create regular backups of the following databases on the host where the Monitoring Service is installed:</p>
                         <ul
                 id="Elasticsearch_database_concept_conbody_section_1_ul">
                                 <li>Elasticsearch database</li>
@@ -34,8 +33,7 @@
                             href="http://curl.haxx.se/download.html"
                         scope="external"><u><i>http://curl.haxx.se/download.html</i></u></xref>.</p>
                                 </li>
-                                <li>Log in to the host where the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is installed.</li>
+                                <li>Log in to the host where the Monitoring Service is installed.</li>
                                 <li>
                                         <p>Create a snapshot repository.</p>
                                         <p>Example:</p>
@@ -49,9 +47,7 @@
                                         <p
                         id="The_example_registers_a_share_concept_conbody_section_2_o">The example registers a shared file system repository (<codeph>"type": "fs"</codeph>) that uses the <codeph>/mount/backup/elasticsearch1</codeph> directory for storing snapshots. </p>
                                         <note othertype="note"
-                                                        >The directory for storing snapshots must be specified as configured during the installation of the <ph
-                                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                        /> Service in the <codeph>group_vars/monasca_group</codeph> file. The directory must be manually mounted before creating the snapshot. The <codeph>elastic</codeph> user must be specified as the owner of the directory.</note>
+                                                        >The directory for storing snapshots must be specified as configured during the installation of the Monitoring Service in the <codeph>group_vars/monasca_group</codeph> file. The directory must be manually mounted before creating the snapshot. The <codeph>elastic</codeph> user must be specified as the owner of the directory.</note>
                                         <p
                     id="compress_concept_conbody_section_2_o"><codeph>compress</codeph> is turned on to compress the metadata files.</p>
                                 </li>
@@ -110,8 +106,8 @@
                                 <li>
                                         <p>Back up the database.</p>
                                         <p>Example:</p>
-                                        <codeblock>$ ./influxd backup -host "&lt;host&gt;:&lt;port&gt;" /mount/backup/mysnapshot</codeblock>
-                                        <p>Replace <codeph>&lt;host&gt;</codeph> and <codeph>&lt;port&gt;</codeph> with the IP address and port number that are defined in the <codeph>meta</codeph> section in your InfluxDB configuration file. By default, the <codeph>influxdb.conf</codeph> file is located in the <codeph>/etc/influxdb/</codeph> directory. The example creates the backup for the database in <codeph>/mount/backup/mysnapshot</codeph>.</p>
+                                        <codeblock>$ ./influxd backup -database &lt;db_name&gt; /mount/backup/mysnapshot</codeblock>
+                                        <p>Replace <codeph>&lt;db_name&gt;</codeph> with the name of the database. The example creates the backup for the database in <codeph>/mount/backup/mysnapshot</codeph>.</p>
                                 </li>
                         </ol>
                         <p>Before restoring the database, make sure that all database processes are shut down. To restore the database, you can then proceed as follows:</p>
@@ -126,10 +122,25 @@
                                         <codeblock>$ su influxdb </codeblock>
                                 </li>
                                 <li>
+                                        <p>If required, delete all files not included in the backup by dropping the database before you carry out the restore operation. A restore operation restores all files included in the backup. Files created or merged at a later point in time, are not affected</p>
+                                        <p>Example:</p>
+                                        <codeblock>$ ./influxd drop database &lt;db_name&gt;</codeblock>
+                                        <p>Replace <codeph>&lt;db_name&gt;</codeph> with the name of the database.</p>
+                                </li>
+                                <li>
+                                        <p>Restore the metastore.</p>
+                                        <p>Example:</p>
+                                        <codeblock>$ ./influxd restore -metadir /var/opt/influxdb/meta /mount/backup/mysnapshot</codeblock>
+                                </li>
+                                <li>
                                         <p>Restore the database. </p>
                                         <p>Example:</p>
-                                        <codeblock>$ ./influxd restore -config /etc/influxdb/influxdb.conf /mount/backup/mysnapshot</codeblock>
-                                        <p>The example restores the backup from <codeph>/mount/backup/mysnapshot</codeph> to <codeph>/etc/influxdb/influxdb.conf</codeph>.</p>
+                                        <codeblock>$ ./influxd restore -database &lt;db_name&gt; -datadir /var/opt/influxdb/data /mount/backup/mysnapshot</codeblock>
+                                        <p>The example restores the backup from <codeph>/mount/backup/mysnapshot</codeph> to <codeph>/var/opt/influxdb/influxdb.conf</codeph>.</p>
+                                </li>
+                                <li>
+                                        <p>Ensure that the file permissions for the restored database are set correctly.</p>
+                                        <codeblock>sudo chown -R influxdb:influxdb /var/opt/influxdb</codeblock>
                                 </li>
                                 <li>
                                         <p>Start the InfluxDB database service. Use the following command:</p>
@@ -138,7 +149,7 @@
                         </ol>
                         <p>For additional information on backing up and restoring an InfluxDB database, refer to the <xref
                                         format="html"
-                                        href="https://docs.influxdata.com/influxdb/v0.10/administration/backup_and_restore/"
+                                        href="https://docs.influxdata.com/influxdb/v1.1/administration/backup_and_restore/"
                                         scope="external"><u><i>InfluxDB documentation</i></u></xref>.</p>
                 </section>
                 <section>
@@ -151,15 +162,13 @@
                         <p>In addition to the name of the database, you have to specify the name and the location where <codeph>mysqldump</codeph> stores its output.</p>
                         <p>To restore your MariaDB database, proceed as follows:</p>
                         <ol>
-                                <li>Log in to the host where the <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> Service is installed as a user with root privileges.</li>
+                                <li>Log in to the host where the Monitoring Service is installed as a user with root privileges.</li>
                                 <li>Go to the directory where the <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> installation package is located.<p>Example:</p><p>
                                                 <codeblock>cd /opt/FJSVsvcmm</codeblock>
                                         </p></li>
                                 <li>
-                                        <p>Stop all <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> agents and services: </p>
+                                        <p>Stop all agents and services: </p>
                                         <p>
                                                 <codeblock>./services.sh stop</codeblock>
                                         </p>
