@@ -24,12 +24,12 @@
         <section>
             <fig>
                 <image
-                    align="left" alt="installation-type-overview.png" height="346"
+                    align="left" alt="installation-type-overview.png" height="297"
                     href="../../images/installation-type-overview.png"
-                    width="350"/>
+                    width="300"/>
             </fig>
-            <p>The installation of <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> comprises the following steps: </p>
+            <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                /> comprises the following steps: </p>
             <ol>
                 <li>Preparing the installation environment - done by the Monitoring Service operator and the OpenStack operator.</li>
                 <li>Configuring the Control Machine - done by the Monitoring Service operator and the OpenStack operator.</li>
