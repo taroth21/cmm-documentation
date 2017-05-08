@@ -40,8 +40,7 @@
                             </ul>
                         </p><p>In the course of the productive operation of <ph
                             conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, additional projects may be created.</p><p>The <b>Project ID</b> field shows the relevant ID. </p></li>
-                    <li>Log in to the host where <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed. </li>
+                    <li>Log in to the host where the Monitoring Service is installed. </li>
                     <li>Make sure that the data you want to delete exists by executing the following command: <p>
                             <codeblock>curl -XHEAD -i 'http://localhost:&lt;port&gt;/&lt;projectID-date&gt;'</codeblock>
                         </p><p>For example, if Elasticsearch is listening at port 9200 (default), the ID of the OpenStack project is <codeph>abc123</codeph>, and you want to check the index of 2015, July 1st, the command is as follows: </p><p>

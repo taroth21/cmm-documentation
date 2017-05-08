@@ -122,7 +122,7 @@
                                         <codeblock>$ su influxdb </codeblock>
                                 </li>
                                 <li>
-                                        <p>If required, delete all files not included in the backup by dropping the database before you carry out the restore operation. A restore operation restores all files included in the backup. Files created or merged at a later point in time, are not affected</p>
+                                        <p>If required, delete all files not included in the backup by dropping the database before you carry out the restore operation. A restore operation restores all files included in the backup. Files created or merged at a later point in time are not affected.</p>
                                         <p>Example:</p>
                                         <codeblock>$ ./influxd drop database &lt;db_name&gt;</codeblock>
                                         <p>Replace <codeph>&lt;db_name&gt;</codeph> with the name of the database.</p>

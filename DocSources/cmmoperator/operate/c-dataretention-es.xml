@@ -17,12 +17,10 @@
                 /> allows you to configure Elasticsearch Curator and the Cron daemon to define your data retention policies as required by your monitoring environment. </p>
             <p>By default, an Elasticsearch index is automatically deleted in <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> if it is older than 60 days. The delete job is executed every day at midnight. </p>
-            <p>Proceed as follows to change the data retention settings that were defined when installing <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>:</p>
+            <p>Proceed as follows to change the data retention settings that were defined when installing the Monitoring Service:</p>
             <ol>
                 <li>
-                    <p>Log in to the host where <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed.</p>
+                    <p>Log in to the host where the Monitoring Service is installed.</p>
                 </li>
                 <li
                     id="Open_the_concept_conbody_section_ol_l">
