@@ -29,6 +29,7 @@
                     <p>For details on the tasks of the Monitoring Service operator, refer to the <i>Monitoring Service Operator's Guide</i>.</p>
                 </li>
             </ul>
+            <p>The tasks of the Monitoring Service operator and the OpenStack Operator can jointly be performed by one system operator. In this case, refer to the <i>Monitoring Service Operator's Guide</i> and the <i>OpenStack Operator's Guide</i>.</p>
         </section>
         <section
                     id="User_Management_concept_conbody_section_2">

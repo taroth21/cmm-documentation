@@ -49,6 +49,6 @@
                                                 /> to ensure the <ph
                                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                         /> quality. For monitoring, you use a graphical user interface that is seamlessly integrated into the cloud infrastructure. Based on OpenStack Horizon, the user interface visualizes the health and status of your cloud resources and enables user access to all monitoring and log management functionality.</li>
-                        </ul></section>
+                        </ul><p>The tasks of the Monitoring Service operator and the OpenStack Operator can jointly be performed by one system operator. In this case, also refer to the <i>OpenStack Operator's Guide</i>.</p></section>
     </conbody>
 </concept>
