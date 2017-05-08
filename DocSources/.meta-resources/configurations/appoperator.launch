@@ -13,11 +13,10 @@
 <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.ant.ui.AntClasspathProvider"/>
 <mapAttribute key="org.eclipse.ui.externaltools.ATTR_ANT_PROPERTIES">
 <mapEntry key="args.fo.userconfig" value="${workspace_loc}\.metadata\.plugins\com.go.dita.transform\userconfig.xml"/>
-<mapEntry key="args.input" value="/DocSources/tenantuser.ditamap"/>
+<mapEntry key="args.input" value="/DocSources/appoperator.ditamap"/>
 <mapEntry key="customization.dir" value="/DocModel12/pdf.customization"/>
 <mapEntry key="dita.ant.catalog" value="${dita.ant.catalog}"/>
 <mapEntry key="dita.dir" value="${dita.dir}"/>
-<mapEntry key="dita.input.valfile" value="DocSources/.meta-resources/profiles\TenantUser.ditaval"/>
 <mapEntry key="dita.temp.dir" value="${dita.temp.dir}"/>
 <mapEntry key="dita.xml.catalog" value="${dita.xml.catalog}"/>
 <mapEntry key="generate.copy.outer" value="2"/>

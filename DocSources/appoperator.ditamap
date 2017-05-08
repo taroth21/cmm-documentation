@@ -91,7 +91,7 @@
             type="concept"/>
         <topicref format="dita"
             href="shared/monitor/c-monitor-alert.xml"
-        type="concept"/>
+            type="concept"/>
         <topicref format="dita"
             href="tenantuser/monitor/c-tumon-statusinfo.xml"
         type="concept"/>
