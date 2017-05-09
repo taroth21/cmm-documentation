@@ -4,8 +4,9 @@
 ]>
 <!-- Copyright FUJITSU LIMITED 2017 -->
 <concept id="concept_E8D43EB4494E41D2AB42D4A89396D1CMM"
-                    xml:lang="en-us">
-    <title>Working with Data Visualizations</title>
+        xml:lang="en-us">
+    <title
+            id="Working_with_Data_Visualizati_concept_title">Working with Data Visualizations</title>
     <conbody>
         <section
             conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/The_user_interface_for_monito_concept_conbody_section_1"/>
@@ -19,7 +20,6 @@
             conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Editing_Rows_concept_conbody_section_6"/>
         <section
             conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Editing_Panels_concept_conbody_section_7"/>
-        <section
-            conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Saving_and_Sharing_Dashboards_concept_conbody_section_8"/>
+        <section conref="../../shared/monitor/c-monitor-grafana.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Saving_and_Sharing_Dashboards_concept_conbody_section_8"/>
     </conbody>
 </concept>

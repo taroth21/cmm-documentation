@@ -17,7 +17,7 @@
                                         /> monitoring functions. Additional roles are optional. Contact your OpenStack operator for more information.</li>
                                 <li>You must be assigned to the project you want to monitor.</li>
                         </ul>
-                        <p>Log in to the OpenStack platform using the user name and password provided as login information by OpenStack. This allows you to access the OpenStack Horizon dashboard. The tabs and functions you can access in OpenStack Horizon depend on your access permissions. </p>
+                        <p>Log in to OpenStack Horizon using the user name and password provided as login information by OpenStack. The tabs and functions you can access in OpenStack Horizon depend on your access permissions. </p>
                         <p>For monitoring your services and virtual machines, you use the <ph
                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                                         /> monitoring user interface which is integrated into OpenStack Horizon. The <ph
