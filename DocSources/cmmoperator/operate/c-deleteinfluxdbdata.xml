@@ -10,7 +10,7 @@
     <conbody>
         <section>
             <p>Metrics data is stored in the Metrics and Alarms InfluxDB Database. InfluxDB features an SQL-like query language for querying data and performing aggregations on that data.</p>
-            <p>The Metrics Agent configuration defines the metrics and types of measurement for which data is stored. For each measurement, a so-called series is written to the InfluxDB database. A series consists of a timestamp, the metric, and the value measured.</p>
+            <p>The Metrics Agent configuration defines the metrics and types of measurement for which data is stored. For each measurement, a so-called series is written to the InfluxDB database. A series consists of a timestamp, the metrics, and the value measured.</p>
             <p>Example: </p>
             <fig>
                 <image alt="CSI_Influxdb.png" height="79" href="../../images/cmm-influxdb.png" width="252"/>
@@ -33,14 +33,13 @@
                         </p><p>In the course of the productive operation of <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             />, additional projects may be created, for example, for application operators.</p><p>The <b>Project ID</b> field shows the relevant tenant ID. </p></li>
-                    <li>Log in to the host where <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed. </li>
+                    <li>Log in to the host where the Monitoring Service is installed. </li>
                     <li>Go to the directory where InfluxDB is installed: <p>
                             <codeblock>cd /usr/bin</codeblock>
                         </p></li>
                     <li>Connect to InfluxDB using the InfluxDB command line interface as follows: <p>
                             <codeblock>./influx -host &lt;host_ip&gt;</codeblock>
-                        </p><p>Replace <codeph>host_ip</codeph> with the IP address of the machine on which <ph
+                        </p><p>Replace <codeph>&lt;host_ip&gt;</codeph> with the IP address of the machine on which <ph
                                 conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             /> is installed.</p><p>The output of this command is, for example, as follows: </p><p>
                             <codeblock>Connected to http://localhost:8086 version 1.1.1
@@ -70,7 +69,7 @@ Using database mon</codeblock>
                                 </p>
                             </li>
                             <li>
-                                <p>You can view the series for a specific metric and project, for example, as follows: </p>
+                                <p>You can view the series for a specific metrics and project, for example, as follows: </p>
                                 <p>
                                     <codeblock>SHOW SERIES FROM "cpu.user_perc" WHERE _tenant_id = '&lt;project ID&gt;'</codeblock>
                                 </p>
@@ -85,8 +84,8 @@ Using database mon</codeblock>
                                 </p><p>Example: </p><p>
                                     <codeblock>DROP SERIES WHERE _tenant_id = '27620d7ee6e948e29172f1d0950bd6f4'</codeblock>
                                 </p></li>
-                            <li>When a metric is no longer relevant for a project, delete all series for the specific project and metric as follows: <p>
-                                    <codeblock>DROP SERIES FROM "&lt;metric&gt;" WHERE _tenant_id = '&lt;project ID&gt;'</codeblock>
+                            <li>When a metrics is no longer relevant for a project, delete all series for the specific project and metrics as follows: <p>
+                                    <codeblock>DROP SERIES FROM "&lt;metrics&gt;" WHERE _tenant_id = '&lt;project ID&gt;'</codeblock>
                                 </p><p>Example: </p><p>
                                     <codeblock>DROP SERIES FROM "cpu.user_perc" WHERE _tenant_id = '27620d7e'</codeblock>
                                 </p></li>

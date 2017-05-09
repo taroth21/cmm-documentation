@@ -13,11 +13,9 @@
             <p
                     id="Metrics_and_alarm_history_dat_concept_conbody_section_p_1">Metrics and alarm history data is stored in the InfluxDB database. InfluxDB features data retention mechanisms that allow you to define your data retention policies as required by your monitoring environment. By default, <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> automatically deletes metrics and alarm history data from the database if it is older than 60 days. </p>
-            <p>To change the data retention settings that were defined when installing <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>, you use the InfluxDB command line interface, the interactive shell that is provided for the database. Proceed as follows:</p>
+            <p>To change the data retention settings that were defined when installing the Monitoring Service, you use the InfluxDB command line interface, the interactive shell that is provided for the database. Proceed as follows:</p>
             <ol>
-                <li>Log in to the host where <ph
-                            conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is installed.</li>
+                <li>Log in to the host where the Monitoring Service is installed.</li>
                 <li id="Go_to_the_directory_where_Inf_concept_conbody_section_ol_l">Go to the directory where InfluxDB is installed: <p>
                         <codeblock>cd /usr/bin</codeblock>
                     </p></li>
@@ -60,10 +58,10 @@ Using database mon</codeblock>
                     <p>Use <codeph>[SHARD DURATION]</codeph> to define the time span covered by a shard group. When a retention policy is enforced for the database, entire shard groups are removed, and not individual data points. This means that specifying a shorter time range for shard groups than the database retention period allows you to remove data more efficiently. By default, the shard group duration is determined by the database retention period as follows:</p>
                     <ul>
                         <li>A database retention period &lt; 2 days corresponds to a shard group duration of 1 hour.</li>
-                        <li>A database retention period >= 2 days and &lt;= 6 months means a shard group duration of 1 day.</li>
-                        <li>A database retention period > 6 months means a shard group duration of 7 days</li>
+                        <li>A database retention period >= 2 days and &lt;= 6 months corresponds to a shard group duration of 1 day.</li>
+                        <li>A database retention period > 6 months corresponds to a shard group duration of 7 days</li>
                     </ul>
-                    <p>To deviate from the default, you can replace  <codeph>&lt;shard_duration&gt;</codeph> with a time span for shard groups. You can use the same options as for the database retention period, except for <codeph>INF</codeph>.</p>
+                    <p>To deviate from this default, you can replace <codeph>&lt;shard_duration&gt;</codeph> with a different time span for shard groups. You can use the same options as for the database retention period, except for <codeph>INF</codeph>.</p>
                     <p>Use <codeph>[DEFAULT]</codeph> to set the new retention policy as the default retention policy for your database.</p>
                     <p>Example for deleting data if it is older than 30 days:</p>
                     <codeblock>ALTER RETENTION POLICY persister_all my_policy ON mon DURATION 30d DEFAULT </codeblock>
