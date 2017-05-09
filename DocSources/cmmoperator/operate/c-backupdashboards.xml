@@ -13,7 +13,7 @@
                     format="html" href="https://www.elastic.co/guide/en/kibana/4.5/dashboard.html#saving-dashboards"
                     scope="external"><u><i>Kibana documentation</i></u></xref>.</p>
             <p>Grafana allows you to export a monitoring dashboard to a JSON file, and to re-import it when necessary. For backing up and restoring the exported dashboards, use the standard mechanisms of your file system. For details on exporting monitoring dashboards, refer to the <xref
-                    format="html" href="http://docs.grafana.org/v1.9/guides/gettingstarted/" scope="external"
+                    format="html" href="http://docs.grafana.org/" scope="external"
                             ><u><i>Getting Started</i></u></xref> tutorial of Grafana.  </p>
         </section>
     </conbody>
