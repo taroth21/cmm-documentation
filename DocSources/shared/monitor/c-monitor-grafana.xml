@@ -139,13 +139,12 @@
             <p>You can move panels on your dashboard by simply dragging and dropping them within and between rows.</p>
             <p>By default, the time range for panels is controlled by dashboard settings. Use the time picker in the top right corner of your dashboard window to define relative or absolute time ranges. You can also set an auto-refresh interval, or manually refresh the data that is displayed. </p>
         </section>
-        <section
-                    id="Saving_and_Sharing_Dashboards_concept_conbody_section_8">
+        <section id="Saving_and_Sharing_Dashboards_concept_conbody_section_8">
             <title>Saving and Sharing Dashboards</title>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                    /> allows you to save your metrics dashboards locally. Saving a dashboard means exporting it to a JSON file. The JSON file can be edited, it can be shared with other users, and it can be imported to <ph
+                    /> allows you to save a metrics dashboard and export it to a JSON file. The JSON file can be edited, it can be shared with other users, and it can be imported to <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> again.</p>
-            <p>To save a dashboard, use <uicontrol>Save</uicontrol> in the top right corner of your dashboard window. The option allows you to directly view the JSON syntax and export the dashboard to a JSON file. The JSON file can be forwarded to other users, if required. To import a JSON file, use <uicontrol>Open dashboard</uicontrol> in the top left corner of the dashboard window.</p>
+            <p>To save a dashboard, use <uicontrol>Save</uicontrol> in the top right corner of your dashboard window. You can enter a name for the dashboard and simply save it to your browser's local storage. Use <uicontrol>Dashboard JSON</uicontrol> to directly view the corresponding JSON syntax, or use <uicontrol>Export dashboard</uicontrol>  to download the JSON file. The JSON file can be forwarded to other users, if required. To import a JSON file, use <uicontrol>Open dashboard</uicontrol> in the top left corner of the dashboard window.</p>
         </section>
     </conbody>
 </concept>
