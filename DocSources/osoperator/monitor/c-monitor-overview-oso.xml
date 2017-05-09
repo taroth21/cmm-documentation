@@ -9,7 +9,6 @@
         <section
             conref="../../shared/monitor/c-monitor-overview.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/provides_one_convenient_acce_concept_conbody_section_1"/>
         <section
-            conref="../../shared/monitor/c-monitor-overview.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/On_the_overview_page_os"
-        />
+            conref="../../shared/monitor/c-monitor-overview.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/On_the_overview_page_os"/>
     </conbody>
 </concept>

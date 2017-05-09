@@ -94,7 +94,7 @@
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> as a starting point and customize it.</li>
             </ul>
             <p>The following sections provide introductory information on dashboards, rows, and panels, and make you familiar with the first steps involved in building a dashboard. For additional information, you can also refer to the <xref
-                    format="html" href="http://docs.grafana.org/v1.9/" scope="external"
+                    format="html" href="http://docs.grafana.org/" scope="external"
                         ><u><i>Grafana documentation</i></u></xref>.</p>
         </section>
         <section
