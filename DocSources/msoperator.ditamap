@@ -195,7 +195,8 @@
     <chapter
             href="shared/monitor/c-monitor.xml">
         <topicref
-            format="dita" href="cmmoperator/monitor/c-monitor-overview-cmmo.xml"
+            format="dita"
+            href="cmmoperator/monitor/c-monitor-overview-cmmo.xml"
             type="concept"/>
         <topicref format="dita"
             href="cmmoperator/monitor/c-monitor-graf-cmmo.xml"
