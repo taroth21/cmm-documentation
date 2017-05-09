@@ -15,12 +15,12 @@
                 <section>
                         <fig>
                                 <image
-                    alt="installation-type-overview.png" height="346"
+                    alt="installation-type-overview.png" height="297"
                     href="../../images/installation-type-overview.png"
-                    width="350"/>
+                    width="300"/>
                         </fig>
-                        <p>The installation of <ph
-                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> comprises the following steps: </p>
+                        <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> comprises the following steps: </p>
                         <ol>
                                 <li>Preparing the installation environment - done by the OpenStack operator and the Monitoring Service operator.</li>
                                 <li>Configuring the Control Machine - done by the OpenStack operator and the Monitoring Service operator.</li>
@@ -59,7 +59,9 @@
                                         <p>You can install additional agents for monitoring additional OpenStack services as required.</p>
                                 </li>
                         </ul>
-                        <p>The installation of the <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components is managed from a so-called Control Machine.</p>
+                        <p>The installation of the <ph
+                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
+                                /> components is managed from a so-called Control Machine.</p>
                 </section>
         </conbody>
 </concept>
