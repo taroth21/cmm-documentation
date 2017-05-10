@@ -49,7 +49,7 @@
                                     href="../install/c-cmmoinstall.xml"/></entry>
                                 <entry
                                     colname="col3">For installation and configuration of SUSE OpenStack Cloud Monitoring,
-                                    refer to the &clouddeploy;<!--FIXME taroth 2017-05-10: add chapter title: Deploying
+                                    refer to the <!--FIXME taroth 2017-05-10: add chapter title: Deploying
                                     the OpenStack Services, section Deploying Monasca-->.</entry>
                             </row>
                             <row>
