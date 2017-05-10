@@ -12,8 +12,7 @@
         <section>
             <p
                     id="As_more_and_more_applications_concept_conbody_section_p_1">As more and more applications are deployed on cloud systems and cloud systems are growing in complexity, managing the cloud infrastructure is becoming increasingly difficult. <ph
-                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"/> (<ph
-                conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>) helps mastering this challenge by providing a sophisticated Monitoring as a Service solution that is operated on top of OpenStack-based cloud computing platforms.</p>
+                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Name"/> helps mastering this challenge by providing a sophisticated Monitoring as a Service solution that is operated on top of OpenStack-based cloud computing platforms.</p>
             <p
                     id="allows_enterprises_to_manage_concept_conbody_section_p_2"><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> allows enterprises to manage, track, and optimize their cloud infrastructure and the services they provide to end users. It offers a suite of monitoring and analytics tools aimed at improving the health and performance of cloud systems.</p>
