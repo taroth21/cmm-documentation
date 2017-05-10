@@ -48,8 +48,9 @@
                                     colname="col2"><xref
                                     href="../install/c-cmmoinstall.xml"/></entry>
                                 <entry
-                                    colname="col3">Describes how to install and configure <ph
-                                    conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</entry>
+                                    colname="col3">For installation and configuration of SUSE OpenStack Cloud Monitoring,
+                                    refer to the &clouddeploy;<!--FIXME taroth 2017-05-10: add chapter title: Deploying
+                                    the OpenStack Services, section Deploying Monasca-->.</entry>
                             </row>
                             <row>
                                 <entry
@@ -80,21 +81,21 @@
                                 <entry
                                     colname="col3">Lists the RPM packages required for installing <ph
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>.</entry>
-                            </row -->
+                            </row>
                             <row>
                                 <entry
                                     colname="col2"><xref
                                     href="../../shared/appendix/r-confsettings.xml"/></entry>
                                 <entry colname="col3"
                                     >Describes the configuration settings for the Metrics Agent and the Log Agent.</entry>
-                            </row>
-                            <row>
+                            </row>-->
+                           <!-- <row>
                                 <entry
                                     colname="col2"><xref
                                     href="../appendix/r-cmmometrics.xml"/></entry>
                                 <entry colname="col3">Describes the metrics supported by <ph
                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </entry>
-                            </row>
+                            </row>-->
                             <row>
                                 <entry
                                     colname="col2"><xref
