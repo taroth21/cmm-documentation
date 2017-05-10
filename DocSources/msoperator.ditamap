@@ -223,7 +223,7 @@
             href="shared/logging/c-osolog-alarms.xml"
         type="concept"/>
     </chapter>
-   <!-- <appendix format="dita"
+    <appendix format="dita"
         href="shared/appendix/r-confsettings.xml"
             type="reference">
         <topicref format="dita"
@@ -232,7 +232,7 @@
         <topicref format="dita"
             href="shared/appendix/r-confsettings-logs.xml"
         type="reference"/>
-    </appendix>-->
+    </appendix>
     <appendix format="dita"
         href="cmmoperator/appendix/r-cmmometrics.xml"
             type="reference">
