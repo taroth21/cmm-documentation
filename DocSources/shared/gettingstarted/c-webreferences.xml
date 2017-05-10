@@ -13,7 +13,7 @@
                         conref="../product-name.xml#ProductNameTopic/Product_Abbr"/>:</p>
                         <ul>
                         <li><xref
-                                format="html" href="http://docs.openstack.org/liberty/"
+                                format="html" href="http://docs.openstack.org/newton/"
                         scope="external">
                         <u><i>OpenStack</i></u></xref>: Documentation on OpenStack, the underlying platform technology.</li>
                         <li><xref

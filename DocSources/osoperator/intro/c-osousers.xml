@@ -20,7 +20,7 @@
                                 <li/>
                         </ul>
                         <p>For details on user management, refer to the <xref format="html"
-                                href="http://docs.openstack.org/liberty/" scope="external"
+                                href="http://docs.openstack.org/newton/" scope="external"
                                                         ><u><i>OpenStack documentation</i></u></xref>.</p>
                 </section>
         </conbody>
