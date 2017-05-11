@@ -16,7 +16,7 @@
         </section>
         <section>
             <title>Monitoring </title>
-            <p>A Metrics Agent can be installed on each virtual or physical server where services to be monitored are provisioned. The agent is responsible for querying metrics and sending them to the Monitoring Service for further processing.</p>
+            <p>The Metrics agent is responsible for querying metrics and sending them to the Monitoring Service for further processing.</p>
             <p
                 conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/Metrics_represent_self-descri_concept_conbody_section_3_p"/>
             <p
@@ -25,8 +25,12 @@
                     conref="../../overview/monitor/c-monitoring.xml#concept_E8D43EB4494E41D2AB42D4A89396D1AB/System_metrics_for_example_concept_conbody_section_3_ul">
                 <li/>
             </ul>
-            <p>Your individual agent configuration determines which metrics are available for monitoring your services and servers. For details on installing and configuring a Metrics Agent, refer to <xref
-                    href="../install/c-osoinstmetricsagent.xml"/>.</p>
+            <p>Your individual agent configuration determines which metrics are
+                available for monitoring your services and servers. For details
+                on installing and configuring a Metrics Agent, refer to the
+                SUSE OpenStack Cloud Deployment Guide.
+                <!--taroth 2017-05-11: add chapter and section title here, too-->
+            </p>
             <p>As soon as an agent is available, you have access to the <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> monitoring features. You work with a graphical user interface that is seamlessly integrated into your cloud infrastructure. Based on OpenStack Horizon, the user interface enables access to all monitoring functionality and the resulting large-scale monitoring data. A comfortable dashboard visualizes the health and status of your cloud resources.</p>
             <p>
@@ -38,8 +42,12 @@
         </section>
         <section>
             <title>Log Management</title>
-            <p>A Log Agent can be installed and configured on each physical and virtual server where log data is to be retrieved. The agent collects the log data from the services and servers and sends them to the Monitoring Service for further processing. For details on installing and configuring a Log Agent, refer to <xref
-                    href="../install/c-osoinstlogagent.xml"/>.</p>
+            <p>The Log agent collects the log data from the services and
+                servers and sends them to the Monitoring Service for further
+                processing. For details on installing and configuring a Log
+                Agent, refer to the SUSE OpenStack Cloud Deployment Guide.
+                <!--taroth 2017-05-11: add chapter and section title here, too-->
+            </p>
             <p><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> stores the log data in a central database. This forms the basis for visualizing the log data for the <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> users. Advanced data analysis and visualization of the log data is supported in a variety of charts, tables, and maps. Visualizations can easily be combined in dynamic dashboards that display changes to search queries in real time. </p>
