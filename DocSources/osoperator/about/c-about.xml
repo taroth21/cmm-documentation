@@ -53,13 +53,13 @@
                                         Deploying the OpenStack Services, 
                                         section Deploying Monasca-->.</entry>
                             </row>
-                            <row>
+                            <!--<row>
                                 <entry
                                     colname="col2"><xref
                                     href="../prepare/c-osopreparetu.xml"/></entry>
                                 <entry colname="col3"
                                     >Describes how to prepare the monitoring environment for application operators. </entry>
-                            </row>
+                            </row>-->
                             <row>
                                 <entry
                                     colname="col2"><xref
