@@ -9,59 +9,9 @@
     <title>Installation</title>
     <conbody>
                 <section>
-                        <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> comprises several steps. They are partially executed by the Monitoring Service operator, and partially by the OpenStack operator.</p>
-                </section>
-                <section>
-                        <fig>
-                                <image
-                    alt="installation-type-overview.png" height="297"
-                    href="../../images/installation-type-overview.png"
-                    width="300"/>
-                        </fig>
-                        <p>The installation of <ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> comprises the following steps: </p>
-                        <ol>
-                                <li>Preparing the installation environment - done by the OpenStack operator and the Monitoring Service operator.</li>
-                                <li>Configuring the Control Machine - done by the OpenStack operator and the Monitoring Service operator.</li>
-                                <li>Installing the offline resources - done by the Monitoring Service operator only. </li>
-                                <li>Installing the OpenStack extensions required for the Monitoring Service - done by the OpenStack operator only. </li>
-                                <li>Installing the Monitoring Service - done by the Monitoring Service operator only.</li>
-                        </ol>
-                        <p>As an OpenStack operator, you also install and configure the agents you use for monitoring your OpenStack services. Your application operators who have booked a virtual machine in OpenStack monitor their machine with libvirt. As an OpenStack operator, you have to make the required libvirt preparations for them. For details, refer to <xref
-                                        href="../prepare/c-osopreparetu.xml"/>.</p>
-                        <p>For installing the OpenStack extensions and the required agents, <ph
-                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> ships with an installer that is based on Ansible. </p>
-                </section>
-                <section>
-                        <title>Recommended Installation Environment</title>
-                        <p>The following installation environment is recommended:</p>
-                        <fig>
-                                <image
-                    alt="ansible-installation-connection.png"
-                    height="206"
-                    href="../../images/ansible-installation-connection.png"
-                        width="327"/>
-                        </fig>
-                        <ul>
-                                <li>
-                                        <p>By default, the Monitoring Service operator installs the offline resources, the <ph
-                                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                        /> components, and the required agents on one host (<ph
-                                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                        /> host). To ensure high availability and improve scalability, <ph
-                                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                                /> can also be clustered and installed on multiple hosts. This does not affect your tasks as an OpenStack operator.</p>
-                                </li>
-                                <li>
-                                        <p>As an OpenStack operator, you install the OpenStack extensions and the required agents for the OpenStack Keystone and the OpenStack Horizon service. Depending on your OpenStack environment, Keystone and Horizon are either installed on the same or on two separate hosts.</p>
-                                        <p>You can install additional agents for monitoring additional OpenStack services as required.</p>
-                                </li>
-                        </ul>
-                        <p>The installation of the <ph
-                                        conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
-                                /> components is managed from a so-called Control Machine.</p>
+                        <p>SUSE OpenStack Cloud Monitoring is automatically installed and configured
+                           if you deploy the Monasca barclamp. For details, see the SUSE
+                           OpenStack Cloud Deployment Guide.</p>
                 </section>
         </conbody>
 </concept>
