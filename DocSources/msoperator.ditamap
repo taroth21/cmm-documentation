@@ -153,6 +153,12 @@
             href="cmmoperator/operate/c-cmmostartstopcmm.xml"
             type="concept"/>
         <topicref format="dita"
+            href="cmmoperator/operate/c-deleteinfluxdbdata.xml"
+            type="concept"/>
+        <topicref format="dita"
+            href="cmmoperator/operate/c-removelogfiles.xml"
+            type="concept"/><!--
+        <topicref format="dita"
             href="shared/operationmaintenance/c-deletedata.xml"
                 type="concept">
             <topicref format="dita"
@@ -167,13 +173,7 @@
             <topicref format="dita"
                 href="cmmoperator/operate/c-dataretention-es.xml"
                 type="concept"/>
-            <topicref format="dita"
-                href="cmmoperator/operate/c-deleteinfluxdbdata.xml"
-                type="concept"/>
-            <topicref format="dita"
-                href="cmmoperator/operate/c-removelogfiles.xml"
-            type="concept"/>
-        </topicref>
+          </topicref>-->
         <topicref
             format="dita"
             href="shared/operationmaintenance/c-logfilelocation.xml"
