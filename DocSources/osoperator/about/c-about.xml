@@ -82,7 +82,7 @@
                                     colname="col3">Lists the RPM packages required for installing the <ph
                                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> components.</entry>
                             </row -->
-                            <row>
+                           <!-- <row>
                                 <entry
                                     colname="col2"><xref
                                     href="../../shared/appendix/r-confsettings.xml"/></entry>
@@ -95,7 +95,7 @@
                                     href="../appendix/r-osometrics.xml"/></entry>
                                 <entry colname="col3">Describes the metrics supported by <ph
                                         conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/>. </entry>
-                            </row>
+                            </row>-->
                             <row>
                                 <entry
                                     colname="col2"><xref
