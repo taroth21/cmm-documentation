@@ -38,7 +38,8 @@
                     <p>You must be assigned to the OpenStack project you want to monitor.</p>
                 </li>
             </ul>
-            <p>Log in to OpenStack Horizon with your user name and password. The functions you can use in OpenStack Horizon depend on your access permissions. </p>
+            <p>Log in to OpenStack Horizon with your user name and password. The functions you can use in OpenStack Horizon depend on your access permissions.
+               To access logs and metrics, switch to the <uicontrol>monasca</uicontrol> tenant in Horizon.</p>
             <p>The <ph conref="../product-name.xml#ProductNameTopic/Product_Abbr"
                     /> functionality is available on the <uicontrol>Monitoring</uicontrol> tab. It provides access to the log data of all projects to which you are assigned. Before you start, select the project you want to work on. The <uicontrol>Log Management</uicontrol> option at the top border of the <uicontrol>Overview</uicontrol> page displays the log management window where you can work on the log data of the selected project. </p>
         </section>
