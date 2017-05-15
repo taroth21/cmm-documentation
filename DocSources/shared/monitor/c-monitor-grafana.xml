@@ -18,12 +18,12 @@
                     id="Preconfigured_Dashboard_for_O_concept_conbody_section_2">
             <title>Preconfigured Metrics Dashboard for OpenStack</title>
             <p>As an OpenStack operator, you use the <uicontrol>Dashboard</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the OpenStack services. The Monitoring Service operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the Monitoring Service.</p>
-            <fig>
+            <!--<fig>
                 <image
                     alt="grafana-os.png" height="260"
                     href="../../images/grafana-os.png"
                             width="435"/>
-            </fig>
+            </fig>-->
             <p>To monitor OpenStack, the preconfigured dashboard shows the following: </p>
             <ul>
                 <li>
@@ -50,12 +50,12 @@
             <title>Preconfigured Metrics Dashboard for <ph
                     conref="../product-name.xml#ProductNameTopic/Product_Abbr"/></title>
             <p>As a Monitoring Service operator, you use the <uicontrol>Monasca Health</uicontrol> option on the <uicontrol>Overview</uicontrol> page to view the metrics data on the Monitoring Service. The OpenStack operator uses the <uicontrol>Dashboard</uicontrol> option to view the metrics data on the OpenStack services.</p>
-            <fig>
+            <!--<fig>
                 <image
                     alt="grafana-cmm.png" height="260"
                     href="../../images/grafana-cmm.png"
                             width="435"/>
-            </fig>
+            </fig>-->
             <p>The preconfigured dashboard shows the following data on the Monitoring Service: </p>
             <ul>
                 <li>
@@ -101,12 +101,12 @@
                     id="Creating_a_Dashboard_concept_conbody_section_5">
             <title>Creating a Dashboard</title>
             <p>To create a new dashboard, you use <uicontrol>Open Dashboard</uicontrol> in the top right corner of your dashboard window. The option provides access to various features for administrating dashboards. Use <uicontrol>New</uicontrol> to create an empty dashboard that serves as a starting point for adding rows and panels.</p>
-            <fig>
+          <!--  <fig>
                 <image
                     alt="grafana-cmm.png" height="260"
                     href="../../images/grafana-emptydb.png"
             width="435"/>
-            </fig>
+            </fig>-->
             <p>On the left side of an empty dashboard, there is a green rectangle displayed. Hover over this rectangle to access a <uicontrol>Row</uicontrol> menu. To insert your first panel, you can use the options in the <uicontrol>Add Panel</uicontrol> submenu. See below for details on the available panel types.</p>
             <p>As soon as you have inserted an empty panel, you can add additional rows. For this purpose, use the <uicontrol>Add Row</uicontrol> option on the right side of the dashboard.</p>
         </section>
@@ -120,9 +120,9 @@
                     id="Editing_Panels_concept_conbody_section_7">
             <title>Editing Panels</title>
             <p>Grafana distinguishes between three panel types:</p>
-            <fig>
+         <!--   <fig>
                 <image alt="grafana-cmm.png" height="260" href="../../images/grafana-panels.png" width="435"/>
-            </fig>
+            </fig>-->
             <p>Panels of type <uicontrol>Graph</uicontrol> are used to visualize metrics data. A query editor is provided to define the data to be visualized. The editor allows you to combine multiple queries. This means that any number of metrics and data series can be visualized in one panel.</p>
             <p>Panels of type <uicontrol>Singlestat</uicontrol> are also used to visualize metrics data, yet they reduce a single query to a single number. The single number can be, for example, the minimum, maximum, average, or sum of values of the data series. The single number can be translated into a text value, if required.</p>
             <p>Panels of type <uicontrol>Text</uicontrol> are used to insert static text. The text may, for example, provide information for the dashboard users. Text panels are not connected to any metrics data. </p>

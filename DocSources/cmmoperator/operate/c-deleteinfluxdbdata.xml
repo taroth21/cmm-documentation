@@ -11,10 +11,10 @@
         <section>
             <p>Metrics data is stored in the Metrics and Alarms InfluxDB Database. InfluxDB features an SQL-like query language for querying data and performing aggregations on that data.</p>
             <p>The Metrics Agent configuration defines the metrics and types of measurement for which data is stored. For each measurement, a so-called series is written to the InfluxDB database. A series consists of a timestamp, the metrics, and the value measured.</p>
-            <p>Example: </p>
+            <!--<p>Example: </p>
             <fig>
                 <image alt="CSI_Influxdb.png" height="79" href="../../images/cmm-influxdb.png" width="252"/>
-            </fig>
+            </fig>-->
             <p>Every series can be assigned key tags. In the case of <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     />, this is the <codeph>_tenant_id</codeph> tag. This tag identifies the OpenStack project for which the metrics data has been collected. </p>

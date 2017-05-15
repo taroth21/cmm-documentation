@@ -41,12 +41,12 @@
         <section>
             <title>Querying Log Data</title>
             <p>For querying log data, you use the <uicontrol>Discover</uicontrol> page in the log management window. It is instantly displayed when you access the window. It shows the most recently collected log data:</p>
-            <fig>
+            <!--<fig>
                 <image
                     alt="kibana.png" height="260"
                     href="../../images/kibana-discover.png"
                             width="435"/>
-            </fig>
+            </fig>-->
             <p>The <uicontrol>Discover</uicontrol> page allows you to access the log data in every index that matches the current index pattern. In addition to submitting queries, you can view, filter, and analyze the log data that is returned by your queries.</p>
             <p>On the <uicontrol>Discover</uicontrol> page the following elements assist you in analyzing your log data: </p>
             <ul>
@@ -94,12 +94,12 @@
             <title>Visualizing Query Results</title>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                     /> supports you in building graphical representations of your query results. You can choose from different visualization types, for example, pie charts, data tables, line charts, or vertical bar charts. For visualizing your results, you use the <uicontrol>Visualize</uicontrol> page in the log management window:</p>
-            <fig>
+            <!--<fig>
                 <image
                     alt="kibana.png" height="260"
                     href="../../images/kibana-visualize.png"
                             width="435"/>
-            </fig>
+            </fig>-->
             <p>To create a visualization, use <uicontrol>New Visualization</uicontrol> to the right of the search box at the top border of the window. You have to select a visualization type and the query to be used. You can either create a new query or load a query you have already saved.</p>
             <p>Based on the visualization type and the query, you can proceed with designing the graphical representation in a visualization editor. Multiple design options and a preview function are provided for creating, modifying, and viewing the graphical representation.</p>
             <p>You can save and re-use visualizations. You can also share them with other users. For this purpose, use the options to the right of the search box at the top border of the log management window:</p>
@@ -119,12 +119,12 @@
         <section>
             <title>Combining Visualizations in Dashboards</title>
             <p>For correlating related information or providing an overview, you can combine visualizations in dashboards. Use the <uicontrol>Dashboard</uicontrol> page in the log management window for this purpose: </p>
-            <fig>
+           <!-- <fig>
                 <image
                     alt="kibana.png" height="260"
                     href="../../images/kibana-dashboard.png"
                 width="435"/>
-            </fig>
+            </fig>-->
             <p>To create a dashboard from scratch, you use <uicontrol>New Dashboard</uicontrol> to the right of the search box at the top border of the window. To add a visualization from a list of existing visualizations, use <uicontrol>Add Visualization</uicontrol>. You need at least one saved visualization to create a dashboard. In addition to adding visualizations, you can also place the tabular output of query results on your dashboards. Switch to the <uicontrol>Searches</uicontrol> tab when adding a visualization, and select a saved query. This adds the query result to your dashboard.</p>
             <p>A visualization or query result is displayed in a container on your dashboard. Various options are provided for arranging containers:</p>
             <ul

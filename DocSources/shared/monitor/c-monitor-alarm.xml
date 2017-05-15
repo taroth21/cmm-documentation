@@ -24,12 +24,12 @@ max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
         <section
                     id="Details_concept_conbody_section_2">
             <title>Details</title>
-            <fig>
+            <!--<fig>
                 <image
                     alt="alarm-details.png" height="260"
                     href="../../images/alarm-details.png"
             width="435"/>
-            </fig>
+            </fig>-->
             <p>For an alarm definition, you specify the following details:</p>
             <ul>
                 <li><uicontrol>Name</uicontrol>. Mandatory identifier of the alarm. The name must be unique within the project for which you define the alarm.</li>
@@ -44,12 +44,12 @@ max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
         <section
                     id="Expression_concept_conbody_section_3">
             <title>Expression</title>
-            <fig>
+            <!--<fig>
                 <image
                     alt="alarm-expression.png" height="260"
                     href="../../images/alarm-expression.png"
                     width="435"/>
-            </fig>
+            </fig>-->
             <p>The expression defines how to evaluate a metrics. The expression syntax is based on a simple expressive grammar. For details, refer to the <xref
                     format="html"
                     href="https://github.com/openstack/monasca-api/blob/stable/ocata/docs/monasca-api-spec.md"
@@ -96,12 +96,12 @@ max(disk.space_used_perc{service=monitoring}) &gt; 90</codeblock>
         </section>
         <section>
             <title>Notifications</title>
-            <fig>
+            <!--<fig>
                 <image
                     alt="alarm-notifications.png" height="260"
                     href="../../images/alarm-notifications.png"
                     width="435"/>
-            </fig>
+            </fig>-->
             <p>You can enable notifications for an alarm definition. As soon as an alarm is triggered, the enabled notifications will be sent.</p>
             <p>The <uicontrol>Notifications</uicontrol> tab allows you to select the notifications from the ones that are predefined in your environment. For a selected notification, you specify whether you want to send it for a status transition to <uicontrol>Alarm</uicontrol>, <uicontrol>OK</uicontrol>, and/or <uicontrol>Undetermined</uicontrol>. </p>
             <p>For details on defining notifications, refer to <xref
