@@ -8,9 +8,9 @@
                     xml:lang="en-us">
     <title>Distribution Media</title>
     <conbody>
-        <section>
+        <!-- section>
             <p><i><b>PENDING</b>: Distribution media for CMM 1.3 has not yet been defined.</i></p>
-        </section>
+        </section -->
         <section>
             <p><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> is distributed in the <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"

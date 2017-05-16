@@ -8,9 +8,9 @@
                     xml:lang="en-us">
     <title>Software and Setup Utilities </title>
     <conbody>
-        <section>
+        <!--section>
             <p><i><b>PENDING</b>: Distribution media for CMM 1.3 has not yet been defined.</i></p>
-        </section>
+        </section -->
         <section>
             <p>The software and setup utilities are distributed in the <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
@@ -68,7 +68,7 @@
                         /> agents and services. </p>
                 </li>
                 <li>
-                    <p><codeph>*.txt</codeph> files <i><b>PENDING</b>: Bug 13216 to be fixed with productization of CMM 1.3 (RPMs and libs consist of 3 parts: (1) Offline Resources (2) RHEL7.3 and OSP8 (3) Delta which cannot be provided for license reasons</i></p>
+                    <p><codeph>*.txt</codeph> files <!-- i><b>PENDING</b>: Bug 13216 to be fixed with productization of CMM 1.3 (RPMs and libs consist of 3 parts: (1) Offline Resources (2) RHEL7.3 and OSP8 (3) Delta which cannot be provided for license reasons</i --></p>
                     <p><codeph><ph conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"
                             />13_PythonRequirements.txt</codeph> lists the Python libraries required for the Monitoring Service, <codeph>OSP8_PythonRequirements.txt</codeph> lists the Python libraries required for the OpenStack extensions. These libraries are installed to the <codeph>/usr/lib/python2.7/site-packages</codeph> directory.</p>
                     <note othertype="note"
