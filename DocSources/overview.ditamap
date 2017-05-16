@@ -13,7 +13,7 @@
 				<vrm version="1.2" />
 			</vrmlist>
 			<brand><!--FUJITSU Software--></brand>
-			<prognum>SUSE OpenStack Cloud Monitoring 1.0</prognum>
+			<prognum>SUSE OpenStack Cloud Monitoring</prognum>
 			<component />
 			<series>Overview</series>
 		</prodinfo>
