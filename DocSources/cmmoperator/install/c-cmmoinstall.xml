@@ -12,6 +12,9 @@
             <p>SUSE OpenStack Cloud Monitoring is automatically installed and configured
                 if you deploy the Monasca barclamp. For details, see the SUSE
             OpenStack Cloud Deployment Guide.</p>
-        </section>
+       <!-- taroth 2017-05-10:FIXME: add pointer to DG,
+       chapter title: 'Deploying the OpenStack Services', section title:
+       'Deploying Monasca'-->
+       </section>
     </conbody>
 </concept>
