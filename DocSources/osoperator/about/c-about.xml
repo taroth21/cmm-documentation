@@ -48,7 +48,7 @@
                                     colname="col2"><xref
                                     href="../install/c-osoinstall.xml"/></entry>
                                 <entry colname="col3">For installation and configuration of SUSE OpenStack Cloud Monitoring,
-                                    refer to the FIXME <!-- taroth 2017-05-10:
+                                    refer to the <!-- taroth 2017: FIXME SOCM:
                                         add DG entity plus chapter title:
                                         Deploying the OpenStack Services, 
                                         section Deploying Monasca-->.</entry>

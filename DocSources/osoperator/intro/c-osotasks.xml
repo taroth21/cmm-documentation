@@ -29,7 +29,7 @@
                 available for monitoring your services and servers. For details
                 on installing and configuring a Metrics Agent, refer to the
                 SUSE OpenStack Cloud Deployment Guide.
-                <!--taroth 2017-05-11: add chapter and section title here, too-->
+                <!--taroth 2017: FIXME SOCM: add chapter and section title here, too-->
             </p>
             <p>As soon as an agent is available, you have access to the <ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> monitoring features. You work with a graphical user interface that is seamlessly integrated into your cloud infrastructure. Based on OpenStack Horizon, the user interface enables access to all monitoring functionality and the resulting large-scale monitoring data. A comfortable dashboard visualizes the health and status of your cloud resources.</p>
@@ -46,7 +46,7 @@
                 servers and sends them to the Monitoring Service for further
                 processing. For details on installing and configuring a Log
                 Agent, refer to the SUSE OpenStack Cloud Deployment Guide.
-                <!--taroth 2017-05-11: add chapter and section title here, too-->
+                <!--taroth 2017: FIXME SOCM: add chapter and section title here, too-->
             </p>
             <p><ph
                     conref="../../shared/product-name.xml#ProductNameTopic/Product_Abbr"/> stores the log data in a central database. This forms the basis for visualizing the log data for the <ph

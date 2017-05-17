@@ -23,11 +23,11 @@
                         This can be configured in the Monasca barclamp. For
                         details, see the SUSE OpenStack Cloud Deployment Guide.</li>
                     <li>Removing metrics data from the InfluxDB
-                        database.<!--taroth 2017-05-03: add xref to section--></li>
-                    <li>Removing log data from the Elasticsearch database. <!--taroth 2017-05-03: add xref to section--></li>
+                        database.<!--taroth 2017: FIXME SOCM: add xref to section--></li>
+                    <li>Removing log data from the Elasticsearch database. <!--taroth 2017: FIXME SOCM: add xref to section--></li>
                     <!--<li>Handling log files of agents and services.</li>-->
                     <li>Backup and recovery of databases, configuration files,
-                        and dashboards.<!--taroth 2017-05-03: add xref to section--></li>
+                        and dashboards.<!--taroth 2017: FIXME SOCM: add xref to section--></li>
                 </ul>
             </p>
         </section>
