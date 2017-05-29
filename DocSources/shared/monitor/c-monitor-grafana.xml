@@ -114,7 +114,7 @@
             id="Editing_Rows_concept_conbody_section_6">
             <title>Editing Rows</title>
             <p>Features for editing rows can be accessed via the green rectangle that is displayed to the left of each row. </p>
-            <p>In addition to adding panels to a row, you can collapse or remove a row, move the position of the row within your dashboard, or set the row height. Row settings allows you, for example, to insert a row title or to hide the <uicontrol>Row</uicontrol> menu so that the row can no longer be edited.</p>
+            <p>In addition to adding panels to a row, you can collapse or remove a row, move the position of a row within your dashboard, or set a row's height. Row settings allows you, for example, to insert a row title or to hide the <uicontrol>Row</uicontrol> menu so that a row can no longer be edited.</p>
         </section>
         <section
                     id="Editing_Panels_concept_conbody_section_7">
