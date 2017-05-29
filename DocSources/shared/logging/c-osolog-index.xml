@@ -34,7 +34,7 @@
                     <p><uicontrol>Time-field name</uicontrol>. Select <codeph>@timestamp</codeph> as time-field name. <codeph>@timestamp</codeph> matches the <codeph>YYYY-MM-DD</codeph> naming pattern.</p>
                 </li>
             </ul>
-            <p>The default index pattern is automatically loaded when you access the log management window. It is marked with an asterisk in front of the pattern name in the <uicontrol>Index Patterns</uicontrol> field at the top left corner of the <uicontrol>Settings</uicontrol> page. Select the pattern you want to set as the default from the the <uicontrol>Index Patterns</uicontrol> field. The content of the log management window is instantly updated.</p>
+            <p>The default index pattern is automatically loaded when you access the log management window. It is marked with an asterisk in front of the pattern name in the <uicontrol>Index Patterns</uicontrol> field at the top left corner of the <uicontrol>Settings</uicontrol> page. Select the pattern you want to set as the default from the <uicontrol>Index Patterns</uicontrol> field. The content of the log management window is instantly updated.</p>
         </section>
     </conbody>
 </concept>
