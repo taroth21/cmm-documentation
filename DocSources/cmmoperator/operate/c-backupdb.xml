@@ -88,7 +88,7 @@
                                 </li>
                         </ol>
                         <p id="For_additional_information_ba_concept_conbody_section_2_p"
-                                        >For additional information backing up and restoring an Elasticsearch database, refer to the <xref
+                                        >For additional information on backing up and restoring an Elasticsearch database, refer to the <xref
                                         format="html"
                                         href="https://www.elastic.co/guide/en/elasticsearch/reference/2.3/modules-snapshots.html"
                                         scope="external"><u><i>Elasticsearch documentation</i></u></xref>.</p>
